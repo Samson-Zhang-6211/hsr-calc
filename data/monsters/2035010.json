@@ -1,0 +1,411 @@
+{
+  "id": "2035010",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "「飞霄」之影",
+    "en": "Shadow of \"Feixiao\""
+  },
+  "meta": {
+    "rank": "BigBoss",
+    "weak": [
+      "Physical",
+      "Fire",
+      "Quantum"
+    ]
+  },
+  "zh": {
+    "id": 2035010,
+    "name": "「飞霄」之影",
+    "desc": "借由「赤月」的转移死而不绝的呼雷，以飞霄形貌现身，与本尊相对而立，宛如镜照。",
+    "monster_camp_id": 2,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 1255.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_2033020.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "BigBoss",
+    "speed_base": 120,
+    "stance_base": 540,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 2035010,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 203501001,
+            "skill_name": "枪刃•剑牙",
+            "skill_desc": "对指定我方单体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 203501002,
+            "skill_name": "巨钺•铁爪",
+            "skill_desc": "对指定我方单体目标造成风属性伤害，并大概率使受到攻击的我方目标陷入<u>虚弱</u>状态。",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {
+              "220350102": {
+                "name": "虚弱",
+                "desc": "造成的伤害降低。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 203501003,
+            "skill_name": "束身天除",
+            "skill_desc": "强化自身获得额外行动。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501004,
+            "skill_name": "风胄雷鞮",
+            "skill_desc": "与蚀月心兽的所有部位产生共鸣，并解除其弱点击破状态，下次行动前无法被攻击并在下次行动对我方全体施放【席卷乾圜，气吞坤矩】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501005,
+            "skill_name": "席卷乾圜，气吞坤矩",
+            "skill_desc": "对我方全体造成大量风属性伤害并根据剩余未被弱点击破的部位进行强化，每有1个未被击破的部位会使该技能的伤害提高，同时会附带对应部位的强化效果。",
+            "damage_type": "Wind",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 203501006,
+            "skill_name": "寸飚",
+            "skill_desc": "对我方全体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 203501007,
+            "skill_name": "心兽合击",
+            "skill_desc": "【「飞霄」之影】的额外行动会与蚀月心兽的部位共鸣，共鸣会使蚀月心兽的部位恢复一定韧性，受到攻击时被削减的韧性值提高；下次行动变为强化行动，【喰云之首】共鸣大概率使我方全体目标陷入<u>怒噪</u>状态，【裂维之爪】共鸣额外大幅增加伤害，【辟尘之尾】共鸣大概率使我方全体目标陷入<u>虚弱</u>状态。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "220350101": {
+                "name": "怒噪",
+                "desc": "无法操控，自动攻击随机敌方目标。若该目标被施放技能解除负面效果，将会优先被解除【怒噪】状态。",
+                "param": []
+              },
+              "220350102": {
+                "name": "虚弱",
+                "desc": "造成的伤害降低。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 203501008,
+            "skill_name": "守备",
+            "skill_desc": "进入【守备】状态，弱点未被击破时受到的伤害降低，被击破时行动额外延后，被击破后受到的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501009,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 2035010,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 6
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 9
+      }
+    ]
+  },
+  "en": {
+    "id": 2035010,
+    "name": "Shadow of \"Feixiao\"",
+    "desc": "Hoolay, who used the Crimson Moon to escape death, has manifested in the form of Feixiao, standing opposite her, as if in a mirror.",
+    "monster_camp_id": 2,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 1255.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_2033020.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "BigBoss",
+    "speed_base": 120,
+    "stance_base": 540,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 2035010,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 203501001,
+            "skill_name": "Gunblade: Swordfang",
+            "skill_desc": "Deals Wind DMG to a single target.",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 203501002,
+            "skill_name": "Great Ax: Irontalon",
+            "skill_desc": "Deals Wind DMG to a single target, with a high chance to inflict <u>Weaken</u>.",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {
+              "220350102": {
+                "name": "Weaken",
+                "desc": "Decreases DMG dealt.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 203501003,
+            "skill_name": "Heaven's Binds",
+            "skill_desc": "Enhances self to gain additional action.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501004,
+            "skill_name": "Wreathed in Storm",
+            "skill_desc": "Resonates with all parts of the Ecliptic Inner Beast and dispels their Weakness Broken state. This unit cannot be attacked before its next action. In the next action, this unit will use Sweep the Heavens, Swallow the Earth on all targets.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501005,
+            "skill_name": "Sweep the Heavens, Swallow the Earth",
+            "skill_desc": "Deals massive Wind DMG to all targets and Enhances this unit based on the parts that have yet to be Weakness Broken. Every part that has yet to be Broken will increase the DMG dealt by this ability, and this ability will enhance the parts that are not Weakness Broken.",
+            "damage_type": "Wind",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 203501006,
+            "skill_name": "Passing Tempest",
+            "skill_desc": "Deals Wind DMG to all targets.",
+            "damage_type": "Wind",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 203501007,
+            "skill_name": "Beastbond Strike",
+            "skill_desc": "The additional action from Shadow of \"Feixiao\" will resonate with the Ecliptic Inner Beast's body parts. Resonance will restore a certain amount of Toughness for the Ecliptic Inner Beast's parts and increase the Toughness value reduced when attacked. The next action becomes Enhanced. Resonance with \"Nebula Devourer\" has a high chance of inflicting <u>Outrage</u> on all targets. Resonance with \"Planeshred Claws\" additionally greatly increases DMG. Resonance with \"Worldpurge Tail\" has a high chance of inflicting <u>Weaken</u> on all targets.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "220350101": {
+                "name": "Outrage",
+                "desc": "Cannot be controlled. Automatically attacks a random enemy target. If the target is about to have any debuff removed by an ability, then the \"Outrage\" state will be prioritized for removal.",
+                "param": []
+              },
+              "220350102": {
+                "name": "Weaken",
+                "desc": "Decreases DMG dealt.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 203501008,
+            "skill_name": "Safeguard",
+            "skill_desc": "Enters the Safeguard state. While not Weakness Broken, reduces DMG received. Once Weakness is Broken, action will be delayed. After Weakness is Broken, increases DMG received.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 203501009,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 2035010,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2035010,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 6
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 9
+      }
+    ]
+  }
+}

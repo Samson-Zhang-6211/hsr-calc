@@ -1,0 +1,155 @@
+{
+  "version": "pure-2027",
+  "source": "https://sr.appfeng.com/challenge/pure?p=2027",
+  "note": "虚构叙事第 27 期「取象为文」出现的 29 只怪。fm=效果抵抗（DebuffResist），dk=分属性抗性；数值原样照抄 appfeng 详情，未按弱点反推。",
+  "monsters": {
+    "1002040": {
+      "name": "银鬃近卫",
+      "weaknesses": ["Wind", "Quantum"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Ice": 0.2, "Thunder": 0.2, "Imaginary": 0.2 }
+    },
+    "1012010": {
+      "name": "自动机兵•战犬",
+      "weaknesses": ["Physical", "Thunder"],
+      "resistance": { "Fire": 0.2, "Ice": 0.2, "Wind": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "1012030": {
+      "name": "自动机兵•甲虫",
+      "weaknesses": ["Thunder", "Wind", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Ice": 0.2, "Quantum": 0.2 }
+    },
+    "1013020": {
+      "name": "自动机兵•齿狼",
+      "weaknesses": ["Ice", "Thunder", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "2002030": {
+      "name": "幽府武弁",
+      "weaknesses": ["Physical", "Ice", "Wind"],
+      "resistance": { "Fire": 0.2, "Thunder": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "2012010": {
+      "name": "入魔机巧 • 灯昼龙鱼",
+      "weaknesses": ["Physical", "Thunder", "Imaginary"],
+      "resistance": { "Fire": 0.2, "Ice": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "2022050": {
+      "name": "丰饶灵兽•奎木",
+      "weaknesses": ["Fire", "Wind", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Ice": 0.2, "Thunder": 0.2, "Quantum": 0.2 }
+    },
+    "2023030": {
+      "name": "承露天人",
+      "weaknesses": ["Physical", "Ice", "Thunder"],
+      "resistance": { "Fire": 0.2, "Wind": 0.4, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "2032010": {
+      "name": "玄爪狼卒",
+      "weaknesses": ["Fire", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "2032020": {
+      "name": "蚀月狼卒",
+      "weaknesses": ["Physical", "Wind"],
+      "resistance": { "Fire": 0.2, "Ice": 0.2, "Thunder": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "3003020": {
+      "name": "惊梦剧团的甜猿泰山",
+      "weaknesses": ["Physical", "Fire", "Imaginary"],
+      "resistance": { "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "3003050": {
+      "name": "「醉于盛会的此刻」",
+      "weaknesses": ["Physical", "Fire", "Imaginary"],
+      "resistance": { "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "4012010": {
+      "name": "天谴斗士",
+      "weaknesses": ["Thunder", "Quantum", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Ice": 0.2, "Wind": 0.2 }
+    },
+    "4012020": {
+      "name": "天谴哲人",
+      "weaknesses": ["Fire", "Ice", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "4013010": {
+      "name": "天谴先锋",
+      "weaknesses": ["Ice", "Thunder", "Quantum"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Wind": 0.2, "Imaginary": 0.2 }
+    },
+    "4022010": {
+      "name": "流星铁鹰",
+      "weaknesses": ["Wind", "Quantum", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Ice": 0.2, "Thunder": 0.2 }
+    },
+    "4023010": {
+      "name": "正阳狮鹫",
+      "weaknesses": ["Physical", "Quantum", "Imaginary"],
+      "resistance": { "Fire": 0.2, "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2 }
+    },
+    "4033010": {
+      "name": "黑潮蚀魔",
+      "weaknesses": ["Physical", "Wind", "Quantum"],
+      "resistance": { "Fire": 0.2, "Ice": 0.2, "Thunder": 0.2, "Imaginary": 0.2 }
+    },
+    "4034010": {
+      "name": "至黑之剑，盗火行者",
+      "weaknesses": ["Ice", "Thunder", "Quantum"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Wind": 0.2, "Imaginary": 0.2 },
+      "debuffResist": { "freeze": 0.75, "imprison": 0.75, "entangle": 0.75 }
+    },
+    "4053010": {
+      "name": "波涛夫人",
+      "weaknesses": ["Physical", "Fire", "Thunder"],
+      "resistance": { "Ice": 0.2, "Wind": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "4062010": {
+      "name": "金血忆灵•雉形",
+      "weaknesses": ["Physical", "Fire"],
+      "resistance": { "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "4062020": {
+      "name": "金血忆灵•犬形",
+      "weaknesses": ["Ice", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    },
+    "4063010": {
+      "name": "金血忆灵•翼蛇形",
+      "weaknesses": ["Physical", "Fire", "Ice"],
+      "resistance": { "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "5012100": {
+      "name": "魔法少女急袭剧团",
+      "weaknesses": ["Physical", "Fire", "Ice"],
+      "resistance": { "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2, "Imaginary": 0.2 }
+    },
+    "5012110": {
+      "name": "狸猫记者",
+      "weaknesses": ["Thunder", "Quantum", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Fire": 0.2, "Ice": 0.2, "Wind": 0.2 }
+    },
+    "5013040": {
+      "name": "破晓战队•苍翼",
+      "weaknesses": ["Fire", "Quantum", "Imaginary"],
+      "resistance": { "Ice": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.8 }
+    },
+    "5014020": {
+      "name": "合金机铠•帕姆王",
+      "weaknesses": ["Fire", "Thunder", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Ice": 0.2, "Wind": 0.2, "Quantum": 0.2 },
+      "debuffResist": { "control": 0.5 }
+    },
+    "8003010": {
+      "name": "外宇宙之冰",
+      "weaknesses": ["Fire", "Wind", "Quantum"],
+      "resistance": { "Physical": 0.2, "Ice": 0.4, "Thunder": 0.2, "Imaginary": 0.2 },
+      "debuffResist": { "freeze": 1 }
+    },
+    "8033010": {
+      "name": "资深员工•组长",
+      "weaknesses": ["Fire", "Ice", "Imaginary"],
+      "resistance": { "Physical": 0.2, "Thunder": 0.2, "Wind": 0.2, "Quantum": 0.2 }
+    }
+  }
+}

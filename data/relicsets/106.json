@@ -1,0 +1,96 @@
+{
+  "id": "106",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "戍卫风雪的铁卫",
+    "en": "Guard of Wuthering Snow"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "戍卫风雪的铁卫",
+    "icon": "SpriteOutput/ItemIcon/71005.png",
+    "parts": {
+      "31061": {
+        "name": "铁卫的铸铁面盔",
+        "desc": null,
+        "story": null
+      },
+      "31062": {
+        "name": "铁卫的银鳞手甲",
+        "desc": null,
+        "story": null
+      },
+      "31063": {
+        "name": "铁卫的旧制军服",
+        "desc": null,
+        "story": null
+      },
+      "31064": {
+        "name": "铁卫的白银护胫",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "受到伤害降低<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.08
+        ]
+      },
+      "4": {
+        "desc": "回合开始时，如果装备者当前生命值百分比小于等于<unbreak>#1[i]%</unbreak>，则回复等同于自身生命上限<unbreak>#2[i]%</unbreak>的生命值，并恢复<unbreak>#3[i]</unbreak>点能量。",
+        "param_list": [
+          0.5,
+          0.08,
+          5
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Guard of Wuthering Snow",
+    "icon": "SpriteOutput/ItemIcon/71005.png",
+    "parts": {
+      "31061": {
+        "name": "Guard's Cast Iron Helmet",
+        "desc": null,
+        "story": null
+      },
+      "31062": {
+        "name": "Guard's Shining Gauntlets",
+        "desc": null,
+        "story": null
+      },
+      "31063": {
+        "name": "Guard's Uniform of Old",
+        "desc": null,
+        "story": null
+      },
+      "31064": {
+        "name": "Guard's Silver Greaves",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Reduces DMG taken by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.08
+        ]
+      },
+      "4": {
+        "desc": "At the beginning of the turn, if the wearer's HP percentage is equal to or less than <unbreak>#1[i]%</unbreak>, restores HP equal to <unbreak>#2[i]%</unbreak> of their Max HP and regenerates <unbreak>#3[i]</unbreak> Energy.",
+        "param_list": [
+          0.5,
+          0.08,
+          5
+        ]
+      }
+    }
+  }
+}

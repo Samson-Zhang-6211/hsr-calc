@@ -1,0 +1,94 @@
+{
+  "id": "104",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "密林卧雪的猎人",
+    "en": "Hunter of Glacial Forest"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "密林卧雪的猎人",
+    "icon": "SpriteOutput/ItemIcon/71003.png",
+    "parts": {
+      "31041": {
+        "name": "雪猎的荒神兜帽",
+        "desc": null,
+        "story": null
+      },
+      "31042": {
+        "name": "雪猎的巨蜥手套",
+        "desc": null,
+        "story": null
+      },
+      "31043": {
+        "name": "雪猎的冰龙披风",
+        "desc": null,
+        "story": null
+      },
+      "31044": {
+        "name": "雪猎的鹿皮软靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "冰属性伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "当装备者施放终结技时，暴击伤害提高<unbreak>#1[i]%</unbreak>，持续<unbreak>#2[i]</unbreak>回合。",
+        "param_list": [
+          0.25,
+          2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Hunter of Glacial Forest",
+    "icon": "SpriteOutput/ItemIcon/71003.png",
+    "parts": {
+      "31041": {
+        "name": "Hunter's Artaius Hood",
+        "desc": null,
+        "story": null
+      },
+      "31042": {
+        "name": "Hunter's Lizard Gloves",
+        "desc": null,
+        "story": null
+      },
+      "31043": {
+        "name": "Hunter's Ice Dragon Cloak",
+        "desc": null,
+        "story": null
+      },
+      "31044": {
+        "name": "Hunter's Soft Elkskin Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Ice DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "After the wearer uses their Ultimate, their CRIT DMG increases by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s).",
+        "param_list": [
+          0.25,
+          2
+        ]
+      }
+    }
+  }
+}

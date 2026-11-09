@@ -1,0 +1,403 @@
+{
+  "pack": "arb-p10",
+  "mode": "arb",
+  "period": 10,
+  "title": "落叶归根",
+  "p": 10,
+  "roundMode": "arbiter",
+  "difficultyGroup": 3,
+  "source": "https://sr.appfeng.com/challenge/arb?p=10",
+  "note": "站点仲裁期号用 ?p=10（不是 4000+N；4000+N 会返回空壳）。按用户 2026-10-30 裁定拆成 5 个独立关卡：王棋（站点「将杀王棋·上半」Lv.100）/ 绝境王棋（站点「苦难阶段」Lv.120）/ 骑士（三/二/一）。关卡机制按站点原文抄录（stage 级 + 该段级），实现见 docs/AGENTS-stages.md；难度乘区 = HardLevelGroup=3。",
+  "expose": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "stages": [
+    {
+      "index": 1,
+      "name": "王棋",
+      "f": 4,
+      "kind": "single",
+      "siteName": "将杀王棋·上半",
+      "level": 100,
+      "tags": [
+        "Quantum",
+        "Imaginary"
+      ],
+      "hp": 2366503,
+      "mechanics": [
+        {
+          "name": "血嗜",
+          "desc": "我方目标回合开始时损失500点生命值，该效果可致命。"
+        },
+        {
+          "name": "洞穿",
+          "desc": "敌方目标施放攻击时，如果受到攻击的我方目标持有护盾，则使敌方目标造成的伤害提高200%。"
+        },
+        {
+          "name": "狂喜之夜",
+          "desc": "我方编队中第一位角色造成的欢愉伤害增笑50%。"
+        },
+        {
+          "name": "领航誓言",
+          "desc": "我方编队中第一位角色造成的战技和终结技伤害的全属性抗性穿透提高50%。"
+        },
+        {
+          "name": "胞吞作用",
+          "desc": "【稳态失衡】对【血脑屏障】造成的伤害提高50%。"
+        }
+      ],
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "4023020",
+              "level": 100,
+              "name": "月夜天马",
+              "rank": "精英",
+              "hp": 721220,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Quantum",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "8033020",
+              "level": 100,
+              "name": "「灯塔」",
+              "rank": "精英",
+              "hp": 631067,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Wind",
+                "Quantum"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "5034010",
+              "level": 100,
+              "name": "堕神之血•亚婆离",
+              "rank": "小BOSS",
+              "hp": 1014216,
+              "count": 1,
+              "weak": [
+                "Ice",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "King"
+    },
+    {
+      "index": 2,
+      "name": "绝境王棋",
+      "f": 4,
+      "kind": "single",
+      "siteName": "将杀王棋·苦难阶段",
+      "level": 120,
+      "tags": [
+        "Quantum",
+        "Imaginary"
+      ],
+      "hp": 9466011,
+      "mechanics": [
+        {
+          "name": "血嗜+",
+          "desc": "我方目标回合开始时损失1000点生命值，该效果可致命。"
+        },
+        {
+          "name": "洞穿+",
+          "desc": "敌方目标施放攻击时，如果受到攻击的我方目标持有护盾，则使敌方目标造成的伤害提高400%。"
+        },
+        {
+          "name": "不屈",
+          "desc": "敌方目标受到攻击时，获得相当于自身1.0%生命上限的护盾。"
+        }
+      ],
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "4023020",
+              "level": 120,
+              "name": "月夜天马",
+              "rank": "精英",
+              "hp": 2884879,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Quantum",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "8033020",
+              "level": 120,
+              "name": "「灯塔」",
+              "rank": "精英",
+              "hp": 2524270,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Wind",
+                "Quantum"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "5034010",
+              "level": 120,
+              "name": "堕神之血•亚婆离",
+              "rank": "小BOSS",
+              "hp": 4056862,
+              "count": 1,
+              "weak": [
+                "Ice",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Nightmare King"
+    },
+    {
+      "index": 3,
+      "name": "骑士（三）",
+      "f": 3,
+      "kind": "single",
+      "siteName": "骑士（三）",
+      "level": 95,
+      "tags": [
+        "Fire",
+        "Wind"
+      ],
+      "hp": 3735988,
+      "mechanics": [
+        {
+          "name": "闭锁",
+          "desc": "我方目标每次施放攻击后叠加1层该效果，达到6层后使该目标陷入持续1回合的【禁锢】状态，并固定降低30%能量。该效果的层数在目标回合开始时或负面效果触发后清空。"
+        }
+      ],
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "4053020",
+              "level": 95,
+              "name": "飓风大母",
+              "rank": "精英",
+              "hp": 523737,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Ice",
+                "Thunder"
+              ]
+            },
+            {
+              "monsterId": "2023020",
+              "level": 95,
+              "name": "丰饶灵兽•长右",
+              "rank": "精英",
+              "hp": 418989,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Ice",
+                "Wind"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "3024030",
+              "level": 95,
+              "name": "示死祸源：深魇蝗灾",
+              "rank": "小BOSS",
+              "hp": 2793262,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Fire",
+                "Wind"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Knight III"
+    },
+    {
+      "index": 4,
+      "name": "骑士（二）",
+      "f": 2,
+      "kind": "single",
+      "siteName": "骑士（二）",
+      "level": 95,
+      "tags": [
+        "Quantum"
+      ],
+      "hp": 2182237,
+      "mechanics": [
+        {
+          "name": "桎梏+",
+          "desc": "我方目标初始获得2层该效果，每层使自身造成的伤害降低20%，该效果不可解除，每次施放终结技后移除1层该效果。"
+        },
+        {
+          "name": "激怒",
+          "desc": "我方目标每次施放终结技后使敌方全体目标叠加1层该效果，每层使敌方目标的速度提高30%，最多叠加4层。该效果的层数在敌方目标回合开始时清空。"
+        }
+      ],
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "5013050",
+              "level": 95,
+              "name": "破晓战队•赤焰",
+              "rank": "精英",
+              "hp": 523737,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Quantum",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "5013070",
+              "level": 95,
+              "name": "破晓战队•灰烬",
+              "rank": "精英",
+              "hp": 523737,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "4014030",
+              "level": 95,
+              "name": "冥魂渡者，死龙残躯，玻吕刻斯",
+              "rank": "小BOSS",
+              "hp": 1134763,
+              "count": 1,
+              "weak": [
+                "Wind",
+                "Quantum",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Knight II"
+    },
+    {
+      "index": 5,
+      "name": "骑士（一）",
+      "f": 1,
+      "kind": "single",
+      "siteName": "骑士（一）",
+      "level": 95,
+      "tags": [
+        "Fire",
+        "Imaginary"
+      ],
+      "hp": 2042574,
+      "mechanics": [
+        {
+          "name": "血嗜",
+          "desc": "我方目标回合开始时损失500点生命值，该效果可致命。"
+        }
+      ],
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "5013040",
+              "level": 95,
+              "name": "破晓战队•苍翼",
+              "rank": "精英",
+              "hp": 523737,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Fire",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "5023010",
+              "level": 95,
+              "name": "乐变化天人",
+              "rank": "精英",
+              "hp": 209495,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Thunder",
+                "Imaginary"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "5014020",
+              "level": 95,
+              "name": "合金机铠•帕姆王",
+              "rank": "小BOSS",
+              "hp": 1309342,
+              "count": 1,
+              "weak": [
+                "Fire",
+                "Thunder",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Knight I"
+    }
+  ],
+  "modeMechanics": []
+}

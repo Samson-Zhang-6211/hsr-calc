@@ -1,0 +1,102 @@
+{
+  "id": "117",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "死水深潜的先驱",
+    "en": "Pioneer Diver of Dead Waters"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "死水深潜的先驱",
+    "icon": "SpriteOutput/ItemIcon/71028.png",
+    "parts": {
+      "31171": {
+        "name": "先驱的绝热围壳",
+        "desc": null,
+        "story": null
+      },
+      "31172": {
+        "name": "先驱的虚极罗盘",
+        "desc": null,
+        "story": null
+      },
+      "31173": {
+        "name": "先驱的密合铅衣",
+        "desc": null,
+        "story": null
+      },
+      "31174": {
+        "name": "先驱的泊星桩锚",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "对受负面状态影响的敌人造成的伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "暴击率提高<unbreak>#1[i]%</unbreak>，装备者对陷入不少于<unbreak>#4[i]</unbreak>/<unbreak>#5[i]</unbreak>个负面效果的敌方目标造成的暴击伤害提高<unbreak>#2[i]%</unbreak>/<unbreak>#3[i]%</unbreak>。装备者对敌方目标施加负面效果后，上述效果提高<unbreak>100%</unbreak>，持续<unbreak>#6[i]</unbreak>回合。",
+        "param_list": [
+          0.04,
+          0.08,
+          0.12,
+          2,
+          3,
+          1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Pioneer Diver of Dead Waters",
+    "icon": "SpriteOutput/ItemIcon/71028.png",
+    "parts": {
+      "31171": {
+        "name": "Pioneer's Heatproof Shell",
+        "desc": null,
+        "story": null
+      },
+      "31172": {
+        "name": "Pioneer's Lacuna Compass",
+        "desc": null,
+        "story": null
+      },
+      "31173": {
+        "name": "Pioneer's Sealed Lead Apron",
+        "desc": null,
+        "story": null
+      },
+      "31174": {
+        "name": "Pioneer's Starfaring Anchor",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases DMG dealt to enemies with debuffs by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "Increases CRIT Rate by <unbreak>#1[i]%</unbreak>. The wearer deals <unbreak>#2[i]%</unbreak>/<unbreak>#3[i]%</unbreak> increased CRIT DMG to enemies with at least <unbreak>#4[i]</unbreak>/<unbreak>#5[i]</unbreak> debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by <unbreak>100%</unbreak>, lasting for <unbreak>#6[i]</unbreak> turn(s).",
+        "param_list": [
+          0.04,
+          0.08,
+          0.12,
+          2,
+          3,
+          1
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "318",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "奇想蕉乐园",
+    "en": "The Wondrous BananAmusement Park"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "奇想蕉乐园",
+    "icon": "SpriteOutput/ItemIcon/71037.png",
+    "parts": {
+      "33185": {
+        "name": "蕉乐园的蕉芯广场",
+        "desc": null,
+        "story": null
+      },
+      "33186": {
+        "name": "蕉乐园的模因线缆",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击伤害提高<unbreak>#1[i]%</unbreak>，当存在装备者召唤的目标时，暴击伤害额外提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.16,
+          0.32
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "The Wondrous BananAmusement Park",
+    "icon": "SpriteOutput/ItemIcon/71037.png",
+    "parts": {
+      "33185": {
+        "name": "BananAmusement Park's BananAxis Plaza",
+        "desc": null,
+        "story": null
+      },
+      "33186": {
+        "name": "BananAmusement Park's Memetic Cables",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT DMG by <unbreak>#1[i]%</unbreak>. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.16,
+          0.32
+        ]
+      }
+    }
+  }
+}

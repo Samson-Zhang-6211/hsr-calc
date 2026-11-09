@@ -1,0 +1,62 @@
+{
+  "id": "317",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "沉陆海域露莎卡",
+    "en": "Lushaka, the Sunken Seas"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "沉陆海域露莎卡",
+    "icon": "SpriteOutput/ItemIcon/71036.png",
+    "parts": {
+      "33175": {
+        "name": "露莎卡的水朽苍都",
+        "desc": null,
+        "story": null
+      },
+      "33176": {
+        "name": "露莎卡的双生航道",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的能量恢复效率提高<unbreak>#1[i]%</unbreak>，如果装备者不是编队中的第一位角色，使编队中的第一位角色攻击力提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.05,
+          0.12
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Lushaka, the Sunken Seas",
+    "icon": "SpriteOutput/ItemIcon/71036.png",
+    "parts": {
+      "33175": {
+        "name": "Lushaka's Waterscape",
+        "desc": null,
+        "story": null
+      },
+      "33176": {
+        "name": "Lushaka's Twinlanes",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Energy Regeneration Rate by <unbreak>#1[i]%</unbreak>. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.05,
+          0.12
+        ]
+      }
+    }
+  }
+}

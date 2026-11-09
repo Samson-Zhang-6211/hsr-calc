@@ -1,0 +1,24 @@
+[
+  {
+    "id": "axis-qingge",
+    "rosterId": "1512",
+    "name": "知更鸟•晴歌",
+    "element": "Wind",
+    "level": 80,
+    "atk": 1500,
+    "hp": 6500,
+    "def": 950,
+    "critRate": 0.15,
+    "critDmg": 0.6,
+    "breakEffect": 0,
+    "damageBonus": 0,
+    "commonBonus": 0,
+    "elementDmg": { "Physical": 0, "Fire": 0, "Ice": 0, "Thunder": 0, "Wind": 0, "Quantum": 0, "Imaginary": 0 },
+    "speed": 156,
+    "energyRegen": 0.244,
+    "mode": "manual",
+    "skillLevels": { "basic": 6, "skill": 10, "ult": 10, "talent": 10, "memoSkill": 6 },
+    "build": { "lightconeId": "24005", "refinement": 5, "relicsetId": "127", "planarsetId": "317", "eidolonLevel": 0 },
+    "_note": "00 晴歌（光锥记忆永不落幕叠5、非专武 + 再创天地的救世主4件 + 沉陆海域露莎卡，星魂0）。HP6500（璐洛洛：搭攻击主C最好6500+；九游区间5500-7000）；攻1500（九游1500-1550，须低于景元触发行迹加攻分支）；速度156、生命衣/生命球 damageBonus=0。critRate=5%+救世主2件8%+副词条≈15%（套装已含）。普攻6、忆灵技6、其余10。修正：①energyRegen 0.194→0.244 = 充能绳19.4% + 露莎卡2件5%（你确认原值未含套装，已补）；②速度156已含光锥速度+12%（你确认）。战技后全队+16%、救世主4件全队+15%为战斗内条件子句，由战斗模拟接入。"
+  }
+]

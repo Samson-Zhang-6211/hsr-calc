@@ -1,0 +1,62 @@
+{
+  "id": "327",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "坠星启航地",
+    "en": "Fallen Star Anchorage"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "坠星启航地",
+    "icon": "SpriteOutput/ItemIcon/71058.png",
+    "parts": {
+      "33275": {
+        "name": "启航地的搁浅列车",
+        "desc": null,
+        "story": null
+      },
+      "33276": {
+        "name": "启航地的梦想银轨",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击率提高<unbreak>#1[i]%</unbreak>。进入战斗时，若装备者与另一名队友均为开拓同行角色，使装备者的暴击伤害提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.08,
+          0.32
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Fallen Star Anchorage",
+    "icon": "SpriteOutput/ItemIcon/71058.png",
+    "parts": {
+      "33275": {
+        "name": "Stranded Express at the Anchorage",
+        "desc": null,
+        "story": null
+      },
+      "33276": {
+        "name": "Silver Rails of the Anchorage",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT Rate by <unbreak>#1[i]%</unbreak>. When entering combat, if the wearer and another teammate are both Trailblaze Companions characters, increases the wearer's CRIT DMG by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.08,
+          0.32
+        ]
+      }
+    }
+  }
+}

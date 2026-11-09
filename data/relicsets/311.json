@@ -1,0 +1,68 @@
+{
+  "id": "311",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "苍穹战线格拉默",
+    "en": "Firmament Frontline: Glamoth"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "苍穹战线格拉默",
+    "icon": "SpriteOutput/ItemIcon/71026.png",
+    "parts": {
+      "33115": {
+        "name": "格拉默的铁骑兵团",
+        "desc": null,
+        "story": null
+      },
+      "33116": {
+        "name": "格拉默的寂静坟碑",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的攻击力提高<unbreak>#1[i]%</unbreak>。当装备者的速度大于等于<unbreak>#2[i]</unbreak>/<unbreak>#3[i]</unbreak>时，使装备者造成的伤害提高<unbreak>#4[i]%</unbreak>/<unbreak>#5[i]%</unbreak>。",
+        "param_list": [
+          0.12,
+          135,
+          160,
+          0.12,
+          0.18
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Firmament Frontline: Glamoth",
+    "icon": "SpriteOutput/ItemIcon/71026.png",
+    "parts": {
+      "33115": {
+        "name": "Glamoth's Iron Cavalry Regiment",
+        "desc": null,
+        "story": null
+      },
+      "33116": {
+        "name": "Glamoth's Silent Tombstone",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's ATK by <unbreak>#1[i]%</unbreak>. When the wearer's SPD is equal to or higher than <unbreak>#2[i]</unbreak>/<unbreak>#3[i]</unbreak>, the wearer deals <unbreak>#4[i]%</unbreak>/<unbreak>#5[i]%</unbreak> more DMG.",
+        "param_list": [
+          0.12,
+          135,
+          160,
+          0.12,
+          0.18
+        ]
+      }
+    }
+  }
+}

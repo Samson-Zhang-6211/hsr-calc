@@ -1,0 +1,64 @@
+{
+  "id": "330",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "亚空异容所",
+    "en": "Subspace ASC Center"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "亚空异容所",
+    "icon": "SpriteOutput/ItemIcon/71063.png",
+    "parts": {
+      "33305": {
+        "name": "异容所的深黯裂隙",
+        "desc": null,
+        "story": null
+      },
+      "33306": {
+        "name": "异容所的负向胶卷",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的速度提高<unbreak>#1[i]%</unbreak>，当装备者的速度大于等于<unbreak>#2[i]</unbreak>时，进入战斗后使我方全体击破特攻提高<unbreak>#3[i]%</unbreak>，该效果无法叠加。",
+        "param_list": [
+          0.06,
+          145,
+          0.18
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Subspace ASC Center",
+    "icon": "SpriteOutput/ItemIcon/71063.png",
+    "parts": {
+      "33305": {
+        "name": "ASC Dark Fissure",
+        "desc": null,
+        "story": null
+      },
+      "33306": {
+        "name": "ASC Negative Film",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's SPD by <unbreak>#1[i]%</unbreak>. When the wearer's SPD reaches <unbreak>#2[i]</unbreak> or higher, increases all allies' Break Effect by <unbreak>#3[i]%</unbreak> after entering combat. This effect cannot stack.",
+        "param_list": [
+          0.06,
+          145,
+          0.18
+        ]
+      }
+    }
+  }
+}

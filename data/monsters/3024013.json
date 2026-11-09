@@ -1,0 +1,2552 @@
+{
+  "id": "3024013",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "芒寒色正的银骑士",
+    "en": "Silver Knight of Virtuous Gallantry"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Physical",
+      "Fire",
+      "Ice",
+      "Imaginary"
+    ]
+  },
+  "zh": {
+    "id": 3024013,
+    "name": "芒寒色正的银骑士",
+    "desc": "「纯美骑士团」的古典骑士，虔诚地仰慕着已失踪的「纯美」星神伊德莉拉。\\n为人正直、光明磊落，于宇宙中漫游，宣扬伊德莉拉美名。",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 5812.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_3024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 105,
+    "stance_base": 810,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 3024013,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "虔诚",
+            "skill_desc": "对指定我方单体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "渐臻虔诚",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "纯美的勇气赞歌",
+            "skill_desc": "对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "枪之召唤",
+            "skill_desc": "召唤4个【枪尖】的雕塑。如果场上已经存在4个【枪尖】的雕塑，则会施放【枪之横扫】。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "盾之召唤",
+            "skill_desc": "召唤4个【盾】的雕塑。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "授勋云集",
+            "skill_desc": "召唤4个【授勋】的雕塑。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "枪之横扫",
+            "skill_desc": "释放【枪尖】的雕塑中的力量，对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "盾之奉还",
+            "skill_desc": "释放【盾】的雕塑中的力量，命令【盾】的雕塑嘲讽对位我方角色，并根据目标调整自身弱点属性。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "授勋之力",
+            "skill_desc": "进入不可选中状态，下次行动时释放【不可抵挡的命运】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "灵魂回收",
+            "skill_desc": "收回所有雕塑中的【灵魂释放】，并基于【灵魂释放】的数量强化自身，持续1回合。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "灵魂释放",
+            "skill_desc": "芒寒色正的银骑士会为召唤的雕塑施加【灵魂释放】，被施加的单位被消灭时，会为我方全体附加【灵魂强化】，提高造成的伤害；如果被芒寒色正的银骑士回收，则会提高芒寒色正的银骑士本回合造成的伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "不可抵挡的命运",
+            "skill_desc": "对我方全体造成物理属性伤害。每有一层【桂冠】，额外追加一次物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "破竹之势",
+            "skill_desc": "芒寒色正的银骑士受到的伤害大幅降低，但在被弱点击破后，行动额外延后，受到的伤害额外提高，同时使我方全体恢复战技点并激活终结技。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "攻守易型",
+            "skill_desc": "芒寒色正的银骑士会在战斗中切换自身<u>战斗姿态</u>，召唤不同雕塑进行战斗；我方消灭【灵魂释放】状态的雕塑时，会使本次战斗中我方全体造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "战斗姿态",
+                "desc": "芒寒色正的银骑士会随着战斗改变自身的状态：\\n【骑士之怒】：召唤【枪尖】的雕塑，自身受到的所有伤害降低，有4个雕塑在场时自身进入韧性保护状态。\\n【黄金奉还】：召唤【盾】的雕塑，自身造成的所有伤害提高。\\n【瑰丽之勋】：召唤【授勋】的雕塑，有雕塑存在时，自身不可被选中。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "绝境逆转",
+            "skill_desc": "芒寒色正的银骑士二阶段释放【灵魂释放】时，会选择所有雕塑作为目标。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "众星拱卫",
+            "skill_desc": "除芒寒色正的银骑士外，每多存在1个敌方单位，敌方全体受到的伤害降低，造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401301,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -390,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "虔诚",
+            "skill_desc": "对指定我方单体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "渐臻虔诚",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "纯美的勇气赞歌",
+            "skill_desc": "对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "枪之召唤",
+            "skill_desc": "召唤4个【枪尖】的雕塑。如果场上已经存在4个【枪尖】的雕塑，则会施放【枪之横扫】。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "盾之召唤",
+            "skill_desc": "召唤4个【盾】的雕塑。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "授勋云集",
+            "skill_desc": "召唤4个【授勋】的雕塑。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "枪之横扫",
+            "skill_desc": "释放【枪尖】的雕塑中的力量，对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "盾之奉还",
+            "skill_desc": "释放【盾】的雕塑中的力量，命令【盾】的雕塑嘲讽对位我方角色，并根据目标调整自身弱点属性。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "授勋之力",
+            "skill_desc": "进入不可选中状态，下次行动时释放【不可抵挡的命运】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "灵魂回收",
+            "skill_desc": "收回所有雕塑中的【灵魂释放】，并基于【灵魂释放】的数量强化自身，持续1回合。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "灵魂释放",
+            "skill_desc": "芒寒色正的银骑士会为召唤的雕塑施加【灵魂释放】，被施加的单位被消灭时，会为我方全体附加【灵魂强化】，提高造成的伤害；如果被芒寒色正的银骑士回收，则会提高芒寒色正的银骑士本回合造成的伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "不可抵挡的命运",
+            "skill_desc": "对我方全体造成物理属性伤害。每有一层【桂冠】，额外追加一次物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "破竹之势",
+            "skill_desc": "芒寒色正的银骑士受到的伤害大幅降低，但在被弱点击破后，行动额外延后，受到的伤害额外提高，同时使我方全体恢复战技点并激活终结技。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "攻守易型",
+            "skill_desc": "芒寒色正的银骑士会在战斗中切换自身<u>战斗姿态</u>，召唤不同雕塑进行战斗；我方消灭【灵魂释放】状态的雕塑时，会使本次战斗中我方全体造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "战斗姿态",
+                "desc": "芒寒色正的银骑士会随着战斗改变自身的状态：\\n【骑士之怒】：召唤【枪尖】的雕塑，自身受到的所有伤害降低，有4个雕塑在场时自身进入韧性保护状态。\\n【黄金奉还】：召唤【盾】的雕塑，自身造成的所有伤害提高。\\n【瑰丽之勋】：召唤【授勋】的雕塑，有雕塑存在时，自身不可被选中。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "绝境逆转",
+            "skill_desc": "芒寒色正的银骑士二阶段释放【灵魂释放】时，会选择所有雕塑作为目标。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "众星拱卫",
+            "skill_desc": "除芒寒色正的银骑士外，每多存在1个敌方单位，敌方全体受到的伤害降低，造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401302,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -270,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "虔诚",
+            "skill_desc": "对指定我方单体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "渐臻虔诚",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "纯美的勇气赞歌",
+            "skill_desc": "对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "枪之召唤",
+            "skill_desc": "召唤4个【枪尖】的雕塑。如果场上已经存在4个【枪尖】的雕塑，则会施放【枪之横扫】。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "盾之召唤",
+            "skill_desc": "召唤4个【盾】的雕塑。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "授勋云集",
+            "skill_desc": "召唤4个【授勋】的雕塑。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "枪之横扫",
+            "skill_desc": "释放【枪尖】的雕塑中的力量，对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "盾之奉还",
+            "skill_desc": "释放【盾】的雕塑中的力量，命令【盾】的雕塑嘲讽对位我方角色，并根据目标调整自身弱点属性。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "授勋之力",
+            "skill_desc": "进入不可选中状态，下次行动时释放【不可抵挡的命运】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "灵魂回收",
+            "skill_desc": "收回所有雕塑中的【灵魂释放】，并基于【灵魂释放】的数量强化自身，持续1回合。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "灵魂释放",
+            "skill_desc": "芒寒色正的银骑士会为召唤的雕塑施加【灵魂释放】，被施加的单位被消灭时，会为我方全体附加【灵魂强化】，提高造成的伤害；如果被芒寒色正的银骑士回收，则会提高芒寒色正的银骑士本回合造成的伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "不可抵挡的命运",
+            "skill_desc": "对我方全体造成物理属性伤害。每有一层【桂冠】，额外追加一次物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "破竹之势",
+            "skill_desc": "芒寒色正的银骑士受到的伤害大幅降低，但在被弱点击破后，行动额外延后，受到的伤害额外提高，同时使我方全体恢复战技点并激活终结技。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "攻守易型",
+            "skill_desc": "芒寒色正的银骑士会在战斗中切换自身<u>战斗姿态</u>，召唤不同雕塑进行战斗；我方消灭【灵魂释放】状态的雕塑时，会使本次战斗中我方全体造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "战斗姿态",
+                "desc": "芒寒色正的银骑士会随着战斗改变自身的状态：\\n【骑士之怒】：召唤【枪尖】的雕塑，自身受到的所有伤害降低，有4个雕塑在场时自身进入韧性保护状态。\\n【黄金奉还】：召唤【盾】的雕塑，自身造成的所有伤害提高。\\n【瑰丽之勋】：召唤【授勋】的雕塑，有雕塑存在时，自身不可被选中。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "绝境逆转",
+            "skill_desc": "芒寒色正的银骑士二阶段释放【灵魂释放】时，会选择所有雕塑作为目标。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "众星拱卫",
+            "skill_desc": "除芒寒色正的银骑士外，每多存在1个敌方单位，敌方全体受到的伤害降低，造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401303,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -150,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "虔诚",
+            "skill_desc": "对指定我方单体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "渐臻虔诚",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "纯美的勇气赞歌",
+            "skill_desc": "对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "枪之召唤",
+            "skill_desc": "召唤4个【枪尖】的雕塑。如果场上已经存在4个【枪尖】的雕塑，则会施放【枪之横扫】。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "盾之召唤",
+            "skill_desc": "召唤4个【盾】的雕塑。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "授勋云集",
+            "skill_desc": "召唤4个【授勋】的雕塑。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "枪之横扫",
+            "skill_desc": "释放【枪尖】的雕塑中的力量，对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "盾之奉还",
+            "skill_desc": "释放【盾】的雕塑中的力量，命令【盾】的雕塑嘲讽对位我方角色，并根据目标调整自身弱点属性。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "授勋之力",
+            "skill_desc": "进入不可选中状态，下次行动时释放【不可抵挡的命运】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "灵魂回收",
+            "skill_desc": "收回所有雕塑中的【灵魂释放】，并基于【灵魂释放】的数量强化自身，持续1回合。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "灵魂释放",
+            "skill_desc": "芒寒色正的银骑士会为召唤的雕塑施加【灵魂释放】，被施加的单位被消灭时，会为我方全体附加【灵魂强化】，提高造成的伤害；如果被芒寒色正的银骑士回收，则会提高芒寒色正的银骑士本回合造成的伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "不可抵挡的命运",
+            "skill_desc": "对我方全体造成物理属性伤害。每有一层【桂冠】，额外追加一次物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "破竹之势",
+            "skill_desc": "芒寒色正的银骑士受到的伤害大幅降低，但在被弱点击破后，行动额外延后，受到的伤害额外提高，同时使我方全体恢复战技点并激活终结技。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "攻守易型",
+            "skill_desc": "芒寒色正的银骑士会在战斗中切换自身<u>战斗姿态</u>，召唤不同雕塑进行战斗；我方消灭【灵魂释放】状态的雕塑时，会使本次战斗中我方全体造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "战斗姿态",
+                "desc": "芒寒色正的银骑士会随着战斗改变自身的状态：\\n【骑士之怒】：召唤【枪尖】的雕塑，自身受到的所有伤害降低，有4个雕塑在场时自身进入韧性保护状态。\\n【黄金奉还】：召唤【盾】的雕塑，自身造成的所有伤害提高。\\n【瑰丽之勋】：召唤【授勋】的雕塑，有雕塑存在时，自身不可被选中。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "绝境逆转",
+            "skill_desc": "芒寒色正的银骑士二阶段释放【灵魂释放】时，会选择所有雕塑作为目标。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "众星拱卫",
+            "skill_desc": "除芒寒色正的银骑士外，每多存在1个敌方单位，敌方全体受到的伤害降低，造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401304,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": 90,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "虔诚",
+            "skill_desc": "对指定我方单体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "渐臻虔诚",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "纯美的勇气赞歌",
+            "skill_desc": "对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "枪之召唤",
+            "skill_desc": "召唤4个【枪尖】的雕塑。如果场上已经存在4个【枪尖】的雕塑，则会施放【枪之横扫】。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "盾之召唤",
+            "skill_desc": "召唤4个【盾】的雕塑。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "授勋云集",
+            "skill_desc": "召唤4个【授勋】的雕塑。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "枪之横扫",
+            "skill_desc": "释放【枪尖】的雕塑中的力量，对我方全体造成物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "盾之奉还",
+            "skill_desc": "释放【盾】的雕塑中的力量，命令【盾】的雕塑嘲讽对位我方角色，并根据目标调整自身弱点属性。",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "授勋之力",
+            "skill_desc": "进入不可选中状态，下次行动时释放【不可抵挡的命运】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "灵魂回收",
+            "skill_desc": "收回所有雕塑中的【灵魂释放】，并基于【灵魂释放】的数量强化自身，持续1回合。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "灵魂释放",
+            "skill_desc": "芒寒色正的银骑士会为召唤的雕塑施加【灵魂释放】，被施加的单位被消灭时，会为我方全体附加【灵魂强化】，提高造成的伤害；如果被芒寒色正的银骑士回收，则会提高芒寒色正的银骑士本回合造成的伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "不可抵挡的命运",
+            "skill_desc": "对我方全体造成物理属性伤害。每有一层【桂冠】，额外追加一次物理属性伤害。",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "破竹之势",
+            "skill_desc": "芒寒色正的银骑士受到的伤害大幅降低，但在被弱点击破后，行动额外延后，受到的伤害额外提高，同时使我方全体恢复战技点并激活终结技。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "攻守易型",
+            "skill_desc": "芒寒色正的银骑士会在战斗中切换自身<u>战斗姿态</u>，召唤不同雕塑进行战斗；我方消灭【灵魂释放】状态的雕塑时，会使本次战斗中我方全体造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "战斗姿态",
+                "desc": "芒寒色正的银骑士会随着战斗改变自身的状态：\\n【骑士之怒】：召唤【枪尖】的雕塑，自身受到的所有伤害降低，有4个雕塑在场时自身进入韧性保护状态。\\n【黄金奉还】：召唤【盾】的雕塑，自身造成的所有伤害提高。\\n【瑰丽之勋】：召唤【授勋】的雕塑，有雕塑存在时，自身不可被选中。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "绝境逆转",
+            "skill_desc": "芒寒色正的银骑士二阶段释放【灵魂释放】时，会选择所有雕塑作为目标。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "众星拱卫",
+            "skill_desc": "除芒寒色正的银骑士外，每多存在1个敌方单位，敌方全体受到的伤害降低，造成的伤害提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 3024013,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  },
+  "en": {
+    "id": 3024013,
+    "name": "Silver Knight of Virtuous Gallantry",
+    "desc": "A paragon knight of the Knights of Beauty who is piously seeking his missing Aeon, Idrila the Beauty.\\nForthright and candid, he wanders the cosmos espousing the virtues of Idrila's good name.",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 5812.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_3024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 105,
+    "stance_base": 810,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 3024013,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "Piety",
+            "skill_desc": "Deals Physical DMG to a single target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "Imbue Devotion",
+            "skill_desc": "Deals Physical DMG to a single target and units adjacent to the target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "Hymn of Gorgeous Courage",
+            "skill_desc": "Deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "Lance's Summon",
+            "skill_desc": "Summons 4 statues of Speartips. If 4 statues of Speartip already exist on the field, use Sweeping Lance.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "Shield's Summon",
+            "skill_desc": "Summons 4 statues of The Shield.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "Honored Multitudes",
+            "skill_desc": "Summon 4 statues of The Honored.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "Sweeping Lance",
+            "skill_desc": "Releases the power in the Speartip statue and deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "Shield's Retribution",
+            "skill_desc": "Releases the power in \"The Shield\" statue. Commands \"The Shield\" statue to Taunt the target character directly facing the statue, and adjusts the statue's Weakness Type according to the targets facing it.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "Strength of Honor",
+            "skill_desc": "Enters an unselectable state. In the next turn, use Undeniable Fate.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "Soul Regained",
+            "skill_desc": "Regains \"Soulfreed\" from all statues and Enhances this unit based on the number of \"Soulfreed,\" lasting for 1 turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "Soulfreed",
+            "skill_desc": "Silver Knight of Virtuous Gallantry will apply \"Soulfreed\" to the summoned statues. When the unit with \"Soulfreed\" is defeated, apply \"Soul Enhancement\" to all targets and increase DMG dealt. If Silver Knight of Virtuous Gallantry regains \"Soulfreed,\" it will instead increase the DMG dealt by Silver Knight of Virtuous Gallantry in this turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "Undeniable Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Additionally, apply Physical DMG 1 time for every stack of Wreath.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "Unstoppable Momentum",
+            "skill_desc": "Damage received by Silver Knight of Virtuous Gallantry is greatly reduced. However, after being Weakness Broken, its action is additionally delayed and it receives more DMG, as well as recovering all targets' Skill Points and activating all targets' Ultimates.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "Reversal of Fortune",
+            "skill_desc": "The Silver Knight of Virtuous Gallantry can switch their own <u>Combat Stance</u> in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "Combat Stance",
+                "desc": "The Silver Knight of Virtuous Gallantry will change their state throughout the battle:\\n\"Chivalric Wrath\": Summons \"Speartip\" statues and decreases all DMG taken by this unit. When 4 statues are on the field, this unit enters the Toughness Protection state.\\n\"Golden Harvest\": Summons \"Shield\" statues and increases all DMG dealt by this unit.\\n\"Medal of Elegance\": Summons \"The Honored\" statues. When statues exist on the field, this unit cannot be selected as a target.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "Turn Back the Tide",
+            "skill_desc": "When the Silver Knight of Virtuous Gallantry uses \"Soulfreed\" in their second phase, they will target all the statues.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "Stellar Aegis",
+            "skill_desc": "For every unit on the enemy's side of the field aside from the Silver Knight of Virtuous Gallantry, all enemies receive less DMG and deal more DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401301,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -390,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "Piety",
+            "skill_desc": "Deals Physical DMG to a single target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "Imbue Devotion",
+            "skill_desc": "Deals Physical DMG to a single target and units adjacent to the target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "Hymn of Gorgeous Courage",
+            "skill_desc": "Deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "Lance's Summon",
+            "skill_desc": "Summons 4 statues of Speartips. If 4 statues of Speartip already exist on the field, use Sweeping Lance.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "Shield's Summon",
+            "skill_desc": "Summons 4 statues of The Shield.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "Honored Multitudes",
+            "skill_desc": "Summon 4 statues of The Honored.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "Sweeping Lance",
+            "skill_desc": "Releases the power in the Speartip statue and deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "Shield's Retribution",
+            "skill_desc": "Releases the power in \"The Shield\" statue. Commands \"The Shield\" statue to Taunt the target character directly facing the statue, and adjusts the statue's Weakness Type according to the targets facing it.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "Strength of Honor",
+            "skill_desc": "Enters an unselectable state. In the next turn, use Undeniable Fate.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "Soul Regained",
+            "skill_desc": "Regains \"Soulfreed\" from all statues and Enhances this unit based on the number of \"Soulfreed,\" lasting for 1 turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "Soulfreed",
+            "skill_desc": "Silver Knight of Virtuous Gallantry will apply \"Soulfreed\" to the summoned statues. When the unit with \"Soulfreed\" is defeated, apply \"Soul Enhancement\" to all targets and increase DMG dealt. If Silver Knight of Virtuous Gallantry regains \"Soulfreed,\" it will instead increase the DMG dealt by Silver Knight of Virtuous Gallantry in this turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "Undeniable Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Additionally, apply Physical DMG 1 time for every stack of Wreath.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "Unstoppable Momentum",
+            "skill_desc": "Damage received by Silver Knight of Virtuous Gallantry is greatly reduced. However, after being Weakness Broken, its action is additionally delayed and it receives more DMG, as well as recovering all targets' Skill Points and activating all targets' Ultimates.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "Reversal of Fortune",
+            "skill_desc": "The Silver Knight of Virtuous Gallantry can switch their own <u>Combat Stance</u> in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "Combat Stance",
+                "desc": "The Silver Knight of Virtuous Gallantry will change their state throughout the battle:\\n\"Chivalric Wrath\": Summons \"Speartip\" statues and decreases all DMG taken by this unit. When 4 statues are on the field, this unit enters the Toughness Protection state.\\n\"Golden Harvest\": Summons \"Shield\" statues and increases all DMG dealt by this unit.\\n\"Medal of Elegance\": Summons \"The Honored\" statues. When statues exist on the field, this unit cannot be selected as a target.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "Turn Back the Tide",
+            "skill_desc": "When the Silver Knight of Virtuous Gallantry uses \"Soulfreed\" in their second phase, they will target all the statues.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "Stellar Aegis",
+            "skill_desc": "For every unit on the enemy's side of the field aside from the Silver Knight of Virtuous Gallantry, all enemies receive less DMG and deal more DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401302,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -270,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "Piety",
+            "skill_desc": "Deals Physical DMG to a single target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "Imbue Devotion",
+            "skill_desc": "Deals Physical DMG to a single target and units adjacent to the target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "Hymn of Gorgeous Courage",
+            "skill_desc": "Deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "Lance's Summon",
+            "skill_desc": "Summons 4 statues of Speartips. If 4 statues of Speartip already exist on the field, use Sweeping Lance.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "Shield's Summon",
+            "skill_desc": "Summons 4 statues of The Shield.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "Honored Multitudes",
+            "skill_desc": "Summon 4 statues of The Honored.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "Sweeping Lance",
+            "skill_desc": "Releases the power in the Speartip statue and deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "Shield's Retribution",
+            "skill_desc": "Releases the power in \"The Shield\" statue. Commands \"The Shield\" statue to Taunt the target character directly facing the statue, and adjusts the statue's Weakness Type according to the targets facing it.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "Strength of Honor",
+            "skill_desc": "Enters an unselectable state. In the next turn, use Undeniable Fate.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "Soul Regained",
+            "skill_desc": "Regains \"Soulfreed\" from all statues and Enhances this unit based on the number of \"Soulfreed,\" lasting for 1 turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "Soulfreed",
+            "skill_desc": "Silver Knight of Virtuous Gallantry will apply \"Soulfreed\" to the summoned statues. When the unit with \"Soulfreed\" is defeated, apply \"Soul Enhancement\" to all targets and increase DMG dealt. If Silver Knight of Virtuous Gallantry regains \"Soulfreed,\" it will instead increase the DMG dealt by Silver Knight of Virtuous Gallantry in this turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "Undeniable Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Additionally, apply Physical DMG 1 time for every stack of Wreath.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "Unstoppable Momentum",
+            "skill_desc": "Damage received by Silver Knight of Virtuous Gallantry is greatly reduced. However, after being Weakness Broken, its action is additionally delayed and it receives more DMG, as well as recovering all targets' Skill Points and activating all targets' Ultimates.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "Reversal of Fortune",
+            "skill_desc": "The Silver Knight of Virtuous Gallantry can switch their own <u>Combat Stance</u> in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "Combat Stance",
+                "desc": "The Silver Knight of Virtuous Gallantry will change their state throughout the battle:\\n\"Chivalric Wrath\": Summons \"Speartip\" statues and decreases all DMG taken by this unit. When 4 statues are on the field, this unit enters the Toughness Protection state.\\n\"Golden Harvest\": Summons \"Shield\" statues and increases all DMG dealt by this unit.\\n\"Medal of Elegance\": Summons \"The Honored\" statues. When statues exist on the field, this unit cannot be selected as a target.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "Turn Back the Tide",
+            "skill_desc": "When the Silver Knight of Virtuous Gallantry uses \"Soulfreed\" in their second phase, they will target all the statues.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "Stellar Aegis",
+            "skill_desc": "For every unit on the enemy's side of the field aside from the Silver Knight of Virtuous Gallantry, all enemies receive less DMG and deal more DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401303,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -150,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "Piety",
+            "skill_desc": "Deals Physical DMG to a single target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "Imbue Devotion",
+            "skill_desc": "Deals Physical DMG to a single target and units adjacent to the target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "Hymn of Gorgeous Courage",
+            "skill_desc": "Deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "Lance's Summon",
+            "skill_desc": "Summons 4 statues of Speartips. If 4 statues of Speartip already exist on the field, use Sweeping Lance.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "Shield's Summon",
+            "skill_desc": "Summons 4 statues of The Shield.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "Honored Multitudes",
+            "skill_desc": "Summon 4 statues of The Honored.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "Sweeping Lance",
+            "skill_desc": "Releases the power in the Speartip statue and deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "Shield's Retribution",
+            "skill_desc": "Releases the power in \"The Shield\" statue. Commands \"The Shield\" statue to Taunt the target character directly facing the statue, and adjusts the statue's Weakness Type according to the targets facing it.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "Strength of Honor",
+            "skill_desc": "Enters an unselectable state. In the next turn, use Undeniable Fate.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "Soul Regained",
+            "skill_desc": "Regains \"Soulfreed\" from all statues and Enhances this unit based on the number of \"Soulfreed,\" lasting for 1 turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "Soulfreed",
+            "skill_desc": "Silver Knight of Virtuous Gallantry will apply \"Soulfreed\" to the summoned statues. When the unit with \"Soulfreed\" is defeated, apply \"Soul Enhancement\" to all targets and increase DMG dealt. If Silver Knight of Virtuous Gallantry regains \"Soulfreed,\" it will instead increase the DMG dealt by Silver Knight of Virtuous Gallantry in this turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "Undeniable Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Additionally, apply Physical DMG 1 time for every stack of Wreath.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "Unstoppable Momentum",
+            "skill_desc": "Damage received by Silver Knight of Virtuous Gallantry is greatly reduced. However, after being Weakness Broken, its action is additionally delayed and it receives more DMG, as well as recovering all targets' Skill Points and activating all targets' Ultimates.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "Reversal of Fortune",
+            "skill_desc": "The Silver Knight of Virtuous Gallantry can switch their own <u>Combat Stance</u> in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "Combat Stance",
+                "desc": "The Silver Knight of Virtuous Gallantry will change their state throughout the battle:\\n\"Chivalric Wrath\": Summons \"Speartip\" statues and decreases all DMG taken by this unit. When 4 statues are on the field, this unit enters the Toughness Protection state.\\n\"Golden Harvest\": Summons \"Shield\" statues and increases all DMG dealt by this unit.\\n\"Medal of Elegance\": Summons \"The Honored\" statues. When statues exist on the field, this unit cannot be selected as a target.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "Turn Back the Tide",
+            "skill_desc": "When the Silver Knight of Virtuous Gallantry uses \"Soulfreed\" in their second phase, they will target all the statues.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "Stellar Aegis",
+            "skill_desc": "For every unit on the enemy's side of the field aside from the Silver Knight of Virtuous Gallantry, all enemies receive less DMG and deal more DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 302401304,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": 90,
+        "stance_weak_list": [
+          "Physical",
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Thunder",
+            "value": 0.6
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 302401301,
+            "skill_name": "Piety",
+            "skill_desc": "Deals Physical DMG to a single target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401302,
+            "skill_name": "Imbue Devotion",
+            "skill_desc": "Deals Physical DMG to a single target and units adjacent to the target.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401303,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401304,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401305,
+            "skill_name": "Hymn of Gorgeous Courage",
+            "skill_desc": "Deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401306,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401307,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401308,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401310,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401311,
+            "skill_name": "Lance's Summon",
+            "skill_desc": "Summons 4 statues of Speartips. If 4 statues of Speartip already exist on the field, use Sweeping Lance.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401312,
+            "skill_name": "Shield's Summon",
+            "skill_desc": "Summons 4 statues of The Shield.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401313,
+            "skill_name": "Honored Multitudes",
+            "skill_desc": "Summon 4 statues of The Honored.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401314,
+            "skill_name": "Sweeping Lance",
+            "skill_desc": "Releases the power in the Speartip statue and deals Physical DMG to all targets.",
+            "damage_type": "Physical",
+            "sp_hit_base": 40,
+            "extra": {}
+          },
+          {
+            "id": 302401315,
+            "skill_name": "Shield's Retribution",
+            "skill_desc": "Releases the power in \"The Shield\" statue. Commands \"The Shield\" statue to Taunt the target character directly facing the statue, and adjusts the statue's Weakness Type according to the targets facing it.",
+            "damage_type": "Physical",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 302401316,
+            "skill_name": "Strength of Honor",
+            "skill_desc": "Enters an unselectable state. In the next turn, use Undeniable Fate.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401317,
+            "skill_name": "Soul Regained",
+            "skill_desc": "Regains \"Soulfreed\" from all statues and Enhances this unit based on the number of \"Soulfreed,\" lasting for 1 turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401318,
+            "skill_name": "Soulfreed",
+            "skill_desc": "Silver Knight of Virtuous Gallantry will apply \"Soulfreed\" to the summoned statues. When the unit with \"Soulfreed\" is defeated, apply \"Soul Enhancement\" to all targets and increase DMG dealt. If Silver Knight of Virtuous Gallantry regains \"Soulfreed,\" it will instead increase the DMG dealt by Silver Knight of Virtuous Gallantry in this turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401319,
+            "skill_name": "Undeniable Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Additionally, apply Physical DMG 1 time for every stack of Wreath.",
+            "damage_type": "Physical",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 302401320,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401321,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401322,
+            "skill_name": "Unstoppable Momentum",
+            "skill_desc": "Damage received by Silver Knight of Virtuous Gallantry is greatly reduced. However, after being Weakness Broken, its action is additionally delayed and it receives more DMG, as well as recovering all targets' Skill Points and activating all targets' Ultimates.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401323,
+            "skill_name": "Reversal of Fortune",
+            "skill_desc": "The Silver Knight of Virtuous Gallantry can switch their own <u>Combat Stance</u> in battle and summon different statues to fight. When characters defeat statues in the \"Soulfreed\" state, DMG dealt by the team in this battle will be increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "70000303": {
+                "name": "Combat Stance",
+                "desc": "The Silver Knight of Virtuous Gallantry will change their state throughout the battle:\\n\"Chivalric Wrath\": Summons \"Speartip\" statues and decreases all DMG taken by this unit. When 4 statues are on the field, this unit enters the Toughness Protection state.\\n\"Golden Harvest\": Summons \"Shield\" statues and increases all DMG dealt by this unit.\\n\"Medal of Elegance\": Summons \"The Honored\" statues. When statues exist on the field, this unit cannot be selected as a target.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 302401324,
+            "skill_name": "Turn Back the Tide",
+            "skill_desc": "When the Silver Knight of Virtuous Gallantry uses \"Soulfreed\" in their second phase, they will target all the statues.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401325,
+            "skill_name": "Stellar Aegis",
+            "skill_desc": "For every unit on the enemy's side of the field aside from the Silver Knight of Virtuous Gallantry, all enemies receive less DMG and deal more DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 302401326,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 3024013,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 3024013,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  }
+}

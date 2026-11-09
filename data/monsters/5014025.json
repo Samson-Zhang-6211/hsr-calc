@@ -1,0 +1,391 @@
+{
+  "id": "5014025",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "合金机铠•帕姆王",
+    "en": "Alloy Mechatron: King Pom-Pom"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Thunder",
+      "Quantum",
+      "Imaginary"
+    ]
+  },
+  "zh": {
+    "id": 5014025,
+    "name": "合金机铠•帕姆王",
+    "desc": "谁能驾驭星穹列车的洪荒之力？！失控的帕姆变成了「合金机铠•帕姆王」。\\n帕姆王是一台对干净整洁极为执着的强大机铠，按照它的标准，这里不干净了，必须进行全！面！打！扫！帕！",
+    "monster_camp_id": 17,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 7672.5,
+    "initial_delay_ratio": 0.8,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5014020.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 142,
+    "stance_base": 600,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5014025,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 501402501,
+            "skill_name": "灵魂修正剪",
+            "skill_desc": "对指定我方单体目标造成少量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 501402503,
+            "skill_name": "高温消毒模式",
+            "skill_desc": "进入【蒸汽洗涤】状态，使自身造成的伤害提高，并获得【长效抗菌】效果，韧性无法被削减，并使自身受到所有伤害大幅降低。追加攻击伤害和欢愉伤害破除【长效抗菌】的效率大幅提高。【长效抗菌】解除时，退出【蒸汽洗涤】状态，使自身陷入弱点击破状态并受到大量伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 501402502,
+            "skill_name": "无死角洗涤",
+            "skill_desc": "对我方全体目标造成量子属性伤害，并使我方获得<u>笑点</u>。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402504,
+            "skill_name": "强效肥皂泡",
+            "skill_desc": "对我方全体目标造成量子属性伤害并施加【劳动最快乐！】效果，同时使我方获得<u>笑点</u>。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402505,
+            "skill_name": "值日准备中…",
+            "skill_desc": "进入【摩拳擦掌】状态，获得【韧性保护】效果，下次行动时施放【饱和式大扫除！】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 501402506,
+            "skill_name": "饱和式大扫除！",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害，并使我方获得<u>笑点</u>。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 15,
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402508,
+            "skill_name": "洗地机之乱",
+            "skill_desc": "战斗开始时，为我方召唤「合金保姆」。我方每获得1个笑点时我方的「合金保姆」积累1点充能值，充能值达到<unbreak>#1[i]</unbreak>时可施放强化普攻。我方的「合金保姆」不会被敌我双方选中。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402509,
+            "skill_name": "长效抗菌",
+            "skill_desc": "若在释放【高温消毒模式】前生命值降低到一定值，则立刻释放【高温消毒模式】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5014025,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ]
+  },
+  "en": {
+    "id": 5014025,
+    "name": "Alloy Mechatron: King Pom-Pom",
+    "desc": "Who can handle the wild, untamed power of the Astral Express!? Pom-Pom, now beyond control, has transformed into Alloy Mechatron: King Pom-Pom.\\nKing Pom-Pom is a powerful mechatron obsessed with cleanliness and order. By its standards, this place is a mess and needs a thorough! Deep! Clean!",
+    "monster_camp_id": 17,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 7672.5,
+    "initial_delay_ratio": 0.8,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5014020.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 142,
+    "stance_base": 600,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5014025,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Thunder",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 501402501,
+            "skill_name": "Soulmend Shears",
+            "skill_desc": "Deals minor Quantum DMG to one designated target.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 501402503,
+            "skill_name": "High-Temp Sterilization Mode",
+            "skill_desc": "Enters the \"Steam Wash\" state, increasing DMG dealt by this unit, granting this unit the \"Lasting Antibac\" effect, whereby its Toughness cannot be reduced, and all DMG received by this unit are greatly reduced. The efficiency of Follow-Up ATK DMG or Elation DMG dispelling \"Lasting Antibac\" greatly increases. When \"Lasting Antibac\" is dispelled, this unit exits the \"Steam Wash\" state, enters the Weakness Broken state, and receives massive DMG.",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 501402502,
+            "skill_name": "Zero-Blind-Spot Cleanse",
+            "skill_desc": "Deals Quantum DMG to all targets and grants the target team <u>Punchline</u>.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402504,
+            "skill_name": "Potent Foam Soap",
+            "skill_desc": "Deals Quantum DMG to all targets and applies the \"Work Is Bliss!\" effect, while causing the target team to gain <u>Punchline</u>.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402505,
+            "skill_name": "Duty Prep in Progress...",
+            "skill_desc": "Enters the \"Raring to Go\" state and gains the \"Toughness Protection\" effect. Uses \"Saturation Cleaning!\" in the next action.",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 501402506,
+            "skill_name": "Saturation Cleaning!",
+            "skill_desc": "Deals massive Quantum DMG to all targets and grants the target team <u>Punchline</u>.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 15,
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402508,
+            "skill_name": "Scrubber's Mutiny",
+            "skill_desc": "When battle begins, summons an \"Alloy Pommy\" for the target team. Each time targets gain 1 Punchline, the target team's \"Alloy Pommy\" accumulates 1 Charge. Upon reaching <unbreak>#1[i]</unbreak> Charge, it can use an Enhanced Basic ATK. The target team's \"Alloy Pommy\" cannot be targeted by either side.",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 501402509,
+            "skill_name": "Lasting Antibac",
+            "skill_desc": "If HP drops to a certain value before using \"High-Temp Sterilization Mode,\" immediately uses \"High-Temp Sterilization Mode\".",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5014025,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5014025,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ]
+  }
+}

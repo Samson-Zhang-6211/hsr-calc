@@ -1,0 +1,96 @@
+{
+  "id": "120",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "风举云飞的勇烈",
+    "en": "The Wind-Soaring Valorous"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "风举云飞的勇烈",
+    "icon": "SpriteOutput/ItemIcon/71033.png",
+    "parts": {
+      "31201": {
+        "name": "勇烈的玄枵面甲",
+        "desc": null,
+        "story": null
+      },
+      "31202": {
+        "name": "勇烈的钩爪腕甲",
+        "desc": null,
+        "story": null
+      },
+      "31203": {
+        "name": "勇烈的飞翎瓷甲",
+        "desc": null,
+        "story": null
+      },
+      "31204": {
+        "name": "勇烈的逐猎腿甲",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "攻击力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "使装备者的暴击率提高<unbreak>#1[i]%</unbreak>，装备者施放追加攻击时，使终结技造成的伤害提高<unbreak>#2[i]%</unbreak>，持续<unbreak>#3[i]</unbreak>回合。",
+        "param_list": [
+          0.06,
+          0.36,
+          1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "The Wind-Soaring Valorous",
+    "icon": "SpriteOutput/ItemIcon/71033.png",
+    "parts": {
+      "31201": {
+        "name": "Valorous Mask of Northern Skies",
+        "desc": null,
+        "story": null
+      },
+      "31202": {
+        "name": "Valorous Bracelet of Grappling Hooks",
+        "desc": null,
+        "story": null
+      },
+      "31203": {
+        "name": "Valorous Plate of Soaring Flight",
+        "desc": null,
+        "story": null
+      },
+      "31204": {
+        "name": "Valorous Greaves of Pursuing Hunt",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "Increases the wearer's CRIT Rate by <unbreak>#1[i]%</unbreak>. After the wearer uses a Follow-Up ATK, increases DMG dealt by Ultimate by <unbreak>#2[i]%</unbreak>, lasting for <unbreak>#3[i]</unbreak> turn(s).",
+        "param_list": [
+          0.06,
+          0.36,
+          1
+        ]
+      }
+    }
+  }
+}

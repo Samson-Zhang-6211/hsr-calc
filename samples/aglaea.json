@@ -1,0 +1,43 @@
+[
+  {
+    "id": "axis-aglaea",
+    "rosterId": "1402",
+    "name": "阿格莱雅",
+    "element": "Thunder",
+    "level": 80,
+    "atk": 2577,
+    "hp": 1242,
+    "def": 485,
+    "critRate": 0.7,
+    "critDmg": 1.06,
+    "breakEffect": 0,
+    "damageBonus": 0,
+    "commonBonus": 0,
+    "elementDmg": {
+      "Physical": 0,
+      "Fire": 0,
+      "Ice": 0,
+      "Thunder": 0.224,
+      "Wind": 0,
+      "Quantum": 0,
+      "Imaginary": 0
+    },
+    "speed": 159,
+    "energyRegen": 0,
+    "mode": "manual",
+    "skillLevels": {
+      "basic": 10,
+      "skill": 10,
+      "ult": 10,
+      "talent": 10,
+      "memoSkill": 10
+    },
+    "build": {
+      "lightconeId": "23036",
+      "refinement": 1,
+      "relicsetId": "123",
+      "planarsetId": "318",
+      "eidolonLevel": 1
+    }
+  }
+]

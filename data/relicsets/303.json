@@ -1,0 +1,64 @@
+{
+  "id": "303",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "泛银河商业公司",
+    "en": "Pan-Cosmic Commercial Enterprise"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "泛银河商业公司",
+    "icon": "SpriteOutput/ItemIcon/71014.png",
+    "parts": {
+      "33035": {
+        "name": "公司的巨构总部",
+        "desc": null,
+        "story": null
+      },
+      "33036": {
+        "name": "公司的贸易航道",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的效果命中提高<unbreak>#1[i]%</unbreak>。同时提高装备者等同于当前效果命中<unbreak>#2[i]%</unbreak>的攻击力，最多提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.1,
+          0.25,
+          0.25
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Pan-Cosmic Commercial Enterprise",
+    "icon": "SpriteOutput/ItemIcon/71014.png",
+    "parts": {
+      "33035": {
+        "name": "The IPC's Mega HQ",
+        "desc": null,
+        "story": null
+      },
+      "33036": {
+        "name": "The IPC's Trade Route",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Effect Hit Rate by <unbreak>#1[i]%</unbreak>. Meanwhile, the wearer's ATK increases by an amount that is equal to <unbreak>#2[i]%</unbreak> of the current Effect Hit Rate, up to a maximum increase of <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          0.1,
+          0.25,
+          0.25
+        ]
+      }
+    }
+  }
+}

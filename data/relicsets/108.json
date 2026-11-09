@@ -1,0 +1,94 @@
+{
+  "id": "108",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "繁星璀璨的天才",
+    "en": "Genius of Brilliant Stars"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "繁星璀璨的天才",
+    "icon": "SpriteOutput/ItemIcon/71007.png",
+    "parts": {
+      "31081": {
+        "name": "天才的超距遥感",
+        "desc": null,
+        "story": null
+      },
+      "31082": {
+        "name": "天才的频变捕手",
+        "desc": null,
+        "story": null
+      },
+      "31083": {
+        "name": "天才的元域深潜",
+        "desc": null,
+        "story": null
+      },
+      "31084": {
+        "name": "天才的引力漫步",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "量子属性伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "当装备者对敌方目标造成伤害时，无视其<unbreak>#1[i]%</unbreak>的防御力。若目标拥有量子属性弱点，额外无视其<unbreak>#2[i]%</unbreak>的防御力。",
+        "param_list": [
+          0.1,
+          0.1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Genius of Brilliant Stars",
+    "icon": "SpriteOutput/ItemIcon/71007.png",
+    "parts": {
+      "31081": {
+        "name": "Genius's Ultraremote Sensing Visor",
+        "desc": null,
+        "story": null
+      },
+      "31082": {
+        "name": "Genius's Frequency Catcher",
+        "desc": null,
+        "story": null
+      },
+      "31083": {
+        "name": "Genius's Metafield Suit",
+        "desc": null,
+        "story": null
+      },
+      "31084": {
+        "name": "Genius's Gravity Walker",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Quantum DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "When the wearer deals DMG to the target enemy, ignores <unbreak>#1[i]%</unbreak> DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores <unbreak>#2[i]%</unbreak> DEF.",
+        "param_list": [
+          0.1,
+          0.1
+        ]
+      }
+    }
+  }
+}

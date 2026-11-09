@@ -1,0 +1,1962 @@
+{
+  "version": "4.6.54",
+  "count": 99,
+  "items": [
+    {
+      "id": "1001",
+      "zh": "三月七",
+      "en": "March 7th",
+      "meta": {
+        "element": "Ice",
+        "path": "Knight",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 3,
+          "SpeedDelta": 3,
+          "StatusProbabilityBase": 1
+        },
+        "portrait": "/portraits/1001.webp",
+        "portraitShop": "/portraits-shop/1001.webp"
+      }
+    },
+    {
+      "id": "1002",
+      "zh": "丹恒",
+      "en": "Dan Heng",
+      "meta": {
+        "element": "Wind",
+        "path": "Rogue",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1002.webp",
+        "portraitShop": "/portraits-shop/1002.webp"
+      }
+    },
+    {
+      "id": "1003",
+      "zh": "姬子",
+      "en": "Himeko",
+      "meta": {
+        "element": "Fire",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1003.webp",
+        "portraitShop": "/portraits-shop/1003.webp"
+      }
+    },
+    {
+      "id": "1004",
+      "zh": "瓦尔特",
+      "en": "Welt",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 5,
+          "SpeedDelta": 3,
+          "CriticalDamageBase": 3,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1004.webp",
+        "portraitShop": "/portraits-shop/1004.webp"
+      }
+    },
+    {
+      "id": "1005",
+      "zh": "卡芙卡",
+      "en": "Kafka",
+      "meta": {
+        "element": "Thunder",
+        "path": "Warlock",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1005-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1006",
+      "zh": "银狼",
+      "en": "Silver Wolf",
+      "meta": {
+        "element": "Quantum",
+        "path": "Warlock",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1006-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1008",
+      "zh": "阿兰",
+      "en": "Arlan",
+      "meta": {
+        "element": "Thunder",
+        "path": "Warrior",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1008.webp",
+        "portraitShop": "/portraits-shop/1008.webp"
+      }
+    },
+    {
+      "id": "1009",
+      "zh": "艾丝妲",
+      "en": "Asta",
+      "meta": {
+        "element": "Fire",
+        "path": "Shaman",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1
+        },
+        "portrait": "/portraits/1009.webp",
+        "portraitShop": "/portraits-shop/1009.webp"
+      }
+    },
+    {
+      "id": "1013",
+      "zh": "黑塔",
+      "en": "Herta",
+      "meta": {
+        "element": "Ice",
+        "path": "Mage",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1013.webp",
+        "portraitShop": "/portraits-shop/1013.webp"
+      }
+    },
+    {
+      "id": "1014",
+      "zh": "Saber",
+      "en": "Saber",
+      "meta": {
+        "element": "Wind",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1014.webp",
+        "portraitShop": "/portraits-shop/1014.webp"
+      }
+    },
+    {
+      "id": "1015",
+      "zh": "Archer",
+      "en": "Archer",
+      "meta": {
+        "element": "Quantum",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1015.webp",
+        "portraitShop": "/portraits-shop/1015.webp"
+      }
+    },
+    {
+      "id": "1101",
+      "zh": "布洛妮娅",
+      "en": "Bronya",
+      "meta": {
+        "element": "Wind",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalDamageBase",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "CriticalDamageBase": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1101.webp",
+        "portraitShop": "/portraits-shop/1101.webp"
+      }
+    },
+    {
+      "id": "1102",
+      "zh": "希儿",
+      "en": "Seele",
+      "meta": {
+        "element": "Quantum",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1102.webp",
+        "portraitShop": "/portraits-shop/1102.webp"
+      }
+    },
+    {
+      "id": "1103",
+      "zh": "希露瓦",
+      "en": "Serval",
+      "meta": {
+        "element": "Thunder",
+        "path": "Mage",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "BreakDamageAddedRatioBase",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1,
+          "BreakDamageAddedRatioBase": 1
+        },
+        "portrait": "/portraits/1103.webp",
+        "portraitShop": "/portraits-shop/1103.webp"
+      }
+    },
+    {
+      "id": "1104",
+      "zh": "杰帕德",
+      "en": "Gepard",
+      "meta": {
+        "element": "Ice",
+        "path": "Knight",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1,
+          "StatusProbabilityBase": 1
+        },
+        "portrait": "/portraits/1104.webp",
+        "portraitShop": "/portraits-shop/1104.webp"
+      }
+    },
+    {
+      "id": "1105",
+      "zh": "娜塔莎",
+      "en": "Natasha",
+      "meta": {
+        "element": "Physical",
+        "path": "Priest",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1105.webp",
+        "portraitShop": "/portraits-shop/1105.webp"
+      }
+    },
+    {
+      "id": "1106",
+      "zh": "佩拉",
+      "en": "Pela",
+      "meta": {
+        "element": "Ice",
+        "path": "Warlock",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "StatusProbabilityBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1106.webp",
+        "portraitShop": "/portraits-shop/1106.webp"
+      }
+    },
+    {
+      "id": "1107",
+      "zh": "克拉拉",
+      "en": "Clara",
+      "meta": {
+        "element": "Physical",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1107.webp",
+        "portraitShop": "/portraits-shop/1107.webp"
+      }
+    },
+    {
+      "id": "1108",
+      "zh": "桑博",
+      "en": "Sampo",
+      "meta": {
+        "element": "Wind",
+        "path": "Warlock",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "BreakDamageAddedRatioBase",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1,
+          "BreakDamageAddedRatioBase": 1
+        },
+        "portrait": "/portraits/1108.webp",
+        "portraitShop": "/portraits-shop/1108.webp"
+      }
+    },
+    {
+      "id": "1109",
+      "zh": "虎克",
+      "en": "Hook",
+      "meta": {
+        "element": "Fire",
+        "path": "Warrior",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1109.webp",
+        "portraitShop": "/portraits-shop/1109.webp"
+      }
+    },
+    {
+      "id": "1110",
+      "zh": "玲可",
+      "en": "Lynx",
+      "meta": {
+        "element": "Quantum",
+        "path": "Priest",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1110.webp",
+        "portraitShop": "/portraits-shop/1110.webp"
+      }
+    },
+    {
+      "id": "1111",
+      "zh": "卢卡",
+      "en": "Luka",
+      "meta": {
+        "element": "Physical",
+        "path": "Warlock",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "BreakDamageAddedRatioBase",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1,
+          "BreakDamageAddedRatioBase": 1
+        },
+        "portrait": "/portraits/1111.webp",
+        "portraitShop": "/portraits-shop/1111.webp"
+      }
+    },
+    {
+      "id": "1112",
+      "zh": "托帕&账账",
+      "en": "Topaz & Numby",
+      "meta": {
+        "element": "Fire",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1112.webp",
+        "portraitShop": "/portraits-shop/1112.webp"
+      }
+    },
+    {
+      "id": "1201",
+      "zh": "青雀",
+      "en": "Qingque",
+      "meta": {
+        "element": "Quantum",
+        "path": "Mage",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1201.webp",
+        "portraitShop": "/portraits-shop/1201.webp"
+      }
+    },
+    {
+      "id": "1202",
+      "zh": "停云",
+      "en": "Tingyun",
+      "meta": {
+        "element": "Thunder",
+        "path": "Shaman",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1202.webp",
+        "portraitShop": "/portraits-shop/1202.webp"
+      }
+    },
+    {
+      "id": "1203",
+      "zh": "罗刹",
+      "en": "Luocha",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Priest",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1203.webp",
+        "portraitShop": "/portraits-shop/1203.webp"
+      }
+    },
+    {
+      "id": "1204",
+      "zh": "景元",
+      "en": "Jing Yuan",
+      "meta": {
+        "element": "Thunder",
+        "path": "Mage",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1205",
+      "zh": "刃",
+      "en": "Blade",
+      "meta": {
+        "element": "Wind",
+        "path": "Warrior",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1205-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1206",
+      "zh": "素裳",
+      "en": "Sushang",
+      "meta": {
+        "element": "Physical",
+        "path": "Rogue",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1206.webp",
+        "portraitShop": "/portraits-shop/1206.webp"
+      }
+    },
+    {
+      "id": "1207",
+      "zh": "驭空",
+      "en": "Yukong",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Shaman",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1207.webp",
+        "portraitShop": "/portraits-shop/1207.webp"
+      }
+    },
+    {
+      "id": "1208",
+      "zh": "符玄",
+      "en": "Fu Xuan",
+      "meta": {
+        "element": "Quantum",
+        "path": "Knight",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1208.webp",
+        "portraitShop": "/portraits-shop/1208.webp"
+      }
+    },
+    {
+      "id": "1209",
+      "zh": "彦卿",
+      "en": "Yanqing",
+      "meta": {
+        "element": "Ice",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0,
+        "portrait": "/portraits/1209.webp",
+        "portraitShop": "/portraits-shop/1209.webp"
+      }
+    },
+    {
+      "id": "1210",
+      "zh": "桂乃芬",
+      "en": "Guinaifen",
+      "meta": {
+        "element": "Fire",
+        "path": "Warlock",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "BreakDamageAddedRatioBase",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1,
+          "BreakDamageAddedRatioBase": 1
+        },
+        "portrait": "/portraits/1210.webp",
+        "portraitShop": "/portraits-shop/1210.webp"
+      }
+    },
+    {
+      "id": "1211",
+      "zh": "白露",
+      "en": "Bailu",
+      "meta": {
+        "element": "Thunder",
+        "path": "Priest",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1211.webp",
+        "portraitShop": "/portraits-shop/1211.webp"
+      }
+    },
+    {
+      "id": "1212",
+      "zh": "镜流",
+      "en": "Jingliu",
+      "meta": {
+        "element": "Ice",
+        "path": "Warrior",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1212-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1213",
+      "zh": "丹恒•饮月",
+      "en": "Dan Heng • Imbibitor Lunae",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Warrior",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1214",
+      "zh": "雪衣",
+      "en": "Xueyi",
+      "meta": {
+        "element": "Quantum",
+        "path": "Warrior",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "CriticalDamageBase": 3,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1214.webp",
+        "portraitShop": "/portraits-shop/1214.webp"
+      }
+    },
+    {
+      "id": "1215",
+      "zh": "寒鸦",
+      "en": "Hanya",
+      "meta": {
+        "element": "Physical",
+        "path": "Shaman",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1215.webp",
+        "portraitShop": "/portraits-shop/1215.webp"
+      }
+    },
+    {
+      "id": "1217",
+      "zh": "藿藿",
+      "en": "Huohuo",
+      "meta": {
+        "element": "Wind",
+        "path": "Priest",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1217-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1218",
+      "zh": "椒丘",
+      "en": "Jiaoqiu",
+      "meta": {
+        "element": "Fire",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1218.webp",
+        "portraitShop": "/portraits-shop/1218.webp"
+      }
+    },
+    {
+      "id": "1220",
+      "zh": "飞霄",
+      "en": "Feixiao",
+      "meta": {
+        "element": "Wind",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1220.webp",
+        "portraitShop": "/portraits-shop/1220.webp"
+      }
+    },
+    {
+      "id": "1221",
+      "zh": "云璃",
+      "en": "Yunli",
+      "meta": {
+        "element": "Physical",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1221.webp",
+        "portraitShop": "/portraits-shop/1221.webp"
+      }
+    },
+    {
+      "id": "1222",
+      "zh": "灵砂",
+      "en": "Lingsha",
+      "meta": {
+        "element": "Fire",
+        "path": "Priest",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase",
+          "BreakDamageAddedRatioBase"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1222.webp",
+        "portraitShop": "/portraits-shop/1222.webp"
+      }
+    },
+    {
+      "id": "1223",
+      "zh": "貊泽",
+      "en": "Moze",
+      "meta": {
+        "element": "Thunder",
+        "path": "Rogue",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1223.webp",
+        "portraitShop": "/portraits-shop/1223.webp"
+      }
+    },
+    {
+      "id": "1224",
+      "zh": "三月七",
+      "en": "March 7th",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Rogue",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1224.webp",
+        "portraitShop": "/portraits-shop/1224.webp"
+      }
+    },
+    {
+      "id": "1225",
+      "zh": "忘归人",
+      "en": "Fugue",
+      "meta": {
+        "element": "Fire",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "StatusProbabilityBase": 3
+        },
+        "portrait": "/portraits/1225.webp",
+        "portraitShop": "/portraits-shop/1225.webp"
+      }
+    },
+    {
+      "id": "1301",
+      "zh": "加拉赫",
+      "en": "Gallagher",
+      "meta": {
+        "element": "Fire",
+        "path": "Priest",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1301.webp",
+        "portraitShop": "/portraits-shop/1301.webp"
+      }
+    },
+    {
+      "id": "1302",
+      "zh": "银枝",
+      "en": "Argenti",
+      "meta": {
+        "element": "Physical",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.7,
+        "portrait": "/portraits/1302.webp",
+        "portraitShop": "/portraits-shop/1302.webp"
+      }
+    },
+    {
+      "id": "1303",
+      "zh": "阮•梅",
+      "en": "Ruan Mei",
+      "meta": {
+        "element": "Ice",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1303.webp",
+        "portraitShop": "/portraits-shop/1303.webp"
+      }
+    },
+    {
+      "id": "1304",
+      "zh": "砂金",
+      "en": "Aventurine",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Knight",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1304.webp",
+        "portraitShop": "/portraits-shop/1304.webp"
+      }
+    },
+    {
+      "id": "1305",
+      "zh": "真理医生",
+      "en": "Dr. Ratio",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.8,
+        "portrait": "/portraits/1305.webp",
+        "portraitShop": "/portraits-shop/1305.webp"
+      }
+    },
+    {
+      "id": "1306",
+      "zh": "花火",
+      "en": "Sparkle",
+      "meta": {
+        "element": "Quantum",
+        "path": "Shaman",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1306-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1307",
+      "zh": "黑天鹅",
+      "en": "Black Swan",
+      "meta": {
+        "element": "Wind",
+        "path": "Warlock",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1307-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1308",
+      "zh": "黄泉",
+      "en": "Acheron",
+      "meta": {
+        "element": "Thunder",
+        "path": "Warlock",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1309",
+      "zh": "知更鸟",
+      "en": "Robin",
+      "meta": {
+        "element": "Physical",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1309.webp",
+        "portraitShop": "/portraits-shop/1309.webp"
+      }
+    },
+    {
+      "id": "1310",
+      "zh": "流萤",
+      "en": "Firefly",
+      "meta": {
+        "element": "Fire",
+        "path": "Warrior",
+        "rarity": 5,
+        "patched": "enhanced-buff-2026-10",
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1310-enhanced.mjs"
+      }
+    },
+    {
+      "id": "1312",
+      "zh": "米沙",
+      "en": "Misha",
+      "meta": {
+        "element": "Ice",
+        "path": "Warrior",
+        "rarity": 4,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1312.webp",
+        "portraitShop": "/portraits-shop/1312.webp"
+      }
+    },
+    {
+      "id": "1313",
+      "zh": "星期日",
+      "en": "Sunday",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "SpeedDelta",
+          "CriticalDamageBase",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 3,
+          "CriticalDamageBase": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1313.webp",
+        "portraitShop": "/portraits-shop/1313.webp"
+      }
+    },
+    {
+      "id": "1314",
+      "zh": "翡翠",
+      "en": "Jade",
+      "meta": {
+        "element": "Quantum",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1314.webp",
+        "portraitShop": "/portraits-shop/1314.webp"
+      }
+    },
+    {
+      "id": "1315",
+      "zh": "波提欧",
+      "en": "Boothill",
+      "meta": {
+        "element": "Physical",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1315.webp",
+        "portraitShop": "/portraits-shop/1315.webp"
+      }
+    },
+    {
+      "id": "1317",
+      "zh": "乱破",
+      "en": "Rappa",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1317.webp",
+        "portraitShop": "/portraits-shop/1317.webp"
+      }
+    },
+    {
+      "id": "1321",
+      "zh": "大丽花",
+      "en": "The Dahlia",
+      "meta": {
+        "element": "Fire",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1321.webp",
+        "portraitShop": "/portraits-shop/1321.webp"
+      }
+    },
+    {
+      "id": "1401",
+      "zh": "大黑塔",
+      "en": "The Herta",
+      "meta": {
+        "element": "Ice",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1401.webp",
+        "portraitShop": "/portraits-shop/1401.webp"
+      }
+    },
+    {
+      "id": "1402",
+      "zh": "阿格莱雅",
+      "en": "Aglaea",
+      "meta": {
+        "element": "Thunder",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1402.webp",
+        "portraitShop": "/portraits-shop/1402.webp"
+      }
+    },
+    {
+      "id": "1403",
+      "zh": "缇宝",
+      "en": "Tribbie",
+      "meta": {
+        "element": "Quantum",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3
+        },
+        "portrait": "/portraits/1403.webp",
+        "portraitShop": "/portraits-shop/1403.webp"
+      }
+    },
+    {
+      "id": "1404",
+      "zh": "万敌",
+      "en": "Mydei",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.45,
+        "portrait": "/portraits/1404.webp",
+        "portraitShop": "/portraits-shop/1404.webp"
+      }
+    },
+    {
+      "id": "1405",
+      "zh": "那刻夏",
+      "en": "Anaxa",
+      "meta": {
+        "element": "Wind",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1405.webp",
+        "portraitShop": "/portraits-shop/1405.webp"
+      }
+    },
+    {
+      "id": "1406",
+      "zh": "赛飞儿",
+      "en": "Cipher",
+      "meta": {
+        "element": "Quantum",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 5,
+          "SpeedDelta": 3,
+          "CriticalDamageBase": 3,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 1
+        },
+        "critRateTarget": 0.4,
+        "portrait": "/portraits/1406.webp",
+        "portraitShop": "/portraits-shop/1406.webp"
+      }
+    },
+    {
+      "id": "1407",
+      "zh": "遐蝶",
+      "en": "Castorice",
+      "meta": {
+        "element": "Quantum",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3
+        },
+        "portrait": "/portraits/1407.webp",
+        "portraitShop": "/portraits-shop/1407.webp"
+      }
+    },
+    {
+      "id": "1408",
+      "zh": "白厄",
+      "en": "Phainon",
+      "meta": {
+        "element": "Physical",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1408.webp",
+        "portraitShop": "/portraits-shop/1408.webp"
+      }
+    },
+    {
+      "id": "1409",
+      "zh": "风堇",
+      "en": "Hyacine",
+      "meta": {
+        "element": "Wind",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase",
+          "CriticalDamageBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "HPAddedRatio": 3,
+          "CriticalDamageBase": 1,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1409.webp",
+        "portraitShop": "/portraits-shop/1409.webp"
+      }
+    },
+    {
+      "id": "1410",
+      "zh": "海瑟音",
+      "en": "Hysilens",
+      "meta": {
+        "element": "Physical",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1410.webp",
+        "portraitShop": "/portraits-shop/1410.webp"
+      }
+    },
+    {
+      "id": "1412",
+      "zh": "刻律德菈",
+      "en": "Cerydra",
+      "meta": {
+        "element": "Wind",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1412.webp",
+        "portraitShop": "/portraits-shop/1412.webp"
+      }
+    },
+    {
+      "id": "1413",
+      "zh": "长夜月",
+      "en": "Evernight",
+      "meta": {
+        "element": "Ice",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 3,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.55,
+        "portrait": "/portraits/1413.webp",
+        "portraitShop": "/portraits-shop/1413.webp"
+      }
+    },
+    {
+      "id": "1414",
+      "zh": "丹恒•腾荒",
+      "en": "Dan Heng • Permansor Terrae",
+      "meta": {
+        "element": "Physical",
+        "path": "Knight",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1414.webp",
+        "portraitShop": "/portraits-shop/1414.webp"
+      }
+    },
+    {
+      "id": "1415",
+      "zh": "昔涟",
+      "en": "Cyrene",
+      "meta": {
+        "element": "Ice",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "CriticalDamageBase": 3,
+          "HPAddedRatio": 1
+        },
+        "critRateTarget": 0.35,
+        "portrait": "/portraits/1415.webp",
+        "portraitShop": "/portraits-shop/1415.webp"
+      }
+    },
+    {
+      "id": "1501",
+      "zh": "火花",
+      "en": "Sparxie",
+      "meta": {
+        "element": "Fire",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1502",
+      "zh": "爻光",
+      "en": "Yao Guang",
+      "meta": {
+        "element": "Physical",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1503",
+      "zh": "真珠",
+      "en": "Pearl",
+      "meta": {
+        "element": "Ice",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1504",
+      "zh": "不死途",
+      "en": "Ashveil",
+      "meta": {
+        "element": "Thunder",
+        "path": "Rogue",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1504.webp",
+        "portraitShop": "/portraits-shop/1504.webp"
+      }
+    },
+    {
+      "id": "1505",
+      "zh": "绯英",
+      "en": "Evanescia",
+      "meta": {
+        "element": "Physical",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1506",
+      "zh": "银狼LV.<unbreak>999</unbreak>",
+      "en": "Silver Wolf LV.<unbreak>999</unbreak>",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1507",
+      "zh": "千冶•刃",
+      "en": "Mortenax Blade",
+      "meta": {
+        "element": "Fire",
+        "path": "Warlock",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.7,
+        "portrait": "/portraits/1507.webp",
+        "portraitShop": "/portraits-shop/1507.webp"
+      }
+    },
+    {
+      "id": "1508",
+      "zh": "远坂凛",
+      "en": "Rin Tohsaka",
+      "meta": {
+        "element": "Quantum",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1508.webp",
+        "portraitShop": "/portraits-shop/1508.webp"
+      }
+    },
+    {
+      "id": "1509",
+      "zh": "吉尔伽美什",
+      "en": "Gilgamesh",
+      "meta": {
+        "element": "Thunder",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1509.webp",
+        "portraitShop": "/portraits-shop/1509.webp"
+      }
+    },
+    {
+      "id": "1510",
+      "zh": "姬子•启行",
+      "en": "Himeko • Nova",
+      "meta": {
+        "element": "Fire",
+        "path": "Mage",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1510.webp",
+        "portraitShop": "/portraits-shop/1510.webp"
+      }
+    },
+    {
+      "id": "1511",
+      "zh": "星神★阿哈",
+      "en": "Aeon ★ Aha",
+      "meta": {
+        "element": "Quantum",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "1512",
+      "zh": "知更鸟•晴歌",
+      "en": "Robin • Summeretto",
+      "meta": {
+        "element": "Wind",
+        "path": "Memory",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.45,
+        "portrait": "/portraits/1512.webp",
+        "portraitShop": "/portraits-shop/1512.webp"
+      }
+    },
+    {
+      "id": "1513",
+      "zh": "砂金•戏浪",
+      "en": "Aventurine • Waveflair",
+      "meta": {
+        "element": "Quantum",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8001",
+      "zh": "开拓者·毁灭",
+      "en": "Trailblazer · Destruction",
+      "meta": {
+        "element": "Physical",
+        "path": "Warrior",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8002",
+      "zh": "开拓者·毁灭",
+      "en": "Trailblazer · Destruction",
+      "meta": {
+        "element": "Physical",
+        "path": "Warrior",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8003",
+      "zh": "开拓者·存护",
+      "en": "Trailblazer · Preservation",
+      "meta": {
+        "element": "Fire",
+        "path": "Knight",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8004",
+      "zh": "开拓者·存护",
+      "en": "Trailblazer · Preservation",
+      "meta": {
+        "element": "Fire",
+        "path": "Knight",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8005",
+      "zh": "开拓者·同谐",
+      "en": "Trailblazer · Harmony",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Shaman",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8006",
+      "zh": "开拓者·同谐",
+      "en": "Trailblazer · Harmony",
+      "meta": {
+        "element": "Imaginary",
+        "path": "Shaman",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8007",
+      "zh": "开拓者·记忆",
+      "en": "Trailblazer · Remembrance",
+      "meta": {
+        "element": "Ice",
+        "path": "Memory",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8008",
+      "zh": "开拓者·记忆",
+      "en": "Trailblazer · Remembrance",
+      "meta": {
+        "element": "Ice",
+        "path": "Memory",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8009",
+      "zh": "开拓者·欢愉",
+      "en": "Trailblazer · Elation",
+      "meta": {
+        "element": "Thunder",
+        "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "8010",
+      "zh": "开拓者·欢愉",
+      "en": "Trailblazer · Elation",
+      "meta": {
+        "element": "Thunder",
+        "path": "Elation",
+        "rarity": 5
+      }
+    }
+  ]
+}

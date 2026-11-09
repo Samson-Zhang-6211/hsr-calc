@@ -1,0 +1,96 @@
+{
+  "id": "126",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "恶海逐波的船长",
+    "en": "Wavestrider Captain"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "恶海逐波的船长",
+    "icon": "SpriteOutput/ItemIcon/71045.png",
+    "parts": {
+      "31261": {
+        "name": "船长的领航笠帽",
+        "desc": null,
+        "story": null
+      },
+      "31262": {
+        "name": "船长的捕光星盘",
+        "desc": null,
+        "story": null
+      },
+      "31263": {
+        "name": "船长的驭风斗篷",
+        "desc": null,
+        "story": null
+      },
+      "31264": {
+        "name": "船长的踏浪游靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "暴击伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "装备者成为其他我方目标的技能目标时，获得1层【助力】，最多叠加<unbreak>#1[i]</unbreak>层。施放终结技时，若持有<unbreak>#1[i]</unbreak>层【助力】，消耗所有【助力】，使装备者攻击力提高<unbreak>#2[i]%</unbreak>，持续<unbreak>#3[i]</unbreak>回合。",
+        "param_list": [
+          2,
+          0.48,
+          1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Wavestrider Captain",
+    "icon": "SpriteOutput/ItemIcon/71045.png",
+    "parts": {
+      "31261": {
+        "name": "Captain's Navigator Hat",
+        "desc": null,
+        "story": null
+      },
+      "31262": {
+        "name": "Captain's Lightcatcher Astrolabe",
+        "desc": null,
+        "story": null
+      },
+      "31263": {
+        "name": "Captain's Wind Mantle",
+        "desc": null,
+        "story": null
+      },
+      "31264": {
+        "name": "Captain's Tidal Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases CRIT DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "When the wearer becomes the target of another ally target's ability, gains 1 stack of \"Help,\" stacking up to <unbreak>#1[i]</unbreak> time(s). If there are <unbreak>#1[i]</unbreak> stack(s) of \"Help\" when the wearer uses their Ultimate, consumes all \"Help\" to increase the wearer's ATK by <unbreak>#2[i]%</unbreak> for <unbreak>#3[i]</unbreak> turn(s).",
+        "param_list": [
+          2,
+          0.48,
+          1
+        ]
+      }
+    }
+  }
+}

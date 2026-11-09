@@ -1,0 +1,64 @@
+{
+  "id": "307",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "盗贼公国塔利亚",
+    "en": "Talia: Kingdom of Banditry"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "盗贼公国塔利亚",
+    "icon": "SpriteOutput/ItemIcon/71018.png",
+    "parts": {
+      "33075": {
+        "name": "塔利亚的钉壳小镇",
+        "desc": null,
+        "story": null
+      },
+      "33076": {
+        "name": "塔利亚的裸皮电线",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的击破特攻提高<unbreak>#1[i]%</unbreak>。当装备者的速度大于等于<unbreak>#2[i]</unbreak>时，击破特攻额外提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.16,
+          145,
+          0.2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Talia: Kingdom of Banditry",
+    "icon": "SpriteOutput/ItemIcon/71018.png",
+    "parts": {
+      "33075": {
+        "name": "Talia's Nailscrap Town",
+        "desc": null,
+        "story": null
+      },
+      "33076": {
+        "name": "Talia's Exposed Electric Wire",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Break Effect by <unbreak>#1[i]%</unbreak>. When the wearer's SPD reaches <unbreak>#2[i]</unbreak> or higher, the wearer's Break Effect increases by an extra <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          0.16,
+          145,
+          0.2
+        ]
+      }
+    }
+  }
+}

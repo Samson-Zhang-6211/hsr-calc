@@ -1,0 +1,168 @@
+{
+  "pack": "moc-p43",
+  "mode": "moc",
+  "period": 43,
+  "title": "来生泅渡",
+  "p": 1035,
+  "source": "https://sr.appfeng.com/challenge/moc?p=1035",
+  "note": "混沌回忆第 43 期「来生泅渡」：按用户 2026-10-30 裁定，只收录最难关（其十二）与星启。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量。tags = 该半所有怪弱点的交集。",
+  "roundMode": "forgotten",
+  "difficultyGroup": 3,
+  "stages": [
+    {
+      "index": 12,
+      "name": "来生泅渡其十二",
+      "f": 12,
+      "kind": "boss",
+      "totalHp": 7279941,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Fire",
+            "Quantum"
+          ],
+          "level": 95,
+          "hp": 2356816,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013060",
+                  "level": 95,
+                  "name": "破晓战队•曙光",
+                  "rank": "精英",
+                  "hp": 523737,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8003010",
+                  "level": 95,
+                  "name": "外宇宙之冰",
+                  "rank": "精英",
+                  "hp": 349158,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5014010",
+                  "level": 95,
+                  "name": "火花大会@Official",
+                  "rank": "小BOSS",
+                  "hp": 1483921,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Physical",
+            "Ice"
+          ],
+          "level": 95,
+          "hp": 4923125,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2023030",
+                  "level": 95,
+                  "name": "承露天人",
+                  "rank": "精英",
+                  "hp": 384074,
+                  "count": 1
+                },
+                {
+                  "monsterId": "1003010",
+                  "level": 95,
+                  "name": "银鬃尉官",
+                  "rank": "精英",
+                  "hp": 349158,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4044010",
+                  "level": 95,
+                  "name": "第一位天才，隐德来希，赞达尔",
+                  "rank": "小BOSS",
+                  "hp": 4189894,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Stage 12"
+    },
+    {
+      "index": 0,
+      "name": "星启",
+      "f": 0,
+      "kind": "star",
+      "level": 95,
+      "totalHp": 2077489,
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "5013040",
+              "level": 95,
+              "name": "破晓战队•苍翼",
+              "rank": "精英",
+              "hp": 523737,
+              "count": 1
+            },
+            {
+              "monsterId": "3003050",
+              "level": 95,
+              "name": "「醉于盛会的此刻」",
+              "rank": "精英",
+              "hp": 418989,
+              "count": 1
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "5014030",
+              "level": 95,
+              "name": "始作画者，无量塔绘世",
+              "rank": "小BOSS",
+              "hp": 1134763,
+              "count": 1
+            }
+          ]
+        }
+      ],
+      "nameEn": "Tierce"
+    }
+  ],
+  "modeMechanics": [
+    {
+      "name": "记忆紊流",
+      "desc": "我方编队中第一位角色获得欢愉技【极乐漩涡】，可对敌方全体造成100%的角色属性欢愉伤害。每个轮开始时，使阿哈立即获得1个固定计入20笑点的额外回合，该回合不消耗笑点。"
+    }
+  ],
+  "expose": [
+    12,
+    0
+  ]
+}

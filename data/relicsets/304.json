@@ -1,0 +1,64 @@
+{
+  "id": "304",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "筑城者的贝洛伯格",
+    "en": "Belobog of the Architects"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "筑城者的贝洛伯格",
+    "icon": "SpriteOutput/ItemIcon/71015.png",
+    "parts": {
+      "33045": {
+        "name": "贝洛伯格的存护堡垒",
+        "desc": null,
+        "story": null
+      },
+      "33046": {
+        "name": "贝洛伯格的铁卫防线",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的防御力提高<unbreak>#1[i]%</unbreak>。当装备者的效果命中大于等于<unbreak>#2[i]%</unbreak>时，防御力额外提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.15,
+          0.5,
+          0.15
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Belobog of the Architects",
+    "icon": "SpriteOutput/ItemIcon/71015.png",
+    "parts": {
+      "33045": {
+        "name": "Belobog's Fortress of Preservation",
+        "desc": null,
+        "story": null
+      },
+      "33046": {
+        "name": "Belobog's Iron Defense",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's DEF by <unbreak>#1[i]%</unbreak>. When the wearer's Effect Hit Rate is <unbreak>#2[i]%</unbreak> or higher, the wearer gains an extra <unbreak>#3[i]%</unbreak> DEF.",
+        "param_list": [
+          0.15,
+          0.5,
+          0.15
+        ]
+      }
+    }
+  }
+}

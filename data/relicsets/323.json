@@ -1,0 +1,62 @@
+{
+  "id": "323",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "永恒之地翁法罗斯",
+    "en": "Amphoreus, The Eternal Land"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "永恒之地翁法罗斯",
+    "icon": "SpriteOutput/ItemIcon/71050.png",
+    "parts": {
+      "33235": {
+        "name": "翁法罗斯的西风尽途",
+        "desc": null,
+        "story": null
+      },
+      "33236": {
+        "name": "翁法罗斯的永恒诗篇",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击率提高<unbreak>#1[i]%</unbreak>。装备者的忆灵在场时，我方全体速度提高<unbreak>#2[i]%</unbreak>，该效果无法叠加。",
+        "param_list": [
+          0.08,
+          0.08
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Amphoreus, The Eternal Land",
+    "icon": "SpriteOutput/ItemIcon/71050.png",
+    "parts": {
+      "33235": {
+        "name": "Last West Wind of Amphoreus",
+        "desc": null,
+        "story": null
+      },
+      "33236": {
+        "name": "Eternal Verses of Amphoreus",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT Rate by <unbreak>#1[i]%</unbreak>. While the wearer's memosprite is on the field, increases all allies' SPD by <unbreak>#2[i]%</unbreak>. This effect cannot be stacked.",
+        "param_list": [
+          0.08,
+          0.08
+        ]
+      }
+    }
+  }
+}

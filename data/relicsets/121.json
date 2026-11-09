@@ -1,0 +1,96 @@
+{
+  "id": "121",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "重循苦旅的司铎",
+    "en": "Sacerdos' Relived Ordeal"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "重循苦旅的司铎",
+    "icon": "SpriteOutput/ItemIcon/71038.png",
+    "parts": {
+      "31211": {
+        "name": "司铎的律音耳坠",
+        "desc": null,
+        "story": null
+      },
+      "31212": {
+        "name": "司铎的授邀手套",
+        "desc": null,
+        "story": null
+      },
+      "31213": {
+        "name": "司铎的圣职礼服",
+        "desc": null,
+        "story": null
+      },
+      "31214": {
+        "name": "司铎的苦旅短靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "速度提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.06
+        ]
+      },
+      "4": {
+        "desc": "对我方单体目标施放战技或终结技时，使技能目标的暴击伤害提高<unbreak>#1[i]%</unbreak>，持续<unbreak>#2[i]</unbreak>回合，该效果最多叠加<unbreak>#3[i]</unbreak>次。",
+        "param_list": [
+          0.18,
+          2,
+          2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Sacerdos' Relived Ordeal",
+    "icon": "SpriteOutput/ItemIcon/71038.png",
+    "parts": {
+      "31211": {
+        "name": "Sacerdos' Melodic Earrings",
+        "desc": null,
+        "story": null
+      },
+      "31212": {
+        "name": "Sacerdos' Welcoming Gloves",
+        "desc": null,
+        "story": null
+      },
+      "31213": {
+        "name": "Sacerdos' Ceremonial Garb",
+        "desc": null,
+        "story": null
+      },
+      "31214": {
+        "name": "Sacerdos' Arduous Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases SPD by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.06
+        ]
+      },
+      "4": {
+        "desc": "When using Skill or Ultimate on one ally target, increases the ability target's CRIT DMG by <unbreak>#1[i]%</unbreak>, lasting for <unbreak>#2[i]</unbreak> turn(s). This effect can stack up to <unbreak>#3[i]</unbreak> time(s).",
+        "param_list": [
+          0.18,
+          2,
+          2
+        ]
+      }
+    }
+  }
+}

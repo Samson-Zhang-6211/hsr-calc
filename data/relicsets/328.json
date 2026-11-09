@@ -1,0 +1,64 @@
+{
+  "id": "328",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "寰宇生研院",
+    "en": "Cosmic Life Sciences Institute"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "寰宇生研院",
+    "icon": "SpriteOutput/ItemIcon/71059.png",
+    "parts": {
+      "33285": {
+        "name": "生研院的中心突触",
+        "desc": null,
+        "story": null
+      },
+      "33286": {
+        "name": "生研院的外周管线",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "进入战斗时，若装备者能量上限大于等于<unbreak>#1[i]</unbreak>点，每超过1点使装备者造成的伤害提高<unbreak>#2[f1]%</unbreak>，最多提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          200,
+          0.002,
+          0.32
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Cosmic Life Sciences Institute",
+    "icon": "SpriteOutput/ItemIcon/71059.png",
+    "parts": {
+      "33285": {
+        "name": "Central Synapse of the Life Sciences Institute",
+        "desc": null,
+        "story": null
+      },
+      "33286": {
+        "name": "Peripheral Conduits of the Life Sciences Institute",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "When entering combat, if the wearer's Max Energy is greater than or equal to <unbreak>#1[i]</unbreak>, for every 1 excess point, increases the wearer's DMG dealt by <unbreak>#2[f1]%</unbreak>, up to a max increase of <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          200,
+          0.002,
+          0.32
+        ]
+      }
+    }
+  }
+}

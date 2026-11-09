@@ -1,0 +1,851 @@
+{
+  "id": "8015040",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "万色返空主，归寂•「住」",
+    "en": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\""
+  },
+  "meta": {
+    "rank": "BigBoss",
+    "weak": [
+      "Fire",
+      "Wind",
+      "Imaginary"
+    ]
+  },
+  "zh": {
+    "id": 8015040,
+    "name": "万色返空主，归寂•「住」",
+    "desc": "名为「我见」的领航员，为解救「欢愉」踏上开拓之旅。\\n他帮助星球摆脱危机，为寰宇排忧解难，只为寻得欢愉的解药。\\n然而旅途愈久，他目睹愈多熟悉的世界走向堕落与灭亡——甚至曾有世界，试图以一同毁灭去回报列车组的拯救。\\n最终，在「开拓」之神陨落之后，亲眼见证「亚德丽芬」终结的他，终于领悟到「欢愉」唯一的解药——「毁灭」。",
+    "monster_camp_id": 6,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 14880,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_8015040.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "BigBoss",
+    "speed_base": 140,
+    "stance_base": 1080,
+    "stance_count": 1,
+    "status_resistance_base": null,
+    "child": [
+      {
+        "id": 8015040,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 801504001,
+            "skill_name": "存在的闹剧",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504002,
+            "skill_name": "讥讽的目光",
+            "skill_desc": "对指定我方单体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504003,
+            "skill_name": "收束命运的博弈",
+            "skill_desc": "掷出数个骰子，从中选择一个为我方生效，剩余的效果则为敌方生效。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504004,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504005,
+            "skill_name": "三面化身",
+            "skill_desc": "本场战斗中，「万色返空主，归寂」拥有【成】、【住】、【坏】三面，每个面有自己的独特技能。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504006,
+            "skill_name": "笑话来自地狱",
+            "skill_desc": "在行动序列上添加【好戏开场】，每次【好戏开场】行动时，解除「万色返空主，归寂」的<u>控制类负面状态</u>与弱点击破状态，并施放【愿此行终抵毁灭】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504007,
+            "skill_name": "三面合一",
+            "skill_desc": "此阶段内，【成】【住】【坏】将共享生命值，且【成】、【住】面将处于不可被选中状态。每次【好戏开场】行动时，解除「万色返空主，归寂」的<u>控制类负面状态</u>与弱点击破状态，并施放【令欢愉终归死寂】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504008,
+            "skill_name": "热场嘉宾",
+            "skill_desc": "在行动序列上添加【粉墨登场】，每次【粉墨登场】行动时，召唤【喜剧学家】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 801504009,
+            "skill_name": "埋梗时刻",
+            "skill_desc": "进入蓄力状态。为我方角色附加共计4层【<u>爆梗</u>】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "爆梗",
+                "desc": "当我方角色施放【爆梗】时，归寂将对我方全体目标造成大量伤害，大概率使我方目标陷入【强烈震荡】，同时移除1层【爆梗】。若我方目标未持有护盾或【屏障】，则额外附加1层【噬命】。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504010,
+            "skill_name": "爆梗狂欢",
+            "skill_desc": "引爆所有【<u>爆梗</u>】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "爆梗",
+                "desc": "当我方角色施放【爆梗】时，归寂将对我方全体目标造成大量伤害，大概率使我方目标陷入【强烈震荡】，同时移除1层【爆梗】。若我方目标未持有护盾或【屏障】，则额外附加1层【噬命】。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504011,
+            "skill_name": "愿此行终抵毁灭",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504012,
+            "skill_name": "令欢愉终归死寂",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504013,
+            "skill_name": "虚无的愉悦",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504014,
+            "skill_name": "三重的蔑视",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 801504001,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.375,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 801504001,
+            "skill_name": "存在的闹剧",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504002,
+            "skill_name": "讥讽的目光",
+            "skill_desc": "对指定我方单体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504003,
+            "skill_name": "收束命运的博弈",
+            "skill_desc": "掷出数个骰子，从中选择一个为我方生效，剩余的效果则为敌方生效。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504004,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504005,
+            "skill_name": "三面化身",
+            "skill_desc": "本场战斗中，「万色返空主，归寂」拥有【成】、【住】、【坏】三面，每个面有自己的独特技能。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504006,
+            "skill_name": "笑话来自地狱",
+            "skill_desc": "在行动序列上添加【好戏开场】，每次【好戏开场】行动时，解除「万色返空主，归寂」的<u>控制类负面状态</u>与弱点击破状态，并施放【愿此行终抵毁灭】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504007,
+            "skill_name": "三面合一",
+            "skill_desc": "此阶段内，【成】【住】【坏】将共享生命值，且【成】、【住】面将处于不可被选中状态。每次【好戏开场】行动时，解除「万色返空主，归寂」的<u>控制类负面状态</u>与弱点击破状态，并施放【令欢愉终归死寂】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504008,
+            "skill_name": "热场嘉宾",
+            "skill_desc": "在行动序列上添加【粉墨登场】，每次【粉墨登场】行动时，召唤【喜剧学家】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 801504009,
+            "skill_name": "埋梗时刻",
+            "skill_desc": "进入蓄力状态。为我方角色附加共计4层【<u>爆梗</u>】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "爆梗",
+                "desc": "当我方角色施放【爆梗】时，归寂将对我方全体目标造成大量伤害，大概率使我方目标陷入【强烈震荡】，同时移除1层【爆梗】。若我方目标未持有护盾或【屏障】，则额外附加1层【噬命】。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504010,
+            "skill_name": "爆梗狂欢",
+            "skill_desc": "引爆所有【<u>爆梗</u>】。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "爆梗",
+                "desc": "当我方角色施放【爆梗】时，归寂将对我方全体目标造成大量伤害，大概率使我方目标陷入【强烈震荡】，同时移除1层【爆梗】。若我方目标未持有护盾或【屏障】，则额外附加1层【噬命】。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504011,
+            "skill_name": "愿此行终抵毁灭",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504012,
+            "skill_name": "令欢愉终归死寂",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504013,
+            "skill_name": "虚无的愉悦",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504014,
+            "skill_name": "三重的蔑视",
+            "skill_desc": "对我方全体目标造成伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 8015040,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 2.5
+      }
+    ]
+  },
+  "en": {
+    "id": 8015040,
+    "name": "Lord of Saṃvartasthāyi, Asat Pramad: \"Existence\"",
+    "desc": "A Navigator named \"Isee\" embarked on a trailblazing expedition to save the Elation.\\nHe helped planets overcome crises, resolving troubles across the cosmos, all to find a cure for the Elation.\\nYet, the longer his journey went on, the more familiar worlds he witnessed descending into corruption and ruin. One world even attempted to repay the Express Crew's rescue with mutual destruction.\\nUltimately, after the fall of the God of Trailblaze and having witnessed the end of Adlivun with his own eyes, he finally realized that the only cure for the Elation was... the Destruction.",
+    "monster_camp_id": 6,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 14880,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_8015040.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "BigBoss",
+    "speed_base": 140,
+    "stance_base": 1080,
+    "stance_count": 1,
+    "status_resistance_base": null,
+    "child": [
+      {
+        "id": 8015040,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 801504001,
+            "skill_name": "Existential Farce",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504002,
+            "skill_name": "Mocked Gaze",
+            "skill_desc": "Deals DMG to one designated target.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504003,
+            "skill_name": "Gambit of Converging Fates",
+            "skill_desc": "Roll several dice. Select one to take effect on targets, while the remaining effects take effect on friendly units.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504004,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504005,
+            "skill_name": "Three-Faced Incarnation",
+            "skill_desc": "In this battle, \"Lord of Saṃvartasthāyi, Asat Pramad\" has three faces: \"Formation,\" \"Existence,\" and \"Decay.\" Each face has its own unique ability.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504006,
+            "skill_name": "Jokes From Hell",
+            "skill_desc": "Adds \"The Game Is On\" to the Action Order. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's <u>Crowd Control debuffs</u> and Weakness Broken state, and uses \"May This Journey Lead You to Destruction.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504007,
+            "skill_name": "Three Faces as One",
+            "skill_desc": "During this phase, \"Formation,\" \"Existence,\" and \"Decay\" share HP, and the \"Formation\" and \"Existence\" faces cannot be targeted. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's <u>Crowd Control debuffs</u> and Weakness Broken state, and uses \"Let Elation Hang in Silence.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504008,
+            "skill_name": "Warm-Up Act",
+            "skill_desc": "Adds \"Take the Stage\" to the Action Order. Every time \"Take the Stage\" takes action, summons \"Comediologist.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 801504009,
+            "skill_name": "Meme Setup",
+            "skill_desc": "Enters Charging state. Applies a total of 4 stacks of \"<u>Meme'd</u>\" to target characters.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "Meme'd",
+                "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504010,
+            "skill_name": "Meme Carnival",
+            "skill_desc": "Detonate all \"<u>Meme'd</u>.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "Meme'd",
+                "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504011,
+            "skill_name": "May This Journey Lead You to Destruction",
+            "skill_desc": "Deals massive Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504012,
+            "skill_name": "Let Elation Hang in Silence",
+            "skill_desc": "Deals massive Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504013,
+            "skill_name": "Nihility's Joy",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504014,
+            "skill_name": "Triple Contempt",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 801504001,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.375,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Wind",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 801504001,
+            "skill_name": "Existential Farce",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504002,
+            "skill_name": "Mocked Gaze",
+            "skill_desc": "Deals DMG to one designated target.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504003,
+            "skill_name": "Gambit of Converging Fates",
+            "skill_desc": "Roll several dice. Select one to take effect on targets, while the remaining effects take effect on friendly units.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504004,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504005,
+            "skill_name": "Three-Faced Incarnation",
+            "skill_desc": "In this battle, \"Lord of Saṃvartasthāyi, Asat Pramad\" has three faces: \"Formation,\" \"Existence,\" and \"Decay.\" Each face has its own unique ability.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504006,
+            "skill_name": "Jokes From Hell",
+            "skill_desc": "Adds \"The Game Is On\" to the Action Order. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's <u>Crowd Control debuffs</u> and Weakness Broken state, and uses \"May This Journey Lead You to Destruction.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504007,
+            "skill_name": "Three Faces as One",
+            "skill_desc": "During this phase, \"Formation,\" \"Existence,\" and \"Decay\" share HP, and the \"Formation\" and \"Existence\" faces cannot be targeted. Every time \"The Game Is On\" takes action, dispels Lord of Saṃvartasthāyi, Asat Pramad's <u>Crowd Control debuffs</u> and Weakness Broken state, and uses \"Let Elation Hang in Silence.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504008,
+            "skill_name": "Warm-Up Act",
+            "skill_desc": "Adds \"Take the Stage\" to the Action Order. Every time \"Take the Stage\" takes action, summons \"Comediologist.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 801504009,
+            "skill_name": "Meme Setup",
+            "skill_desc": "Enters Charging state. Applies a total of 4 stacks of \"<u>Meme'd</u>\" to target characters.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "Meme'd",
+                "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504010,
+            "skill_name": "Meme Carnival",
+            "skill_desc": "Detonate all \"<u>Meme'd</u>.\"",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "280150301": {
+                "name": "Meme'd",
+                "desc": "When an ally character uses \"Meme'd,\" Asat Pramad deals massive DMG to all ally targets, has a high chance to inflict \"Strong Reverberation\" on ally targets, and removes 1 stack of \"Meme'd.\" If the ally target does not have a Shield or \"Barrier,\" additionally applies 1 stack of \"Prana-Siphon.\"",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 801504011,
+            "skill_name": "May This Journey Lead You to Destruction",
+            "skill_desc": "Deals massive Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504012,
+            "skill_name": "Let Elation Hang in Silence",
+            "skill_desc": "Deals massive Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504013,
+            "skill_name": "Nihility's Joy",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 801504014,
+            "skill_name": "Triple Contempt",
+            "skill_desc": "Deals DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 8015040,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 8015040,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 2.5
+      }
+    ]
+  }
+}

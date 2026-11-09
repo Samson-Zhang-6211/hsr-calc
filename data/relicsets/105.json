@@ -1,0 +1,94 @@
+{
+  "id": "105",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "街头出身的拳王",
+    "en": "Champion of Streetwise Boxing"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "街头出身的拳王",
+    "icon": "SpriteOutput/ItemIcon/71004.png",
+    "parts": {
+      "31051": {
+        "name": "拳王的冠军护头",
+        "desc": null,
+        "story": null
+      },
+      "31052": {
+        "name": "拳王的重炮拳套",
+        "desc": null,
+        "story": null
+      },
+      "31053": {
+        "name": "拳王的贴身护胸",
+        "desc": null,
+        "story": null
+      },
+      "31054": {
+        "name": "拳王的弧步战靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "物理属性伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "当装备者施放攻击或受到攻击后，其在本场战斗中攻击力提高<unbreak>#1[i]%</unbreak>，最多叠加<unbreak>#2[i]</unbreak>层。",
+        "param_list": [
+          0.05,
+          5
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Champion of Streetwise Boxing",
+    "icon": "SpriteOutput/ItemIcon/71004.png",
+    "parts": {
+      "31051": {
+        "name": "Champion's Headgear",
+        "desc": null,
+        "story": null
+      },
+      "31052": {
+        "name": "Champion's Heavy Gloves",
+        "desc": null,
+        "story": null
+      },
+      "31053": {
+        "name": "Champion's Chest Guard",
+        "desc": null,
+        "story": null
+      },
+      "31054": {
+        "name": "Champion's Fleetfoot Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Physical DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "After the wearer attacks or is hit, their ATK increases by <unbreak>#1[i]%</unbreak> for the rest of the battle. This effect can stack up to <unbreak>#2[i]</unbreak> time(s).",
+        "param_list": [
+          0.05,
+          5
+        ]
+      }
+    }
+  }
+}

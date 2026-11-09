@@ -1,0 +1,64 @@
+{
+  "id": "310",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "折断的龙骨",
+    "en": "Broken Keel"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "折断的龙骨",
+    "icon": "SpriteOutput/ItemIcon/71023.png",
+    "parts": {
+      "33105": {
+        "name": "伊须磨洲的残船鲸落",
+        "desc": null,
+        "story": null
+      },
+      "33106": {
+        "name": "伊须磨洲的坼裂缆索",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的效果抵抗提高<unbreak>#1[i]%</unbreak>。当装备者的效果抵抗大于等于<unbreak>#2[i]%</unbreak>时，我方全体暴击伤害提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.1,
+          0.3,
+          0.1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Broken Keel",
+    "icon": "SpriteOutput/ItemIcon/71023.png",
+    "parts": {
+      "33105": {
+        "name": "Insumousu's Whalefall Ship",
+        "desc": null,
+        "story": null
+      },
+      "33106": {
+        "name": "Insumousu's Frayed Hawser",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Effect RES by <unbreak>#1[i]%</unbreak>. When the wearer's Effect RES is at <unbreak>#2[i]%</unbreak> or higher, all allies' CRIT DMG increases by <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          0.1,
+          0.3,
+          0.1
+        ]
+      }
+    }
+  }
+}

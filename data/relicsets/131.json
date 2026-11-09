@@ -1,0 +1,96 @@
+{
+  "id": "131",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "星如我见的领航员",
+    "en": "As Navigator Isee Sees It"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "星如我见的领航员",
+    "icon": "SpriteOutput/ItemIcon/71056.png",
+    "parts": {
+      "31311": {
+        "name": "领航员的深空之镜",
+        "desc": null,
+        "story": null
+      },
+      "31312": {
+        "name": "领航员的游戏之骰",
+        "desc": null,
+        "story": null
+      },
+      "31313": {
+        "name": "领航员的星图制服",
+        "desc": null,
+        "story": null
+      },
+      "31314": {
+        "name": "领航员的永行魔靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "攻击力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "装备者进入战斗时/施放战技时，使战技和终结技造成的伤害提高<unbreak>#1[i]%</unbreak>，最多叠加<unbreak>#2[i]</unbreak>层，装备者回合开始时/施放终结技后，移除<unbreak>#3[i]</unbreak>层该效果。",
+        "param_list": [
+          0.18,
+          3,
+          1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "As Navigator Isee Sees It",
+    "icon": "SpriteOutput/ItemIcon/71056.png",
+    "parts": {
+      "31311": {
+        "name": "Navigator's Deep Space Mirror",
+        "desc": null,
+        "story": null
+      },
+      "31312": {
+        "name": "Navigator's Game Die",
+        "desc": null,
+        "story": null
+      },
+      "31313": {
+        "name": "Navigator's Astral Chart Uniform",
+        "desc": null,
+        "story": null
+      },
+      "31314": {
+        "name": "Navigator's Everstride Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "When the wearer enters combat or uses Skill, the DMG dealt by their Skill and Ultimate increases by <unbreak>#1[i]%</unbreak>, stacking up to <unbreak>#2[i]</unbreak> time(s). At the start of the wearer's turn or after using Ultimate, removes <unbreak>#3[i]</unbreak> stack(s) of this effect.",
+        "param_list": [
+          0.18,
+          3,
+          1
+        ]
+      }
+    }
+  }
+}

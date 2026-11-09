@@ -1,0 +1,64 @@
+{
+  "id": "306",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "停转的萨尔索图",
+    "en": "Inert Salsotto"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "停转的萨尔索图",
+    "icon": "SpriteOutput/ItemIcon/71017.png",
+    "parts": {
+      "33065": {
+        "name": "萨尔索图的移动城市",
+        "desc": null,
+        "story": null
+      },
+      "33066": {
+        "name": "萨尔索图的晨昏界线",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击率提高<unbreak>#1[i]%</unbreak>。当装备者当前暴击率大于等于<unbreak>#2[i]%</unbreak>时，终结技和追加攻击造成的伤害提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.08,
+          0.5,
+          0.15
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Inert Salsotto",
+    "icon": "SpriteOutput/ItemIcon/71017.png",
+    "parts": {
+      "33065": {
+        "name": "Salsotto's Moving City",
+        "desc": null,
+        "story": null
+      },
+      "33066": {
+        "name": "Salsotto's Terminator Line",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT Rate by <unbreak>#1[i]%</unbreak>. When the wearer's current CRIT Rate reaches <unbreak>#2[i]%</unbreak> or higher, the DMG dealt by the wearer's Ultimate and Follow-Up ATK increases by <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          0.08,
+          0.5,
+          0.15
+        ]
+      }
+    }
+  }
+}

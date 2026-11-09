@@ -1,0 +1,136 @@
+{
+  "pack": "apo-p21",
+  "mode": "apo",
+  "period": 21,
+  "title": "支配遗忘",
+  "p": 3021,
+  "roundMode": "phantom",
+  "difficultyGroup": 1,
+  "source": "https://sr.appfeng.com/challenge/apo?p=3021",
+  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。",
+  "expose": [
+    4,
+    0
+  ],
+  "stages": [
+    {
+      "index": 4,
+      "name": "支配遗忘·难度04",
+      "f": 4,
+      "kind": "boss",
+      "totalHp": 9129057,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Physical",
+            "Fire",
+            "Wind",
+            "Imaginary"
+          ],
+          "level": 90,
+          "hp": 1869807,
+          "pageHp": 1869807,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2004014",
+                  "level": 90,
+                  "name": "勾魂摄魄的支配者",
+                  "rank": "小BOSS",
+                  "hp": 1869807,
+                  "count": 1,
+                  "weak": [
+                    "Physical",
+                    "Fire",
+                    "Wind",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Physical",
+            "Fire",
+            "Thunder",
+            "Imaginary"
+          ],
+          "level": 90,
+          "hp": 7259250,
+          "pageHp": 7259250,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "4064012",
+                  "level": 90,
+                  "name": "迷惘之渊的裁定者",
+                  "rank": "小BOSS",
+                  "hp": 7259250,
+                  "count": 1,
+                  "weak": [
+                    "Physical",
+                    "Fire",
+                    "Thunder",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Stage 04"
+    },
+    {
+      "index": 0,
+      "name": "星启",
+      "f": 0,
+      "kind": "star",
+      "siteName": "星启",
+      "level": 90,
+      "tags": [
+        "Physical",
+        "Fire",
+        "Wind",
+        "Quantum"
+      ],
+      "hp": 2419750,
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "2034014",
+              "level": 90,
+              "name": "雷奔云谲的恶狼主",
+              "rank": "小BOSS",
+              "hp": 2419750,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Fire",
+                "Wind",
+                "Quantum"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Tierce"
+    }
+  ],
+  "modeMechanics": [
+    {
+      "name": "末法余烬",
+      "desc": "拥有【坚防守备】的敌方目标被弱点击破时，使我方全体目标解除控制状态、行动提前并使阿哈立即获得一个额外回合（本回合固定计入10笑点）。敌方全体目标受到的终结技伤害提高25%，欢愉伤害提高15%。"
+    }
+  ]
+}

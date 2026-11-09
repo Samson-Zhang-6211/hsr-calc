@@ -1,0 +1,1395 @@
+{
+  "pack": "moc-p44",
+  "mode": "moc",
+  "period": 44,
+  "title": "物竞天择",
+  "p": 1036,
+  "roundMode": "forgotten",
+  "source": "https://sr.appfeng.com/challenge/moc?p=1036",
+  "note": "混沌回忆第 44 期「物竞天择」：保留全部 12 关原始数据（生成器按用户 2026-10-30 裁定只暴露其十二 + 星启，见 expose）。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量；半/关血量 = 逐怪 hp × count 合计。星启 = 2026-10-30 从 ?p=1036 星启段补入（页面总血 1,920,368，逐怪合计 1,920,367）。",
+  "difficultyGroup": 3,
+  "modeMechanics": [
+    {
+      "name": "物竞天择",
+      "desc": "我方目标施放终结技时获得5个笑点。每个轮开始时，使阿哈立即获得1个固定计入20笑点的额外回合，该回合不消耗笑点。"
+    }
+  ],
+  "stages": [
+    {
+      "index": 1,
+      "name": "物竞天择其一",
+      "f": 1,
+      "totalHp": 709811,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Quantum"
+          ],
+          "level": 68,
+          "hp": 395948,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013060",
+                  "level": 68,
+                  "name": "破晓战队•曙光",
+                  "rank": "精英",
+                  "hp": 120716,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 68,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 16900,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5013060",
+                  "level": 68,
+                  "name": "破晓战队•曙光",
+                  "rank": "精英",
+                  "hp": 120716,
+                  "count": 1
+                },
+                {
+                  "monsterId": "5013070",
+                  "level": 68,
+                  "name": "破晓战队•灰烬",
+                  "rank": "精英",
+                  "hp": 120716,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Physical",
+            "Imaginary"
+          ],
+          "level": 68,
+          "hp": 313863,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 68,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 96573,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012010",
+                  "level": 68,
+                  "name": "虚卒•掠夺者",
+                  "rank": "小怪Lv2",
+                  "hp": 12072,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 68,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 96573,
+                  "count": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 1"
+    },
+    {
+      "index": 2,
+      "name": "物竞天择其二",
+      "f": 2,
+      "totalHp": 736741,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Physical",
+            "Fire"
+          ],
+          "level": 70,
+          "hp": 381621,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "3003040",
+                  "level": 70,
+                  "name": "「同音共律的来日」",
+                  "rank": "精英",
+                  "hp": 106006,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 70,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 18551,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4053010",
+                  "level": 70,
+                  "name": "波涛夫人",
+                  "rank": "精英",
+                  "hp": 132507,
+                  "count": 1
+                },
+                {
+                  "monsterId": "3003040",
+                  "level": 70,
+                  "name": "「同音共律的来日」",
+                  "rank": "精英",
+                  "hp": 106006,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Ice",
+            "Wind"
+          ],
+          "level": 70,
+          "hp": 355120,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2023020",
+                  "level": 70,
+                  "name": "丰饶灵兽•长右",
+                  "rank": "精英",
+                  "hp": 106006,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 70,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 18551,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2023020",
+                  "level": 70,
+                  "name": "丰饶灵兽•长右",
+                  "rank": "精英",
+                  "hp": 106006,
+                  "count": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 2"
+    },
+    {
+      "index": 3,
+      "name": "物竞天择其三",
+      "f": 3,
+      "totalHp": 1150110,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Fire",
+            "Ice"
+          ],
+          "level": 73,
+          "hp": 559749,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 73,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 174922,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 73,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 22958,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 73,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 174922,
+                  "count": 1
+                },
+                {
+                  "monsterId": "4053020",
+                  "level": 73,
+                  "name": "飓风大母",
+                  "rank": "精英",
+                  "hp": 163989,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Fire"
+          ],
+          "level": 73,
+          "hp": 590361,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 73,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 196787,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012010",
+                  "level": 73,
+                  "name": "虚卒•掠夺者",
+                  "rank": "小怪Lv2",
+                  "hp": 16399,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 73,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 196787,
+                  "count": 1
+                },
+                {
+                  "monsterId": "4053010",
+                  "level": 73,
+                  "name": "波涛夫人",
+                  "rank": "精英",
+                  "hp": 163989,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 3"
+    },
+    {
+      "index": 4,
+      "name": "物竞天择其四",
+      "f": 4,
+      "totalHp": 981609,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Wind"
+          ],
+          "level": 75,
+          "hp": 468608,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2033010",
+                  "level": 75,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 147981,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2032020",
+                  "level": 75,
+                  "name": "蚀月狼卒",
+                  "rank": "小怪Lv2",
+                  "hp": 24664,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2033010",
+                  "level": 75,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 147981,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8003010",
+                  "level": 75,
+                  "name": "外宇宙之冰",
+                  "rank": "精英",
+                  "hp": 123318,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Thunder",
+            "Imaginary"
+          ],
+          "level": 75,
+          "hp": 513001,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 75,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 147981,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012020",
+                  "level": 75,
+                  "name": "虚卒•篡改者",
+                  "rank": "小怪Lv2",
+                  "hp": 22197,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "3013010",
+                  "level": 75,
+                  "name": "忆域迷因「狂怒褪去之壳」",
+                  "rank": "精英",
+                  "hp": 172645,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2013020",
+                  "level": 75,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 147981,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 4"
+    },
+    {
+      "index": 5,
+      "name": "物竞天择其五",
+      "f": 5,
+      "totalHp": 1301637,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Wind"
+          ],
+          "level": 78,
+          "hp": 548362,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2033010",
+                  "level": 78,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 173167,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2032020",
+                  "level": 78,
+                  "name": "蚀月狼卒",
+                  "rank": "小怪Lv2",
+                  "hp": 28861,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2033010",
+                  "level": 78,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 173167,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8003010",
+                  "level": 78,
+                  "name": "外宇宙之冰",
+                  "rank": "精英",
+                  "hp": 144306,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Physical",
+            "Ice"
+          ],
+          "level": 78,
+          "hp": 753275,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 78,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 230889,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 78,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 30304,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 78,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 230889,
+                  "count": 1
+                },
+                {
+                  "monsterId": "5023020",
+                  "level": 78,
+                  "name": "吞神子嗣",
+                  "rank": "精英",
+                  "hp": 230889,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 5"
+    },
+    {
+      "index": 6,
+      "name": "物竞天择其六",
+      "f": 6,
+      "totalHp": 1396188,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Quantum"
+          ],
+          "level": 80,
+          "hp": 778827,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013060",
+                  "level": 80,
+                  "name": "破晓战队•曙光",
+                  "rank": "精英",
+                  "hp": 237447,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 80,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 33243,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5013060",
+                  "level": 80,
+                  "name": "破晓战队•曙光",
+                  "rank": "精英",
+                  "hp": 237447,
+                  "count": 1
+                },
+                {
+                  "monsterId": "5013070",
+                  "level": 80,
+                  "name": "破晓战队•灰烬",
+                  "rank": "精英",
+                  "hp": 237447,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Physical",
+            "Imaginary"
+          ],
+          "level": 80,
+          "hp": 617361,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 80,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 189957,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012010",
+                  "level": 80,
+                  "name": "虚卒•掠夺者",
+                  "rank": "小怪Lv2",
+                  "hp": 23745,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 80,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 189957,
+                  "count": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 6"
+    },
+    {
+      "index": 7,
+      "name": "物竞天择其七",
+      "f": 7,
+      "totalHp": 1471425,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Physical",
+            "Fire"
+          ],
+          "level": 82,
+          "hp": 762177,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "3003040",
+                  "level": 82,
+                  "name": "「同音共律的来日」",
+                  "rank": "精英",
+                  "hp": 211716,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 82,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 37050,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4033030",
+                  "level": 82,
+                  "name": "黑日狮鹫",
+                  "rank": "精英",
+                  "hp": 264645,
+                  "count": 1
+                },
+                {
+                  "monsterId": "3003040",
+                  "level": 82,
+                  "name": "「同音共律的来日」",
+                  "rank": "精英",
+                  "hp": 211716,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Ice",
+            "Wind"
+          ],
+          "level": 82,
+          "hp": 709248,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2023020",
+                  "level": 82,
+                  "name": "丰饶灵兽•长右",
+                  "rank": "精英",
+                  "hp": 211716,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 82,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 37050,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2023020",
+                  "level": 82,
+                  "name": "丰饶灵兽•长右",
+                  "rank": "精英",
+                  "hp": 211716,
+                  "count": 2
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 7"
+    },
+    {
+      "index": 8,
+      "name": "物竞天择其八",
+      "f": 8,
+      "totalHp": 2179444,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Fire",
+            "Ice"
+          ],
+          "level": 85,
+          "hp": 1060717,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 85,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 331474,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012030",
+                  "level": 85,
+                  "name": "虚卒•抹消者",
+                  "rank": "小怪Lv2",
+                  "hp": 43506,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4063010",
+                  "level": 85,
+                  "name": "金血忆灵•翼蛇形",
+                  "rank": "精英",
+                  "hp": 331474,
+                  "count": 1
+                },
+                {
+                  "monsterId": "4053020",
+                  "level": 85,
+                  "name": "飓风大母",
+                  "rank": "精英",
+                  "hp": 310757,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Fire"
+          ],
+          "level": 85,
+          "hp": 1118727,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 85,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 372909,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012010",
+                  "level": 85,
+                  "name": "虚卒•掠夺者",
+                  "rank": "小怪Lv2",
+                  "hp": 31076,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 85,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 372909,
+                  "count": 1
+                },
+                {
+                  "monsterId": "4053010",
+                  "level": 85,
+                  "name": "波涛夫人",
+                  "rank": "精英",
+                  "hp": 310757,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 8"
+    },
+    {
+      "index": 9,
+      "name": "物竞天择其九",
+      "f": 9,
+      "totalHp": 2126565,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Wind"
+          ],
+          "level": 88,
+          "hp": 1116689,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2033010",
+                  "level": 88,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 291310,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2032020",
+                  "level": 88,
+                  "name": "蚀月狼卒",
+                  "rank": "小怪Lv2",
+                  "hp": 48552,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 88,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 436965,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2033010",
+                  "level": 88,
+                  "name": "咆哮灵柩",
+                  "rank": "精英",
+                  "hp": 291310,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Thunder",
+            "Imaginary"
+          ],
+          "level": 88,
+          "hp": 1009876,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "2013020",
+                  "level": 88,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 291310,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8012020",
+                  "level": 88,
+                  "name": "虚卒•篡改者",
+                  "rank": "小怪Lv2",
+                  "hp": 43697,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "3013010",
+                  "level": 88,
+                  "name": "忆域迷因「狂怒褪去之壳」",
+                  "rank": "精英",
+                  "hp": 339862,
+                  "count": 1
+                },
+                {
+                  "monsterId": "2013020",
+                  "level": 88,
+                  "name": "金人勾魂使",
+                  "rank": "精英",
+                  "hp": 291310,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 9"
+    },
+    {
+      "index": 10,
+      "name": "物竞天择其十",
+      "f": 10,
+      "totalHp": 3194142,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Fire",
+            "Imaginary"
+          ],
+          "level": 90,
+          "hp": 1725105,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "3003030",
+                  "level": 90,
+                  "name": "「身陷樊笼的往昔」",
+                  "rank": "精英",
+                  "hp": 323457,
+                  "count": 1
+                },
+                {
+                  "monsterId": "3003050",
+                  "level": 90,
+                  "name": "「醉于盛会的此刻」",
+                  "rank": "精英",
+                  "hp": 323457,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "3004020",
+                  "level": 90,
+                  "name": "奇想林中的蕉研组",
+                  "rank": "小BOSS",
+                  "hp": 1078191,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Ice",
+            "Thunder"
+          ],
+          "level": 90,
+          "hp": 1469037,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "1013020",
+                  "level": 90,
+                  "name": "自动机兵•齿狼",
+                  "rank": "精英",
+                  "hp": 296503,
+                  "count": 1
+                },
+                {
+                  "monsterId": "1023010",
+                  "level": 90,
+                  "name": "炽燃徘徊者",
+                  "rank": "精英",
+                  "hp": 296503,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "4034010",
+                  "level": 90,
+                  "name": "至黑之剑，盗火行者",
+                  "rank": "小BOSS",
+                  "hp": 876031,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 10"
+    },
+    {
+      "index": 11,
+      "name": "物竞天择其十一",
+      "f": 11,
+      "totalHp": 4964777,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Physical",
+            "Wind"
+          ],
+          "level": 92,
+          "hp": 3469362,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 92,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 538349,
+                  "count": 2
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "3024030",
+                  "level": 92,
+                  "name": "示死祸源：深魇蝗灾",
+                  "rank": "小BOSS",
+                  "hp": 2392664,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Ice",
+            "Quantum"
+          ],
+          "level": 92,
+          "hp": 1495415,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5023020",
+                  "level": 92,
+                  "name": "吞神子嗣",
+                  "rank": "精英",
+                  "hp": 478533,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8003020",
+                  "level": 92,
+                  "name": "外宇宙之炎",
+                  "rank": "精英",
+                  "hp": 299083,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "8024011",
+                  "level": 92,
+                  "name": "虫群•真蛰虫",
+                  "rank": "小BOSS",
+                  "hp": 717799,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 11"
+    },
+    {
+      "index": 12,
+      "name": "物竞天择其十二",
+      "f": 12,
+      "totalHp": 4085146,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Fire",
+            "Wind"
+          ],
+          "level": 95,
+          "hp": 2112405,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "5013010",
+                  "level": 95,
+                  "name": "摇滚狂徒",
+                  "rank": "精英",
+                  "hp": 628484,
+                  "count": 1
+                },
+                {
+                  "monsterId": "8003040",
+                  "level": 95,
+                  "name": "蚕食者之影",
+                  "rank": "精英",
+                  "hp": 523737,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "2034010",
+                  "level": 95,
+                  "name": "步离战首•呼雷",
+                  "rank": "小BOSS",
+                  "hp": 960184,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Quantum",
+            "Imaginary"
+          ],
+          "level": 95,
+          "hp": 1972741,
+          "waves": [
+            {
+              "wave": 1,
+              "foes": [
+                {
+                  "monsterId": "4023010",
+                  "level": 95,
+                  "name": "正阳狮鹫",
+                  "rank": "精英",
+                  "hp": 628484,
+                  "count": 1
+                },
+                {
+                  "monsterId": "4023020",
+                  "level": 95,
+                  "name": "月夜天马",
+                  "rank": "精英",
+                  "hp": 558652,
+                  "count": 1
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "foes": [
+                {
+                  "monsterId": "5034010",
+                  "level": 95,
+                  "name": "堕神之血•亚婆离",
+                  "rank": "小BOSS",
+                  "hp": 785605,
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "kind": "boss",
+      "nameEn": "Stage 12"
+    },
+    {
+      "index": 0,
+      "name": "星启",
+      "f": 0,
+      "kind": "star",
+      "siteName": "星启",
+      "mechanics": [
+        {
+          "name": "物竞天择",
+          "desc": "我方目标施放终结技时获得5个笑点。每个轮开始时，使阿哈立即获得1个固定计入20笑点的额外回合，该回合不消耗笑点。"
+        },
+        {
+          "name": "阿哈帮大忙了",
+          "desc": "我方全体攻击力提高300点，防御力提高240点，生命上限提高600点，速度提高12点，暴击伤害提高30%。"
+        }
+      ],
+      "level": 95,
+      "tags": [
+        "Physical"
+      ],
+      "hp": 1920367,
+      "waves": [
+        {
+          "wave": 1,
+          "foes": [
+            {
+              "monsterId": "4063010",
+              "level": 95,
+              "name": "金血忆灵•翼蛇形",
+              "rank": "精英",
+              "hp": 558652,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Fire",
+                "Ice"
+              ]
+            },
+            {
+              "monsterId": "2013020",
+              "level": 95,
+              "name": "金人勾魂使",
+              "rank": "精英",
+              "hp": 418989,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Thunder",
+                "Imaginary"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "foes": [
+            {
+              "monsterId": "4064010",
+              "level": 95,
+              "name": "金血忆灵•裁定忘却之形",
+              "rank": "小BOSS",
+              "hp": 942726,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Ice",
+                "Imaginary"
+              ]
+            }
+          ]
+        }
+      ],
+      "pageHp": 1920368,
+      "nameEn": "Tierce"
+    }
+  ],
+  "expose": [
+    12,
+    0
+  ]
+}

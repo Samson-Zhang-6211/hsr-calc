@@ -1,0 +1,66 @@
+{
+  "id": "324",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "天国@直播间",
+    "en": "Tengoku@Livestream"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "天国@直播间",
+    "icon": "SpriteOutput/ItemIcon/71051.png",
+    "parts": {
+      "33245": {
+        "name": "直播间的千窗万面",
+        "desc": null,
+        "story": null
+      },
+      "33246": {
+        "name": "直播间的畅聊语流",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击伤害提高<unbreak>#1[i]%</unbreak>，若在同一回合内消耗大于等于<unbreak>#2[i]</unbreak>点战技点，额外使装备者暴击伤害提高<unbreak>#3[i]%</unbreak>，持续<unbreak>#4[i]</unbreak>回合。",
+        "param_list": [
+          0.16,
+          3,
+          0.32,
+          3
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Tengoku@Livestream",
+    "icon": "SpriteOutput/ItemIcon/71051.png",
+    "parts": {
+      "33245": {
+        "name": "Livestream's Protean Vistas",
+        "desc": null,
+        "story": null
+      },
+      "33246": {
+        "name": "Livestream's Chatter Banter",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT DMG by <unbreak>#1[i]%</unbreak>. If <unbreak>#2[i]</unbreak> or more Skill Points are consumed in the same turn, additionally increases the wearer's CRIT DMG by <unbreak>#3[i]%</unbreak>, lasting for <unbreak>#4[i]</unbreak> turns.",
+        "param_list": [
+          0.16,
+          3,
+          0.32,
+          3
+        ]
+      }
+    }
+  }
+}

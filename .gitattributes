@@ -1,0 +1,13 @@
+# 让 GitHub 语言统计显示 TypeScript 而不是一堆 JSON
+data/**/*.json linguist-vendored
+apps/web/public/** linguist-vendored
+pnpm-lock.yaml linguist-generated
+
+# 由 scripts/gen-*.mjs 生成的超大表格，diff 默认折叠
+apps/web/src/data/*-roster.ts linguist-generated
+apps/web/src/data/main-stats.ts linguist-generated
+packages/engine/src/combat/skill-data.ts linguist-generated
+packages/engine/src/combat/lightcone-data.ts linguist-generated
+packages/engine/src/combat/relic-set-data.ts linguist-generated
+packages/engine/src/combat/monster-stages.ts linguist-generated
+packages/engine/src/combat/monster-resist-table.ts linguist-generated

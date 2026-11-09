@@ -1,0 +1,493 @@
+{
+  "pack": "pure-p27",
+  "mode": "pure",
+  "period": 27,
+  "title": "取象为文",
+  "p": 2027,
+  "roundMode": "forgotten",
+  "difficultyGroup": 1,
+  "source": "https://sr.appfeng.com/challenge/pure?p=2027",
+  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。 页面无「本期机制」段（虚构叙事本期机制文案站点未提供），modeMechanics 留空待补；每波血量增幅（×5/×10/×46 等）已含在逐怪 hp 里，mult 仅留档。",
+  "expose": [
+    4,
+    0
+  ],
+  "stages": [
+    {
+      "index": 4,
+      "name": "取象为文其四",
+      "f": 4,
+      "kind": "boss",
+      "totalHp": 374034395,
+      "halves": [
+        {
+          "half": "上半",
+          "tags": [
+            "Ice",
+            "Thunder"
+          ],
+          "level": 85,
+          "hp": 192908819,
+          "pageHp": 192908816,
+          "waves": [
+            {
+              "wave": 1,
+              "mult": "×5",
+              "foes": [
+                {
+                  "monsterId": "4022010",
+                  "level": 85,
+                  "name": "流星铁鹰",
+                  "rank": "小怪Lv2",
+                  "hp": 262628,
+                  "count": 13,
+                  "weak": [
+                    "Wind",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "4012010",
+                  "level": 85,
+                  "name": "天谴斗士",
+                  "rank": "小怪Lv2",
+                  "hp": 227611,
+                  "count": 14,
+                  "weak": [
+                    "Thunder",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "5012110",
+                  "level": 85,
+                  "name": "狸猫记者",
+                  "rank": "小怪Lv2",
+                  "hp": 525255,
+                  "count": 2,
+                  "weak": [
+                    "Thunder",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "8003060",
+                  "level": 85,
+                  "name": "虚构集合体",
+                  "rank": "精英",
+                  "hp": 437713,
+                  "count": 1,
+                  "weak": []
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "mult": "×10",
+              "foes": [
+                {
+                  "monsterId": "4013010",
+                  "level": 85,
+                  "name": "天谴先锋",
+                  "rank": "精英",
+                  "hp": 14444524,
+                  "count": 1,
+                  "weak": [
+                    "Ice",
+                    "Thunder",
+                    "Quantum"
+                  ]
+                },
+                {
+                  "monsterId": "2022040",
+                  "level": 85,
+                  "name": "丰饶灵兽•娄金",
+                  "rank": "小怪Lv2",
+                  "hp": 280136,
+                  "count": 20,
+                  "weak": [
+                    "Ice",
+                    "Thunder",
+                    "Quantum"
+                  ]
+                },
+                {
+                  "monsterId": "1012010",
+                  "level": 85,
+                  "name": "自动机兵•战犬",
+                  "rank": "小怪Lv2",
+                  "hp": 245119,
+                  "count": 20,
+                  "weak": [
+                    "Physical",
+                    "Thunder"
+                  ]
+                }
+              ]
+            },
+            {
+              "wave": 3,
+              "mult": "×46",
+              "foes": [
+                {
+                  "monsterId": "4034014",
+                  "level": 85,
+                  "name": "至黑之剑，盗火行者",
+                  "rank": "小BOSS",
+                  "hp": 66444814,
+                  "count": 1,
+                  "weak": [
+                    "Ice",
+                    "Thunder",
+                    "Quantum"
+                  ]
+                },
+                {
+                  "monsterId": "4032030",
+                  "level": 85,
+                  "name": "黑潮蚀斧",
+                  "rank": "小怪Lv2",
+                  "hp": 2738332,
+                  "count": 20,
+                  "weak": [
+                    "Physical",
+                    "Thunder",
+                    "Quantum"
+                  ]
+                },
+                {
+                  "monsterId": "4032024",
+                  "level": 85,
+                  "name": "残破容器",
+                  "rank": "小怪Lv2",
+                  "hp": 1932940,
+                  "count": 20,
+                  "weak": [
+                    "Ice",
+                    "Thunder",
+                    "Quantum"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "half": "下半",
+          "tags": [
+            "Fire",
+            "Imaginary"
+          ],
+          "level": 85,
+          "hp": 181125576,
+          "pageHp": 181125585,
+          "waves": [
+            {
+              "wave": 1,
+              "mult": "×5",
+              "foes": [
+                {
+                  "monsterId": "2032010",
+                  "level": 85,
+                  "name": "玄爪狼卒",
+                  "rank": "小怪Lv2",
+                  "hp": 175085,
+                  "count": 14,
+                  "weak": [
+                    "Fire",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "2022050",
+                  "level": 85,
+                  "name": "丰饶灵兽•奎木",
+                  "rank": "小怪Lv2",
+                  "hp": 175085,
+                  "count": 13,
+                  "weak": [
+                    "Fire",
+                    "Wind",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "5012110",
+                  "level": 85,
+                  "name": "狸猫记者",
+                  "rank": "小怪Lv2",
+                  "hp": 525255,
+                  "count": 2,
+                  "weak": [
+                    "Thunder",
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "8003060",
+                  "level": 85,
+                  "name": "虚构集合体",
+                  "rank": "精英",
+                  "hp": 437713,
+                  "count": 1,
+                  "weak": []
+                }
+              ]
+            },
+            {
+              "wave": 2,
+              "mult": "×10",
+              "foes": [
+                {
+                  "monsterId": "3003020",
+                  "level": 85,
+                  "name": "惊梦剧团的甜猿泰山",
+                  "rank": "精英",
+                  "hp": 14444524,
+                  "count": 1,
+                  "weak": [
+                    "Physical",
+                    "Fire",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "8022010",
+                  "level": 85,
+                  "name": "幼蛰虫",
+                  "rank": "小怪Lv2",
+                  "hp": 393942,
+                  "count": 20,
+                  "weak": [
+                    "Quantum",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "2002010",
+                  "level": 85,
+                  "name": "云骑巡防士卒",
+                  "rank": "小怪Lv2",
+                  "hp": 280136,
+                  "count": 20,
+                  "weak": [
+                    "Fire",
+                    "Wind",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            },
+            {
+              "wave": 3,
+              "mult": "×46",
+              "foes": [
+                {
+                  "monsterId": "5014023",
+                  "level": 85,
+                  "name": "合金机铠•帕姆王",
+                  "rank": "小BOSS",
+                  "hp": 66444814,
+                  "count": 1,
+                  "weak": [
+                    "Fire",
+                    "Thunder",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "5012120",
+                  "level": 85,
+                  "name": "「合金保姆」",
+                  "rank": "小怪Lv2",
+                  "hp": 2416175,
+                  "count": 20,
+                  "weak": [
+                    "Fire",
+                    "Thunder",
+                    "Imaginary"
+                  ]
+                },
+                {
+                  "monsterId": "2022050",
+                  "level": 85,
+                  "name": "丰饶灵兽•奎木",
+                  "rank": "小怪Lv2",
+                  "hp": 1610783,
+                  "count": 20,
+                  "weak": [
+                    "Fire",
+                    "Wind",
+                    "Imaginary"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Stage 4"
+    },
+    {
+      "index": 0,
+      "name": "星启",
+      "f": 0,
+      "kind": "star",
+      "siteName": "星启",
+      "level": 85,
+      "tags": [
+        "Physical",
+        "Ice"
+      ],
+      "hp": 212629524,
+      "waves": [
+        {
+          "wave": 1,
+          "mult": "×5.5",
+          "foes": [
+            {
+              "monsterId": "1002030",
+              "level": 85,
+              "name": "银鬃炮手",
+              "rank": "小怪Lv2",
+              "hp": 202223,
+              "count": 14,
+              "weak": [
+                "Physical",
+                "Ice",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "1002050",
+              "level": 85,
+              "name": "银鬃射手",
+              "rank": "小怪Lv2",
+              "hp": 105927,
+              "count": 13,
+              "weak": [
+                "Physical",
+                "Ice"
+              ]
+            },
+            {
+              "monsterId": "5012110",
+              "level": 85,
+              "name": "狸猫记者",
+              "rank": "小怪Lv2",
+              "hp": 577781,
+              "count": 2,
+              "weak": [
+                "Thunder",
+                "Quantum",
+                "Imaginary"
+              ]
+            },
+            {
+              "monsterId": "8003060",
+              "level": 85,
+              "name": "虚构集合体",
+              "rank": "精英",
+              "hp": 481484,
+              "count": 1,
+              "weak": []
+            }
+          ]
+        },
+        {
+          "wave": 2,
+          "mult": "×13",
+          "foes": [
+            {
+              "monsterId": "2023030",
+              "level": 85,
+              "name": "承露天人",
+              "rank": "精英",
+              "hp": 18777882,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Ice",
+                "Thunder"
+              ]
+            },
+            {
+              "monsterId": "2032020",
+              "level": 85,
+              "name": "蚀月狼卒",
+              "rank": "小怪Lv2",
+              "hp": 455221,
+              "count": 20,
+              "weak": [
+                "Physical",
+                "Wind"
+              ]
+            },
+            {
+              "monsterId": "2002030",
+              "level": 85,
+              "name": "幽府武弁",
+              "rank": "小怪Lv2",
+              "hp": 341416,
+              "count": 20,
+              "weak": [
+                "Physical",
+                "Ice",
+                "Wind"
+              ]
+            }
+          ]
+        },
+        {
+          "wave": 3,
+          "mult": "×56",
+          "foes": [
+            {
+              "monsterId": "3024010",
+              "level": 85,
+              "name": "银枝",
+              "rank": "小BOSS",
+              "hp": 80889343,
+              "count": 1,
+              "weak": [
+                "Physical",
+                "Fire",
+                "Ice"
+              ]
+            },
+            {
+              "monsterId": "3021020",
+              "level": 85,
+              "name": "「授勋」",
+              "rank": "小怪",
+              "hp": 2696311,
+              "count": 20,
+              "weak": [
+                "Physical",
+                "Ice"
+              ]
+            },
+            {
+              "monsterId": "3021040",
+              "level": 85,
+              "name": "「盾」",
+              "rank": "小怪",
+              "hp": 1862906,
+              "count": 20,
+              "weak": [
+                "Physical",
+                "Thunder"
+              ]
+            }
+          ]
+        }
+      ],
+      "nameEn": "Tierce"
+    }
+  ],
+  "modeMechanics": []
+}

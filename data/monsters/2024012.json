@@ -1,0 +1,1351 @@
+{
+  "id": "2024012",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "丰饶玄鹿（完整）",
+    "en": "Abundant Ebon Deer (Complete)"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Fire",
+      "Ice",
+      "Quantum"
+    ]
+  },
+  "zh": {
+    "id": 2024012,
+    "name": "丰饶玄鹿（完整）",
+    "desc": "代码受到影响后的完整投影。参照本体为由「建木」化生，拱卫其根系的灵瑞之兽，履迹所之，和泽滋生，枝杪郁敷。\\n自毁于太古时代的战争后，「建木」终于在星核的修补下再度生长。彼时仙人们所造的珍禽奇兽纷至沓来，宛如旧梦重临。",
+    "monster_camp_id": 2,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 697.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_2024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 144,
+    "stance_base": 420,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 2024012,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "衔枝 • 肃风",
+            "skill_desc": "召唤建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "衔枝 • 缃叶",
+            "skill_desc": "召唤建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "衔枝 • 繁花",
+            "skill_desc": "召唤建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "衔枝 • 嘉实",
+            "skill_desc": "召唤建木枝梢【嘉实之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "呦鸣",
+            "skill_desc": "对指定我方单体造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "绾风",
+            "skill_desc": "对我方全体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "蕉覆",
+            "skill_desc": "提高防御力，且使自身韧性无法被削减。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "斑龙触",
+            "skill_desc": "当场上存在2个【嘉实】时立即施放该技能，对我方全体造成大量雷属性伤害。场上【建木枝梢】数量越多，造成的伤害越高。施放技能后，清除场上所有的【嘉实之杪】。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "永寿",
+            "skill_desc": "立即回复生命值，并获得1层【若木化生】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "衔枝 • 引蔓",
+            "skill_desc": "召唤2个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "衔枝 • 垂枝",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "衔枝 • 榛莽",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】，1个建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "衔枝 • 交藤",
+            "skill_desc": "召唤2个建木枝梢【嘉实之杪】，1个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "生机充盈",
+            "skill_desc": "每当丰饶玄鹿获得来自敌方目标的增益效果时，丰饶玄鹿和所有建木枝梢造成的伤害小幅提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401201,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 2.666667,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": 256,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": 660,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "衔枝 • 肃风",
+            "skill_desc": "召唤建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "衔枝 • 缃叶",
+            "skill_desc": "召唤建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "衔枝 • 繁花",
+            "skill_desc": "召唤建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "衔枝 • 嘉实",
+            "skill_desc": "召唤建木枝梢【嘉实之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "呦鸣",
+            "skill_desc": "对指定我方单体造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "绾风",
+            "skill_desc": "对我方全体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "蕉覆",
+            "skill_desc": "提高防御力，且使自身韧性无法被削减。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "斑龙触",
+            "skill_desc": "当场上存在2个【嘉实】时立即施放该技能，对我方全体造成大量雷属性伤害。场上【建木枝梢】数量越多，造成的伤害越高。施放技能后，清除场上所有的【嘉实之杪】。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "永寿",
+            "skill_desc": "立即回复生命值，并获得1层【若木化生】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "衔枝 • 引蔓",
+            "skill_desc": "召唤2个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "衔枝 • 垂枝",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "衔枝 • 榛莽",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】，1个建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "衔枝 • 交藤",
+            "skill_desc": "召唤2个建木枝梢【嘉实之杪】，1个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "生机充盈",
+            "skill_desc": "每当丰饶玄鹿获得来自敌方目标的增益效果时，丰饶玄鹿和所有建木枝梢造成的伤害小幅提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401202,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 4,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -120,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "衔枝 • 肃风",
+            "skill_desc": "召唤建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "衔枝 • 缃叶",
+            "skill_desc": "召唤建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "衔枝 • 繁花",
+            "skill_desc": "召唤建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "衔枝 • 嘉实",
+            "skill_desc": "召唤建木枝梢【嘉实之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "呦鸣",
+            "skill_desc": "对指定我方单体造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "绾风",
+            "skill_desc": "对我方全体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "蕉覆",
+            "skill_desc": "提高防御力，且使自身韧性无法被削减。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "斑龙触",
+            "skill_desc": "当场上存在2个【嘉实】时立即施放该技能，对我方全体造成大量雷属性伤害。场上【建木枝梢】数量越多，造成的伤害越高。施放技能后，清除场上所有的【嘉实之杪】。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "永寿",
+            "skill_desc": "立即回复生命值，并获得1层【若木化生】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "衔枝 • 引蔓",
+            "skill_desc": "召唤2个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "衔枝 • 垂枝",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "衔枝 • 榛莽",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】，1个建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "衔枝 • 交藤",
+            "skill_desc": "召唤2个建木枝梢【嘉实之杪】，1个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "生机充盈",
+            "skill_desc": "每当丰饶玄鹿获得来自敌方目标的增益效果时，丰饶玄鹿和所有建木枝梢造成的伤害小幅提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401203,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1.733333,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "衔枝 • 肃风",
+            "skill_desc": "召唤建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "衔枝 • 缃叶",
+            "skill_desc": "召唤建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "衔枝 • 繁花",
+            "skill_desc": "召唤建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "衔枝 • 嘉实",
+            "skill_desc": "召唤建木枝梢【嘉实之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "呦鸣",
+            "skill_desc": "对指定我方单体造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "绾风",
+            "skill_desc": "对我方全体造成风属性伤害。",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "蕉覆",
+            "skill_desc": "提高防御力，且使自身韧性无法被削减。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "斑龙触",
+            "skill_desc": "当场上存在2个【嘉实】时立即施放该技能，对我方全体造成大量雷属性伤害。场上【建木枝梢】数量越多，造成的伤害越高。施放技能后，清除场上所有的【嘉实之杪】。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "永寿",
+            "skill_desc": "立即回复生命值，并获得1层【若木化生】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "衔枝 • 引蔓",
+            "skill_desc": "召唤2个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "衔枝 • 垂枝",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "衔枝 • 榛莽",
+            "skill_desc": "召唤2个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】，1个建木枝梢【繁花之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "衔枝 • 交藤",
+            "skill_desc": "召唤2个建木枝梢【嘉实之杪】，1个建木枝梢【缃叶之杪】，1个建木枝梢【肃风之杪】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "生机充盈",
+            "skill_desc": "每当丰饶玄鹿获得来自敌方目标的增益效果时，丰饶玄鹿和所有建木枝梢造成的伤害小幅提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 2024012,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 1.66
+      }
+    ]
+  },
+  "en": {
+    "id": 2024012,
+    "name": "Abundant Ebon Deer (Complete)",
+    "desc": "A complete projection produced by compromised codes. The referent entity is an auspicious spiritual beast wrought into being to the Ambrosial Arbor and protects its roots. Its arrival brings along exuberant vegetation and promises good fortune.\\nOnce destroyed during ancient wars, the Ambrosial Arbor is mended by the Stellaron and finally revives. Rare creatures and legendary beasts made by celestials of the past all return to this world, like an old dream coming alive again.",
+    "monster_camp_id": 2,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 697.5,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_2024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 144,
+    "stance_base": 420,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 2024012,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "Pedicel: Wintry Wind",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Wintry Wind\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "Pedicel: Marple Leaf",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Marple Leaf\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "Pedicel: Glorious Blooms",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Glorious Blooms\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "Pedicel: Lavish Fruits",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Lavish Fruits.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "Wavering Bleat",
+            "skill_desc": "Deals Lightning DMG to a single target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "Caress of Wind",
+            "skill_desc": "Deals Wind DMG to all targets.",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "Hardy Leaf Sheath",
+            "skill_desc": "Increases DEF. Toughness cannot be reduced.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "Flamboyant Gore",
+            "skill_desc": "Uses this ability immediately when there are 2 Lavish Fruits on the field. Deals massive Lightning DMG to all targets. Deals more damage for every Ambrosial Arbor Branch on the field. After the ability is used, removes all Twigs of Lavish Fruits on the field.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "Everlife",
+            "skill_desc": "Immediately restores HP and gains 1 stack of Synwood Renewal.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "Pedicel: Ivy Allure",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "Pedicel: Willow Sprig",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "Pedicel: Hazel Lush",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" 1 Ambrosial Arbor Branch \"Twig of Wintry Wind,\" and 1 Ambrosial Arbor Branch \"Twig of Glorious Blooms.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "Pedicel: Entwined Vines",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Lavish Fruits,\" 1 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" and 1 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "Vigor Overflow",
+            "skill_desc": "Every time the Abundant Ebon Deer gains a buff from enemy targets, DMG dealt by the Abundant Ebon Deer and all Ambrosial Arbor branches is slightly increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401201,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 2.666667,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": 256,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": 660,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "Pedicel: Wintry Wind",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Wintry Wind\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "Pedicel: Marple Leaf",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Marple Leaf\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "Pedicel: Glorious Blooms",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Glorious Blooms\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "Pedicel: Lavish Fruits",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Lavish Fruits.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "Wavering Bleat",
+            "skill_desc": "Deals Lightning DMG to a single target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "Caress of Wind",
+            "skill_desc": "Deals Wind DMG to all targets.",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "Hardy Leaf Sheath",
+            "skill_desc": "Increases DEF. Toughness cannot be reduced.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "Flamboyant Gore",
+            "skill_desc": "Uses this ability immediately when there are 2 Lavish Fruits on the field. Deals massive Lightning DMG to all targets. Deals more damage for every Ambrosial Arbor Branch on the field. After the ability is used, removes all Twigs of Lavish Fruits on the field.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "Everlife",
+            "skill_desc": "Immediately restores HP and gains 1 stack of Synwood Renewal.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "Pedicel: Ivy Allure",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "Pedicel: Willow Sprig",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "Pedicel: Hazel Lush",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" 1 Ambrosial Arbor Branch \"Twig of Wintry Wind,\" and 1 Ambrosial Arbor Branch \"Twig of Glorious Blooms.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "Pedicel: Entwined Vines",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Lavish Fruits,\" 1 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" and 1 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "Vigor Overflow",
+            "skill_desc": "Every time the Abundant Ebon Deer gains a buff from enemy targets, DMG dealt by the Abundant Ebon Deer and all Ambrosial Arbor branches is slightly increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401202,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 4,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": -120,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "Pedicel: Wintry Wind",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Wintry Wind\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "Pedicel: Marple Leaf",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Marple Leaf\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "Pedicel: Glorious Blooms",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Glorious Blooms\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "Pedicel: Lavish Fruits",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Lavish Fruits.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "Wavering Bleat",
+            "skill_desc": "Deals Lightning DMG to a single target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "Caress of Wind",
+            "skill_desc": "Deals Wind DMG to all targets.",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "Hardy Leaf Sheath",
+            "skill_desc": "Increases DEF. Toughness cannot be reduced.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "Flamboyant Gore",
+            "skill_desc": "Uses this ability immediately when there are 2 Lavish Fruits on the field. Deals massive Lightning DMG to all targets. Deals more damage for every Ambrosial Arbor Branch on the field. After the ability is used, removes all Twigs of Lavish Fruits on the field.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "Everlife",
+            "skill_desc": "Immediately restores HP and gains 1 stack of Synwood Renewal.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "Pedicel: Ivy Allure",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "Pedicel: Willow Sprig",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "Pedicel: Hazel Lush",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" 1 Ambrosial Arbor Branch \"Twig of Wintry Wind,\" and 1 Ambrosial Arbor Branch \"Twig of Glorious Blooms.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "Pedicel: Entwined Vines",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Lavish Fruits,\" 1 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" and 1 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "Vigor Overflow",
+            "skill_desc": "Every time the Abundant Ebon Deer gains a buff from enemy targets, DMG dealt by the Abundant Ebon Deer and all Ambrosial Arbor branches is slightly increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 202401203,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1.733333,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Fire",
+          "Ice",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 202401201,
+            "skill_name": "Pedicel: Wintry Wind",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Wintry Wind\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401202,
+            "skill_name": "Pedicel: Marple Leaf",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Marple Leaf\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401203,
+            "skill_name": "Pedicel: Glorious Blooms",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Glorious Blooms\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401204,
+            "skill_name": "Pedicel: Lavish Fruits",
+            "skill_desc": "Summons Ambrosial Arbor branch \"Twig of Lavish Fruits.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401205,
+            "skill_name": "Wavering Bleat",
+            "skill_desc": "Deals Lightning DMG to a single target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401206,
+            "skill_name": "Caress of Wind",
+            "skill_desc": "Deals Wind DMG to all targets.",
+            "damage_type": "Wind",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 202401207,
+            "skill_name": "Hardy Leaf Sheath",
+            "skill_desc": "Increases DEF. Toughness cannot be reduced.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401208,
+            "skill_name": "Flamboyant Gore",
+            "skill_desc": "Uses this ability immediately when there are 2 Lavish Fruits on the field. Deals massive Lightning DMG to all targets. Deals more damage for every Ambrosial Arbor Branch on the field. After the ability is used, removes all Twigs of Lavish Fruits on the field.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {}
+          },
+          {
+            "id": 202401209,
+            "skill_name": "Everlife",
+            "skill_desc": "Immediately restores HP and gains 1 stack of Synwood Renewal.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401210,
+            "skill_name": "Pedicel: Ivy Allure",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401211,
+            "skill_name": "Pedicel: Willow Sprig",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401212,
+            "skill_name": "Pedicel: Hazel Lush",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" 1 Ambrosial Arbor Branch \"Twig of Wintry Wind,\" and 1 Ambrosial Arbor Branch \"Twig of Glorious Blooms.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401213,
+            "skill_name": "Pedicel: Entwined Vines",
+            "skill_desc": "Summons 2 Ambrosial Arbor Branch \"Twig of Lavish Fruits,\" 1 Ambrosial Arbor Branch \"Twig of Marple Leaf,\" and 1 Ambrosial Arbor Branch \"Twig of Wintry Wind.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 202401214,
+            "skill_name": "Vigor Overflow",
+            "skill_desc": "Every time the Abundant Ebon Deer gains a buff from enemy targets, DMG dealt by the Abundant Ebon Deer and all Ambrosial Arbor branches is slightly increased.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 2024012,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 2024012,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 1.66
+      }
+    ]
+  }
+}

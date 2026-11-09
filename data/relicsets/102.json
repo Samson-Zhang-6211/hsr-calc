@@ -1,0 +1,94 @@
+{
+  "id": "102",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "野穗伴行的快枪手",
+    "en": "Musketeer of Wild Wheat"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "野穗伴行的快枪手",
+    "icon": "SpriteOutput/ItemIcon/71001.png",
+    "parts": {
+      "31021": {
+        "name": "快枪手的野穗毡帽",
+        "desc": null,
+        "story": null
+      },
+      "31022": {
+        "name": "快枪手的粗革手套",
+        "desc": null,
+        "story": null
+      },
+      "31023": {
+        "name": "快枪手的猎风披肩",
+        "desc": null,
+        "story": null
+      },
+      "31024": {
+        "name": "快枪手的铆钉马靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "攻击力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "使装备者的速度提高<unbreak>#1[i]%</unbreak>，普攻造成的伤害提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.06,
+          0.1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Musketeer of Wild Wheat",
+    "icon": "SpriteOutput/ItemIcon/71001.png",
+    "parts": {
+      "31021": {
+        "name": "Musketeer's Wild Wheat Felt Hat",
+        "desc": null,
+        "story": null
+      },
+      "31022": {
+        "name": "Musketeer's Coarse Leather Gloves",
+        "desc": null,
+        "story": null
+      },
+      "31023": {
+        "name": "Musketeer's Wind-Hunting Shawl",
+        "desc": null,
+        "story": null
+      },
+      "31024": {
+        "name": "Musketeer's Rivets Riding Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "The wearer's SPD increases by <unbreak>#1[i]%</unbreak> and DMG dealt by Basic ATK increases by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.06,
+          0.1
+        ]
+      }
+    }
+  }
+}

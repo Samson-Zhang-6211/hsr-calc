@@ -1,0 +1,64 @@
+{
+  "id": "329",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "神的瞬息欢愉",
+    "en": "God's Moment of Joy"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "神的瞬息欢愉",
+    "icon": "SpriteOutput/ItemIcon/71062.png",
+    "parts": {
+      "33295": {
+        "name": "瞬息欢愉的永恒舞台",
+        "desc": null,
+        "story": null
+      },
+      "33296": {
+        "name": "瞬息欢愉的魔术道具",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的速度提高<unbreak>#1[i]%</unbreak>。当装备者的欢愉度大于等于<unbreak>#2[i]%</unbreak>时，进入战斗时立刻使行动提前<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.06,
+          0.4,
+          0.4
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "God's Moment of Joy",
+    "icon": "SpriteOutput/ItemIcon/71062.png",
+    "parts": {
+      "33295": {
+        "name": "Moment of Joy's Eternal Stage",
+        "desc": null,
+        "story": null
+      },
+      "33296": {
+        "name": "Moment of Joy's Magic Prop",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's SPD by <unbreak>#1[i]%</unbreak>. When the wearer's Elation reaches <unbreak>#2[i]%</unbreak> or higher, the wearer's action advances by <unbreak>#3[i]%</unbreak> immediately when entering combat.",
+        "param_list": [
+          0.06,
+          0.4,
+          0.4
+        ]
+      }
+    }
+  }
+}

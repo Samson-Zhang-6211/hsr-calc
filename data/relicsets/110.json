@@ -1,0 +1,92 @@
+{
+  "id": "110",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "晨昏交界的翔鹰",
+    "en": "Eagle of Twilight Line"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "晨昏交界的翔鹰",
+    "icon": "SpriteOutput/ItemIcon/71009.png",
+    "parts": {
+      "31101": {
+        "name": "翔鹰的长喙头盔",
+        "desc": null,
+        "story": null
+      },
+      "31102": {
+        "name": "翔鹰的鹰击指环",
+        "desc": null,
+        "story": null
+      },
+      "31103": {
+        "name": "翔鹰的翼装束带",
+        "desc": null,
+        "story": null
+      },
+      "31104": {
+        "name": "翔鹰的绒羽绑带",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "风属性伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "当装备者施放终结技后，使其行动提前<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.25
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Eagle of Twilight Line",
+    "icon": "SpriteOutput/ItemIcon/71009.png",
+    "parts": {
+      "31101": {
+        "name": "Eagle's Beaked Helmet",
+        "desc": null,
+        "story": null
+      },
+      "31102": {
+        "name": "Eagle's Soaring Ring",
+        "desc": null,
+        "story": null
+      },
+      "31103": {
+        "name": "Eagle's Winged Suit Harness",
+        "desc": null,
+        "story": null
+      },
+      "31104": {
+        "name": "Eagle's Quilted Puttees",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Wind DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "After the wearer uses their Ultimate, their action is Advanced Forward by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.25
+        ]
+      }
+    }
+  }
+}

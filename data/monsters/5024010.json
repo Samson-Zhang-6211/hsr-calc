@@ -1,0 +1,973 @@
+{
+  "id": "5024010",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "极乐颠倒•邪愿莲华主",
+    "en": "Paramount Bliss Inverted: Illwish Archlotus"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Physical",
+      "Thunder",
+      "Imaginary"
+    ]
+  },
+  "zh": {
+    "id": 5024010,
+    "name": "极乐颠倒•邪愿莲华主",
+    "desc": "满愿电视台的台长，与被带入二相乐园的倏忽血肉合二为一。\\n在<unbreak>15</unbreak>年前的上一场幻月游戏中，名为「告死魔」的连环杀手造成了巨大的死伤。他的作为使得许多居民失去父母、兄弟、同学。\\n肉体上的伤痕可以治愈，但心灵上的伤痕永远无法被填补。人们组成了「受害者互助会」，试图医治这道伤痛。\\n满愿改进了一种「幸福手术」，接种后，所有人将永远忘却痛苦，保持快乐。手术的源头，就是倏忽血肉的残片。\\n十五年过去后，「受害者互助会」演变成了庞大的「幸福微笑研究会」，而这项简单的小手术借由整容、医疗等行为，在二相乐园感染了无数人，让倏忽的细胞沉睡在人群中。\\n作为幸福微笑研究会的首领，满愿仇恨着产生告死魔的幻月游戏，因而化作了「极乐颠倒•邪愿莲华主」，向这个世界发起复仇。",
+    "monster_camp_id": 17,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 4464,
+    "initial_delay_ratio": 0.5,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 144,
+    "stance_base": 720,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5024010,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "空裂刺蕊",
+            "skill_desc": "对指定我方单体目标造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "凶梦汲取",
+            "skill_desc": "吸取所有带有<u>【幸福】</u>或<u>【幸福傀儡】</u>效果我方目标的生命值并转化为自身生命值。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "邪愿散华",
+            "skill_desc": "对随机我方多个角色造成雷属性伤害并施加<u>【幸福】</u>效果。回合结束时<u>【幸福】</u>到达<unbreak>#2[i]</unbreak>层会将目标转化为<u>【幸福傀儡】</u>。<u>【幸福】</u>变为0层则会移除<u>【幸福】</u>并添加<u>【颠倒离断】</u>效果。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401003": {
+                "name": "颠倒离断",
+                "desc": "暴击伤害提高，并且在持续时间内不会受到【幸福傀儡】效果的影响。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "待放",
+            "skill_desc": "进入蓄力状态，下回合施放【极乐之拥】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "极乐之拥",
+            "skill_desc": "对我方全体角色造成大量雷属性伤害，若自身处于<u>【邪笑】</u>状态则对所有目标施加<u>【幸福傀儡】</u>状态。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "笑止",
+            "skill_desc": "一定数量的敌方目标被消灭后触发【笑止】，使敌方全体目标受到的伤害提高，并清除【极乐颠倒•邪愿莲华主】的<u>【邪笑】</u>效果。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 502401001,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.28125,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "空裂刺蕊",
+            "skill_desc": "对指定我方单体目标造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "凶梦汲取",
+            "skill_desc": "吸取所有带有<u>【幸福】</u>或<u>【幸福傀儡】</u>效果我方目标的生命值并转化为自身生命值。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "邪愿散华",
+            "skill_desc": "对随机我方多个角色造成雷属性伤害并施加<u>【幸福】</u>效果。回合结束时<u>【幸福】</u>到达<unbreak>#2[i]</unbreak>层会将目标转化为<u>【幸福傀儡】</u>。<u>【幸福】</u>变为0层则会移除<u>【幸福】</u>并添加<u>【颠倒离断】</u>效果。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401003": {
+                "name": "颠倒离断",
+                "desc": "暴击伤害提高，并且在持续时间内不会受到【幸福傀儡】效果的影响。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "待放",
+            "skill_desc": "进入蓄力状态，下回合施放【极乐之拥】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "极乐之拥",
+            "skill_desc": "对我方全体角色造成大量雷属性伤害，若自身处于<u>【邪笑】</u>状态则对所有目标施加<u>【幸福傀儡】</u>状态。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "笑止",
+            "skill_desc": "一定数量的敌方目标被消灭后触发【笑止】，使敌方全体目标受到的伤害提高，并清除【极乐颠倒•邪愿莲华主】的<u>【邪笑】</u>效果。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 502401002,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "空裂刺蕊",
+            "skill_desc": "对指定我方单体目标造成雷属性伤害。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "凶梦汲取",
+            "skill_desc": "吸取所有带有<u>【幸福】</u>或<u>【幸福傀儡】</u>效果我方目标的生命值并转化为自身生命值。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "邪愿散华",
+            "skill_desc": "对随机我方多个角色造成雷属性伤害并施加<u>【幸福】</u>效果。回合结束时<u>【幸福】</u>到达<unbreak>#2[i]</unbreak>层会将目标转化为<u>【幸福傀儡】</u>。<u>【幸福】</u>变为0层则会移除<u>【幸福】</u>并添加<u>【颠倒离断】</u>效果。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "幸福",
+                "desc": "回合开始时增加层数，并在敌方召唤【邪愿莲华】，攻击敌方目标后减少1层，消灭1个敌方目标后额外减少1层；回合结束时若大于等于一定层数则被转化为【幸福傀儡】；变为0层时则解除该状态并添加【颠倒离断】效果。",
+                "param": []
+              },
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401003": {
+                "name": "颠倒离断",
+                "desc": "暴击伤害提高，并且在持续时间内不会受到【幸福傀儡】效果的影响。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "待放",
+            "skill_desc": "进入蓄力状态，下回合施放【极乐之拥】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "极乐之拥",
+            "skill_desc": "对我方全体角色造成大量雷属性伤害，若自身处于<u>【邪笑】</u>状态则对所有目标施加<u>【幸福傀儡】</u>状态。",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "幸福傀儡",
+                "desc": "无法行动，回合开始时随机陷入【怒噪】或【支配】状态并获得笑点，有概率造成【会心一击】使我方获得更多笑点。",
+                "param": []
+              },
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "笑止",
+            "skill_desc": "一定数量的敌方目标被消灭后触发【笑止】，使敌方全体目标受到的伤害提高，并清除【极乐颠倒•邪愿莲华主】的<u>【邪笑】</u>效果。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "邪笑",
+                "desc": "造成的伤害提高，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5024010,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  },
+  "en": {
+    "id": 5024010,
+    "name": "Paramount Bliss Inverted: Illwish Archlotus",
+    "desc": "The director of Fulwish TV, fused with the flesh of Shuhu that was brought into Planarcadia.\\nDuring the last Phantasmoon Games fifteen years ago, a serial killer known as the \"Herald of Death\" caused countless casualties. His actions left numerous residents without parents, siblings, and classmates.\\nPhysical scars can heal, but scars of the mind and soul can never be mended again. The people formed a \"Victims' Mutual Aid Society\" in an attempt to heal this wound.\\nFulwish perfected a \"Happiness Surgery.\" Once administered, everyone would eternally forget their suffering and remain happy. The source of this surgery was pieces of Shuhu's flesh.\\nFifteen years later, the \"Victims' Mutual Aid Society\" evolved into the renowned \"Research Society of Happy Smiles.\" This simple little surgery, disguised as a cosmetic procedure or medical treatment, infected countless people in Planarcadia and allowed Shuhu's cells to slumber within the populace.\\nAs the president of the Research Society of Happy Smiles, Fulwish harbored hatred toward the Phantasmoon Games that spawned the Herald of Death, and thus transformed into \"Paramount Bliss Inverted: Illwish Archlotus,\" launching her revenge against this world.",
+    "monster_camp_id": 17,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 4464,
+    "initial_delay_ratio": 0.5,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5024010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 144,
+    "stance_base": 720,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5024010,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "Rift Pistil",
+            "skill_desc": "Deals Lightning DMG to one designated target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "Siphon Woe",
+            "skill_desc": "Drains the HP of all targets with the <u>\"Happiness\"</u> or <u>\"Happiness Puppet\"</u> effects and converts it into this unit's HP.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "Illwish Spray",
+            "skill_desc": "Deals Lightning DMG to multiple random target characters and applies the <u>\"Happiness\"</u> effect. When <u>\"Happiness\"</u> reaches <unbreak>#2[i]</unbreak> stack(s) at the end of a turn, the target will be converted into a <u>\"Happiness Puppet\"</u>. If <u>\"Happiness\"</u> is reduced to 0 stacks, it will be removed and replaced with the <u>\"Inverted Severance\"</u> effect.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401003": {
+                "name": "Inverted Severance",
+                "desc": "Increases CRIT DMG and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "Incipient Bloom",
+            "skill_desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "Euphoric Embrace",
+            "skill_desc": "Deals massive Lightning DMG to all target characters. If this unit is in the <u>\"Wicked Grin\"</u> state, inflicts the <u>\"Happiness Puppet\"</u> state on all targets.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "Laughter's End",
+            "skill_desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the <u>\"Wicked Grin\"</u> effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 502401001,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.28125,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "Rift Pistil",
+            "skill_desc": "Deals Lightning DMG to one designated target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "Siphon Woe",
+            "skill_desc": "Drains the HP of all targets with the <u>\"Happiness\"</u> or <u>\"Happiness Puppet\"</u> effects and converts it into this unit's HP.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "Illwish Spray",
+            "skill_desc": "Deals Lightning DMG to multiple random target characters and applies the <u>\"Happiness\"</u> effect. When <u>\"Happiness\"</u> reaches <unbreak>#2[i]</unbreak> stack(s) at the end of a turn, the target will be converted into a <u>\"Happiness Puppet\"</u>. If <u>\"Happiness\"</u> is reduced to 0 stacks, it will be removed and replaced with the <u>\"Inverted Severance\"</u> effect.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401003": {
+                "name": "Inverted Severance",
+                "desc": "Increases CRIT DMG and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "Incipient Bloom",
+            "skill_desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "Euphoric Embrace",
+            "skill_desc": "Deals massive Lightning DMG to all target characters. If this unit is in the <u>\"Wicked Grin\"</u> state, inflicts the <u>\"Happiness Puppet\"</u> state on all targets.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "Laughter's End",
+            "skill_desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the <u>\"Wicked Grin\"</u> effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 502401002,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Thunder",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.4
+          },
+          {
+            "damage_type": "Quantum",
+            "value": 0.4
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 502401001,
+            "skill_name": "Rift Pistil",
+            "skill_desc": "Deals Lightning DMG to one designated target.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 15,
+            "extra": {}
+          },
+          {
+            "id": 502401003,
+            "skill_name": "Siphon Woe",
+            "skill_desc": "Drains the HP of all targets with the <u>\"Happiness\"</u> or <u>\"Happiness Puppet\"</u> effects and converts it into this unit's HP.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401004,
+            "skill_name": "Illwish Spray",
+            "skill_desc": "Deals Lightning DMG to multiple random target characters and applies the <u>\"Happiness\"</u> effect. When <u>\"Happiness\"</u> reaches <unbreak>#2[i]</unbreak> stack(s) at the end of a turn, the target will be converted into a <u>\"Happiness Puppet\"</u>. If <u>\"Happiness\"</u> is reduced to 0 stacks, it will be removed and replaced with the <u>\"Inverted Severance\"</u> effect.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 10,
+            "extra": {
+              "502401001": {
+                "name": "Happiness",
+                "desc": "Gains stacks at the start of each turn. Loses 1 stack when an enemy summons \"Illwish Lotus\" or after attacking an enemy target. Loses 1 additional stack after eliminating an enemy target. At the end of a turn, if stacks are at or above a certain amount, will be converted into a \"Happiness Puppet.\" When stacks reach 0, this state is dispelled and the \"Inverted Severance\" effect is applied.",
+                "param": []
+              },
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401003": {
+                "name": "Inverted Severance",
+                "desc": "Increases CRIT DMG and becomes immune to the \"Happiness Puppet\" effect for the duration.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401005,
+            "skill_name": "Incipient Bloom",
+            "skill_desc": "Enters the Charging state. Uses \"Euphoric Embrace\" in the next turn.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 502401006,
+            "skill_name": "Euphoric Embrace",
+            "skill_desc": "Deals massive Lightning DMG to all target characters. If this unit is in the <u>\"Wicked Grin\"</u> state, inflicts the <u>\"Happiness Puppet\"</u> state on all targets.",
+            "damage_type": "Thunder",
+            "sp_hit_base": 20,
+            "extra": {
+              "502401002": {
+                "name": "Happiness Puppet",
+                "desc": "Cannot take action. At the start of each turn, randomly enters either \"Outrage\" or \"Dominance\" state and gains Punchline. Has a chance to trigger \"Right on Target,\" granting allies more Punchline.",
+                "param": []
+              },
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401007,
+            "skill_name": "Laughter's End",
+            "skill_desc": "After a certain number of friendly units are defeated, triggers \"Laughter's End\" that increases the DMG taken by all friendly units and removes the <u>\"Wicked Grin\"</u> effect from \"Paramount Bliss Inverted: Illwish Archlotus.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "502401004": {
+                "name": "Wicked Grin",
+                "desc": "DMG dealt increases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 502401008,
+            "skill_name": null,
+            "skill_desc": null,
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5024010,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5024010,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  }
+}

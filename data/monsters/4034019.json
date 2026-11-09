@@ -1,0 +1,505 @@
+{
+  "id": "4034019",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "至黑之剑，盗火行者（污染）",
+    "en": "Flame Reaver of the Deepest Dark (Corrupted)"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Ice",
+      "Thunder",
+      "Quantum"
+    ]
+  },
+  "zh": {
+    "id": 4034019,
+    "name": "至黑之剑，盗火行者（污染）",
+    "desc": "伴随黑潮而来、狩猎泰坦火种的无名剑士，无人知晓其真身。\\n身负不可思议的力量，剑技也近乎无懈可击。疯狂与执着交织于它的锋刃，神悟树庭与哀丽秘榭皆毁于其手。",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 930,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_4034010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 132,
+    "stance_base": 480,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 4034019,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 403401901,
+            "skill_name": "亡死的黑云",
+            "skill_desc": "对指定我方单体及其相邻目标造成物理属性伤害。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 403401902,
+            "skill_name": "将尽的命数",
+            "skill_desc": "对我方全体目标造成物理属性伤害，被击中目标降低生命值的一部分转化为<u>【侵蚀】</u>。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {
+              "240320101": {
+                "name": "侵蚀",
+                "desc": "攻击后回复侵蚀部分的生命值，击中的目标数量越多，回复的生命值越高。受到伤害时，降低生命值的一部分转化为侵蚀。消耗生命值时，降低的生命值会全部转化为侵蚀。通过回复生命值的方式解除侵蚀时，使自身获得【焕新】效果。【焕新】：下次攻击造成的伤害提高。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401903,
+            "skill_name": "相混的道途",
+            "skill_desc": "使【残破容器】进入【共祭】状态，在数次行动内施放【幽冥的悼念】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 403401904,
+            "skill_name": "幽冥的悼念",
+            "skill_desc": "与【残破容器】一同施放【亡死的黑云】或【将尽的命数】，随后吸收【残破容器】治疗自身，并获得<u>【灾难之力】</u>。",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401905,
+            "skill_name": "沉默的悲叹",
+            "skill_desc": "获得<u>【灾难之力】</u>并进入【沉默的悲叹】状态，下次行动时施放【莫因舍弃而哭泣】。",
+            "damage_type": "",
+            "sp_hit_base": 15,
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401906,
+            "skill_name": "却是必要的苦难",
+            "skill_desc": "消耗所有<u>【灾难之力】</u>对我方全体造成数次少量物理属性伤害，消耗的【灾难之力】层数越多，伤害的段数越多，随后对我方全体造成少量物理属性伤害。",
+            "damage_type": "",
+            "sp_hit_base": 20,
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401907,
+            "skill_name": "莫因舍弃而哭泣",
+            "skill_desc": "对我方全体造成物理属性伤害，消耗所有<u>【灾难之力】</u>额外造成数次少量物理属性伤害，消耗的【灾难之力】层数越多，伤害的段数越多。",
+            "damage_type": "",
+            "sp_hit_base": 15,
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401908,
+            "skill_name": "分离的哀痛",
+            "skill_desc": "施放【亡死的黑云】或【将尽的命数】时，消耗生命值召唤【残破容器】，并使消耗的生命值转化为<u>【苦痛缠绕】</u>。若该攻击召唤的【残破容器】被消灭，则额外对自身造成物理属性伤害。当自身再次施放【亡死的黑云】或【将尽的命数】时，曾被该攻击召唤的【残破容器】将一同发起攻击，随后被自身吸收， 回复转化为<u>【苦痛缠绕】</u>的生命值并使自身获得<u>【灾难之力】</u>。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              },
+              "403401002": {
+                "name": "苦痛缠绕",
+                "desc": "吸收【残破容器】后回复召唤该【残破容器】时消耗的生命值，【残破容器】被消灭后，无法再回复召唤该【残破容器】时消耗的生命值。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401909,
+            "skill_name": "迷失的共祭",
+            "skill_desc": "施放【沉默的悲叹】时，消耗生命值召唤【残破容器】，并使消耗的生命值转化为<u>【苦痛缠绕】</u>。当拥有的<u>【灾难之力】</u>层数不为0时，若【残破容器】受到致命攻击，则立即消耗1层<u>【灾难之力】</u>和一定比例的生命值，重新召唤【残破容器】。施放【莫因舍弃而哭泣】时，吸收【残破容器】并回复转化为<u>【苦痛缠绕】</u>的生命值。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "403401001": {
+                "name": "灾难之力",
+                "desc": "施放特定技能时，消耗【灾难之力】的所有层数追加攻击段数。",
+                "param": []
+              },
+              "403401002": {
+                "name": "苦痛缠绕",
+                "desc": "吸收【残破容器】后回复召唤该【残破容器】时消耗的生命值，【残破容器】被消灭后，无法再回复召唤该【残破容器】时消耗的生命值。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401910,
+            "skill_name": "永别的决绝",
+            "skill_desc": "获得一定层数的【减伤】，使自身受到的伤害降低，每有1个【残破容器】被消灭后失去1层。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 403401911,
+            "skill_name": "残火将熄",
+            "skill_desc": "战斗中会出现黑泥对首领进行强化。强化后【至黑之剑，盗火行者（污染）】会立刻施放【却是必要的苦难】或【沉默的悲叹】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 4034019,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  },
+  "en": {
+    "id": 4034019,
+    "name": "Flame Reaver of the Deepest Dark (Corrupted)",
+    "desc": "A nameless swordmaster who came with the black tide and is hunting down the Titans' Coreflame. None knows their true identity.\\nTheir power is incredible, and their swordplay is nigh impeccable. Within their swords, madness and obsession entwine, once leading to the fall of the Grove of Epiphany and Aedes Elysiae.",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 930,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_4034010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 132,
+    "stance_base": 480,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 4034019,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Ice",
+          "Thunder",
+          "Quantum"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Imaginary",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 403401901,
+            "skill_name": "Demise's Storm",
+            "skill_desc": "Deals Physical DMG to one designated target and adjacent targets.",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 403401902,
+            "skill_name": "Fading Fate",
+            "skill_desc": "Deals Physical DMG to all targets. Converts a portion of the hit target's reduced HP to \"<u>Corrosion</u>.\"",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {
+              "240320101": {
+                "name": "Corrosion",
+                "desc": "After attacking, restore a portion of Corroded HP. The more targets are hit, the more HP is restored. When taking DMG, a portion of the HP reduced is converted to Corrosion. When HP is consumed, the reduced HP will all be converted to Corrosion. When Corrosion is dispelled via restorative means, this unit obtains \"Renewal.\" \"Renewal\" increases the DMG dealt by the next attack.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401903,
+            "skill_name": "Roads Mingled",
+            "skill_desc": "Causes \"Long-Shattered Vessel\" to enter the \"Mutual Sacrifice\" state. Uses \"Underworld's Grief\" in a certain number of turns.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 403401904,
+            "skill_name": "Underworld's Grief",
+            "skill_desc": "Uses \"Demise's Storm\" or \"Fading Fate\" together with \"Long-Shattered Vessel.\" Then, absorbs \"Long-Shattered Vessel\" to heal this unit while obtaining <u>\"Calamity Power.\"</u>",
+            "damage_type": "",
+            "sp_hit_base": 10,
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401905,
+            "skill_name": "Silent Sorrow",
+            "skill_desc": "Obtains <u>\"Calamity Power\"</u> and enters the \"Silent Sorrow\" state. Uses \"Cry Not for the Discarded\" in the next action.",
+            "damage_type": "",
+            "sp_hit_base": 15,
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401906,
+            "skill_name": "But Suffering is Essential",
+            "skill_desc": "Consumes all <u>\"Calamity Power\"</u> and deals several instances of minor Physical DMG to all targets. The more \"Calamity Power\" stacks are consumed, the more instances of DMG. Then, deals minor Physical DMG to all targets.",
+            "damage_type": "",
+            "sp_hit_base": 20,
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401907,
+            "skill_name": "Cry Not for the Discarded",
+            "skill_desc": "Deals Physical DMG to all targets and consumes all <u>\"Calamity Power\"</u> to additionally deal several instances of minor Physical DMG. The more \"Calamity Power\" stacks are consumed, the more instances of DMG.",
+            "damage_type": "",
+            "sp_hit_base": 15,
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401908,
+            "skill_name": "Pain of Parting",
+            "skill_desc": "When using \"Demise's Storm\" or \"Fading Fate,\" consumes HP to summon \"Long-Shattered Vessel\" and convert the consumed HP into <u>\"Entangled By Agony.\"</u> If the \"Long-Shattered Vessel\" summoned by this attack is defeated, additionally deals Physical DMG to this unit. When this unit uses \"Demise's Storm\" or \"Fading Fate\" again, the \"Long-Shattered Vessel\" that was summoned by the attacking ability will attack together with this unit. This unit will then absorb the Vessel, restoring the HP that was converted to <u>\"Entangled By Agony\"</u> and granting <u>\"Calamity Power\"</u> to this unit.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              },
+              "403401002": {
+                "name": "Entangled By Agony",
+                "desc": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401909,
+            "skill_name": "Lost Sacrifice",
+            "skill_desc": "When using \"Silent Sorrow,\" consumes HP to summon a \"Long-Shattered Vessel\" and converts the consumed HP into <u>\"Entangled By Agony.\"</u> When stacks of <u>\"Calamity Power\"</u> are not at 0 and if a \"Long-Shattered Vessel\" receives a killing blow, immediately consumes 1 stack of <u>\"Calamity Power\"</u> and a percentage of HP to resummon a \"Long-Shattered Vessel.\" When using \"Cry Not for the Discarded,\" absorbs any \"Long-Shattered Vessel\" and restores the HP that was converted to <u>\"Entangled By Agony.\"</u>",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "403401001": {
+                "name": "Calamity Power",
+                "desc": "When using certain abilities, consume all \"Calamity Power\" stacks to increase Hits Per Action.",
+                "param": []
+              },
+              "403401002": {
+                "name": "Entangled By Agony",
+                "desc": "After absorbing \"Long-Shattered Vessel,\" restores the HP consumed to summon the current \"Long-Shattered Vessel.\" After \"Long-Shattered Vessel\" is defeated, this unit cannot restore the HP consumed used to summon the current \"Long-Shattered Vessel\" again.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 403401910,
+            "skill_name": "Resolute Farewell",
+            "skill_desc": "Receives a certain number of stacks of \"DMG reduction,\" reducing DMG received by this unit. 1 stack is lost after defeating 1 \"Long-Shattered Vessel.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 403401911,
+            "skill_name": "The Flames Extinguished",
+            "skill_desc": "Black Mud will appear in battle to enhance the Boss. After enhancement, \"Flame Reaver of the Deepest Dark (Corrupted)\" will immediately use \"But Suffering is Essential\" or \"Silent Sorrow.\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 4034019,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 4034019,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
+    ]
+  }
+}

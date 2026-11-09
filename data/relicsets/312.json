@@ -1,0 +1,62 @@
+{
+  "id": "312",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "梦想之地匹诺康尼",
+    "en": "Penacony, Land of the Dreams"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "梦想之地匹诺康尼",
+    "icon": "SpriteOutput/ItemIcon/71027.png",
+    "parts": {
+      "33125": {
+        "name": "匹诺康尼的堂皇酒店",
+        "desc": null,
+        "story": null
+      },
+      "33126": {
+        "name": "匹诺康尼的逐梦轨道",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的能量恢复效率提高<unbreak>#1[i]%</unbreak>。使队伍中与装备者属性相同的我方其他角色造成的伤害提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.05,
+          0.1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Penacony, Land of the Dreams",
+    "icon": "SpriteOutput/ItemIcon/71027.png",
+    "parts": {
+      "33125": {
+        "name": "Penacony's Grand Hotel",
+        "desc": null,
+        "story": null
+      },
+      "33126": {
+        "name": "Penacony's Dream-Seeking Tracks",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases wearer's Energy Regeneration Rate by <unbreak>#1[i]%</unbreak>. Increases DMG by <unbreak>#2[i]%</unbreak> for all other allies that are of the same Type as the wearer.",
+        "param_list": [
+          0.05,
+          0.1
+        ]
+      }
+    }
+  }
+}

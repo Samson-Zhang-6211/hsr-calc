@@ -1,0 +1,2298 @@
+/* ============================================================================
+ * 崩铁战斗计算器 · 全局皮肤层（2026-10-11 Tier 1）
+ *
+ * 结构：
+ *   ① :root                     = 默认皮肤「星穹典雅」（无 JS 时也是这一套）
+ *      :root[data-theme='neon'] = 皮肤「命途霓虹」
+ *   ② 组件样式一律引用令牌，不写字面量颜色；新增皮肤 = 新增一个变量块。
+ *
+ * 红线（改本文件前必读）：
+ *   - 装饰只用 position:absolute / background / box-shadow / clip-path 实现，
+ *     不引入额外的布局改动；全真模拟的战场区与明细表滚动依赖既有尺寸（该区冻结）。
+ *   - 不引 CSS 框架 / 预处理器 / webfont / 图标库，颜色全部走令牌。
+ *   - 类名是全局普通名，加类名前先 grep 是否已被别的页面占用。
+ * ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* —— 底色与背景（星点 + 星云，纯 CSS，无图片） —— */
+  --bg: #0a0d17;
+  --bg-image:
+    radial-gradient(1.6px 1.6px at 32px 44px, rgba(255, 255, 255, 0.5), transparent 62%),
+    radial-gradient(1.2px 1.2px at 152px 98px, rgba(200, 220, 255, 0.4), transparent 62%),
+    radial-gradient(1.4px 1.4px at 86px 162px, rgba(255, 235, 190, 0.38), transparent 62%),
+    radial-gradient(820px 420px at 12% -10%, rgba(66, 88, 166, 0.42), transparent 70%),
+    radial-gradient(700px 360px at 92% 0%, rgba(150, 118, 58, 0.18), transparent 72%);
+  --bg-size: 220px 200px, 220px 200px, 220px 200px, auto, auto;
+  --bg-repeat: repeat, repeat, repeat, no-repeat, no-repeat;
+
+  /* —— 文字 —— */
+  --text: #eae6dc;
+  --text-soft: #a9b1c9;
+  --text-muted: #98a0bb;
+
+  /* —— 面板 —— */
+  --panel-bg: linear-gradient(180deg, #1b2238, #141a2c);
+  --panel-border: rgba(226, 199, 141, 0.26);
+  --panel-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
+  --panel-accent: linear-gradient(90deg, rgba(240, 222, 180, 0.95), rgba(232, 213, 168, 0.14) 55%, transparent);
+  --panel-corner: rgba(226, 199, 141, 0.5);
+  --panel-corner-size: 16px;
+  --panel-radius: 3px;
+  --header-line: linear-gradient(90deg, rgba(232, 213, 168, 0.8), rgba(232, 213, 168, 0.16) 45%, transparent);
+
+  /* —— 标题 —— */
+  --title-bg: none;
+  --title-fg: #f4e6c2;
+  --title-shadow: none;
+  --h2-fg: #e8d5a8;
+  --h2-bar: linear-gradient(180deg, #f6e9c6, #a8853f);
+
+  /* —— 导航 —— */
+  --nav-fg: #9aa3c0;
+  --nav-hover-fg: #e8d5a8;
+  --nav-active-fg: #f8eed6;
+  --nav-active-bg: linear-gradient(180deg, rgba(232, 213, 168, 0.24), rgba(232, 213, 168, 0.06));
+  --nav-active-shadow: inset 0 0 0 1px rgba(232, 213, 168, 0.5);
+
+  /* —— 按钮 —— */
+  --btn-primary-bg: linear-gradient(180deg, #f8ecca, #c9a55f);
+  --btn-primary-fg: #241b09;
+  --btn-primary-shadow: 0 3px 16px rgba(226, 199, 141, 0.24);
+  --btn-primary-hover-bg: linear-gradient(180deg, #fdf4dc, #d8b672);
+  --btn-primary-hover-shadow: 0 3px 22px rgba(226, 199, 141, 0.42);
+  --btn-2-bg: rgba(232, 213, 168, 0.07);
+  --btn-2-fg: #e8d5a8;
+  --btn-2-border: rgba(226, 199, 141, 0.45);
+  --btn-2-hover-bg: rgba(232, 213, 168, 0.16);
+  --btn-danger-bg: rgba(160, 60, 80, 0.16);
+  --btn-danger-fg: #ffbcc4;
+  --btn-danger-border: rgba(200, 90, 110, 0.45);
+  --btn-danger-hover-bg: rgba(180, 66, 90, 0.28);
+  --btn-hover-glow: none;
+  --radius-btn: 2px;
+  /* 45° 切角是崩铁 UI 的标志性细节；霓虹皮肤改为药丸形（--btn-clip: none） */
+  --btn-clip: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  --chip-radius: 2px;
+  --chip-clip: polygon(9px 0, 100% 0, 100% calc(100% - 9px), calc(100% - 9px) 100%, 0 100%, 0 9px);
+
+  /* —— 表单 —— */
+  --input-bg: #0c1120;
+  --input-border: rgba(150, 166, 205, 0.18);
+  --input-hover-border: rgba(232, 213, 168, 0.45);
+  --input-fg: #eae6dc;
+  --input-radius: 2px;
+  --input-focus-border: rgba(232, 213, 168, 0.85);
+  --input-focus-ring: 0 0 0 2px rgba(226, 199, 141, 0.16);
+
+  /* —— 表格 —— */
+  --th-fg: rgba(232, 213, 168, 0.78);
+  --th-bg: linear-gradient(180deg, rgba(232, 213, 168, 0.1), transparent);
+  --th-tracking: 0.06em;
+  --table-line: rgba(150, 166, 205, 0.12);
+  --row-hover: rgba(232, 213, 168, 0.05);
+
+  /* —— 结果数字 —— */
+  --total-color: transparent;
+  --total-bg: linear-gradient(180deg, #fdf4da, #d5ac64);
+  --total-glow: 0 0 22px rgba(226, 199, 141, 0.28);
+
+  /* —— 标签页 —— */
+  --tab-bg: rgba(232, 213, 168, 0.06);
+  --tab-fg: #a9b1c9;
+  --tab-border: rgba(226, 199, 141, 0.28);
+  --tab-active-bg: linear-gradient(180deg, rgba(232, 213, 168, 0.24), rgba(232, 213, 168, 0.08));
+  --tab-active-fg: #f8eed6;
+  --tab-active-border: rgba(240, 222, 180, 0.9);
+
+  /* —— 滚动条 / 焦点 / 选中 —— */
+  --scroll-track: rgba(255, 255, 255, 0.02);
+  --scroll-thumb: rgba(226, 199, 141, 0.3);
+  --scroll-thumb-hover: rgba(226, 199, 141, 0.5);
+  --focus-outline: rgba(232, 213, 168, 0.7);
+  --selection-bg: rgba(226, 199, 141, 0.3);
+  --tap-hl: rgba(226, 199, 141, 0.16);
+
+  /* —— 布局尺寸层（两皮肤共用；皮肤块可选择覆盖）——
+   * 响应式只改这一层：@media 断点里覆盖同名变量，组件规则一律引用 var()。
+   * 页面内联 style 写死的宽度/方向也必须改引用这里的变量——
+   * 内联样式压不过媒体查询，这是 2026-10-11 设备适配的核心约束。 */
+  --app-pad: 16px;
+  --panel-pad: 16px;
+  --main-pad-top: 20px;
+  --header-gap: 24px;
+  --title-fs: 20px;
+  --grid-min: 220px;
+  --table-fs: 13px;
+  --th-fs: 12px;
+  --cell-pad-y: 8px;
+  --cell-pad-x: 8px;
+  --input-fs: 14px;
+  --tap-min: 34px; /* 触控最小高度；桌面值小于按钮现有高度＝桌面观感零变化 */
+  --total-fs: 22px;
+  /* 全真模拟战场区：手机档 --stage-dir 变 column，两列宽度改 100% 即上下堆叠 */
+  --stage-dir: row;
+  --stage-gap: 18px;
+  --stage-col-ally: 360px;
+  --stage-col-enemy: 320px;
+  /* 左侧竖排行动条（2026-11-07）：桌面窄列；手机档 --stage-dir 变 column 后改成横排滚动 */
+  --stage-col-rail: 56px;
+  --stage-rail-dir: column;
+  /* 战斗明细表：横滚容器的最小表宽 + 全真模拟页纵向滚动高度上限 */
+  --log-min-w: 1000px;
+  --log-max-h: 460px;
+  /* 槽位标签的最小宽度（TimelinePage / FullSimPage 的编队行） */
+  --slot-min-w: 200px;
+  /* 吸顶列必须是不透明底色（半透明会透出横向滚动时压在下方的内容） */
+  --sticky-bg: #141a2c;
+  --sticky-hover-bg: #1d2439;
+  /* 截图识别置信度徽章（高/中/低；两皮肤各给一套） */
+  --ocr-high-fg: #7ee0a0;
+  --ocr-high-border: #2f6f4a;
+  --ocr-mid-fg: #ffd27a;
+  --ocr-mid-border: #7a5a20;
+  --ocr-low-fg: #ff9b9b;
+  --ocr-low-border: #7a3030;
+}
+
+/* 皮肤二：命途霓虹 —— 紫青霓虹 + 药丸形控件（元素色体系见 theme.ts） */
+:root[data-theme='neon'] {
+  --bg: #070a12;
+  --bg-image:
+    radial-gradient(720px 400px at 8% -6%, rgba(92, 70, 220, 0.42), transparent 70%),
+    radial-gradient(660px 360px at 96% 2%, rgba(40, 140, 220, 0.32), transparent 72%),
+    radial-gradient(1200px 620px at 50% 118%, rgba(120, 60, 200, 0.22), transparent 70%);
+  --bg-size: auto, auto, auto;
+  --bg-repeat: no-repeat, no-repeat, no-repeat;
+
+  --text: #eaf0ff;
+  --text-soft: #a6b2d8;
+  --text-muted: #8f9ac4;
+
+  --panel-bg: linear-gradient(180deg, rgba(22, 28, 50, 0.94), rgba(11, 15, 28, 0.94));
+  --panel-border: rgba(122, 140, 255, 0.3);
+  --panel-shadow: 0 0 28px rgba(80, 110, 255, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --panel-accent: linear-gradient(90deg, rgba(143, 214, 255, 0.9), rgba(169, 155, 255, 0.25) 55%, transparent);
+  --panel-corner: rgba(122, 140, 255, 0.55);
+  --panel-corner-size: 16px;
+  --panel-radius: 12px;
+  --header-line: linear-gradient(90deg, rgba(122, 140, 255, 0.6), rgba(122, 140, 255, 0.14) 50%, transparent);
+
+  --title-bg: linear-gradient(90deg, #a9c6ff, #e2b6ff);
+  --title-fg: transparent;
+  --title-shadow: 0 0 18px rgba(120, 160, 255, 0.35);
+  --h2-fg: #cfe0ff;
+  --h2-bar: linear-gradient(180deg, #8fd6ff, #a98cff);
+
+  --nav-fg: #93a0cc;
+  --nav-hover-fg: #dbe6ff;
+  --nav-active-fg: #0a0f1f;
+  --nav-active-bg: linear-gradient(90deg, #8fd6ff, #a99bff);
+  --nav-active-shadow: 0 0 20px rgba(140, 170, 255, 0.5);
+
+  --btn-primary-bg: linear-gradient(90deg, #7fd0ff, #a98cff);
+  --btn-primary-fg: #08101f;
+  --btn-primary-shadow: 0 0 22px rgba(120, 160, 255, 0.45);
+  --btn-primary-hover-bg: linear-gradient(90deg, #9adcff, #bda6ff);
+  --btn-primary-hover-shadow: 0 0 30px rgba(140, 180, 255, 0.65);
+  --btn-2-bg: rgba(122, 140, 255, 0.12);
+  --btn-2-fg: #bcd0ff;
+  --btn-2-border: rgba(122, 140, 255, 0.45);
+  --btn-2-hover-bg: rgba(122, 140, 255, 0.22);
+  --btn-danger-bg: rgba(210, 70, 110, 0.16);
+  --btn-danger-fg: #ffc2cc;
+  --btn-danger-border: rgba(255, 110, 150, 0.45);
+  --btn-danger-hover-bg: rgba(220, 80, 120, 0.28);
+  --btn-hover-glow: 0 0 18px rgba(122, 140, 255, 0.45);
+  --radius-btn: 999px;
+  --btn-clip: none;
+  --chip-radius: 999px;
+  --chip-clip: none;
+
+  --input-bg: rgba(9, 13, 24, 0.9);
+  --input-border: rgba(122, 140, 255, 0.3);
+  --input-hover-border: rgba(143, 214, 255, 0.6);
+  --input-fg: #eaf0ff;
+  --input-radius: 8px;
+  --input-focus-border: rgba(143, 214, 255, 0.9);
+  --input-focus-ring: 0 0 0 3px rgba(122, 140, 255, 0.22);
+
+  --th-fg: #93a0cc;
+  --th-bg: linear-gradient(180deg, rgba(122, 140, 255, 0.12), transparent);
+  --th-tracking: 0.08em;
+  --table-line: rgba(122, 140, 255, 0.14);
+  --row-hover: rgba(122, 140, 255, 0.08);
+
+  --total-color: #9ff0ff;
+  --total-bg: none;
+  --total-glow: 0 0 20px rgba(120, 220, 255, 0.55), 0 0 46px rgba(120, 160, 255, 0.35);
+
+  --tab-bg: rgba(122, 140, 255, 0.1);
+  --tab-fg: #a6b2d8;
+  --tab-border: rgba(122, 140, 255, 0.32);
+  --tab-active-bg: linear-gradient(90deg, #7fd0ff, #a98cff);
+  --tab-active-fg: #0a0f1f;
+  --tab-active-border: rgba(143, 214, 255, 0.9);
+
+  --scroll-track: rgba(255, 255, 255, 0.02);
+  --scroll-thumb: rgba(122, 140, 255, 0.4);
+  --scroll-thumb-hover: rgba(140, 165, 255, 0.62);
+  --focus-outline: rgba(143, 214, 255, 0.7);
+  --selection-bg: rgba(122, 140, 255, 0.35);
+  --tap-hl: rgba(143, 214, 255, 0.18);
+
+  /* 吸顶列底色（霓虹面板是半透明，这里给等效的不透明值） */
+  --sticky-bg: #0e1428;
+  --sticky-hover-bg: #182142;
+  --ocr-high-fg: #7bffc8;
+  --ocr-high-border: rgba(123, 255, 200, 0.45);
+  --ocr-mid-fg: #ffe28a;
+  --ocr-mid-border: rgba(255, 226, 138, 0.45);
+  --ocr-low-fg: #ff9bb0;
+  --ocr-low-border: rgba(255, 155, 176, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  background-color: var(--bg);
+  background-image: var(--bg-image);
+  background-size: var(--bg-size);
+  background-repeat: var(--bg-repeat);
+  background-attachment: fixed;
+  color: var(--text);
+}
+
+::selection {
+  background: var(--selection-bg);
+}
+
+/* 只改颜色、不改宽度：避免改变滚动容器的内容宽度（战场区/明细表依赖既有尺寸） */
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border: 3px solid transparent;
+  background-clip: content-box;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+.app {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--app-pad);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--header-gap);
+  flex-wrap: wrap;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 12px;
+}
+
+/* 顶部金色/霓虹渐隐分隔线（替代原来的纯色 1px 边框） */
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--header-line);
+  pointer-events: none;
+}
+
+.header h1 {
+  font-size: var(--title-fs);
+  margin: 0;
+  letter-spacing: 0.06em;
+  background-image: var(--title-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--title-fg);
+  text-shadow: var(--title-shadow);
+}
+
+.header nav {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+  /* 5 个导航项宽约 450px，窄屏必须换行，否则顶栏整体撑破页面 */
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  color: var(--nav-fg);
+  text-decoration: none;
+  padding: 6px 12px;
+  /* 窄屏下 flex 子项会被压到最窄导致中文逐字竖排，必须禁止换行（由 nav 的 flex-wrap 换行） */
+  white-space: nowrap;
+  flex: 0 0 auto;
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  transition:
+    color 0.16s ease,
+    background-color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.header nav a:hover {
+  color: var(--nav-hover-fg);
+  background-color: var(--btn-2-bg);
+}
+
+.header nav a.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-fg);
+  box-shadow: var(--nav-active-shadow);
+}
+
+.lang-btn,
+.theme-btn,
+.mobile-btn {
+  background: var(--btn-2-bg);
+  color: var(--btn-2-fg);
+  border: 1px solid var(--btn-2-border);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  padding: 6px 14px;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.lang-btn:hover,
+.theme-btn:hover,
+.mobile-btn:hover {
+  background: var(--btn-2-hover-bg);
+  box-shadow: var(--btn-hover-glow);
+}
+
+/* 「手机版」开关：顶栏右上角，开启 = 强制手机版布局（:root[data-layout='mobile']），
+   关闭 = 回到按屏幕宽度的自适应。高亮复用 nav 选中态令牌，两皮肤均有值。 */
+.mobile-btn.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-fg);
+  border-color: var(--nav-active-bg);
+  box-shadow: var(--nav-active-shadow);
+}
+
+/* 右上角按钮组：margin-left:auto 把三个开关推到顶栏最右端
+   （桌面 nav 已 flex:1 撑开；手机档 nav 独占第二行后靠这条推到右缘） */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--header-gap) * 0.5);
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+
+main {
+  padding-top: var(--main-pad-top);
+}
+
+section.panel {
+  position: relative;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--panel-radius);
+  padding: var(--panel-pad);
+  margin-bottom: 16px;
+  box-shadow: var(--panel-shadow);
+}
+
+/* 面板顶部渐隐强调线 */
+section.panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  border-top-left-radius: var(--panel-radius);
+  border-top-right-radius: var(--panel-radius);
+  background: var(--panel-accent);
+  pointer-events: none;
+}
+
+/* 右下角直角刻线（崩铁 UI 常见的收角细节） */
+section.panel::after {
+  content: '';
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+  width: var(--panel-corner-size);
+  height: var(--panel-corner-size);
+  border-right: 1px solid var(--panel-corner);
+  border-bottom: 1px solid var(--panel-corner);
+  pointer-events: none;
+}
+
+section.panel h2 {
+  position: relative;
+  margin: 0 0 12px;
+  padding-left: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--h2-fg);
+}
+
+section.panel h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  bottom: 2px;
+  width: 3px;
+  border-radius: 1px;
+  background: var(--h2-bar);
+}
+
+.grid {
+  display: grid;
+  /* min() 兜底：容器比 --grid-min 还窄时（超窄手机/缩放）不撑破，退化为单列 */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--grid-min)), 1fr));
+  gap: 12px;
+}
+
+label.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+input,
+select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-fg);
+  border-radius: var(--input-radius);
+  padding: 8px;
+  /* 桌面 14px；手机档必须 ≥16px，否则 iOS Safari 聚焦时会自动放大整页 */
+  font-size: var(--input-fs);
+  font-family: inherit;
+  /* 触控设备上不因聚焦缩放页面 */
+  max-width: 100%;
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background-color 0.16s ease;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:hover,
+select:hover {
+  border-color: var(--input-hover-border);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-ring);
+}
+
+button.primary,
+button.secondary,
+button.danger {
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease;
+}
+
+/* 触控最小高度：桌面 34px 小于按钮自身高度，桌面观感零变化；
+   手机档抬到 44px 附近（--tap-min），避免误触。 */
+button.primary,
+button.secondary,
+button.danger,
+.tabs button,
+.lang-btn,
+.theme-btn,
+.mobile-btn {
+  min-height: var(--tap-min);
+}
+
+button.primary {
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-fg);
+  border: none;
+  border-radius: var(--radius-btn);
+  clip-path: var(--btn-clip);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: var(--btn-primary-shadow);
+}
+
+button.primary:not(:disabled):hover {
+  background: var(--btn-primary-hover-bg);
+  box-shadow: var(--btn-primary-hover-shadow);
+}
+
+button.primary:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+button.secondary {
+  background: var(--btn-2-bg);
+  color: var(--btn-2-fg);
+  border: 1px solid var(--btn-2-border);
+  border-radius: var(--radius-btn);
+  clip-path: var(--btn-clip);
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+button.secondary:not(:disabled):hover {
+  background: var(--btn-2-hover-bg);
+  box-shadow: var(--btn-hover-glow);
+}
+
+button.danger {
+  background: var(--btn-danger-bg);
+  color: var(--btn-danger-fg);
+  border: 1px solid var(--btn-danger-border);
+  border-radius: var(--radius-btn);
+  clip-path: var(--btn-clip);
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+button.danger:not(:disabled):hover {
+  background: var(--btn-danger-hover-bg);
+  box-shadow: var(--btn-hover-glow);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--table-fs);
+  /* 等宽数字：伤害/倍率列对齐后位数不再参差（会带来 1~2px 级列宽重分配） */
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  text-align: left;
+  padding: var(--cell-pad-y) var(--cell-pad-x);
+  border-bottom: 1px solid var(--table-line);
+}
+
+th {
+  /* 12px/字距 0.06em：比原 13px 粗体略窄但不挤压列宽——明细表 16 列本身很挤，
+     表头一旦变小反而更容易换行（2026-10-11 实测后收回的参数，勿再放大字距） */
+  font-size: var(--th-fs);
+  font-weight: 600;
+  letter-spacing: var(--th-tracking);
+  color: var(--th-fg);
+  background: var(--th-bg);
+}
+
+tbody tr {
+  transition: background-color 0.16s ease;
+}
+
+tbody tr:hover {
+  background-color: var(--row-hover);
+}
+
+.total {
+  font-size: var(--total-fs);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background-image: var(--total-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--total-color);
+  text-shadow: var(--total-glow);
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.tabs button {
+  background: var(--tab-bg);
+  color: var(--tab-fg);
+  border: 1px solid var(--tab-border);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  padding: 8px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition:
+    background 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.tabs button:hover {
+  background: var(--btn-2-hover-bg);
+}
+
+.tabs button.active {
+  background: var(--tab-active-bg);
+  color: var(--tab-active-fg);
+  border-color: var(--tab-active-border);
+  box-shadow: var(--nav-active-shadow);
+}
+
+/* ============================================================================
+ * 全真模拟战场区（FullSimPage）
+ *
+ * 只把「布局」搬出内联 style（方向/列宽/gap），断点里改同名变量即可上下堆叠；
+ * 渐变背景、血条/能量/韧性的内联色一律留在页面里（2026-10-11 用户裁定为冻结区）。
+ * ========================================================================== */
+.stage {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--stage-gap);
+  flex-direction: var(--stage-dir);
+}
+
+.stage-col {
+  display: flex;
+  flex-direction: column;
+  /* flex 子项默认 min-width:auto，不置 0 会因内容最小宽把容器撑破 */
+  min-width: 0;
+  /* 手机档列方向下 flex-basis 指的是「高度」，
+     故手机档把 --stage-col-* 置 auto，改由这条 width 撑满宽度；
+     row 方向 flex-basis 非 auto 时 width 不参与计算，桌面观感不受影响。 */
+  width: 100%;
+}
+
+.stage-col--ally {
+  flex: 0 0 var(--stage-col-ally);
+  gap: 8px;
+}
+
+.stage-col--enemy {
+  flex: 0 0 var(--stage-col-enemy);
+  gap: 14px;
+}
+
+/* 左侧竖排行动条（2026-11-07 第二批）：窄列 + 单位圆头像，方向由 --stage-rail-dir 控制。
+   手机档 --stage-dir 变 column，这里同步改横排滚动，否则一列头像会把首屏拉得很长。 */
+.stage-col--rail {
+  flex: 0 0 var(--stage-col-rail);
+  flex-direction: var(--stage-rail-dir);
+  align-items: center;
+  gap: 6px;
+}
+
+/* 中间简略战斗信息：手机档列方向下 flex:1 指纵向，改由 width 撑满宽度 */
+.stage-mid {
+  width: 100%;
+}
+
+/* ============================================================================
+ * 战场攻击动画（2026-10-25 攻击动画批）
+ *
+ * 只加两类东西，不改既有的布局/配色冻结区：
+ *   ① 数值条宽度缓动（.stage-bar）
+ *   ② 逐帧动画：出手者前冲（.stage-sprite + .stage-lunge-r）、受击抖动/闪光
+ *      （.stage-shake / .stage-flash）、伤害飘字（.stage-pop）、终结技演出（.stage-ult-*）
+ *
+ * 约定：
+ *   - 时长一律由 JS 通过内联 `--anim-dur` 注入（= 基础时长 ÷ 输出倍速，见 battle-anim.ts），
+ *     本文件不写死任何时长；
+ *   - 同一动作连续两帧用 `*-alt` 换一个同名 keyframes 触发重播（不 remount 元素，
+ *     否则立绘 <img> 会被重建）；
+ *   - 颜色走令牌，两套皮肤各自覆盖。
+ * ========================================================================== */
+:root {
+  --stage-flash-rgb: 255, 255, 255;
+  --stage-hit-flash-rgb: 255, 214, 110;
+  /* 伤害飘字的描边色（实测游戏里是近黑的暖色，不是纯黑） */
+  --stage-pop-stroke: #16101a;
+  /* 战斗文案统一字族（2026-10-26 用户裁定：飘字/暴击/击破/技能名都用游戏里那种超重黑体）。
+     纯系统字体栈、不引外部字体：数字走 Arial Black（最接近截图里的粗壮字重），
+     中文自动回落到雅黑/思源（Arial Black 无 CJK 字形）。 */
+  --stage-pop-font: 'Arial Black', 'Arial Bold', 'Microsoft YaHei UI', 'Microsoft YaHei',
+    'Noto Sans SC', 'Source Han Sans SC', system-ui, sans-serif;
+  /* 欢愉飘字的颗粒噪点（SVG feTurbulence 内联，无外部资源）。
+     要点：feTurbulence 自带 alpha 通道，必须用 feColorMatrix 把 alpha 顶成 1，
+     否则噪点几乎是透明的、叠上去没效果；feComponentTransfer 拉高对比让颗粒更硬。 */
+  --stage-pop-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1'/%3E%3CfeComponentTransfer%3E%3CfeFuncR type='linear' slope='1.7' intercept='-0.3'/%3E%3CfeFuncG type='linear' slope='1.7' intercept='-0.3'/%3E%3CfeFuncB type='linear' slope='1.7' intercept='-0.3'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='24' height='24' filter='url(%23n)'/%3E%3C/svg%3E");
+  --stage-bar-ease: 260ms;
+}
+
+:root[data-theme='neon'] {
+  --stage-flash-rgb: 190, 235, 255;
+  --stage-hit-flash-rgb: 255, 120, 210;
+  --stage-pop-stroke: #0b0713;
+}
+
+/* —— 数值条：宽度变化缓动（HP/韧性/能量共用） —— */
+.stage-bar {
+  transition: width var(--stage-bar-ease) cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* —— 出手者前冲（我方立绘 + 召唤物窄卡同用） —— */
+.stage-sprite {
+  display: block;
+  will-change: transform;
+}
+
+@keyframes stageLungeR {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  32% {
+    transform: translateX(16px) scale(1.07);
+  }
+  62% {
+    transform: translateX(10px) scale(1.04);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes stageLungeRAlt {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  32% {
+    transform: translateX(16px) scale(1.07);
+  }
+  62% {
+    transform: translateX(10px) scale(1.04);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+.stage-lunge-r {
+  animation: stageLungeR var(--anim-dur, 420ms) ease-out both;
+}
+
+.stage-lunge-r-alt {
+  animation-name: stageLungeRAlt;
+}
+
+/* —— 受击抖动（敌方打我方的立绘） —— */
+@keyframes stageShake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  18% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+  38% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  58% {
+    transform: translateX(-3px);
+  }
+  78% {
+    transform: translateX(2px);
+  }
+}
+
+@keyframes stageShakeAlt {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  18% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+  38% {
+    transform: translateX(5px) rotate(1deg);
+  }
+  58% {
+    transform: translateX(-3px);
+  }
+  78% {
+    transform: translateX(2px);
+  }
+}
+
+.stage-shake {
+  animation: stageShake var(--anim-dur, 420ms) ease-out both;
+}
+
+.stage-shake-alt {
+  animation-name: stageShakeAlt;
+}
+
+/* —— 受击闪光 —— */
+@keyframes stageFlash {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes stageFlashAlt {
+  0% {
+    opacity: 0;
+  }
+  22% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.stage-flash {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(var(--stage-hit-flash-rgb), 0.95),
+    rgba(var(--stage-flash-rgb), 0.35) 55%,
+    transparent 72%
+  );
+  mix-blend-mode: screen;
+  animation: stageFlash var(--anim-dur, 400ms) ease-out both;
+}
+
+.stage-flash--round {
+  border-radius: 50%;
+}
+
+.stage-flash-alt {
+  animation-name: stageFlashAlt;
+}
+
+/* —— 伤害飘字（敌方用 +；我方受击时组件在文案前加 -） —— */
+/* —— 伤害飘字（敌方用 +；我方受击时组件在文案前加 -） ——
+   2026-10-25 按实战录屏重写：带自身倾斜（--pop-rot）、横向错开（--pop-x）、
+   纵向摊开（--pop-y），先「弹一下」再上飘淡出，存活 1000ms。 */
+@keyframes stagePop {
+  0% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) + 10px))
+      rotate(var(--pop-rot, 0deg)) scale(1.45);
+  }
+  14% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 8px))
+      rotate(var(--pop-rot, 0deg)) scale(1);
+  }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 54px))
+      rotate(var(--pop-rot, 0deg)) scale(1);
+  }
+}
+
+.stage-pop {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  z-index: 3;
+  white-space: nowrap;
+  pointer-events: none;
+  /* 2026-10-25 按实战录屏核定：白/金色字 + 极粗深色描边 + 自身倾斜，
+     字号远大于原先的 15px（录屏 720p 下主伤害约 60px ≈ 视口高 8%） */
+  font-family: var(--stage-pop-font);
+  font-weight: 900;
+  font-synthesis: weight;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  /* 8 向 text-shadow 模拟描边（比 -webkit-text-stroke 兼容性更稳，且能带阴影） */
+  text-shadow:
+    2px 0 0 var(--stage-pop-stroke, #16101a),
+    -2px 0 0 var(--stage-pop-stroke, #16101a),
+    0 2px 0 var(--stage-pop-stroke, #16101a),
+    0 -2px 0 var(--stage-pop-stroke, #16101a),
+    2px 2px 0 var(--stage-pop-stroke, #16101a),
+    -2px 2px 0 var(--stage-pop-stroke, #16101a),
+    2px -2px 0 var(--stage-pop-stroke, #16101a),
+    -2px -2px 0 var(--stage-pop-stroke, #16101a),
+    0 4px 12px rgba(0, 0, 0, 0.95);
+  animation: stagePop var(--anim-dur, 1000ms) cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+/* 主伤害（大号）/ 散射·次级（小号）——实测主伤害约为次级的 2.5 倍 */
+.stage-pop--main {
+  font-size: 30px;
+}
+
+.stage-pop--sub {
+  font-size: 19px;
+}
+
+/**
+ * 欢愉伤害 = **颗粒化彩虹**（2026-10-26 用户按游戏内截图校正）。
+ *
+ * 两处关键：
+ *  1. **颗粒感**：叠一层 SVG `feTurbulence` 噪点（data-URI，无外部资源），
+ *     用 `background-blend-mode: overlay` 混进渐变 → 字芯变成斑点状彩色；
+ *  2. **先白后彩**：动画 `stagePopRainbowIn` 让 `filter: saturate(0)`（= 灰白，即物理白）
+ *     在弹出瞬间开始，再在 ~40% 时长处转回饱和彩色。
+ *  注意：字芯透明 + `background-clip:text`，所以描边必须用 `-webkit-text-stroke`，
+ *  阴影只能用 `filter: drop-shadow`（`text-shadow` 会从透明字芯里透出来）。
+ */
+@keyframes stagePopRainbowIn {
+  0% {
+    filter: saturate(0) brightness(4.6) contrast(1.05) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.9));
+  }
+  /* 弹出瞬间（= stagePop 的 14% 弹到位）仍是白的，对应「欢愉伤害先显示属性白」 */
+  14% {
+    filter: saturate(0.04) brightness(3.9) contrast(1.05) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.9));
+  }
+  /* 34% 转彩完成（1× 时约 540ms），之后一直是彩色 */
+  34% {
+    filter: saturate(1.4) brightness(1.35) contrast(1.1) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.9));
+  }
+  100% {
+    filter: saturate(1.2) brightness(1.18) contrast(1.08) drop-shadow(0 3px 8px rgba(0, 0, 0, 0.9));
+  }
+}
+
+.stage-pop--rainbow {
+  /* 噪点层（SVG 湍流）+ 彩虹渐变层：先噪点后渐变，overlay 混出颗粒彩 */
+  background-image: var(--stage-pop-grain, none),
+    linear-gradient(
+      96deg,
+      #ff5f6d 0%,
+      #ffb84d 15%,
+      #ffe95c 30%,
+      #6ef07a 45%,
+      #4fd8ff 60%,
+      #7f8cff 75%,
+      #c77dff 88%,
+      #ff7ad9 100%
+    );
+  background-size:
+    10px 10px,
+    100% 100%;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: overlay, normal;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2.5px var(--stage-pop-stroke, #16101a);
+  text-shadow: none;
+  /* 覆盖基类动画：飘字位移动画 + 白转彩动画（同一个 --anim-dur） */
+  animation:
+    stagePop var(--anim-dur, 1600ms) cubic-bezier(0.2, 0.7, 0.3, 1) both,
+    stagePopRainbowIn var(--anim-dur, 1600ms) ease-out both;
+}
+
+/* 超量合并后缀「×N」（同目标超过 4 段时，多段合并成一条） */
+.stage-pop-multi {
+  margin-left: 2px;
+  font-size: 0.62em;
+  font-weight: 800;
+  color: #fff3c4;
+}
+
+/* 技能名顶部小条：普攻/战技/追击/敌方出手用（终结技走全屏演出） */
+@keyframes stageSkillName {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  14% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  72% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(1);
+  }
+}
+
+.stage-skillname {
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  transform: translateX(-50%);
+  z-index: 6;
+  max-width: 92%;
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  font-family: var(--stage-pop-font);
+  font-synthesis: weight;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #f4f1e4;
+  background: rgba(9, 12, 24, 0.72);
+  border: 1px solid rgba(232, 213, 168, 0.35);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
+  animation: stageSkillName var(--anim-dur, 800ms) ease-out both;
+}
+
+/* 终结技角色立绘 cut-in：左侧滑入 → 向右淡出 */
+@keyframes stageUltPortrait {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(16px) scale(0.96);
+  }
+  16% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px) scale(1.01);
+  }
+}
+
+/* 立绘：舞台**中央**、尽量占满（底部只给技能名留一行），2026-10-26 用户裁定 */
+.stage-ult-portrait {
+  position: absolute;
+  left: 50%;
+  bottom: 52px;
+  transform: translateX(-50%);
+  height: calc(100% - 68px);
+  max-height: 88%;
+  max-width: 86%;
+  object-fit: contain;
+  object-position: center bottom;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 26px rgba(0, 0, 0, 0.8));
+  animation: stageUltPortrait var(--anim-dur, 2400ms) cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+/* 「暴击」/「击破」小标签：数字上方跳两个字，白字带描边 */
+.stage-pop-tag {
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  z-index: 4;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: var(--stage-pop-font);
+  font-synthesis: weight;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fffbe8;
+  text-shadow:
+    1.5px 0 0 var(--stage-pop-stroke, #16101a),
+    -1.5px 0 0 var(--stage-pop-stroke, #16101a),
+    0 1.5px 0 var(--stage-pop-stroke, #16101a),
+    0 -1.5px 0 var(--stage-pop-stroke, #16101a),
+    0 3px 8px rgba(0, 0, 0, 0.9);
+  animation: stagePopTag var(--anim-dur, 1000ms) cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+/* 标签与数字**保持恒定间距**：数字 0%→100% 上飘 +10→-54，
+   标签同步（-34→-100）；Arial Black 的字面高度比普通字体更高，
+   间距要给到 ~54px 才不会压字（2026-10-26 实测） */
+@keyframes stagePopTag {
+  0% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 34px)) scale(0.7);
+  }
+  16% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 62px)) scale(1);
+  }
+  /* 70% 前保持不透明（与数字同期淡出；否则数字还在、标签先没了） */
+  70% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 86px)) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 100px)) scale(1);
+  }
+}
+
+/* —— 终结技演出：白屏闪光（实测亮度曲线）+ 中央立绘 + 贴底技能名 —— */
+@keyframes stageUltWhiteout {
+  0% {
+    opacity: 0;
+  }
+  /* 时间轴按 2400ms 总长压缩到前 38%：闪一下就撤，别把立绘和数字整段冲淡
+     （0.13s 到峰的比例对应 8~14%） */
+  8% {
+    opacity: 0.8;
+  }
+  14% {
+    opacity: 0.72;
+  }
+  26% {
+    opacity: 0.2;
+  }
+  38% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* 技能名：**贴底部闪出**（2026-10-26 用户裁定；立绘在它上方居中） */
+@keyframes stageUltName {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(14px) scale(1.14);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  78% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) scale(1.02);
+  }
+}
+
+.stage-ult-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* 近白屏：实测峰值时整帧亮度翻到 1.7 倍，这里用 0.86 不透明度压过去 */
+.stage-ult-whiteout {
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  mix-blend-mode: screen;
+  animation: stageUltWhiteout var(--anim-dur, 680ms) ease-out both;
+}
+
+.stage-ult-name {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  /* 30px + 2.5px 描边：比例约 1:12，接近实测的技能名字重（26px/2.5px 会糊成一团） */
+  font-family: var(--stage-pop-font);
+  font-synthesis: weight;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #fffdf5;
+  text-shadow:
+    2.5px 0 0 var(--stage-pop-stroke, #16101a),
+    -2.5px 0 0 var(--stage-pop-stroke, #16101a),
+    0 2.5px 0 var(--stage-pop-stroke, #16101a),
+    0 -2.5px 0 var(--stage-pop-stroke, #16101a),
+    0 6px 18px rgba(0, 0, 0, 0.9);
+  animation: stageUltName var(--anim-dur, 2400ms) ease-out both;
+}
+
+/* —— 无障碍：用户系统偏好减少动态效果时关闭全部动画（只留数值变化） —— */
+@media (prefers-reduced-motion: reduce) {
+  .stage-sprite,
+  .stage-flash,
+  .stage-pop,
+  .stage-pop-tag,
+  .stage-skillname,
+  .stage-ult-whiteout,
+  .stage-ult-portrait,
+  .stage-ult-name {
+    animation: none !important;
+  }
+
+  /* 关掉动画后仍要看得见飘字（否则数字永远 opacity:0 消失） */
+  .stage-pop,
+  .stage-pop-tag,
+  .stage-skillname,
+  .stage-ult-name {
+    opacity: 1 !important;
+  }
+
+  .stage-bar {
+    transition: none !important;
+  }
+}
+
+/* ============================================================================
+ * 战斗明细表（FullSimPage / TimelinePage 两页共用的类，勿只在一边加）
+ *
+ * 16 列在窄屏必然宽于视口 → 容器横向滚动 + 首列(#)/伤害列左右吸顶。
+ * 表宽用 min-width 兜底，否则列会被压到换行、每行变得极高。
+ * ========================================================================== */
+.log-scroll {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+
+.log-table {
+  min-width: var(--log-min-w);
+}
+
+/* 表头不换行（2026-11-07 用户反馈「表头竖排挤字」）：
+   16 列明细表在窄屏会把「行动值」拆成竖排三个字。改成 nowrap 后表头一律横排，
+   表宽不足时由 .log-scroll 横向滚动（左右两列已 sticky，滚动时仍能对齐单位与伤害）。 */
+.log-table th {
+  white-space: nowrap;
+}
+
+.log-sticky-l,
+.log-sticky-r {
+  position: sticky;
+  z-index: 1;
+  /* 必须不透明（--sticky-bg）：半透明会透出横向滚动时压在下方单元格的内容 */
+  background: var(--sticky-bg);
+}
+
+/* border-collapse:collapse 下 border 不跟随 sticky 元素，用 box-shadow 画分隔线 */
+.log-sticky-l {
+  left: 0;
+  box-shadow: 1px 0 0 var(--table-line);
+}
+
+.log-sticky-r {
+  right: 0;
+  box-shadow: -1px 0 0 var(--table-line);
+}
+
+tbody tr:hover .log-sticky-l,
+tbody tr:hover .log-sticky-r {
+  background: var(--sticky-hover-bg);
+}
+
+/* 触摸设备（hover:none）：hover 态点完会「粘住」不消失，
+   故把背景改回各控件的静态底色，按压反馈交给 :active（手机没有 hover，只有点按）。 */
+@media (hover: none) {
+  tbody tr:hover {
+    background: transparent;
+  }
+
+  tbody tr:hover .log-sticky-l,
+  tbody tr:hover .log-sticky-r {
+    background: var(--sticky-bg);
+  }
+
+  .header nav a:hover {
+    background: transparent;
+  }
+
+  button.primary:not(:disabled):hover {
+    background: var(--btn-primary-bg);
+    box-shadow: var(--btn-primary-shadow);
+  }
+
+  button.primary:not(:disabled):active {
+    background: var(--btn-primary-hover-bg);
+  }
+
+  button.secondary:not(:disabled):hover {
+    background: var(--btn-2-bg);
+    box-shadow: none;
+  }
+
+  button.secondary:not(:disabled):active {
+    background: var(--btn-2-hover-bg);
+  }
+
+  button.danger:not(:disabled):hover {
+    background: var(--btn-danger-bg);
+    box-shadow: none;
+  }
+
+  button.danger:not(:disabled):active {
+    background: var(--btn-danger-hover-bg);
+  }
+
+  .lang-btn:hover,
+  .theme-btn:hover,
+  .mobile-btn:hover {
+    background: var(--btn-2-bg);
+    box-shadow: none;
+  }
+
+  .mobile-btn.active:hover {
+    background: var(--nav-active-bg);
+    box-shadow: var(--nav-active-shadow);
+  }
+
+  .tabs button:hover {
+    background: var(--tab-bg);
+  }
+
+  .tabs button.active {
+    background: var(--tab-active-bg);
+  }
+}
+
+a,
+button,
+input,
+select,
+summary {
+  -webkit-tap-highlight-color: var(--tap-hl);
+}
+
+/* ============================================================================
+ * 角色管理「去开战」条（2026-11-08）
+ *
+ * 面板存好之后的下一步是两个模拟页。做成一行窄条挂在动作区下面，
+ * 不塞进每行的操作列 —— 一份面板开不了战（要四人各挑一份）。
+ * ========================================================================== */
+.chars-next {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 12.5px;
+}
+
+.chars-next button.secondary {
+  padding: 6px 12px;
+  font-size: 12.5px;
+}
+
+/* ============================================================================
+ * 首页（2026-11-08 首页批）
+ *
+ * 三步引导 + 两块主玩法大卡（数值代理模拟 / 全真模拟）。两卡用 auto-fit 自适应列数，
+ * 不新增断点；未存面板时靠 `.home-card--locked` 压暗标题与标签，主按钮保持突出
+ * ——它此时的动作是「先录入面板」，不该被一起压暗。
+ * ========================================================================== */
+.home-count {
+  margin: -4px 0 12px;
+  font-size: 12px;
+}
+
+.home-steps {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--tab-bg);
+  border: 1px solid var(--table-line);
+  border-left: 2px solid var(--table-line);
+  border-radius: var(--panel-radius);
+}
+
+.home-step__idx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--tab-active-bg);
+  color: var(--h2-fg);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.home-step__text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+
+.home-step__text strong {
+  color: var(--h2-fg);
+  letter-spacing: 0.03em;
+}
+
+.home-step--done {
+  border-left-color: var(--nav-hover-fg);
+}
+
+.home-step--current {
+  border-left-color: var(--h2-fg);
+}
+
+.home-step--current .home-step__idx {
+  background: var(--nav-active-bg);
+  box-shadow: var(--nav-active-shadow);
+}
+
+/* 第 2、3 步在没面板时只是说明，不是可操作项：压暗但不隐藏，让用户看到全貌 */
+.home-step--locked {
+  opacity: 0.66;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  /* section.panel 已给 margin-bottom，这里由 .home-cards 的 gap 统一控制 */
+  margin-bottom: 0;
+}
+
+.home-card__tag {
+  align-self: flex-start;
+  padding: 2px 8px;
+  background: var(--tab-active-bg);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  color: var(--h2-fg);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.home-card p {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* 按钮钉在卡片底部：两卡文案长短不一时按钮仍对齐 */
+.home-card button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.home-card--locked .home-card__tag,
+.home-card--locked h2 {
+  color: var(--text-muted);
+}
+
+.home-aside__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-aside__link {
+  display: inline-block;
+  padding: 6px 12px;
+  background: var(--tab-bg);
+  border: 1px solid var(--tab-border);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  color: var(--nav-fg);
+  font-size: 12.5px;
+  text-decoration: none;
+}
+
+.home-aside__link:hover {
+  background: var(--btn-2-hover-bg);
+  color: var(--nav-hover-fg);
+}
+
+/* ============================================================================
+ * 使用说明层（2026-11-08 说明性内容批）
+ *
+ * 三个落点共用一套令牌：页内折叠提示卡 `.hint-card` / 首访横幅 `.help-banner` /
+ * 帮助页 `.help-*`，外加顶栏的 `.help-btn`。
+ * 只用 var(--…) 令牌，两套皮肤自动跟随；不新增断点（窄屏靠 flex-wrap 收行）。
+ * ========================================================================== */
+
+/* 顶栏「?」入口：与右侧三个开关同款外形，方形、无下划线 */
+.help-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  padding: 6px 10px;
+  background: var(--btn-2-bg);
+  color: var(--btn-2-fg);
+  border: 1px solid var(--btn-2-border);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.help-btn:hover {
+  background: var(--btn-2-hover-bg);
+  color: var(--nav-hover-fg);
+  box-shadow: var(--btn-hover-glow);
+}
+
+/* 停在 /help 时高亮（NavLink 自动加 .active） */
+.help-btn.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-fg);
+  box-shadow: var(--nav-active-shadow);
+}
+
+/* —— 页内提示卡（原生 details，默认折叠成一行） —— */
+.hint-card {
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  background: var(--tab-bg);
+  border: 1px solid var(--table-line);
+  border-radius: var(--panel-radius);
+}
+
+.hint-card__summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 12.5px;
+  color: var(--text-soft);
+  letter-spacing: 0.03em;
+  /* 去掉原生三角：用下面的 ▸ 代替，才能和徽记、步数对齐 */
+  list-style: none;
+}
+
+.hint-card__summary::-webkit-details-marker {
+  display: none;
+}
+
+.hint-card__summary::after {
+  content: '▸';
+  margin-left: auto;
+  color: var(--text-muted);
+  transition: transform 0.16s ease;
+}
+
+.hint-card[open] .hint-card__summary::after {
+  transform: rotate(90deg);
+}
+
+.hint-card__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--tab-active-bg);
+  color: var(--h2-fg);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hint-card__trigger {
+  color: var(--h2-fg);
+  font-weight: 600;
+}
+
+.hint-card__count {
+  color: var(--text-muted);
+}
+
+.hint-card__body {
+  margin-top: 8px;
+}
+
+.hint-card__lead {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  color: var(--text-soft);
+}
+
+.hint-card__list {
+  margin: 0 0 6px;
+  padding-left: 20px;
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.hint-card__more {
+  font-size: 12px;
+  color: var(--nav-hover-fg);
+}
+
+/* —— 首访引导条 —— */
+.help-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-left: 3px solid var(--h2-fg);
+  border-radius: var(--panel-radius);
+  box-shadow: var(--panel-shadow);
+}
+
+.help-banner__text {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  font-size: 12.5px;
+}
+
+.help-banner__text strong {
+  color: var(--h2-fg);
+  letter-spacing: 0.04em;
+}
+
+.help-banner__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+}
+
+/* —— 帮助页 —— */
+.help-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.help-toc a {
+  display: inline-block;
+  padding: 5px 10px;
+  background: var(--tab-bg);
+  border: 1px solid var(--tab-border);
+  border-radius: var(--chip-radius);
+  clip-path: var(--chip-clip);
+  color: var(--nav-fg);
+  font-size: 12.5px;
+  text-decoration: none;
+}
+
+.help-toc a:hover {
+  background: var(--btn-2-hover-bg);
+  color: var(--nav-hover-fg);
+}
+
+/* 锚点跳转时别让标题贴住视口顶端（顶栏是 sticky 的） */
+.help-section h2 {
+  scroll-margin-top: 12px;
+}
+
+.help-label {
+  margin: 14px 0 6px;
+  color: var(--th-fg);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.help-steps,
+.help-tips {
+  margin: 0;
+  padding-left: 22px;
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.help-steps li,
+.help-tips li {
+  margin-bottom: 4px;
+}
+
+.help-go {
+  margin: 14px 0 0;
+}
+
+.help-note {
+  margin: 12px 0 0;
+  font-size: 12px;
+}
+
+/* ============================================================================
+ * 设备适配 · 断点层
+ *
+ * 桌面（>1024px）完全不受影响；≤1024 为平板/小窗；≤720 为手机。
+ * 每档只覆盖 :root 里的布局令牌，组件规则本身不含任何断点。
+ * ========================================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --app-pad: 14px;
+    --panel-pad: 14px;
+    --header-gap: 16px;
+    --table-fs: 12.5px;
+    --cell-pad-y: 6px;
+    --cell-pad-x: 6px;
+    --stage-col-ally: 260px;
+    --stage-col-enemy: 240px;
+    --log-min-w: 900px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --app-pad: 10px;
+    --panel-pad: 12px;
+    --main-pad-top: 12px;
+    --header-gap: 12px;
+    --title-fs: 17px;
+    /* 保持表单单列：手机上下拉框并排容易误触 */
+    --grid-min: 260px;
+    --table-fs: 12px;
+    --th-fs: 11px;
+    --cell-pad-y: 5px;
+    --cell-pad-x: 5px;
+    /* 必须 ≥16px，否则 iOS Safari 聚焦输入框时自动放大整页 */
+    --input-fs: 16px;
+    --tap-min: 44px;
+    --total-fs: 18px;
+    /* 战场区：我方列在上、敌方列在下，各占满宽度（width:100%，basis 置 auto） */
+    --stage-dir: column;
+    --stage-gap: 10px;
+    --stage-col-ally: auto;
+    --stage-col-enemy: auto;
+    /* 行动条改横排滚动，压在战场最上方但只占一行 */
+    --stage-col-rail: auto;
+    --stage-rail-dir: row;
+    --log-min-w: 880px;
+    --slot-min-w: 120px;
+    /* 460 减去横向滚动条占用的高度（用户裁定 2026-10-11） */
+    --log-max-h: 400px;
+  }
+
+  /* 长技能名/增益串在窄列里硬撑会撑破单元格 */
+  .log-table td {
+    overflow-wrap: anywhere;
+  }
+
+  /* 行动条横排滚动（与 :root[data-layout='mobile'] 那条同义，强制开关走另一套条件） */
+  .stage-col--rail {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+  }
+
+  /* 顶栏：标题 + 右上角按钮组一行，导航独占第二行。
+     ⚠ 必须靠 order 把按钮组排到 nav 之前：nav 的 flex-basis 是 100%，
+     正常顺序下它会把第一行填满并把后面的按钮挤到第二行（按钮就掉出了右上角）。 */
+  .header h1 {
+    order: 0;
+    /* basis 必须是 0：flex 的换行是按 hypothetical size 逐项累加决定的，
+       发生收缩之前。若标题仍占内容宽度，它 + 按钮组一旦超过第一行宽度，
+       按钮组就被挤到下一行（右上角就空了）。basis:0 + grow:1 让标题只吃剩余宽度。 */
+    flex: 1 1 0;
+    /* 长标题与按钮组争第一行：标题单行省略，绝不把按钮挤出屏幕 */
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .header-actions {
+    order: 1;
+  }
+
+  .header nav {
+    order: 2;
+    width: 100%;
+    flex: 1 0 100%;
+    gap: 8px;
+  }
+
+  .header nav a {
+    padding: 6px 10px;
+  }
+}
+
+/* ==========================================================================
+ * 强制手机版（顶栏 .mobile-btn 开关 → <html data-layout="mobile">）
+ * 与上面的 @media (max-width:720px) 是同一套手机排版的两个触发条件：
+ * 断点触发（自动）或开关触发（强制，任何视口宽度都生效）。
+ * ⚠ 两处的令牌值与组件规则必须逐条一致，改手机版尺寸时两边都要改。
+ * ========================================================================== */
+:root[data-layout='mobile'] {
+  --app-pad: 10px;
+  --panel-pad: 12px;
+  --main-pad-top: 12px;
+  --header-gap: 12px;
+  --title-fs: 17px;
+  --grid-min: 260px;
+  --table-fs: 12px;
+  --th-fs: 11px;
+  --cell-pad-y: 5px;
+  --cell-pad-x: 5px;
+  --input-fs: 16px;
+  --tap-min: 44px;
+  --total-fs: 18px;
+  --stage-dir: column;
+  --stage-gap: 10px;
+  --stage-col-ally: auto;
+  --stage-col-enemy: auto;
+  --stage-col-rail: auto;
+  --stage-rail-dir: row;
+  --log-min-w: 880px;
+  --slot-min-w: 120px;
+  --log-max-h: 400px;
+}
+
+/* 行动条横排时允许横向滚动（手机档两套触发条件同改，见 AGENTS「手机版」条） */
+:root[data-layout='mobile'] .stage-col--rail {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 2px;
+  align-items: center;
+}
+
+:root[data-layout='mobile'] .log-table td {
+  overflow-wrap: anywhere;
+}
+
+:root[data-layout='mobile'] .header nav {
+  order: 2;
+  width: 100%;
+  flex: 1 0 100%;
+  gap: 8px;
+}
+
+:root[data-layout='mobile'] .header nav a {
+  padding: 6px 10px;
+}
+
+:root[data-layout='mobile'] .header-actions {
+  order: 1;
+}
+
+:root[data-layout='mobile'] .header h1 {
+  order: 0;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ============================================================================
+ * 展示柜（UID 查询，2026-10-26）
+ * 只读展示 Enka.Network 的角色展示柜；样式沿用全局令牌，卡片靠 auto-fill 自适应，
+ * 不新增断点（遵循「改适配=调令牌」）。
+ * ========================================================================== */
+
+.showcase-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 6px;
+}
+
+.showcase-uid {
+  min-width: min(100%, 220px);
+  letter-spacing: 0.08em;
+}
+
+.showcase-proxy {
+  margin: 4px 0 10px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.showcase-proxy summary {
+  cursor: pointer;
+  color: var(--nav-hover-fg);
+}
+
+.showcase-proxy-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.showcase-error {
+  margin: 8px 0;
+  padding: 8px 10px;
+  border: 1px solid var(--btn-danger-border);
+  background: var(--btn-danger-bg);
+  color: var(--btn-danger-fg);
+  border-radius: var(--panel-radius);
+}
+
+.showcase-error p {
+  margin: 4px 0 0;
+}
+
+.showcase-error .muted {
+  color: var(--text-muted);
+}
+
+.showcase-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 6px 0 2px;
+}
+
+.showcase-sign {
+  margin: 0 0 6px;
+  font-size: 13px;
+}
+
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.showcase-card {
+  border: 1px solid var(--input-border);
+  background: var(--input-bg);
+  border-radius: var(--panel-radius);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.showcase-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.showcase-portrait {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--chip-radius);
+  border: 1px solid var(--panel-border);
+  background: var(--bg);
+}
+
+.showcase-card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.showcase-card-title strong {
+  color: var(--title-fg);
+}
+
+.showcase-import {
+  margin-left: auto;
+}
+
+.showcase-lc {
+  font-size: 13px;
+  padding-top: 4px;
+  border-top: 1px dashed var(--table-line);
+}
+
+.showcase-lc-name {
+  color: var(--h2-fg);
+}
+
+.showcase-relics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+}
+
+.showcase-relics li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  padding: 2px 0;
+  border-bottom: 1px solid var(--table-line);
+}
+
+.showcase-relic-slot {
+  color: var(--th-fg);
+  min-width: 3.6em;
+}
+
+.showcase-relic-set {
+  color: var(--text);
+  min-width: 8em;
+}
+
+.showcase-relic-main {
+  color: var(--text-soft);
+}
+
+.showcase-relic-subs {
+  flex: 1 1 12em;
+  min-width: 0;
+}
+
+.showcase-warn {
+  color: var(--btn-danger-fg);
+  font-size: 11px;
+}
+
+.showcase-skills {
+  font-size: 12px;
+}
+
+.showcase-panel {
+  border-top: 1px solid var(--table-line);
+  padding-top: 6px;
+}
+
+.showcase-panel-title {
+  font-size: 12px;
+  color: var(--h2-fg);
+  margin-bottom: 4px;
+}
+
+.showcase-panel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 2px 8px;
+  font-size: 12px;
+  color: var(--text-soft);
+}
+
+.showcase-overwrite {
+  border: 1px solid var(--btn-danger-border);
+  background: var(--btn-danger-bg);
+  border-radius: var(--panel-radius);
+  padding: 8px;
+  font-size: 13px;
+}
+
+.showcase-overwrite p {
+  margin: 0 0 6px;
+  color: var(--btn-danger-fg);
+}
+
+.showcase-overwrite-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* —— 截图识别面板（2026-10-28）——
+ * 图片/视频识别入口；样式只引用令牌，尺寸走响应式令牌层。 */
+.ocr-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px;
+  border: 1px dashed var(--input-border);
+  border-radius: var(--panel-radius, 8px);
+  background: var(--input-bg);
+  color: var(--text);
+  text-align: center;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.ocr-drop.drag {
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-ring);
+}
+
+.ocr-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ocr-thumb {
+  position: relative;
+  width: 112px;
+  border: 1px solid var(--panel-border);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--input-bg);
+}
+
+.ocr-thumb img {
+  display: block;
+  width: 100%;
+  height: 64px;
+  object-fit: cover;
+}
+
+.ocr-thumb button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  padding: 0 4px;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.ocr-table-wrap {
+  overflow: auto;
+  max-height: 44vh;
+  border: 1px solid var(--table-line);
+  border-radius: 6px;
+}
+
+.ocr-table th,
+.ocr-table td {
+  white-space: nowrap;
+}
+
+.ocr-table .ocr-section td {
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--th-bg);
+}
+
+.ocr-table .ocr-muted td {
+  color: var(--text-muted);
+}
+
+.ocr-badge {
+  display: inline-block;
+  padding: 0 6px;
+  border: 1px solid var(--table-line);
+  border-radius: 999px;
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.ocr-badge--high {
+  color: var(--ocr-high-fg);
+  border-color: var(--ocr-high-border);
+}
+
+.ocr-badge--medium {
+  color: var(--ocr-mid-fg);
+  border-color: var(--ocr-mid-border);
+}
+
+.ocr-badge--low {
+  color: var(--ocr-low-fg);
+  border-color: var(--ocr-low-border);
+}
+
+.ocr-note {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.ocr-warn {
+  font-size: 12px;
+  color: var(--ocr-low-fg);
+}
+
+.ocr-video-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ocr-video {
+  width: 100%;
+  max-height: 240px;
+  background: var(--input-bg);
+  border-radius: 6px;
+}
+
+.ocr-range {
+  width: 100%;
+}
+
+/* 视频自动抽帧时 <video> 只用于解码，不显示播放器 */
+.ocr-video-hidden {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

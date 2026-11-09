@@ -1,0 +1,387 @@
+{
+  "id": "5034012",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "堕神之血•亚婆离",
+    "en": "Blood of the Fallen God: Yabuli"
+  },
+  "meta": {
+    "rank": "LittleBoss",
+    "weak": [
+      "Ice",
+      "Quantum",
+      "Imaginary"
+    ]
+  },
+  "zh": {
+    "id": 5034012,
+    "name": "堕神之血•亚婆离",
+    "desc": "暗中掌控博识学会的技术研发部主管，抛弃了脆弱的人类躯壳，将意识置入庞大的「树状脑」，只为窥探古兽的奥秘。\\n亚婆离对超越人类之力的执念最终将其引向了终局。她被「贪饕」彻底同化，重回胚胎，并蜕变为了不可名状的怪物。",
+    "monster_camp_id": 19,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 511.5,
+    "initial_delay_ratio": null,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5034010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 160,
+    "stance_base": 1080,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5034012,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 503401201,
+            "skill_name": "猎食标记",
+            "skill_desc": "对指定我方单体角色造成少量量子属性伤害，并使其陷入1层<u>【堕神衰腐】</u>状态。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "503401001": {
+                "name": "堕神衰腐",
+                "desc": "每次施放技能后减少1层，当到达一定层数后角色陷入【幻身】状态，持续时间结束或受到致命攻击时解除【幻身】状态。【幻身】状态下的我方角色及其召唤物<u>离场</u>，同时召唤【狂兽的胚芽】代替该离场角色继续战斗，【狂兽的胚芽】视为我方角色。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401202,
+            "skill_name": "饥饿的鸣响",
+            "skill_desc": "对我方全体造成量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503401203,
+            "skill_name": "宏观生态系统",
+            "skill_desc": "吞噬【狂兽的胚芽】，使自身造成的伤害提高，并回复生命值。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401204,
+            "skill_name": "万物于我之中",
+            "skill_desc": "对我方全体目标造成大量量子属性伤害，并大概率使我方全体陷入<u>【源质吞噬】</u>状态。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 20,
+            "extra": {
+              "503401002": {
+                "name": "源质吞噬",
+                "desc": "可回复的生命上限降低，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401205,
+            "skill_name": "集群连带应激",
+            "skill_desc": "仪式中受到攻击会使【狂兽的胚芽】行动提前，且【堕神之血】不受行动提前效果的影响。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401206,
+            "skill_name": "兽瞳百相",
+            "skill_desc": "每次行动后增加1个「贪饕之眼」，回合结束时「贪饕之眼」达到一定数量则立刻施放【万物于我之中】。获得【血脑屏障】时速度大幅提高。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401207,
+            "skill_name": "胎儿之梦",
+            "skill_desc": "在行动序列上添加【破胞分生】，每次【破胞分生】行动时召唤【狂兽的胚芽】。【堕神之血】在场时，【狂兽的胚芽】的攻击会额外附加<u>【堕神衰腐】</u>和<u>【源质吞噬】</u>，【狂兽的胚芽】被击杀后会使【堕神之血】的生命值降低。受到攻击后会使【狂兽的胚芽】锁定发起攻击的角色。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "10000016": {
+                "name": "离场",
+                "desc": "处于离场状态的目标无法成为技能目标，且不会出现在行动序列上。",
+                "param": []
+              },
+              "503401001": {
+                "name": "堕神衰腐",
+                "desc": "每次施放技能后减少1层，当到达一定层数后角色陷入【幻身】状态，持续时间结束或受到致命攻击时解除【幻身】状态。【幻身】状态下的我方角色及其召唤物<u>离场</u>，同时召唤【狂兽的胚芽】代替该离场角色继续战斗，【狂兽的胚芽】视为我方角色。",
+                "param": []
+              },
+              "503401002": {
+                "name": "源质吞噬",
+                "desc": "可回复的生命上限降低，该效果可叠加。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401208,
+            "skill_name": "血脑屏障",
+            "skill_desc": "当生命值降低到一定值时使自身获得【血脑屏障】，韧性无法被削减，并使自身受到所有伤害大幅降低，欢愉伤害破除【血脑屏障】的效率大幅提高。获得【血脑屏障】时，在行动序列上添加【稳态失衡】，击杀【狂兽的胚芽】可以增加【稳态失衡】的充能值，【稳态失衡】行动时根据获得的充能值对【血脑屏障】造成伤害。【血脑屏障】解除时自身受到大量伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5034012,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ]
+  },
+  "en": {
+    "id": 5034012,
+    "name": "Blood of the Fallen God: Yabuli",
+    "desc": "The head of the Technology Department who secretly controlled the Intelligentsia Guild. She abandoned her fragile human shell, transferring her consciousness into a massive \"tree-like brain\" just to pry into the secrets of the leviathans.\\nYabuli's obsession with power beyond human limits ultimately led to her demise. She was completely assimilated by the Voracity, reverting to an embryonic state and metamorphosing into an unspeakable monster.",
+    "monster_camp_id": 19,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 511.5,
+    "initial_delay_ratio": null,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_5034010.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "LittleBoss",
+    "speed_base": 160,
+    "stance_base": 1080,
+    "stance_count": 1,
+    "status_resistance_base": 0.3,
+    "child": [
+      {
+        "id": 5034012,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Ice",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Physical",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 503401201,
+            "skill_name": "Mark of Predation",
+            "skill_desc": "Deals minor Quantum DMG to one designated target character, and inflicts 1 stack of the <u>\"Fallen God's Decay\"</u> state on them.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "503401001": {
+                "name": "Fallen God's Decay",
+                "desc": "After each use of abilities, decreases by 1 stack. Upon reaching a certain number of stacks, the character enters the \"Phantom Illusion\" state. The \"Phantom Illusion\" state is dispelled when its duration ends or upon receiving a killing blow. Ally characters in the \"Phantom Illusion\" state and their summons become <u>Departed</u>, and \"Frenzied Beast's Seed Germ\" is summoned to take the place of the Departed character and continue combat. \"Frenzied Beast's Seed Germ\" is considered as an ally character.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401202,
+            "skill_name": "Howl of Hunger",
+            "skill_desc": "Deals Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503401203,
+            "skill_name": "Macroecosystem",
+            "skill_desc": "Devours \"Frenzied Beast's Seed Germ\" to increase DMG dealt by this unit and restore HP.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401204,
+            "skill_name": "All Are Within Me",
+            "skill_desc": "Deals massive Quantum DMG to all targets, and has a high chance to inflict an <u>\"Essence Devour\"</u> state on all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 20,
+            "extra": {
+              "503401002": {
+                "name": "Essence Devour",
+                "desc": "Maximum Restorable HP decreases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401205,
+            "skill_name": "Linked Cluster Stress Response",
+            "skill_desc": "Being attacked during the ceremony advances the action of \"Frenzied Beast's Seed Germs,\" and \"Blood of the Fallen God\" is unaffected by action advance effects.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401206,
+            "skill_name": "Myriad Aspects of the Beast Eye",
+            "skill_desc": "Gains 1 Eye of Voracity after every action. At the end of the turn, if Eye of Voracity reaches a certain amount, immediately uses \"All Are Within Me.\" When gaining \"Blood-Brain Barrier,\" SPD greatly increases.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503401207,
+            "skill_name": "Dream of Embryos",
+            "skill_desc": "Adds \"Lysisgenesis\" to the Action Order. Each time \"Lysisgenesis\" takes action, summons a \"Frenzied Beast's Seed Germ.\" While \"Blood of the Fallen God\" is on the field, attacks from \"Frenzied Beast's Seed Germ\" will additionally inflict <u>\"Fallen God's Decay\"</u> and <u>\"Essence Devour.\"</u> After \"Frenzied Beast's Seed Germ\" is defeated, causes the HP of \"Blood of the Fallen God\" to decrease. After being attacked, causes \"Frenzied Beast's Seed Germs\" to lock onto the attacking character.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "10000016": {
+                "name": "Departed",
+                "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+                "param": []
+              },
+              "503401001": {
+                "name": "Fallen God's Decay",
+                "desc": "After each use of abilities, decreases by 1 stack. Upon reaching a certain number of stacks, the character enters the \"Phantom Illusion\" state. The \"Phantom Illusion\" state is dispelled when its duration ends or upon receiving a killing blow. Ally characters in the \"Phantom Illusion\" state and their summons become <u>Departed</u>, and \"Frenzied Beast's Seed Germ\" is summoned to take the place of the Departed character and continue combat. \"Frenzied Beast's Seed Germ\" is considered as an ally character.",
+                "param": []
+              },
+              "503401002": {
+                "name": "Essence Devour",
+                "desc": "Maximum Restorable HP decreases. This effect is stackable.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503401208,
+            "skill_name": "Blood-Brain Barrier",
+            "skill_desc": "When HP drops to a certain value, this unit gains \"Blood-Brain Barrier,\" Toughness cannot be reduced, and all DMG taken is greatly reduced. Elation DMG's efficiency at dispelling \"Blood-Brain Barrier\" greatly increases. Upon gaining \"Blood-Brain Barrier,\" adds \"Homeostatic Imbalance\" to the Action Order. Defeating \"Frenzied Beast's Seed Germ\" increases \"Homeostatic Imbalance's\" Charge. When \"Homeostatic Imbalance\" takes action, it deals DMG to \"Blood-Brain Barrier\" based on the Charge accumulated. When \"Blood-Brain Barrier\" is dispelled, this unit takes a massive amount of DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 5034012,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 1,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 2,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 3,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 4,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 5,
+        "display_item_list": []
+      },
+      {
+        "monster_template_id": 5034012,
+        "world_level": 6,
+        "display_item_list": []
+      }
+    ]
+  }
+}

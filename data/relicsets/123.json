@@ -1,0 +1,96 @@
+{
+  "id": "123",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "凯歌祝捷的英豪",
+    "en": "Hero of Triumphant Song"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "凯歌祝捷的英豪",
+    "icon": "SpriteOutput/ItemIcon/71040.png",
+    "parts": {
+      "31231": {
+        "name": "英豪的冠军桂冠",
+        "desc": null,
+        "story": null
+      },
+      "31232": {
+        "name": "英豪的鉴金腕铠",
+        "desc": null,
+        "story": null
+      },
+      "31233": {
+        "name": "英豪的骁战金甲",
+        "desc": null,
+        "story": null
+      },
+      "31234": {
+        "name": "英豪的赴火护胫",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "攻击力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "装备者的忆灵在场时，装备者的速度提高<unbreak>#1[i]%</unbreak>，装备者的忆灵攻击时，装备者和忆灵的暴击伤害提高<unbreak>#2[i]%</unbreak>，持续<unbreak>#3[i]</unbreak>回合。",
+        "param_list": [
+          0.06,
+          0.3,
+          2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Hero of Triumphant Song",
+    "icon": "SpriteOutput/ItemIcon/71040.png",
+    "parts": {
+      "31231": {
+        "name": "Hero's Wreath of Championship",
+        "desc": null,
+        "story": null
+      },
+      "31232": {
+        "name": "Hero's Gilded Bracers",
+        "desc": null,
+        "story": null
+      },
+      "31233": {
+        "name": "Hero's Gallant Golden Armor",
+        "desc": null,
+        "story": null
+      },
+      "31234": {
+        "name": "Hero's Firechasing Shinguard",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "While the wearer's memosprite is on the field, increases the wearer's SPD by <unbreak>#1[i]%</unbreak>. When the wearer's memosprite attacks, increases the wearer's and memosprite's CRIT DMG by <unbreak>#2[i]%</unbreak>, lasting for <unbreak>#3[i]</unbreak> turn(s).",
+        "param_list": [
+          0.06,
+          0.3,
+          2
+        ]
+      }
+    }
+  }
+}

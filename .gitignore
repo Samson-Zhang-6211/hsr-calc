@@ -1,0 +1,40 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+.tmp-esbuild/
+# 预告片/识别的临时工作目录（成帧、音频、视频切片，体积巨大；勿提交）
+.tmp-*/
+# 图片/视频识别标定用的临时样本（含个人信息，标定完即删，勿提交）
+.tmp-ocr-samples/
+# 数据同步暂存与版本归档（本地工作产物，勿提交；source.lock.json 本身要提交）
+data/.incoming/
+data/.archive/
+
+# ─── 离线包（2026-11-08）────────────────────────────────────────────────────
+# 离线数据分片（由 data/*.json 生成，约 39MB）与最终打包产物都不入库：
+#   重新生成：node scripts/build-offline.mjs
+apps/web/.offline-data/
+offline/
+
+# ─── 开源发布裁剪（2026-11-08）────────────────────────────────────────────
+# 一、官方美术资源大图：不入库，由 scripts/fetch-*.mjs 本地拉取（见 README「资源准备」）。
+#    public/ 下的 element/ pathicon/ relicsets/ skillicon/ summon-icon/ 共 5.0MB 照常提交，
+#    其中 summon-icon/ 被 src/summon-art.test.tsx 用 existsSync 断言，不能裁。
+apps/web/public/portraits/
+apps/web/public/portraits-shop/
+apps/web/public/monster-art/
+apps/web/public/monster-art-lg/
+apps/web/public/lightcones/
+apps/web/public/relicpieces/
+# 二、预告片成片/切片/截图与验证归档：本地产物（含本机绝对路径与个人素材），勿提交
+docs/
+# 三、AI 记忆与内部契约：含生产地址、内部裁定史与本机路径，不对外发布
+AGENTS.md
+# 四、生成的条款台账（node scripts/gen-clause-ledger.mjs 可重建）
+data/clause-ledger/
+# 五、预告片剪辑脚本：写死本机 ffmpeg 与附件绝对路径，不对外提供
+scripts/trailer/

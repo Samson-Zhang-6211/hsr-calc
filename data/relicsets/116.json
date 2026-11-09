@@ -1,0 +1,94 @@
+{
+  "id": "116",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "幽锁深牢的系囚",
+    "en": "Prisoner in Deep Confinement"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "幽锁深牢的系囚",
+    "icon": "SpriteOutput/ItemIcon/71025.png",
+    "parts": {
+      "31161": {
+        "name": "系囚的合啮拘笼",
+        "desc": null,
+        "story": null
+      },
+      "31162": {
+        "name": "系囚的铅石梏铐",
+        "desc": null,
+        "story": null
+      },
+      "31163": {
+        "name": "系囚的幽闭缚束",
+        "desc": null,
+        "story": null
+      },
+      "31164": {
+        "name": "系囚的绝足锁桎",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "攻击力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "敌方目标每承受1个持续伤害效果，装备者对其造成伤害时就无视其<unbreak>#1[i]%</unbreak>的防御力，最多计入<unbreak>#2[i]</unbreak>个持续伤害效果。",
+        "param_list": [
+          0.06,
+          3
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Prisoner in Deep Confinement",
+    "icon": "SpriteOutput/ItemIcon/71025.png",
+    "parts": {
+      "31161": {
+        "name": "Prisoner's Sealed Muzzle",
+        "desc": null,
+        "story": null
+      },
+      "31162": {
+        "name": "Prisoner's Leadstone Shackles",
+        "desc": null,
+        "story": null
+      },
+      "31163": {
+        "name": "Prisoner's Repressive Straitjacket",
+        "desc": null,
+        "story": null
+      },
+      "31164": {
+        "name": "Prisoner's Restrictive Fetters",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.12
+        ]
+      },
+      "4": {
+        "desc": "For every DoT the enemy target is afflicted with, the wearer will ignore <unbreak>#1[i]%</unbreak> of its DEF when dealing DMG to it. This effect is valid for a max of <unbreak>#2[i]</unbreak> DoTs.",
+        "param_list": [
+          0.06,
+          3
+        ]
+      }
+    }
+  }
+}

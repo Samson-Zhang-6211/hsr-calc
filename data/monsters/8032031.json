@@ -1,0 +1,329 @@
+{
+  "id": "8032031",
+  "type": "monster",
+  "version": "4.6.54",
+  "name": {
+    "zh": "「所有或一无所有」",
+    "en": "\"All or Nothing\""
+  },
+  "meta": {
+    "rank": "MinionLv2",
+    "weak": []
+  },
+  "zh": {
+    "id": 8032031,
+    "name": "「所有或一无所有」",
+    "desc": "「诡弈砂金」所化博弈之骰，于赌局中裁断博徒们的命运。",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 186,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_8032030.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "MinionLv2",
+    "speed_base": 100,
+    "stance_base": null,
+    "stance_count": 1,
+    "status_resistance_base": null,
+    "child": [
+      {
+        "id": 8032031,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [],
+        "hard_level_group": 1,
+        "damage_type_resistance": [],
+        "skill_list": [
+          {
+            "id": 803203101,
+            "skill_name": "运数莫测",
+            "skill_desc": "生命值最低为1，受到进入赌局的目标攻击时使其获得1个随机1到6的点数，生命值降为1后获得【<u>时来</u>】效果，拥有【<u>时来</u>】效果时必定产生6的点数，并在赌局结束时施放【败罚】。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "280340111": {
+                "name": "时来",
+                "desc": "受到进入赌局的目标攻击时必定产生6的点数，并在赌局结束时施放【败罚】。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 803203102,
+            "skill_name": "败罚",
+            "skill_desc": "引爆自身，对诡弈砂金造成虚数属性伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 803203103,
+            "skill_name": "永不败露",
+            "skill_desc": "受到进入赌局的目标攻击时使赌局的赔率翻倍。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 8032031,
+        "avatar_exp_reward": 36,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 1,
+        "avatar_exp_reward": 48,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 2,
+        "avatar_exp_reward": 60,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 3,
+        "avatar_exp_reward": 72,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 4,
+        "avatar_exp_reward": 84,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 5,
+        "avatar_exp_reward": 96,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 6,
+        "avatar_exp_reward": 108,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      }
+    ]
+  },
+  "en": {
+    "id": 8032031,
+    "name": "\"All or Nothing\"",
+    "desc": "A game die metamorphosed from the \"Aventurine of Stratagems,\" which shall decide the gamblers' destiny in the Gamble.",
+    "monster_camp_id": null,
+    "attack_base": 18,
+    "critical_damage_base": 0.2,
+    "defence_base": 210,
+    "hp_base": 186,
+    "initial_delay_ratio": 1,
+    "image_path": "SpriteOutput/MonsterFigure/Monster_8032030.png",
+    "minimum_fatigue_ratio": 0.2,
+    "rank": "MinionLv2",
+    "speed_base": 100,
+    "stance_base": null,
+    "stance_count": 1,
+    "status_resistance_base": null,
+    "child": [
+      {
+        "id": 8032031,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 1,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [],
+        "hard_level_group": 1,
+        "damage_type_resistance": [],
+        "skill_list": [
+          {
+            "id": 803203101,
+            "skill_name": "Fickle Fortune",
+            "skill_desc": "HP cannot be reduced to lower than 1. When this unit is attacked by a target that has entered the Gamble, the target will receive a random number between 1 and 6. When HP is reduced to 1, gains the <u>Influx of Fortuity</u> effect. While under the <u>Influx of Fortuity</u> effect, this unit is guaranteed to receive the number 6 and uses Punishment of Defeat when the Gamble ends.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "280340111": {
+                "name": "Influx of Fortuity",
+                "desc": "When this unit is attacked by a target that has entered the Gamble, this unit always generates a roll of 6, and uses \"Punishment of Defeat\" when the Gamble ends.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 803203102,
+            "skill_name": "Punishment of Defeat",
+            "skill_desc": "Self-destructs, dealing Imaginary DMG to Aventurine of Stratagems.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 803203103,
+            "skill_name": "Forever Concealed",
+            "skill_desc": "When this unit is attacked by a target that has entered the Gamble, the Gamble's odds are doubled.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      }
+    ],
+    "drop": [
+      {
+        "monster_template_id": 8032031,
+        "avatar_exp_reward": 36,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 1,
+        "avatar_exp_reward": 48,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 2,
+        "avatar_exp_reward": 60,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 3,
+        "avatar_exp_reward": 72,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 4,
+        "avatar_exp_reward": 84,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 5,
+        "avatar_exp_reward": 96,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      },
+      {
+        "monster_template_id": 8032031,
+        "world_level": 6,
+        "avatar_exp_reward": 108,
+        "display_item_list": [
+          {
+            "item_id": 2
+          },
+          {
+            "item_id": 181010
+          }
+        ]
+      }
+    ]
+  }
+}

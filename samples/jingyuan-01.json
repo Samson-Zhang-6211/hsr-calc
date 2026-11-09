@@ -1,0 +1,24 @@
+[
+  {
+    "id": "axis-jingyuan",
+    "rosterId": "1204",
+    "name": "景元",
+    "element": "Thunder",
+    "level": 80,
+    "atk": 2800,
+    "hp": 3000,
+    "def": 1100,
+    "critRate": 0.7,
+    "critDmg": 1.81,
+    "breakEffect": 0,
+    "damageBonus": 0.4888,
+    "commonBonus": 0,
+    "elementDmg": { "Physical": 0, "Fire": 0, "Ice": 0, "Thunder": 0.4888, "Wind": 0, "Quantum": 0, "Imaginary": 0 },
+    "speed": 135,
+    "energyRegen": 0,
+    "mode": "manual",
+    "skillLevels": { "basic": 6, "skill": 10, "ult": 10, "talent": 10 },
+    "build": { "lightconeId": "23010", "refinement": 1, "relicsetId": "109", "planarsetId": "318", "eidolonLevel": 0 },
+    "_note": "01 景元（拂晓之前叠1 + 激奏雷电的乐队4件 + 奇想蕉乐园，星魂0）。毕业线（代练通/游侠/逗游/3DM多源一致）：攻2800+/暴击70%+/暴伤180%+/速度133+取135。普攻6，其余10。修正：①damageBonus/elementDmg.Thunder=0.4888 = 雷伤球38.88% + 雷套2件10%（原值0.3888仅球，未含套装2件，已补）；②commonBonus=0（通用增伤；拂晓「战技/终结技伤害+18%」为按技能类型子句，不在面板，由战斗模拟条件子句接入）；③暴伤1.8按已含拂晓36%+蕉乐园16%处理，若你的实际面板不同请告知。内圈由萨尔索图换为奇想蕉乐园（+16%暴伤，有召唤物再+32%为条件子句）。"
+  }
+]

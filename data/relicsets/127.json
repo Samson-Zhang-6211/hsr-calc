@@ -1,0 +1,94 @@
+{
+  "id": "127",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "再创天地的救世主",
+    "en": "World-Remaking Deliverer"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "再创天地的救世主",
+    "icon": "SpriteOutput/ItemIcon/71048.png",
+    "parts": {
+      "31271": {
+        "name": "救世主的登程风帽",
+        "desc": null,
+        "story": null
+      },
+      "31272": {
+        "name": "救世主的执剑护手",
+        "desc": null,
+        "story": null
+      },
+      "31273": {
+        "name": "救世主的传承战袍",
+        "desc": null,
+        "story": null
+      },
+      "31274": {
+        "name": "救世主的拓荒长靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "暴击率提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.08
+        ]
+      },
+      "4": {
+        "desc": "装备者施放普攻或战技后，若装备者的忆灵在场，使装备者及其忆灵生命上限提高<unbreak>#1[i]%</unbreak>，我方全体造成的伤害提高<unbreak>#2[i]%</unbreak>，持续至装备者下次施放普攻或战技后。",
+        "param_list": [
+          0.24,
+          0.15
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "World-Remaking Deliverer",
+    "icon": "SpriteOutput/ItemIcon/71048.png",
+    "parts": {
+      "31271": {
+        "name": "Deliverer's Hood",
+        "desc": null,
+        "story": null
+      },
+      "31272": {
+        "name": "Deliverer's Sword Gauntlet",
+        "desc": null,
+        "story": null
+      },
+      "31273": {
+        "name": "Deliverer's Robe of Legacy",
+        "desc": null,
+        "story": null
+      },
+      "31274": {
+        "name": "Deliverer's Boots of Pioneering",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases CRIT Rate by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.08
+        ]
+      },
+      "4": {
+        "desc": "After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by <unbreak>#1[i]%</unbreak>, and increases all allies' DMG dealt by <unbreak>#2[i]%</unbreak>, lasting until after the wearer's next use of Basic ATK or Skill.",
+        "param_list": [
+          0.24,
+          0.15
+        ]
+      }
+    }
+  }
+}

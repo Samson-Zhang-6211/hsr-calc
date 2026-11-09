@@ -1,0 +1,94 @@
+{
+  "id": "128",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "自匿星芒的隐士",
+    "en": "Self-Enshrouded Recluse"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "自匿星芒的隐士",
+    "icon": "SpriteOutput/ItemIcon/71049.png",
+    "parts": {
+      "31281": {
+        "name": "隐士的宽檐呢帽",
+        "desc": null,
+        "story": null
+      },
+      "31282": {
+        "name": "隐士的简雅腕表",
+        "desc": null,
+        "story": null
+      },
+      "31283": {
+        "name": "隐士的驼色夹克",
+        "desc": null,
+        "story": null
+      },
+      "31284": {
+        "name": "隐士的麂皮软鞋",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "提供的护盾量提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "使装备者提供的护盾量提高<unbreak>#1[i]%</unbreak>，我方目标持有装备者提供的护盾时，暴击伤害提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.12,
+          0.15
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Self-Enshrouded Recluse",
+    "icon": "SpriteOutput/ItemIcon/71049.png",
+    "parts": {
+      "31281": {
+        "name": "Recluse's Wide-Brimmed Fedora",
+        "desc": null,
+        "story": null
+      },
+      "31282": {
+        "name": "Recluse's Refined Timepiece",
+        "desc": null,
+        "story": null
+      },
+      "31283": {
+        "name": "Recluse's Camel-Colored Coat",
+        "desc": null,
+        "story": null
+      },
+      "31284": {
+        "name": "Recluse's Soft Suede Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "The provided Shield Effect increases by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "Increases the Shield Effect provided by the wearer by <unbreak>#1[i]%</unbreak>. When an ally target holds a Shield provided by the wearer, the ally target's CRIT DMG increases by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.12,
+          0.15
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "134",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "贪噬禁果的异端",
+    "en": "The Edacious Heretic"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "贪噬禁果的异端",
+    "icon": "SpriteOutput/ItemIcon/71061.png",
+    "parts": {
+      "31341": {
+        "name": "异端的颅脑仪器",
+        "desc": null,
+        "story": null
+      },
+      "31342": {
+        "name": "异端的注射手套",
+        "desc": null,
+        "story": null
+      },
+      "31343": {
+        "name": "异端的理性束衣",
+        "desc": null,
+        "story": null
+      },
+      "31344": {
+        "name": "异端的饥饿短靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "暴击伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "使装备者普攻造成的伤害提高<unbreak>#1[i]%</unbreak>。当装备者施放普攻时，使装备者的攻击力提高<unbreak>#2[i]%</unbreak>，持续<unbreak>#3[i]</unbreak>回合。",
+        "param_list": [
+          0.36,
+          0.2,
+          2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "The Edacious Heretic",
+    "icon": "SpriteOutput/ItemIcon/71061.png",
+    "parts": {
+      "31341": {
+        "name": "Heretic's Cranial Apparatus",
+        "desc": null,
+        "story": null
+      },
+      "31342": {
+        "name": "Heretic's Injection Gloves",
+        "desc": null,
+        "story": null
+      },
+      "31343": {
+        "name": "Heretic's Straitjacket of Reason",
+        "desc": null,
+        "story": null
+      },
+      "31344": {
+        "name": "Heretic's Ravenous Ankle-Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases CRIT DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "Increases DMG dealt by the wearer's Basic ATK by <unbreak>#1[i]%</unbreak>. When the wearer uses Basic ATK, increases the wearer's ATK by <unbreak>#2[i]%</unbreak>, lasting for <unbreak>#3[i]</unbreak> turn(s).",
+        "param_list": [
+          0.36,
+          0.2,
+          2
+        ]
+      }
+    }
+  }
+}

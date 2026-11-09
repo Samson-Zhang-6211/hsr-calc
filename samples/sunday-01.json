@@ -1,0 +1,24 @@
+[
+  {
+    "id": "axis-sunday",
+    "rosterId": "1313",
+    "name": "星期日",
+    "element": "Imaginary",
+    "level": 80,
+    "atk": 2000,
+    "hp": 4500,
+    "def": 1200,
+    "critRate": 0.05,
+    "critDmg": 2.2,
+    "breakEffect": 0,
+    "damageBonus": 0,
+    "commonBonus": 0,
+    "elementDmg": { "Physical": 0, "Fire": 0, "Ice": 0, "Thunder": 0, "Wind": 0, "Quantum": 0, "Imaginary": 0 },
+    "speed": 134,
+    "energyRegen": 0.244,
+    "mode": "manual",
+    "skillLevels": { "basic": 6, "skill": 10, "ult": 10, "talent": 10 },
+    "build": { "lightconeId": "23034", "refinement": 1, "relicsetId": "121", "planarsetId": "317", "eidolonLevel": 0 },
+    "_note": "01 星期日（回到大地的飞行叠1 + 重循苦旅的司铎4件 + 沉陆海域露莎卡，星魂0）。毕业线来源18183毕业面板一览：HP4500+/攻2000+/防1200+/速度134+/暴击5%+/暴伤220%+。普攻6，其余10。修正：①energyRegen 0.194→0.244 = 充能绳19.4% + 露莎卡2件5%（你确认原值未含套装，已补）；②速度134已含司铎2件+6%（你确认）；③damageBonus=0（辅助不打伤害）。露莎卡「1号位攻击+12%」与专武回SP/圣咏/回能为战斗内条件子句，由战斗模拟接入。"
+  }
+]

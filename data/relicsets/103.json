@@ -1,0 +1,92 @@
+{
+  "id": "103",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "净庭教宗的圣骑士",
+    "en": "Knight of Purity Palace"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "净庭教宗的圣骑士",
+    "icon": "SpriteOutput/ItemIcon/71002.png",
+    "parts": {
+      "31031": {
+        "name": "圣骑的宽恕盔面",
+        "desc": null,
+        "story": null
+      },
+      "31032": {
+        "name": "圣骑的沉默誓环",
+        "desc": null,
+        "story": null
+      },
+      "31033": {
+        "name": "圣骑的肃穆胸甲",
+        "desc": null,
+        "story": null
+      },
+      "31034": {
+        "name": "圣骑的秩序铁靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "防御力提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.15
+        ]
+      },
+      "4": {
+        "desc": "使装备者提供的护盾量提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Knight of Purity Palace",
+    "icon": "SpriteOutput/ItemIcon/71002.png",
+    "parts": {
+      "31031": {
+        "name": "Knight's Forgiving Casque",
+        "desc": null,
+        "story": null
+      },
+      "31032": {
+        "name": "Knight's Silent Oath Ring",
+        "desc": null,
+        "story": null
+      },
+      "31033": {
+        "name": "Knight's Solemn Breastplate",
+        "desc": null,
+        "story": null
+      },
+      "31034": {
+        "name": "Knight's Iron Boots of Order",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases DEF by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.15
+        ]
+      },
+      "4": {
+        "desc": "Increases the max DMG that can be absorbed by the Shield created by the wearer by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.2
+        ]
+      }
+    }
+  }
+}

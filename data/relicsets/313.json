@@ -1,0 +1,64 @@
+{
+  "id": "313",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "无主荒星茨冈尼亚",
+    "en": "Sigonia, the Unclaimed Desolation"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "无主荒星茨冈尼亚",
+    "icon": "SpriteOutput/ItemIcon/71030.png",
+    "parts": {
+      "33135": {
+        "name": "茨冈尼亚的母神卧榻",
+        "desc": null,
+        "story": null
+      },
+      "33136": {
+        "name": "茨冈尼亚的轮回纽结",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击率提高<unbreak>#3[i]%</unbreak>。当敌方目标被消灭时，装备者暴击伤害提高<unbreak>#1[i]%</unbreak>，最多叠加<unbreak>#2[i]</unbreak>层。",
+        "param_list": [
+          0.04,
+          10,
+          0.04
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Sigonia, the Unclaimed Desolation",
+    "icon": "SpriteOutput/ItemIcon/71030.png",
+    "parts": {
+      "33135": {
+        "name": "Sigonia's Gaiathra Berth",
+        "desc": null,
+        "story": null
+      },
+      "33136": {
+        "name": "Sigonia's Knot of Cyclicality",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT Rate by <unbreak>#3[i]%</unbreak>. When an enemy target gets defeated, the wearer's CRIT DMG increases by <unbreak>#1[i]%</unbreak>, stacking up to <unbreak>#2[i]</unbreak> time(s).",
+        "param_list": [
+          0.04,
+          10,
+          0.04
+        ]
+      }
+    }
+  }
+}

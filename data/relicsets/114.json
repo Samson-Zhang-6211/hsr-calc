@@ -1,0 +1,94 @@
+{
+  "id": "114",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "骇域漫游的信使",
+    "en": "Messenger Traversing Hackerspace"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "骇域漫游的信使",
+    "icon": "SpriteOutput/ItemIcon/71021.png",
+    "parts": {
+      "31141": {
+        "name": "信使的全息目镜",
+        "desc": null,
+        "story": null
+      },
+      "31142": {
+        "name": "信使的百变义手",
+        "desc": null,
+        "story": null
+      },
+      "31143": {
+        "name": "信使的密信挎包",
+        "desc": null,
+        "story": null
+      },
+      "31144": {
+        "name": "信使的酷跑板鞋",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "速度提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.06
+        ]
+      },
+      "4": {
+        "desc": "当装备者对我方目标施放终结技时，我方全体速度提高<unbreak>#1[i]%</unbreak>，持续<unbreak>#2[i]</unbreak>回合，该效果无法叠加。",
+        "param_list": [
+          0.12,
+          1
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Messenger Traversing Hackerspace",
+    "icon": "SpriteOutput/ItemIcon/71021.png",
+    "parts": {
+      "31141": {
+        "name": "Messenger's Holovisor",
+        "desc": null,
+        "story": null
+      },
+      "31142": {
+        "name": "Messenger's Transformative Arm",
+        "desc": null,
+        "story": null
+      },
+      "31143": {
+        "name": "Messenger's Secret Satchel",
+        "desc": null,
+        "story": null
+      },
+      "31144": {
+        "name": "Messenger's Par-kool Sneakers",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases SPD by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.06
+        ]
+      },
+      "4": {
+        "desc": "When the wearer uses their Ultimate on an ally, SPD for all allies increases by <unbreak>#1[i]%</unbreak> for <unbreak>#2[i]</unbreak> turn(s). This effect cannot be stacked.",
+        "param_list": [
+          0.12,
+          1
+        ]
+      }
+    }
+  }
+}

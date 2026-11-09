@@ -1,0 +1,64 @@
+{
+  "id": "308",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "生命的翁瓦克",
+    "en": "Sprightly Vonwacq"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "生命的翁瓦克",
+    "icon": "SpriteOutput/ItemIcon/71019.png",
+    "parts": {
+      "33085": {
+        "name": "翁瓦克的诞生之岛",
+        "desc": null,
+        "story": null
+      },
+      "33086": {
+        "name": "翁瓦克的环岛海岸",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的能量恢复效率提高<unbreak>#1[i]%</unbreak>。当装备者的速度大于等于<unbreak>#2[i]</unbreak>时，进入战斗时立刻使行动提前<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.05,
+          120,
+          0.4
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Sprightly Vonwacq",
+    "icon": "SpriteOutput/ItemIcon/71019.png",
+    "parts": {
+      "33085": {
+        "name": "Vonwacq's Island of Birth",
+        "desc": null,
+        "story": null
+      },
+      "33086": {
+        "name": "Vonwacq's Islandic Coast",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Energy Regeneration Rate by <unbreak>#1[i]%</unbreak>. When the wearer's SPD reaches <unbreak>#2[i]</unbreak> or higher, the wearer's action is Advanced Forward by <unbreak>#3[i]%</unbreak> immediately upon entering battle.",
+        "param_list": [
+          0.05,
+          120,
+          0.4
+        ]
+      }
+    }
+  }
+}

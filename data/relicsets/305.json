@@ -1,0 +1,64 @@
+{
+  "id": "305",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "星体差分机",
+    "en": "Celestial Differentiator"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "星体差分机",
+    "icon": "SpriteOutput/ItemIcon/71016.png",
+    "parts": {
+      "33055": {
+        "name": "螺丝星的机械烈阳",
+        "desc": null,
+        "story": null
+      },
+      "33056": {
+        "name": "螺丝星的环星孔带",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的暴击伤害提高<unbreak>#1[i]%</unbreak>。当装备者的暴击伤害大于等于<unbreak>#2[i]%</unbreak>时，进入战斗后装备者的暴击率提高<unbreak>#3[i]%</unbreak>，持续到施放首次攻击后结束。",
+        "param_list": [
+          0.16,
+          1.2,
+          0.6
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Celestial Differentiator",
+    "icon": "SpriteOutput/ItemIcon/71016.png",
+    "parts": {
+      "33055": {
+        "name": "Planet Screwllum's Mechanical Sun",
+        "desc": null,
+        "story": null
+      },
+      "33056": {
+        "name": "Planet Screwllum's Ring System",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's CRIT DMG by <unbreak>#1[i]%</unbreak>. When the wearer's current CRIT DMG reaches <unbreak>#2[i]%</unbreak> or higher, after entering battle, the wearer's CRIT Rate increases by <unbreak>#3[i]%</unbreak> until the end of their first attack.",
+        "param_list": [
+          0.16,
+          1.2,
+          0.6
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "id": "axis-tenghuang",
+    "rosterId": "1414",
+    "name": "丹恒•腾荒",
+    "element": "Physical",
+    "level": 80,
+    "atk": 2600,
+    "hp": 3200,
+    "def": 1250,
+    "critRate": 0.1,
+    "critDmg": 0.6,
+    "breakEffect": 0,
+    "damageBonus": 0,
+    "commonBonus": 0,
+    "elementDmg": { "Physical": 0, "Fire": 0, "Ice": 0, "Thunder": 0, "Wind": 0, "Quantum": 0, "Imaginary": 0 },
+    "speed": 134,
+    "energyRegen": 0.244,
+    "mode": "manual",
+    "skillLevels": { "basic": 6, "skill": 10, "ult": 10, "talent": 10 },
+    "build": { "lightconeId": "24002", "refinement": 5, "relicsetId": "128", "planarsetId": "308", "eidolonLevel": 0 },
+    "_note": "00 盾丹·腾荒（光锥记忆的质料叠5、非专武 + 自匿星芒的隐士4件 + 生命的翁瓦克，星魂0）。攻2600（毕业线2500+）；HP3200（3000+）；速度134、攻击衣/攻击球 damageBonus=0。普攻6，其余10。修正：①energyRegen 0.194→0.244 = 充能绳19.4% + 翁瓦克2件5%（你确认原值未含套装，已补）；②速度134已含套装（你确认）。翁瓦克「速度≥120进战行动提前40%」、隐士4件「持盾暴伤+15%」为战斗内条件子句，由战斗模拟接入；质料的受击护盾/减伤类在打木桩时不生效，跳过。"
+  }
+]

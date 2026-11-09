@@ -1,0 +1,94 @@
+{
+  "id": "111",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "流星追迹的怪盗",
+    "en": "Thief of Shooting Meteor"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "流星追迹的怪盗",
+    "icon": "SpriteOutput/ItemIcon/71010.png",
+    "parts": {
+      "31111": {
+        "name": "怪盗的千人假面",
+        "desc": null,
+        "story": null
+      },
+      "31112": {
+        "name": "怪盗的绘纹手套",
+        "desc": null,
+        "story": null
+      },
+      "31113": {
+        "name": "怪盗的纤钢爪钩",
+        "desc": null,
+        "story": null
+      },
+      "31114": {
+        "name": "怪盗的流星快靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "击破特攻提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "使装备者的击破特攻提高<unbreak>#1[i]%</unbreak>。当装备者击破敌方目标弱点后，恢复<unbreak>#2[i]</unbreak>点能量。",
+        "param_list": [
+          0.16,
+          3
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Thief of Shooting Meteor",
+    "icon": "SpriteOutput/ItemIcon/71010.png",
+    "parts": {
+      "31111": {
+        "name": "Thief's Myriad-Faced Mask",
+        "desc": null,
+        "story": null
+      },
+      "31112": {
+        "name": "Thief's Gloves With Prints",
+        "desc": null,
+        "story": null
+      },
+      "31113": {
+        "name": "Thief's Steel Grappling Hook",
+        "desc": null,
+        "story": null
+      },
+      "31114": {
+        "name": "Thief's Meteor Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Break Effect by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.16
+        ]
+      },
+      "4": {
+        "desc": "Increases the wearer's Break Effect by <unbreak>#1[i]%</unbreak>. After the wearer inflicts Weakness Break on an enemy, regenerates <unbreak>#2[i]</unbreak> Energy.",
+        "param_list": [
+          0.16,
+          3
+        ]
+      }
+    }
+  }
+}

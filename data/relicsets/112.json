@@ -1,0 +1,94 @@
+{
+  "id": "112",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "盗匪荒漠的废土客",
+    "en": "Wastelander of Banditry Desert"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "盗匪荒漠的废土客",
+    "icon": "SpriteOutput/ItemIcon/71011.png",
+    "parts": {
+      "31121": {
+        "name": "废土客的呼吸面罩",
+        "desc": null,
+        "story": null
+      },
+      "31122": {
+        "name": "废土客的荒漠终端",
+        "desc": null,
+        "story": null
+      },
+      "31123": {
+        "name": "废土客的修士长袍",
+        "desc": null,
+        "story": null
+      },
+      "31124": {
+        "name": "废土客的动力腿甲",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "虚数属性伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "装备者对陷入负面效果的敌方目标造成伤害时暴击率提高<unbreak>#1[i]%</unbreak>，对陷入禁锢状态的敌方目标造成伤害时暴击伤害提高<unbreak>#2[i]%</unbreak>。",
+        "param_list": [
+          0.1,
+          0.2
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Wastelander of Banditry Desert",
+    "icon": "SpriteOutput/ItemIcon/71011.png",
+    "parts": {
+      "31121": {
+        "name": "Wastelander's Breathing Mask",
+        "desc": null,
+        "story": null
+      },
+      "31122": {
+        "name": "Wastelander's Desert Terminal",
+        "desc": null,
+        "story": null
+      },
+      "31123": {
+        "name": "Wastelander's Friar Robe",
+        "desc": null,
+        "story": null
+      },
+      "31124": {
+        "name": "Wastelander's Powered Greaves",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases Imaginary DMG by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.1
+        ]
+      },
+      "4": {
+        "desc": "When dealing DMG to debuffed enemy targets, the wearer has their CRIT Rate increased by <unbreak>#1[i]%</unbreak>. And when they deal DMG to Imprisoned enemy targets, their CRIT DMG increases by <unbreak>#2[i]%</unbreak>.",
+        "param_list": [
+          0.1,
+          0.2
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@hsr-calc/engine",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty && tsc -p tsconfig.test.json --pretty",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@hsr-calc/shared": "workspace:*"
+  }
+}

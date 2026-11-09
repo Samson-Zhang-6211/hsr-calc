@@ -1,0 +1,64 @@
+{
+  "id": "302",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "不老者的仙舟",
+    "en": "Fleet of the Ageless"
+  },
+  "meta": {
+    "fourPiece": false
+  },
+  "zh": {
+    "name": "不老者的仙舟",
+    "icon": "SpriteOutput/ItemIcon/71013.png",
+    "parts": {
+      "33025": {
+        "name": "罗浮仙舟的天外楼船",
+        "desc": null,
+        "story": null
+      },
+      "33026": {
+        "name": "罗浮仙舟的建木枝蔓",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "使装备者的生命上限提高<unbreak>#1[i]%</unbreak>。当装备者的速度大于等于<unbreak>#2[i]</unbreak>时，我方全体攻击力提高<unbreak>#3[i]%</unbreak>。",
+        "param_list": [
+          0.12,
+          120,
+          0.08
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "Fleet of the Ageless",
+    "icon": "SpriteOutput/ItemIcon/71013.png",
+    "parts": {
+      "33025": {
+        "name": "The Xianzhou Luofu's Celestial Ark",
+        "desc": null,
+        "story": null
+      },
+      "33026": {
+        "name": "The Xianzhou Luofu's Ambrosial Arbor Vines",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the wearer's Max HP by <unbreak>#1[i]%</unbreak>. When the wearer's SPD reaches <unbreak>#2[i]</unbreak> or higher, all allies' ATK increases by <unbreak>#3[i]%</unbreak>.",
+        "param_list": [
+          0.12,
+          120,
+          0.08
+        ]
+      }
+    }
+  }
+}

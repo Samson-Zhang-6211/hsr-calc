@@ -1,0 +1,96 @@
+{
+  "id": "115",
+  "type": "relicset",
+  "version": "4.6.54",
+  "name": {
+    "zh": "毁烬焚骨的大公",
+    "en": "The Ashblazing Grand Duke"
+  },
+  "meta": {
+    "fourPiece": true
+  },
+  "zh": {
+    "name": "毁烬焚骨的大公",
+    "icon": "SpriteOutput/ItemIcon/71024.png",
+    "parts": {
+      "31151": {
+        "name": "大公的冥焰冠冕",
+        "desc": null,
+        "story": null
+      },
+      "31152": {
+        "name": "大公的绒火指套",
+        "desc": null,
+        "story": null
+      },
+      "31153": {
+        "name": "大公的蒙恩长袍",
+        "desc": null,
+        "story": null
+      },
+      "31154": {
+        "name": "大公的绅雅礼靴",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "追加攻击造成的伤害提高<unbreak>#1[i]%</unbreak>。",
+        "param_list": [
+          0.2
+        ]
+      },
+      "4": {
+        "desc": "装备者施放追加攻击时，根据追加攻击造成伤害的次数，每次造成伤害时使装备者的攻击力提高<unbreak>#1[i]%</unbreak>，最多叠加<unbreak>#2[i]</unbreak>次，持续<unbreak>#3[i]</unbreak>回合。该效果在装备者下一次施放追加攻击时移除。",
+        "param_list": [
+          0.06,
+          8,
+          3
+        ]
+      }
+    }
+  },
+  "en": {
+    "name": "The Ashblazing Grand Duke",
+    "icon": "SpriteOutput/ItemIcon/71024.png",
+    "parts": {
+      "31151": {
+        "name": "Grand Duke's Crown of Netherflame",
+        "desc": null,
+        "story": null
+      },
+      "31152": {
+        "name": "Grand Duke's Gloves of Fieryfur",
+        "desc": null,
+        "story": null
+      },
+      "31153": {
+        "name": "Grand Duke's Robe of Grace",
+        "desc": null,
+        "story": null
+      },
+      "31154": {
+        "name": "Grand Duke's Ceremonial Boots",
+        "desc": null,
+        "story": null
+      }
+    },
+    "require_num": {
+      "2": {
+        "desc": "Increases the DMG dealt by Follow-Up ATK by <unbreak>#1[i]%</unbreak>.",
+        "param_list": [
+          0.2
+        ]
+      },
+      "4": {
+        "desc": "When the wearer uses a Follow-Up ATK, increases the wearer's ATK by <unbreak>#1[i]%</unbreak> for every time the Follow-Up ATK deals DMG. This effect can stack up to <unbreak>#2[i]</unbreak> time(s) and lasts for <unbreak>#3[i]</unbreak> turn(s). This effect is removed the next time the wearer uses a Follow-Up ATK.",
+        "param_list": [
+          0.06,
+          8,
+          3
+        ]
+      }
+    }
+  }
+}
