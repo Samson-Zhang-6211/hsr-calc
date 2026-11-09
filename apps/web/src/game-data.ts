@@ -120,7 +120,7 @@ export interface EidolonInfo {
 export type StatKind = 'atk' | 'hp' | 'def';
 export type DataLang = 'zh' | 'en';
 
-/** 网站（hsr.nanoka.cc）技能文案默认展示等级，来自其前端源码常量 Vl */
+/** 数据源站点的技能文案默认展示等级，来自其前端源码常量 Vl */
 export const SKILL_DEFAULT_LEVEL: Readonly<Record<string, number>> = {
   Normal: 6,
   BPSkill: 10,
