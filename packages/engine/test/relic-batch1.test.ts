@@ -12,7 +12,7 @@ import {
 } from '../src/index.js';
 
 // 遗器套装批1（101~106 四件套，2026-10 批1裁定）。
-// 锚点全部由 *-dump.test.ts 实跑定锚（%TEMP%/opencode/relic-batch1-dump.txt），勿凭推理改数。
+// 锚点全部由 *-dump.test.ts 实跑定锚（%TEMP%/临时目录/relic-batch1-dump.txt），勿凭推理改数。
 
 const ALL_ELEMENTS: Element[] = [
   'Physical', 'Fire', 'Ice', 'Wind', 'Thunder', 'Quantum', 'Imaginary',

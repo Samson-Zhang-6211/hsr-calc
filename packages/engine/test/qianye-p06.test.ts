@@ -15,7 +15,7 @@ import { simulateBattleReplay, type BattleConfig } from '../src/index.js';
  * ② 75% 保底两个时点都生效（战斗开始 / 结界解除）；
  * ③ 每次「能量从不足→满」那一瞬清自身全部负面（不是常驻免控）。
  *
- * 锚点来自 `%TEMP%/opencode/qianye-p06-dump.txt` 实测，勿纯推理改写。
+ * 锚点来自 `%TEMP%/临时目录/qianye-p06-dump.txt` 实测，勿纯推理改写。
  * 能量上限 `ENERGY_MAX.qianye = 160`，故 75% = 120、溢出上限 80。
  * 通用「开大回 5 点能量」会乘充能效率（A 例 5×1.2=6），所以开大后 = 通用回能 + 溢出量。
  */

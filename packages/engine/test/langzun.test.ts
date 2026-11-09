@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { simulateBattle, type BattleConfig, type CombatMember } from '../src/index.js';
 
 /** 狼尊1506接入回归测试——全部锚点取自 2026-10-09 dump
- * （%TEMP%/opencode/langzun-dump2.txt，seed=20261009 单机复现） */
+ * （%TEMP%/临时目录/langzun-dump2.txt，seed=20261009 单机复现） */
 
 const mkPanel = (over: Record<string, unknown> = {}) => ({
   level: 80,

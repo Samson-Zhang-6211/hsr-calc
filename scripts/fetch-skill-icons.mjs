@@ -1,10 +1,10 @@
-// 下载 nanoka 的角色技能图标到本地 public 目录。
+// 下载 社区数据源 的角色技能图标到本地 public 目录。
 // 用途：战场可视化卡底的技能按钮（普攻/战技/终结技/天赋）、角色管理页技能展示。
 //
 // 用法：
 //   node scripts/fetch-skill-icons.mjs [--force] [--ids=1512,1204]
 //
-// 已知路径约定（2026-10 实测，来源 hsr.nanoka.cc 实际网络请求）：
+// 已知路径约定（2026-10 实测，来源 站点 实际网络请求）：
 //   assets/hsr/skillicons/SkillIcon_{角色id}_{Normal|BP|Ultra|Passive}.webp
 //     —— 128x128 alpha
 //   Normal=普攻 / BP=战技 / Ultra=终结技 / Passive=天赋
@@ -14,9 +14,10 @@
 import { mkdirSync, existsSync, statSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const CDN = 'https://static.nanoka.cc/assets/hsr';
+const CDN = assetBase();
 const PUBLIC = join(ROOT, 'apps', 'web', 'public');
 const CHAR_DIR = join(ROOT, 'data', 'characters');
 const OUT_DIR = join(PUBLIC, 'skillicon');

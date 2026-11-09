@@ -98,7 +98,7 @@ const zh = {
         lead: '读一个 9 位 UID 的游戏内「角色展示柜」，本地复算面板后逐卡导入角色管理。',
         steps: [
           '填 9 位纯数字 UID（是 UID，不是角色 id），选数据源：默认 mihomo（国内可直连），Enka 需要外网。',
-          '两个源都不返回 CORS 头，所以必须填代理前缀：展开页面里默认折叠的「接口代理地址」，填 https://你的域/uid 这种形式，也支持带 {uid} 占位符的模板。',
+          '两个源都不返回 CORS 头，所以必须填代理前缀：展开页面里默认折叠的「接口代理地址」，填「转发地址/uid」这种形式，也支持带 {uid} 占位符的模板。',
           '点「查询」。同一 UID 在缓存有效期（默认 60 秒）内不重复请求，要拉最新点「强制刷新」。',
           '每张卡点「导入」：面板、配装、行迹、星魂、技能等级会一起写进角色管理，模式记为「装备自动计算」。',
         ],
@@ -2919,14 +2919,14 @@ const zh = {
     sourceLabel: '数据源',
     sourceHint: 'mihomo：国内网络可直连（默认）；Enka：需要能访问外网。两个源都要经代理转发（浏览器 CORS 限制）。',
     sourceMihomo: 'mihomo（推荐）',
-    sourceEnka: 'Enka.Network',
+    sourceEnka: 'Enka',
     uidPlaceholder: '输入 UID（9 位数字）',
     query: '查询',
     refresh: '强制刷新',
     loading: '查询中…',
     building: '正在读取本地角色数据…',
     proxyLabel: '接口代理地址',
-    proxyPlaceholder: 'https://你的项目.pages.dev/hsr/uid',
+    proxyPlaceholder: '你的转发地址（形如 域名/hsr/uid）',
     proxyHint:
       '两个数据源都不返回 CORS 头，浏览器直连必被拦，所以要填一个转发前缀：mihomo 用 …/hsr/uid、Enka 用 …/hsr/enka（Cloudflare Pages 转发器见 docs/showcase-uid.md）。也支持 {uid} 占位符；本机会记住。',
     errorTitle: '查询失败',
@@ -2942,7 +2942,7 @@ const zh = {
     errServer: '接口返回服务端错误，请稍后重试。',
     errBadPayload: '接口返回的不是预期 JSON，请检查代理是否原样转发。',
     errProxyHint:
-      '代理要求：GET 转发到 https://enka.network/api/hsr/uid/{uid}，带自定义 User-Agent，并回 Access-Control-Allow-Origin。',
+      '代理要求：GET 转发到上游展示柜接口 /{uid}，带自定义 User-Agent，并回 Access-Control-Allow-Origin。',
     noNickname: '（未取到昵称）',
     fromCache: '本地缓存',
     empty: '展示柜为空（或未公开「角色展示柜」）。',
@@ -3057,7 +3057,7 @@ const en: typeof zh = {
         lead: 'Reads the in-game Character Showcase for a 9-digit UID, recomputes the panel locally, then imports characters one card at a time.',
         steps: [
           'Enter the 9-digit numeric UID (a UID, not a character id) and pick a source: mihomo by default (reachable from mainland China), Enka needs international access.',
-          'Neither source sends CORS headers, so a proxy prefix is mandatory: expand the collapsed "API proxy" field and enter something like https://your-host/uid; a template containing {uid} also works.',
+          'Neither source sends CORS headers, so a proxy prefix is mandatory: expand the collapsed "API proxy" field and enter something like domain/uid; a template containing {uid} also works.',
           'Click Query. The same UID is not refetched inside the cache window (60s by default); use "Force refresh" to pull the latest.',
           'Click Import on a card: panel, gear, traces, eidolon and skill levels are written into Characters at once, recorded as "Calculated from Equipment".',
         ],
@@ -5887,7 +5887,7 @@ const en: typeof zh = {
     loading: 'Querying…',
     building: 'Loading local character data…',
     proxyLabel: 'API proxy base',
-    proxyPlaceholder: 'https://your-project.pages.dev/hsr/uid',
+    proxyPlaceholder: 'your relay base (domain/hsr/uid)',
     proxyHint:
       'Neither source sends CORS headers, so a browser cannot call them directly. Provide a relay prefix: use …/hsr/uid for mihomo, …/hsr/enka for Enka (Cloudflare Pages relay: see docs/showcase-uid.md). A {uid} placeholder also works. Remembered locally.',
     errorTitle: 'Query failed',
@@ -5903,7 +5903,7 @@ const en: typeof zh = {
     errServer: 'The API returned a server error. Retry later.',
     errBadPayload: 'The response is not the expected JSON. Check that the proxy forwards it verbatim.',
     errProxyHint:
-      'Proxy requirements: forward GET to https://enka.network/api/hsr/uid/{uid} with a custom User-Agent and return Access-Control-Allow-Origin.',
+      'Proxy requirements: forward GET to the upstream showcase endpoint /{uid} with a custom User-Agent and return Access-Control-Allow-Origin.',
     noNickname: '(no nickname)',
     fromCache: 'local cache',
     empty: 'The showcase is empty (or the character showcase is not public).',

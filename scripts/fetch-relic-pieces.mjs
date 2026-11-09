@@ -1,8 +1,8 @@
 // 下载每套遗器的**部位图标**到 apps/web/public/relicpieces/{setId}-{slot}.webp。
 //
 // 2026-10-29 用户要求：截图/视频识别的遗器比对要用「部位图 vs 部位图」，
-// 不能用「套装徽标 vs 部位图」。图标路径来自 hsr.nanoka.cc 遗器详情页实际请求：
-//   https://static.nanoka.cc/assets/hsr/relicfigures/IconRelic_{relicsetId}_{slot}.webp
+// 不能用「套装徽标 vs 部位图」。图标路径来自 站点 遗器详情页实际请求：
+//   （静态资源根地址）/relicfigures/IconRelic_{relicsetId}_{slot}.webp
 // slot：四件套 1..4（头/手/身/脚），位面套 1..2（球/绳）。
 //
 // 用法：
@@ -10,11 +10,12 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const DATA = join(ROOT, 'data', 'relicsets');
 const OUT = join(ROOT, 'apps', 'web', 'public', 'relicpieces');
-const CDN = 'https://static.nanoka.cc/assets/hsr/relicfigures';
+const CDN = assetBase('relicfigures');
 const UA = {
   'user-agent':
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',

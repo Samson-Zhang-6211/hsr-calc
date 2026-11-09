@@ -12,7 +12,7 @@ import fs from 'node:fs';
  *   而 vite:esbuild 把这个失败当成致命错误抛出来 → 整页白屏。
  * 处置：在**加载配置时**把 `TEMP/TMP` 指到仓库内的可写目录；esbuild 服务是懒启动的
  *   （首次 transform / optimizeDeps 才拉起），因此子进程会继承到这里设置的值。
- * 这条与 AGENTS.md「vite build 报 esbuild: remove ... Access is denied」是同一条坑。
+ * 这条与 项目维护记录「vite build 报 esbuild: remove ... Access is denied」是同一条坑。
  */
 const esbuildTmpDir =
   process.env.HSR_ESBUILD_TMP ||
@@ -54,7 +54,7 @@ const offlineDataSwap = (): Plugin => ({
 });
 
 export default defineConfig({
-  // 主站并轨（2026-10-16）：站点挂在 http://host:14514/hsr/ 下，构建产物路径与
+  // 主站并轨（2026-10-16）：站点挂在根路径 /hsr/ 下，构建产物路径与
   // BrowserRouter basename 均依赖此值（见 main.tsx / asset-url.ts）。
   // 离线包改相对路径（2026-11-08），其余构建不受影响。
   base: offline ? './' : '/hsr/',
@@ -76,38 +76,5 @@ export default defineConfig({
       ),
     },
   },
-  server: {
-    port: 5173,
-    /**
-     * 仅本地开发用：`/enka-proxy/{uid}` → `https://enka.network/api/hsr/uid/{uid}`。
-     *
-     * Enka.Network **不返回 CORS 头**（2026-10-26 实测：带 Origin 的 GET 也没有，
-     * OPTIONS 直接 405），浏览器直连必然被拦。生产环境走「展示柜」页里配置的代理
-     * 前缀（Cloudflare Worker / 自建转发）；dev 不配代理时把该前缀填成
-     * `http://localhost:5173/hsr/enka-proxy` 即可本地联调。
-     * 注意：改这个文件会让正在跑的 dev server 崩（watcher EBUSY），必须重启。
-     */
-    proxy: {
-      '/hsr/enka-proxy': {
-        target: 'https://enka.network',
-        changeOrigin: true,
-        secure: true,
-        headers: { 'User-Agent': 'hsr-sim-local-dev' },
-        rewrite: (path) => path.replace(/^\/hsr\/enka-proxy/, '/api/hsr/uid'),
-      },
-      /**
-       * 同一件事的第二条路（2026-10-27）：`/hsr/mihomo-proxy/{uid}`
-       * → `https://api.mihomo.me/sr_info_parsed/{uid}`。
-       * **国内网络实测 Enka 被阻断（ECONNRESET），mihomo 可直连**，所以展示柜
-       * 默认用 mihomo：本地把代理地址填 `http://localhost:5173/hsr/mihomo-proxy`。
-       */
-      '/hsr/mihomo-proxy': {
-        target: 'https://api.mihomo.me',
-        changeOrigin: true,
-        secure: true,
-        headers: { 'User-Agent': 'hsr-sim-local-dev' },
-        rewrite: (path) => path.replace(/^\/hsr\/mihomo-proxy/, '/sr_info_parsed'),
-      },
-    },
-  },
+  server: { port: 5173 },
 });

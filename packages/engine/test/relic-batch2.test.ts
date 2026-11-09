@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // 遗器套装批2（109/110/111/112/114/117 四件套，2026-10 批2裁定）。
-// 锚点全部由 relic-batch2-dump.test.ts 实跑定锚（%TEMP%/opencode/relic-batch2-dump.txt），勿凭推理改数。
+// 锚点全部由 relic-batch2-dump.test.ts 实跑定锚（%TEMP%/临时目录/relic-batch2-dump.txt），勿凭推理改数。
 // 关键口径：HitLog 的 crit 因子 = 1+critRate×critDmg（期望值暴击、非随机掷骰），
 // 因此暴率/暴伤改动=确定性 crit 因子差值（112: +0.5×0.10=0.05；117: +0.04×0.5=0.02，
 // ≥2负面 tier 后 +0.08×2 暴伤 → 总差 0.0824=0.39×0.66−0.35×0.5）。

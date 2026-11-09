@@ -66,19 +66,20 @@ describe('showcase-api · UID 与 URL', () => {
     expect(normalizeUid('')).toBe(null);
   });
 
-  it('直连 URL：mihomo（默认，带 lang=cn）/ Enka', () => {
-    expect(directUrl('100000001', 'mihomo')).toBe(`${MIHOMO_UID_BASE}100000001?lang=cn`);
-    expect(directUrl('100000001', 'enka')).toBe(`${ENKA_UID_BASE}100000001`);
-    expect(buildShowcaseUrl('100000001')).toBe(`${MIHOMO_UID_BASE}100000001?lang=cn`);
-    expect(buildShowcaseUrl('100000001', { source: 'enka' })).toBe(`${ENKA_UID_BASE}100000001`);
+  it('仓库不内置上游地址：无代理时直连 URL 为空（必须自配转发）', () => {
+    expect(MIHOMO_UID_BASE).toBe('');
+    expect(ENKA_UID_BASE).toBe('');
+    expect(directUrl('100000001', 'mihomo')).toBe('');
+    expect(directUrl('100000001', 'enka')).toBe('');
+    expect(buildShowcaseUrl('100000001')).toBe('');
   });
 
   it('代理前缀：前缀写法 / {uid} 占位符 / 尾斜杠', () => {
-    expect(buildShowcaseUrl('100000001', { proxyBase: 'https://p.example/hsr/uid/' })).toBe(
-      'https://p.example/hsr/uid/100000001',
+    expect(buildShowcaseUrl('100000001', { proxyBase: 'relay/hsr/uid/' })).toBe(
+      'relay/hsr/uid/100000001',
     );
-    expect(buildShowcaseUrl('100000001', { proxyBase: 'https://p.example/enka?uid={uid}' })).toBe(
-      'https://p.example/enka?uid=100000001',
+    expect(buildShowcaseUrl('100000001', { proxyBase: 'relay/enka?uid={uid}' })).toBe(
+      'relay/enka?uid=100000001',
     );
   });
 });
@@ -98,16 +99,16 @@ describe('showcase-api · 取数与缓存', () => {
     const fetchMock = vi.fn().mockImplementation(() => Promise.resolve(jsonResponse(MIHOMO_BODY)));
     vi.stubGlobal('fetch', fetchMock);
 
-    const first = await fetchShowcase('100000001', { proxyBase: 'https://p.example/hsr/uid' });
+    const first = await fetchShowcase('100000001', { proxyBase: 'relay/hsr/uid' });
     expect(fetchMock).toHaveBeenCalledTimes(1);
-    expect(fetchMock.mock.calls[0][0]).toBe('https://p.example/hsr/uid/100000001');
+    expect(fetchMock.mock.calls[0][0]).toBe('relay/hsr/uid/100000001');
     expect(first.cached).toBe(false);
     expect(first.source).toBe('mihomo');
     expect((first.json as typeof MIHOMO_BODY).player.nickname).toBe('测试员');
     // mihomo 不返回 ttl → 默认 60s
     expect(first.expiresAt - first.fetchedAt).toBe(60_000);
 
-    const second = await fetchShowcase('100000001', { proxyBase: 'https://p.example/hsr/uid' });
+    const second = await fetchShowcase('100000001', { proxyBase: 'relay/hsr/uid' });
     expect(fetchMock).toHaveBeenCalledTimes(1);
     expect(second.cached).toBe(true);
   });
@@ -119,13 +120,13 @@ describe('showcase-api · 取数与缓存', () => {
         Promise.resolve(jsonResponse(url.includes('mihomo') ? MIHOMO_BODY : ENKA_BODY)),
       );
     vi.stubGlobal('fetch', fetchMock);
-    const m = await fetchShowcase('100000001');
+    const m = await fetchShowcase('100000001', { proxyBase: 'relay/mihomo/uid' });
     expect(m.source).toBe('mihomo');
-    const e = await fetchShowcase('100000001', { source: 'enka' });
+    const e = await fetchShowcase('100000001', { source: 'enka', proxyBase: 'relay/enka/uid' });
     expect(e.source).toBe('enka');
     expect(fetchMock).toHaveBeenCalledTimes(2);
     // 再取一次 mihomo → 命中自己的缓存，不再发请求
-    const again = await fetchShowcase('100000001');
+    const again = await fetchShowcase('100000001', { proxyBase: 'relay/mihomo/uid' });
     expect(again.cached).toBe(true);
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
@@ -163,7 +164,7 @@ describe('showcase-api · 取数与缓存', () => {
 
     const proxied = await fetchShowcase('100000001', {
       force: true,
-      proxyBase: 'https://p.example/hsr/uid',
+      proxyBase: 'relay/hsr/uid',
     }).catch((e: unknown) => e);
     expect((proxied as ShowcaseError).kind).toBe('network');
   });

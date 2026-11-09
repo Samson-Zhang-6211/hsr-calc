@@ -1,16 +1,17 @@
-// 拉取 nanoka 怪物等级换算成长表（EliteGroup / HardLevelGroup）到 data/monster-growth/。
+// 拉取 社区数据源 怪物等级换算成长表（EliteGroup / HardLevelGroup）到 data/monster-growth/。
 // 用法：node scripts/fetch-monster-growth.mjs [版本]
 //   版本 默认 4.6.51（与 data/ 其余文档同版本口径）
 // 换算公式（前端 nodes/23 实读）：面板 = base × childModifyRatio × EG.Ratio × HG[level].Ratio（speed/stance 另加 modify_value）
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolveVersion } from './lib/data-source.mjs';
+import { dataBase } from './lib/env-base.mjs';
 
 const argv = process.argv.slice(2);
 // 版本口径唯一来源 = data/source.lock.json（显式传参仍优先）
 const VERSION = await resolveVersion(argv.find((a) => /^\d/.test(a)), 'monster-growth');
 
-const BASE = `https://static.nanoka.cc/hsr/${VERSION}`;
+const BASE = `${dataBase()}/${VERSION}`;
 const ROOT = fileURLToPath(new URL('../data/monster-growth/', import.meta.url));
 
 const TABLES = ['EliteGroup', 'HardLevelGroup'];

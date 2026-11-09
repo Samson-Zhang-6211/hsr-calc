@@ -109,7 +109,7 @@ function noteCount(ev: CombatEvent, key: string): number {
   return (ev.note ?? []).filter((n) => n === key).length;
 }
 
-// 断言锚点来自 %TEMP%/opencode/hh-link-dump.txt（2026-10-11 连线一回合模型重写后实测，
+// 断言锚点来自 %TEMP%/临时目录/hh-link-dump.txt（2026-10-11 连线一回合模型重写后实测，
 // 临时 dump 测试已删）。旧「战技事件 + 强化普攻单独一动」双事件锚点全部作废。
 // 明确不锚定（无 dump 证据，代码审查级）：礼物 20%/80% 概率分布；欢愉技削韧 stance 分摊；
 // E2 buff 层数封顶 4。

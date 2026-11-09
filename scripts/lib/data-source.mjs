@@ -11,9 +11,11 @@ import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
 
-export const SOURCE_BASE = 'https://static.nanoka.cc/hsr';
+import { dataBase } from './env-base.mjs';
+
+export const SOURCE_BASE = dataBase();
 /** 站点首页 HTML 内嵌当前版本的静态地址，用于探测最新版本（静态源无版本索引接口） */
-export const SITE_URL = 'https://hsr.nanoka.cc/';
+export const SITE_URL = process.env.HSR_SITE_URL ?? '';
 /** 锁文件缺失且未显式传版本时的兜底值（保持历史口径） */
 export const FALLBACK_VERSION = '4.6.51';
 export const DATA_ROOT = fileURLToPath(new URL('../../data/', import.meta.url));
@@ -214,11 +216,11 @@ export async function resolveVersion(explicit, folder) {
   return lockVersion(lock, folder) ?? FALLBACK_VERSION;
 }
 
-/** 探测站点当前版本（首页内嵌 static.nanoka.cc/hsr/<版本>/ 地址）；失败返回 null */
+/** 探测站点当前版本（首页内嵌 数据源/hsr/<版本>/ 地址）；失败返回 null */
 export async function detectLatestVersion() {
   try {
     const r = await fetchResource(SITE_URL);
-    const hits = [...(r.text ?? '').matchAll(/static\.nanoka\.cc\/hsr\/(\d+\.\d+\.\d+)\//g)].map((m) => m[1]);
+    const hits = [...(r.text ?? '').matchAll(/\/(\d+\.\d+\.\d+)\//g)].map((m) => m[1]);
     return hits[0] ?? null;
   } catch {
     return null;

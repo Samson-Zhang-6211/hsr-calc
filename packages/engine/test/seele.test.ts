@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // 希儿 1102（量子/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §7）。
-// 锚点来自 test/seele-dump.test.ts 实跑（%TEMP%/opencode/seele-dump.txt）。
+// 锚点来自 test/seele-dump.test.ts 实跑（%TEMP%/临时目录/seele-dump.txt）。
 // 关键口径：战技加速 +25%/2 回合（E2 叠 2 层）真改行动轴；【增幅】+80% 增伤；
 // point07 增幅中量子抗穿 +20%；point08 普攻后下一次行动提前 20%（finishAction 后消费）。
 

@@ -18,10 +18,10 @@
 
 ```bash
 pnpm install
-pnpm --filter @hsr-calc/web dev     # http://localhost:5173/hsr/
+pnpm --filter @hsr-calc/web dev     # 端口 5173，路径 /hsr/
 ```
 
-> ⚠️ 站点按 `/hsr/` 前缀构建（`vite.config.ts` 的 `base`），所以**必须**访问 `http://localhost:5173/hsr/`。`127.0.0.1` 与 `[::1]` 都会失效。
+> ⚠️ 站点按 `/hsr/` 前缀构建（`vite.config.ts` 的 `base`），所以**必须**访问 5173 端口下的 `/hsr/` 路径。`127.0.0.1` 与 `[::1]` 都会失效。
 
 ## 离线包（解压即用，不需要服务器）
 
@@ -45,7 +45,11 @@ node scripts/build-offline.mjs
 
 ## 资源准备（clone 后建议做一次）
 
-官方立绘与怪物图鉴体积太大，**不入库**。仓库只带 5MB 小图标，大图需自行拉取（数据源 `static.nanoka.cc`，需要能联网）：
+官方立绘与怪物图鉴体积太大，**不入库**。仓库只带 5MB 小图标，大图需自行拉取（数据源为社区静态数据站，需要能联网）：
+
+> ⚠️ 本仓库不保存任何站点地址。跑抓取/生成脚本前先设置两个环境变量：
+> `HSR_ASSET_BASE`（静态资源根地址）、`HSR_DATA_BASE`（数据根地址）。
+> 未设置时脚本会直接退出并提示。PowerShell 示例：`$env:HSR_ASSET_BASE="<资源根地址>"`。
 
 | 缺什么 | 命令 | 体积 | 不跑的后果 |
 | --- | --- | --- | --- |
@@ -80,7 +84,7 @@ pnpm -r build         # 引擎 tsc + 前端 vite build
 - 在受限沙箱里 vitest 默认的 forks 池可能起不来（`spawn EPERM`），加 `--pool=threads`。
 - 改了 `packages/engine` 后先 `pnpm --filter @hsr-calc/engine exec tsc -p tsconfig.json` 刷 `dist`，否则前端 `tsc` 解析 `dist/index.d.ts` 会报旧类型。
 
-构建产物（`apps/web/dist/`）里的资源路径写死为 `/hsr/...`，所以要把它挂在静态服务的 `/hsr/` 目录下；本地可用 `pnpm --filter @hsr-calc/web preview`（`http://localhost:4173/hsr/`）。
+构建产物（`apps/web/dist/`）里的资源路径写死为 `/hsr/...`，所以要把它挂在静态服务的 `/hsr/` 目录下；本地可用 `pnpm --filter @hsr-calc/web preview`（4173 端口下的 `/hsr/` 路径）。
 
 ## 目录结构
 
@@ -104,8 +108,8 @@ sync-data → apply-*-enhanced → gen-combat-raw → gen-combat-skill-data
 
 `api.mihomo.me` 与 `enka.network` 都不返回 CORS 头，浏览器直连必然被拦。两种做法：
 
-- 本地：把展示柜页的「代理地址」填 `http://localhost:5173/hsr/mihomo-proxy`（vite 已在 `server.proxy` 里备好）。
-- 线上：用 `deploy/cf-pages/_worker.js` 部署一个 Cloudflare Pages 转发（无状态、无密钥）。
+- 本地：自行启动一个转发代理，把展示柜页的「代理地址」填成该代理的地址。仓库不内置任何上游地址。
+- 线上：需要自建一个无状态转发（本仓库不附带示例实现）。
 
 ## 已知限制
 
@@ -116,7 +120,7 @@ sync-data → apply-*-enhanced → gen-combat-raw → gen-combat-skill-data
 
 ## 致谢与参考
 
-- 游戏数据源：[nanoka](https://hsr.nanoka.cc/) 与官方数据，版本口径见 `data/source.lock.json`（当前 4.6.54）。
+- 游戏数据源：社区公开静态数据站 与官方数据，版本口径见 `data/source.lock.json`（当前 4.6.54）。
 - 展示柜接口：mihomo、Enka.Network。
 
 ## 免责声明

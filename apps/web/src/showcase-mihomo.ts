@@ -2,7 +2,7 @@ import type { SkillLevels } from '@hsr-calc/engine';
 import type { ShowcaseChar, ShowcasePlayer, ShowcaseRelic } from './showcase.js';
 
 /**
- * 第二数据源：`api.mihomo.me/sr_info_parsed/{uid}`（2026-10-27 新增）。
+ * 第二数据源：第二数据源接口 `/{uid}`（2026-10-27 新增）。
  *
  * 为什么加它：**Enka.Network 在国内网络下会被阻断**（实测 `ECONNRESET`/超时），
  * 而 mihomo 走 Cloudflare 但不被拦（3/3 通、0.7–1.7s）；官方米游社接口虽通，

@@ -2,10 +2,10 @@
  * 展示柜取数层（2026-10-26 首版 Enka；2026-10-27 加 mihomo 为主源）。
  *
  * **两个数据源都不返回 CORS 头**（实测：Enka 带 Origin 也没有、OPTIONS 405；
- * `api.mihomo.me` 同样没有）→ 浏览器直连必被拦，线上必须走「代理前缀」。
+ * 上游接口同样没有）→ 浏览器直连必被拦，线上必须走「代理前缀」。
  *
  * 为什么默认 mihomo：Enka 在国内网络实测 `ECONNRESET`/超时（被阻断），
- * 而 `api.mihomo.me` 3/3 可达（0.7–1.7s）。Enka 适配器保留，可随时切回。
+ * 而另一路上游 3/3 可达（0.7–1.7s）。Enka 适配器保留，可随时切回。
  *
  * 缓存按响应 `ttl`（Enka 实测 60s；mihomo 无该字段按 60s）落 localStorage ——
  * 重复请求照样吃对方限额，本地不缓存等于自己把自己限流。
@@ -13,8 +13,8 @@
 
 export type ShowcaseSource = 'mihomo' | 'enka';
 
-export const ENKA_UID_BASE = 'https://enka.network/api/hsr/uid/';
-export const MIHOMO_UID_BASE = 'https://api.mihomo.me/sr_info_parsed/';
+export const ENKA_UID_BASE = '';
+export const MIHOMO_UID_BASE = '';
 
 const CACHE_PREFIX = 'hsr-sim.showcase.';
 const FETCH_TIMEOUT_MS = 20000;
@@ -53,12 +53,13 @@ export function normalizeUid(input: string): string | null {
 
 /** 直连 URL（无代理时） */
 export function directUrl(uid: string, source: ShowcaseSource): string {
-  return source === 'mihomo' ? `${MIHOMO_UID_BASE}${uid}?lang=cn` : `${ENKA_UID_BASE}${uid}`;
+  if (source === 'mihomo') return MIHOMO_UID_BASE ? `${MIHOMO_UID_BASE}${uid}?lang=cn` : '';
+  return ENKA_UID_BASE ? `${ENKA_UID_BASE}${uid}` : '';
 }
 
 /**
  * 取数 URL。代理前缀支持两种写法：
- * - 前缀：`https://x.pages.dev/hsr/uid` → `…/hsr/uid/{uid}`
+ * - 前缀：`域名/hsr/uid` → `…/hsr/uid/{uid}`
  * - 占位符：`https://x.com/enka?uid={uid}` → 原样替换
  * 代理自身负责决定转发到哪个源（页面会把 `source` 一起告诉它见 docs/showcase-uid.md）。
  */

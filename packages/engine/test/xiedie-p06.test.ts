@@ -8,7 +8,7 @@ import { simulateBattleReplay, xiedieP06Take, type BattleConfig } from '../src/i
  * 条款：除死龙外的我方目标受到治疗后，将**100%**治疗量转化为【新蕊】（死龙在场 → 死龙 HP）；
  *       单次行动期间**每个目标**累计不超过新蕊上限的 **12%**；行动结束重置累计。
  * 依据：`docs/HANDOFF-clause-ledger.md` §七（外部攻略查证：#1=100）+ §八（施工方案）。
- * 锚点：`%TEMP%/opencode/xiedie-p06-dump.txt` 实测（风堇群奶 + 遐蝶，前 3 回合），勿纯推理改写。
+ * 锚点：`%TEMP%/临时目录/xiedie-p06-dump.txt` 实测（风堇群奶 + 遐蝶，前 3 回合），勿纯推理改写。
  */
 
 const MON = {

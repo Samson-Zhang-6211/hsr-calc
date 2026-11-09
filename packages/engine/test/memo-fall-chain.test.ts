@@ -10,7 +10,7 @@ import { simulateBattle, type BattleConfig, type BattleResult } from '../src/ind
  * 解法 = `BattleConfig.forceEnemyMain`（测试/演示专用开关，生产不传 = 行为不变）：
  * 强制敌方主目标 → 可以稳定把一掌打在忆灵身上。
  *
- * 锚点来自 `%TEMP%/opencode/memo-dump.txt` 实测（seed 20261102，E 例）。
+ * 锚点来自 `%TEMP%/临时目录/memo-dump.txt` 实测（seed 20261102，E 例）。
  */
 
 type Ev = BattleResult['events'][number];

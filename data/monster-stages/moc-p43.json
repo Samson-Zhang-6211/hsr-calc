@@ -3,9 +3,7 @@
   "mode": "moc",
   "period": 43,
   "title": "来生泅渡",
-  "p": 1035,
-  "source": "https://sr.appfeng.com/challenge/moc?p=1035",
-  "note": "混沌回忆第 43 期「来生泅渡」：按用户 2026-10-30 裁定，只收录最难关（其十二）与星启。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量。tags = 该半所有怪弱点的交集。",
+  "p": 1035,  "note": "混沌回忆第 43 期「来生泅渡」：按用户 2026-10-30 裁定，只收录最难关（其十二）与星启。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量。tags = 该半所有怪弱点的交集。",
   "roundMode": "forgotten",
   "difficultyGroup": 3,
   "stages": [

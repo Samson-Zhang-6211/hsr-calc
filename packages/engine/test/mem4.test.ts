@@ -3,7 +3,7 @@ import type { Element } from '@hsr-calc/shared';
 import { simulateBattle, type BattleConfig, type BattleResult } from '../src/index.js';
 
 /** 记忆命途四人（1407 遐蝶/1409 风堇/1413 长夜月/1415 昔涟）接入回归
- * （2026-10；dump 锚点法：锚点全部来自 %TEMP%/opencode/mem4-dump.txt 实测，勿纯推理改写） */
+ * （2026-10；dump 锚点法：锚点全部来自 %TEMP%/临时目录/mem4-dump.txt 实测，勿纯推理改写） */
 
 type Ev = BattleResult['events'][number];
 

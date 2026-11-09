@@ -5,9 +5,7 @@
   "title": "取象为文",
   "p": 2027,
   "roundMode": "forgotten",
-  "difficultyGroup": 1,
-  "source": "https://sr.appfeng.com/challenge/pure?p=2027",
-  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。 页面无「本期机制」段（虚构叙事本期机制文案站点未提供），modeMechanics 留空待补；每波血量增幅（×5/×10/×46 等）已含在逐怪 hp 里，mult 仅留档。",
+  "difficultyGroup": 1,  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。 页面无「本期机制」段（虚构叙事本期机制文案站点未提供），modeMechanics 留空待补；每波血量增幅（×5/×10/×46 等）已含在逐怪 hp 里，mult 仅留档。",
   "expose": [
     4,
     0

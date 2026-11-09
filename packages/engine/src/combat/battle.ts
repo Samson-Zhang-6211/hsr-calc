@@ -1381,7 +1381,7 @@ const TRACE = {
     eidolon4DefIgnore: 0.18,
     eidolon6DmgBonus: 7.29,
   },
-  /** 花火 1306（加强版 4.6：zh.enhanced['1'] 实读；接入六项裁定见 AGENTS.md） */
+  /** 花火 1306（加强版 4.6：zh.enhanced['1'] 实读；接入六项裁定见 项目维护记录） */
   huahuo: {
     /** 行迹岁时记 point06 [10,1]：普攻额外回#1=10能量（×充能）；持战技暴伤 buff 者
      * 每消耗 1 战技点 → 花火回 #2=1 能量（×充能） */
@@ -1404,7 +1404,7 @@ const TRACE = {
     /** 大招溢出记录 SP 池上限（130603 #5；仅大招恢复的溢出入池——2026-10 用户裁定） */
     overflowPoolMax: 10,
   },
-  /** 藿藿 1217（加强版 4.6：zh.enhanced['1'] 实读；丰饶接入，裁定见 AGENTS.md）。
+  /** 藿藿 1217（加强版 4.6：zh.enhanced['1'] 实读；丰饶接入，裁定见 项目维护记录）。
    * 技能参数走 skillParams('1217xx')：普攻121701 SingleAttack 藿藿生命上限0.7(lv10) sp20/bp+1、
    * 战技121702 [0.24,640,0.192,512,1] 主目标治疗+#1生命上限+#2/编队相邻+#3生命上限+#4（负面解除#5跳过）、
    * 大招121703 [0.2,0.4,2] 除自身外队友各回#1×各自能量上限(×充能)+攻+#2持续#3回合、
@@ -1521,7 +1521,7 @@ const TRACE = {
     eidolon4Energy: 5,
     eidolon6BasicHpPct: 0.4,
   },
-  /** 玲可 1110（量子/Priest；1110.json 实读 2026-10；裁定见 AGENTS.md）。
+  /** 玲可 1110（量子/Priest；1110.json 实读 2026-10；裁定见 项目维护记录）。
    * 技能参数走 skillParams('1110xx')：普攻111001 0.7×hp量子单体 sp20/stance30、
    * 战技111002 [0.075,200,2,0.12,320,5] 求生反应7.5%上限+200持2回合+直疗12%上限+320 sp30、
    * 终招111003 [1,0.135,360] 全队治13.5%上限+360（p0=1解负面跳过）sp5、
@@ -1538,7 +1538,7 @@ const TRACE = {
     eidolon4Turns: 1,
     eidolon6HpPct: 0.06,
   },
-  /** 白露 1211（雷/Priest；1211.json 实读 2026-10；裁定见 AGENTS.md）。
+  /** 白露 1211（雷/Priest；1211.json 实读 2026-10；裁定见 项目维护记录）。
    * 技能参数走 skillParams('1211xx')：普攻121101 1.4×atk雷单体 sp20、
    * 战技121102 [0.117,312,0.15,2] 主目标直疗11.7%上限+312、随机单体2次治疗递减15%、
    * 终招121103 [0.135,360,2] 全队治13.5%上限+360 + 生息2回合（已有延长1回合）sp5、
@@ -3338,7 +3338,7 @@ export type AllyTargetKind = 'single' | 'blast' | 'aoe' | 'none';
  *    啊哈151101/02/03、爻光150201/02/03、火花150101/02/03、狼尊150601/02/03、绯英150501/02/03、水砂151301/02/03）
  * - 类型由 `skill-data.ts` 的 `skillTag()` 实读得出：SingleAttack→single / Blast→blast / AoEAttack→aoe，
  *   其余 tag（Summon/Support/Defence/Enhance…）均为无敌方目标的辅助技能 → none
- * - 2026-10-10 生成脚本 `%TEMP%\opencode\gen-target-kinds.mjs`（解析 skill-data.ts 的 id→tag + 角色技能键序）
+ * - 2026-10-10 生成脚本 `%TEMP%\临时目录\gen-target-kinds.mjs`（解析 skill-data.ts 的 id→tag + 角色技能键序）
  *
  * 用途：全真模拟点选敌方目标时，主目标黄框加粗、blast 的相邻目标只加粗。 */
 export const ALLY_TARGET_KINDS: Readonly<Record<CharId, Readonly<Record<AllyAction, AllyTargetKind>>>> = {
@@ -4139,7 +4139,7 @@ const EIDOLON_SKILL_UP: Partial<
  * - 木桩只挨打不反击（用户确认），其行动仅用于击破 DoT 跳伤。
  * - 气氛值整数（倒计时扣除后向下取整）。
  *
- * 简化与待核点（详见 AGENTS.md 与交付说明）：
+ * 简化与待核点（详见 项目维护记录 与交付说明）：
  * - 击破基数=80 级锚点（全等级表未缺）；破韧后韧性立即回满且保持已破韧状态（×1 不再 ×0.9）；
  * - 非弱点属性削韧×0.2（常规口径）；神君每段削韧15、龙灵追加削韧60 待游戏内复核。
  * - 忆灵继承晴歌暴击/增伤面板；忆灵行动给晴歌回 20 能量（1151201 sp_base，×充能效率）、
@@ -5376,7 +5376,7 @@ function* battleSteps(
     );
   }
 
-  // ===== 爻光 1502 / 结界与大吉大利状态（2026-10 接入，裁定见 AGENTS.md） =====
+  // ===== 爻光 1502 / 结界与大吉大利状态（2026-10 接入，裁定见 项目维护记录） =====
   /** 【结界】剩余回合（150202 #1=3：爻光自身每回合开始 -1；0=无结界） */
   let ygZoneLeft = 0;
   /** 【凶星低语】敌方全体 debuff 由 mon.buffs 承载（vulnerability，同源覆盖刷新），无独立状态 */
@@ -5386,7 +5386,7 @@ function* battleSteps(
   let ygE2SpeedApplied = false;
   /** 升格150229 爽点回能已按 4.6.53 新文案移除（改为终招后固定回能，见 castUltFor yaoguang 分支） */
 
-  // ===== 星神★阿哈 1511 / 欢愉系统状态（2026-10 接入，裁定见 AGENTS.md 欢愉角色接入节） =====
+  // ===== 星神★阿哈 1511 / 欢愉系统状态（2026-10 接入，裁定见 项目维护记录 欢愉角色接入节） =====
   /** 【愿力】0-10（激活门槛 TRACE.aha.willPowerMax=8；151104 #11 溢出上限 10；开大耗 8；啊哈不在队恒 0） */
   let willPower = 0;
   // ===== 【虚构叙事·荒腔走板】战意值（0-100，2026-11-02 用户提供文案）=====
@@ -5469,7 +5469,7 @@ function* battleSteps(
   /** 效果命中/抵抗独立随机流（避免新 debuff 判定扰动敌方技能与目标选择的既有种子序列） */
   let debuffRngState = ((config.seed ?? 20261007) ^ 0x9e3779b9) >>> 0;
 
-  // ===== 狼尊 1506（银狼LV.999）/ 无敌玩家·隐藏分·盲盒状态（2026-10 接入，裁定见 AGENTS.md） =====
+  // ===== 狼尊 1506（银狼LV.999）/ 无敌玩家·隐藏分·盲盒状态（2026-10 接入，裁定见 项目维护记录） =====
   /** 【隐藏分】0-300（上限=60+240、升格=60+360 待核；开大耗 60；退出状态清空、E1 保留 20%） */
   let hiddenScore = 0;
   /** 【无敌玩家】状态（150603 进入并立即行动；完整施放 3 次强化普攻后退出；状态内禁开大） */
@@ -5489,7 +5489,7 @@ function* battleSteps(
    * 下一次 record 前合并进 allNotes） */
   let lzExtraNotes: string[] = [];
 
-  // ===== 绯英 1505 / 天赋互转·狐狸老师状态（2026-10 接入，裁定见 AGENTS.md） =====
+  // ===== 绯英 1505 / 天赋互转·狐狸老师状态（2026-10 接入，裁定见 项目维护记录） =====
   /** 天赋150504 累计能量（单次获能量最多记 240、达 240 消耗并发动【狐狸老师】追加攻击） */
   let fyEnergyAccum = 0;
   /** 升格150529 #1：累计【绝活共赏】计步器（每满 #4=480 → 武装下一次终招倍率） */
@@ -5520,7 +5520,7 @@ function* battleSteps(
     }
   }
 
-  // ===== 水砂 1513 砂金•戏浪 / 热意·举杯·All in 状态（2026-10 接入，14 项裁定见 AGENTS.md） =====
+  // ===== 水砂 1513 砂金•戏浪 / 热意·举杯·All in 状态（2026-10 接入，14 项裁定见 项目维护记录） =====
   /** 【热意】当前值（上限=天赋 #4=30、E2=50；举杯不消耗〔裁定⑧〕，All in 施放时消耗全部） */
   let shHeat = 0;
   /** 已触发过的举杯阈值（边沿触发：热意从低于阈值升到阈值才触发一次；E1=10/20/30、E2 另加 40/50） */
@@ -5545,7 +5545,7 @@ function* battleSteps(
   /** 终招速度 buff 的乘数（1+percent；还原用，防除不尽漂移） */
   let shSpeedMult = 1;
 
-  // ===== 真珠 1503 / 深度学习·抵御·底本状态（2026-10 接入，十项裁定见 AGENTS.md） =====
+  // ===== 真珠 1503 / 深度学习·抵御·底本状态（2026-10 接入，十项裁定见 项目维护记录） =====
   /** 【好活当赏】独立池（天赋持续无限不递减；上限 50/升格 75；受击抵挡消耗、治疗/技能获得） */
   let zzGoodWork = 0;
   /** 【深度学习】已激活（终结技/秘技开启；普攻强化、充能耗尽结束） */
@@ -5574,7 +5574,7 @@ function* battleSteps(
   let zzExtraGrantGood = 0;
   let zzExtraGrantLaugh = 0;
 
-  // ===== 开拓者·欢愉 8009/8010 / 天赋·行迹·星魂状态（2026-10 接入，六项裁定见 AGENTS.md） =====
+  // ===== 开拓者·欢愉 8009/8010 / 天赋·行迹·星魂状态（2026-10 接入，六项裁定见 项目维护记录） =====
   /** E1 相信光的时间：战技后叠层（下一次终结技目标好活 +2×层、最多3层，开大消费后清零） */
   let tbE1Stacks = 0;
   /** 升格800929 #3：开拓者额外欢愉技的伤害总量（待被「随后的阿哈欢愉技真伤」替换消费；0 = 无待结算） */
@@ -5584,7 +5584,7 @@ function* battleSteps(
   /** 开拓者散落备注（欢愉技 E4/E6/秘技等 helper 无法直达 notes；下一次 record 前合并） */
   let tbExtraNotes: string[] = [];
 
-  // ===== 火花 1501 / 直播连线·爆点状态（2026-10 接入，裁定见 AGENTS.md） =====
+  // ===== 火花 1501 / 直播连线·爆点状态（2026-10 接入，裁定见 项目维护记录） =====
   /** 【直播连线】已开启（战技开启；强化普攻结算后关闭；开启期间普攻=强化普攻） */
   let hhLinkOn = false;
   /** 本次连线累计发动的【互动陷阱】次数（天赋额外欢愉段按此计；强化普攻结算后清零） */
@@ -5859,7 +5859,7 @@ function* battleSteps(
   const lc5cVoiceLeft = new Map<string, number>();
   const lc5cVoiceSpeed = new Map<string, number>();
 
-  // ===== 虚无命途光锥批（2026-10-15，24 锥；G1-G8 裁定见 AGENTS.md）=====
+  // ===== 虚无命途光锥批（2026-10-15，24 锥；G1-G8 裁定见 项目维护记录）=====
   /** 【末法余烬】破韧 → 立即阿哈额外回合的固定计入笑点（占位，可调） */
 const STAGE_EMBER_AHA_LAUGH = 10;
 /** 【记忆紊流】极乐漩涡附带阿哈额外回合的固定笑点（文案「固定计入 20 笑点」） */
@@ -5877,7 +5877,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** 23022 重塑时光之忆（先知）：每佩戴者本场已叠过的 DoT 类型（一次一种） */
   const lc22Seen = new Map<CharId, Set<string>>();
 
-  // ===== 缇宝 1403 状态（2026-10 接入；七项机制裁定见 AGENTS.md m0072） =====
+  // ===== 缇宝 1403 状态（2026-10 接入；七项机制裁定见 项目维护记录 m0072） =====
   /** 【神启】剩余回数（战技/秘技获得；自身每回合开始 -1；持有期间全队全属性抗穿） */
   let tibaoShenqi = 0;
   /** 结界剩余回数（大招开启；自身每回合开始 -1；持有期间敌受伤+%、我方攻击后附伤） */
@@ -5936,7 +5936,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   // 等后置 let，须在全部状态声明完成后加算（energy map 初始化时会 TDZ）
   if (ids.has('tibao')) energy.tibao += TRACE.tibao.point08Energy * errMul('tibao');
 
-  // ===== 花火 1306（加强版）状态与专武 23021（2026-10 接入；六项裁定见 AGENTS.md m0025） =====
+  // ===== 花火 1306（加强版）状态与专武 23021（2026-10 接入；六项裁定见 项目维护记录 m0025） =====
   /** 大招溢出记录 SP 池（130603 #5=10；仅大招恢复的溢出入池，其余来源溢出丢弃——用户裁定） */
   let hh2Overflow = 0;
   /** 【幻相】层数（130604：花火个人，每层使敌方全体受伤+%）；cipher=谜诡触发层（10%）、
@@ -5967,7 +5967,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let lc21MaskSkip = false;
   let lc21Flames = 0;
 
-  // ===== 开拓者·记忆 8007/8008 / 迷迷·史诗·声援状态（2026-10 接入，十项裁定见 AGENTS.md） =====
+  // ===== 开拓者·记忆 8007/8008 / 迷迷·史诗·声援状态（2026-10 接入，十项裁定见 项目维护记录） =====
   /** 迷迷【充能】百分比（0-100；天赋1800705 召唤+50、战技已在场+10、终招+40、
    * 天赋累计回能每10点+1、强化普攻+10、忆灵技放完+5；满100→迷迷立即行动放
    * 1800707【我会！帮你！】，触发后清零〔裁定②⑧〕） */
@@ -6165,7 +6165,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     if (gained > 0) archerCheckP08();
   }
 
-  // ===== 藿藿 1217（加强版）状态与专武 23017「惊魂夜」（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 藿藿 1217（加强版）状态与专武 23017「惊魂夜」（2026-10 接入；裁定见 项目维护记录） =====
   /** 【禳命】剩余回合（战技/大招/point06 获得；藿藿每回合开始-1；
    * 拥有时我方回合开始/开大触发天赋治疗） */
   let rangelMing = 0;
@@ -6175,7 +6175,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let tailsE2Charges = TRACE.tails.eidolon2Charges;
   /** 回合开始触发天赋的散落备注（主循环写入、charAction 后并入该行动事件——hhPendingNotes 同款） */
   let tailsPendingNotes: string[] = [];
-  // ===== 罗刹 1203 状态（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 罗刹 1203 状态（2026-10 接入；裁定见 项目维护记录） =====
   /** 白花之刻层数（战技/终招+1；满层消耗并展开结界） */
   let luochaFlowers = 0;
   /** 结界剩余回合（每罗刹行动开始-1；0=未展开；死亡解除） */
@@ -6188,7 +6188,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let luochaE4VulnOn = false;
   /** 结界回血/自动奶散落备注（伤害钩子写入、主循环并入下一事件——tailsPendingNotes 同款） */
   let luochaPendingNotes: string[] = [];
-  // ===== 灵砂 1222 状态（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 灵砂 1222 状态（2026-10 接入；裁定见 项目维护记录） =====
   /** 浮元剩余行动次数（0=未召唤/已消失；战技召唤+#7次、在场再施放战技+#7、封顶#5；
    * 行动时-1、耗尽或灵砂退场消失——天赋122204 #5/#7 随天赋等级走 skillParams） */
   let lingshaFuyuanActions = 0;
@@ -6196,7 +6196,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let lingshaE6ResOn = false;
   /** 浮元行动/天赋治疗散落备注（主循环写入、record 并入下一事件——luochaPendingNotes 同款） */
   let lingshaPendingNotes: string[] = [];
-  // ===== 娜塔莎 1105 状态（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 娜塔莎 1105 状态（2026-10 接入；裁定见 项目维护记录） =====
   /** E1 受击低血自疗单场 1 次已用 */
   let natashaE1Used = false;
   /** 娜塔莎散落备注（受击钩子/HoT tick 写入、record 并入下一事件——luochaPendingNotes 同款） */
@@ -6210,12 +6210,12 @@ const STAGE_NS_ULT_LAUGH = 5;
   const bailuLifeTriggers: Partial<Record<CharId, number>> = {};
   /** 白露天赋急救（致命保护）已用次数：单场全局 1 次、E6 +1 */
   let bailuReviveUsed = 0;
-  // ===== 加拉赫 1301 状态（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 加拉赫 1301 状态（2026-10 接入；裁定见 项目维护记录） =====
   /** 终招触发的强化普攻待发（下次普攻用 130108 替代 130101，用完回落） */
   let gallagherNextEnhanced = false;
   /** 加拉赫散落备注（酩酊回血钩子等写入、record 并入下一事件——bailuPendingNotes 同款） */
   let gallagherPendingNotes: string[] = [];
-  // ===== 海瑟音 1410 状态（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 海瑟音 1410 状态（2026-10 接入；裁定见 项目维护记录） =====
   /** 结界剩余回合（自身回合开始-1；0=未展开；无法战斗解除） */
   let hysilensFieldLeft = 0;
   /** 本结界已触发追加次数（总上限 8、E6 12；每次展开重置） */
@@ -6224,10 +6224,10 @@ const STAGE_NS_ULT_LAUGH = 5;
   let hysilensPendingNotes: string[] = [];
   /** 【暖流】（昔涟诗篇 1141522）：施放攻击后消耗回 60 能量 */
   let poemOceanWarm = false;
-  // ===== 黑天鹅 1307 状态（2026-10-17 接入；裁定见 AGENTS.md） =====
+  // ===== 黑天鹅 1307 状态（2026-10-17 接入；裁定见 项目维护记录） =====
   /** 黑天鹅散落备注（天赋挂层等写入、record 并入下一事件——hysilensPendingNotes 同款） */
   let bsPendingNotes: string[] = [];
-  // ===== 卡芙卡 1005 状态（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
+  // ===== 卡芙卡 1005 状态（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
   /** 天赋追击剩余次数（进场满 2、上限=talent#5；卡芙卡回合结束恢复 1、终招后恢复 1——荆棘） */
   let kafkaTalentCharges = 0;
   /** 卡芙卡散落备注（触电施加等写入、record 并入下一事件——bsPendingNotes 同款） */
@@ -7370,7 +7370,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     atkTurns: TRACE.tails.lcAtkTurns,
   };
 
-  // ===== 遐蝶 1407 状态（2026-10 接入；无能量→【新蕊】资源，裁定见 AGENTS.md） =====
+  // ===== 遐蝶 1407 状态（2026-10 接入；无能量→【新蕊】资源，裁定见 项目维护记录） =====
   /** 【新蕊】当前值（每损失1HP+1；死龙在场无法获得——损失转化为死龙HP） */
   let xinrui = 0;
   /** 新蕊上限 = 场上我方角色等级和 ×100（2026-10 用户裁定） */
@@ -7448,7 +7448,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     return pkSubMembers.has(source as CharId) ? 'sub' : pkField;
   };
 
-  // ===== 风堇 1409 状态（2026-10 接入；治疗累计含溢出，裁定见 AGENTS.md） =====
+  // ===== 风堇 1409 状态（2026-10 接入；治疗累计含溢出，裁定见 项目维护记录） =====
   /** 本场累计治疗量（含溢出部分——2026-10 用户裁定；乌云伤害基数、清空按%） */
   let fjHealAccum = 0;
   /** 雨过天晴剩余回合（风堇每回合开始-1） */
@@ -8004,7 +8004,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** E1 攻击后回风堇8%上限HP（雨过天晴中每次攻击） */
   /** E2 我方HP降低时速度+30% 2回合——经 fjOnHpLoss 统一触发 */
 
-  // ===== 长夜月 1413 状态（2026-10 接入；忆质独立字段，裁定见 AGENTS.md） =====
+  // ===== 长夜月 1413 状态（2026-10 接入；忆质独立字段，裁定见 项目维护记录） =====
   /** 【忆质】当前值（天赋/战技/忆灵技获得；≥16→长夜立即行动） */
   let memShard = 0;
   /** 【至暗之谜】剩余充能（终招获得2、迷梦消耗1、回合开始无充能退出） */
@@ -8020,7 +8020,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** 长夜点06施技耗当前5%HP→双方暴伤+15% buff 挂点（经战技分支） */
   /** E6 迷梦后长夜月获消耗忆质30%（一次性记录消费量） */
 
-  // ===== 昔涟 1415 状态（2026-10 接入；无能量→【追忆】资源，裁定见 AGENTS.md） =====
+  // ===== 昔涟 1415 状态（2026-10 接入；无能量→【追忆】资源，裁定见 项目维护记录） =====
   /** 【追忆】当前值（普攻/战技/未来消耗获得；≥24可开大、状态内≥12、溢出至27） */
   let zhuiyi = 0;
   /** 【往昔的涟漪】状态（终招141503开启：普攻强化141508、结界无持续时间） */
@@ -8091,7 +8091,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
   }
 
-  // ===== 刻律德菈 1412 状态（2026-10 接入；同谐四人，裁定见 AGENTS.md） =====
+  // ===== 刻律德菈 1412 状态（2026-10 接入；同谐四人，裁定见 项目维护记录） =====
   /** 军功持有者（仅最新目标生效；目标改变→充能清0、旧军功移除） */
   let cdMeritTarget: CharId | undefined;
   /** 爵位状态（充能≥阈值时军功→爵位；爵位者视为持军功） */
@@ -9691,7 +9691,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     });
   }
 
-  // ===== 白露 1211 helpers（2026-10 接入；生息=受击回血 + 天赋急救，裁定见 AGENTS.md） =====
+  // ===== 白露 1211 helpers（2026-10 接入；生息=受击回血 + 天赋急救，裁定见 项目维护记录） =====
   /** 白露星魂等级 */
   function bailuEidolon(): number {
     return members.find((x) => x.id === 'bailu')?.eidolonLevel ?? 0;
@@ -9828,7 +9828,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     if (!notes.includes('gaDrunkHeal')) notes.push('gaDrunkHeal');
   }
 
-  // ===== 海瑟音 1410 helpers（2026-10 接入；裁定见 AGENTS.md） =====
+  // ===== 海瑟音 1410 helpers（2026-10 接入；裁定见 项目维护记录） =====
   /** 海瑟音星魂等级 */
   function hysilensEidolon(): number {
     return members.find((x) => x.id === 'hysilens')?.eidolonLevel ?? 0;
@@ -10093,7 +10093,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
   }
 
-  // ===== 黑天鹅 1307 helpers（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
+  // ===== 黑天鹅 1307 helpers（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
   function bsEidolon(): number {
     return members.find((x) => x.id === 'blackswan')?.eidolonLevel ?? 0;
   }
@@ -10222,7 +10222,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     bsSyncE1(target);
   }
 
-  // ===== 卡芙卡 1005 helpers（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
+  // ===== 卡芙卡 1005 helpers（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
   function kafkaEidolon(): number {
     return members.find((x) => x.id === 'kafka')?.eidolonLevel ?? 0;
   }
@@ -20028,7 +20028,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     return ids.has('qingge') ? (memberOf('qingge').eidolonLevel ?? 0) : 0;
   }
 
-  // ===== 同谐批 asta/bronya/tingyun/yukong/hanya（2026-10-24 接入；裁定见 AGENTS.md） =====
+  // ===== 同谐批 asta/bronya/tingyun/yukong/hanya（2026-10-24 接入；裁定见 项目维护记录） =====
   const astaEidolon = (): number => (ids.has('asta') ? (memberOf('asta').eidolonLevel ?? 0) : 0);
   const bronyaEidolon = (): number => (ids.has('bronya') ? (memberOf('bronya').eidolonLevel ?? 0) : 0);
   const tingyunEidolon = (): number => (ids.has('tingyun') ? (memberOf('tingyun').eidolonLevel ?? 0) : 0);
@@ -21127,7 +21127,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     });
   }
 
-  // ===== 虚无命途光锥批（24 锥）公共 helper（2026-10-15；G1-G8 裁定见 AGENTS.md）=====
+  // ===== 虚无命途光锥批（24 锥）公共 helper（2026-10-15；G1-G8 裁定见 项目维护记录）=====
   /** 施放者当前效果命中（面板 + buff） */
   function effectHitOf(id: CharId): number {
     return (panelOf(id).effectHit ?? 0) + buffSum(holderOf(id).buffs, 'effectHit');

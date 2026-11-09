@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // 波提欧 1315（物理/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §1）。
-// 锚点来自 test/boothill-dump.test.ts 实跑（%TEMP%/opencode/boothill-dump.txt）。
+// 锚点来自 test/boothill-dump.test.ts 实跑（%TEMP%/临时目录/boothill-dump.txt）。
 // 关键口径：战技**不造成伤害/不回能/本回合不结束**，与目标进入【绝命对峙】；对峙目标承伤 +30%（E4 再 +12%）；
 // 对峙期间普攻变强化普攻（不回 SP、回 30 能）；敌方攻击主目标被强制为波提欧（嘲讽原语）；
 // point06 按击破特攻动态换算双暴（暴率 10%/≤30%、暴伤 50%/≤150%）。

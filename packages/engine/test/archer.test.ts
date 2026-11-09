@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // Archer 1015（量子/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §8）。
-// 锚点来自 test/archer-dump.test.ts 实跑（%TEMP%/opencode/archer-dump.txt）。
+// 锚点来自 test/archer-dump.test.ts 实跑（%TEMP%/临时目录/archer-dump.txt）。
 // 关键口径：【回路连接】战技不结束回合（instantAction 再动，不推进时间）；
 // 战技 +100% 伤害/层（上限 2，E6 3）；天赋「心眼（真）」= 队友攻击事件消耗 1 充能 → 200% 追击 + 回 1 SP；
 // 充能上限 4（进战 point07 +1 / 终结技 +2 / 秘技 +1）；point06 → SP 上限 +2。

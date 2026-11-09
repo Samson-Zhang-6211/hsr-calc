@@ -3,7 +3,7 @@ import type { Element } from '@hsr-calc/shared';
 import { simulateBattle, Timeline, type BattleConfig, type CombatMember, type MonsterConfig } from '../src/index.js';
 
 // ── 轮次模式（2026-10 用户裁定：忘却式/异相仲裁式快捷键 + 末日幻影式无轮次）──
-// 锚点由 round-mode-dump 临时测试实跑写 %TEMP%/opencode/round-mode-dump.txt 后据实定锚
+// 锚点由 round-mode-dump 临时测试实跑写 %TEMP%/临时目录/round-mode-dump.txt 后据实定锚
 //（末批：A/B/C/D/E/F + T1/T2/T3）。
 
 const ALL: Element[] = ['Physical', 'Fire', 'Ice', 'Wind', 'Thunder', 'Quantum', 'Imaginary'];

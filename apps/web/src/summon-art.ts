@@ -5,7 +5,7 @@
  * 结果景元的卡右侧那张「6段数」窄卡画的是景元本人的脸，用户一眼看出不是神君。
  *
  * 现在：站点 CDN 上其实有一整套忆灵头像
- * `https://static.nanoka.cc/assets/hsr/servanticonteam/<1+名册id+B>.webp`（256×216、带 alpha），
+ * 站点 `servanticonteam` 目录下的 `<1+名册id+B>.webp`（256×216、带 alpha），
  * 由 `scripts/fetch-summon-icons.mjs` 落到 `apps/web/public/summon-icon/<召唤物id>.webp`。
  * ⚠ 有 4 个召唤物 CDN 上没有图（见该脚本注释）——它们走「元素徽记 + 名字」兜底，
  *   **绝不要退回到「拿主人立绘冒充」**。

@@ -12,7 +12,7 @@ import {
 } from '../src/index.js';
 
 // 素裳 1206（物理/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §2）。
-// 锚点全部来自 test/sushang-dump.test.ts 实跑（%TEMP%/opencode/sushang-dump.txt），勿凭推理改数。
+// 锚点全部来自 test/sushang-dump.test.ts 实跑（%TEMP%/临时目录/sushang-dump.txt），勿凭推理改数。
 // 关键口径：【剑势】= 附加伤害（直伤通道、吃双暴、削韧 0、不视为一次攻击）；
 // 破韧目标必定发动、否则 33% 固定概率（不吃效果命中）；终结技额外 +2 次判定且该次伤害 50%。
 

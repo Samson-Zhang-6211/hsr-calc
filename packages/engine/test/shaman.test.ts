@@ -4,7 +4,7 @@ import type { BattleConfig, CharId, CombatMember, MemberPanel, MonsterConfig, Mo
 import { skillParams } from '../src/combat/skill-data.js';
 
 // 同谐四人（1412 刻律德菈 / 1309 知更鸟 / 1303 阮•梅 / 8005+8006 同谐主）接入验证。
-// 锚点由 test/probe-dump.test.ts 实跑定锚（%TEMP%/opencode/probe.txt），勿凭推理改数。
+// 锚点由 test/probe-dump.test.ts 实跑定锚（%TEMP%/临时目录/probe.txt），勿凭推理改数。
 // 逐级技能参数（倍率/增益比例）期望值一律 = skillParams(id, 等级)[i]（默认等级 10）——
 // TRACE 常量是 Lmax 冗余值，引擎误用 TRACE 会让这些断言直接失败（回归保护）。
 

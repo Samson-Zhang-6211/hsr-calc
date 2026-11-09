@@ -6,7 +6,7 @@ import { simulateBattle, type BattleConfig, type BattleResult } from '../src/ind
  *  近似落档：qyExtra=下一次自身行动强制战技（非立即追放）；point07 三项/E6受击充能/秘技伤害段未接。
  *  **2026-11-02 重锚**：point06 百炼骨真正接入（溢出能量池 80 / 终招后等量回充 / 战斗开始+结界解除
  *  能量不足 75% 补到 75% / 回满清自身负面），同时修正旧实现把 #1=75% 误当 **HP** 下限的问题 →
- *  千冶更脆、开大更频繁，四条 total 与 A/B/D 的 note 计数整体重锚（来源：`%TEMP%/opencode/qy-anchor-dump.txt`）。 */
+ *  千冶更脆、开大更频繁，四条 total 与 A/B/D 的 note 计数整体重锚（来源：`%TEMP%/临时目录/qy-anchor-dump.txt`）。 */
 
 type Ev = BattleResult['events'][number];
 

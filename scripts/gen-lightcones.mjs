@@ -2,10 +2,11 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { resolveVersion } from './lib/data-source.mjs';
+import { dataBase } from './lib/env-base.mjs';
 
 // 版本口径唯一来源 = data/source.lock.json（显式传参仍优先）
 const VERSION = await resolveVersion(process.argv[2], 'lightcones');
-const DATA_URL = `https://static.nanoka.cc/hsr/${VERSION}/lightcone.json`;
+const DATA_URL = `${dataBase()}/${VERSION}/lightcone.json`;
 const OUT = fileURLToPath(
   new URL('../apps/web/src/data/lightcone-roster.ts', import.meta.url),
 );
@@ -29,7 +30,7 @@ const rows = Object.entries(data)
   }))
   .sort((a, b) => Number(a.id) - Number(b.id));
 
-const body = `// 由 scripts/gen-lightcones.mjs 生成（数据源 static.nanoka.cc，版本 ${VERSION}），请勿手改
+const body = `// 由 scripts/gen-lightcones.mjs 生成（数据源 static.社区数据源.cc，版本 ${VERSION}），请勿手改
 export interface RosterLightcone {
   id: string;
   zh: string;

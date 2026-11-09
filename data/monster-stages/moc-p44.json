@@ -4,9 +4,7 @@
   "period": 44,
   "title": "物竞天择",
   "p": 1036,
-  "roundMode": "forgotten",
-  "source": "https://sr.appfeng.com/challenge/moc?p=1036",
-  "note": "混沌回忆第 44 期「物竞天择」：保留全部 12 关原始数据（生成器按用户 2026-10-30 裁定只暴露其十二 + 星启，见 expose）。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量；半/关血量 = 逐怪 hp × count 合计。星启 = 2026-10-30 从 ?p=1036 星启段补入（页面总血 1,920,368，逐怪合计 1,920,367）。",
+  "roundMode": "forgotten",  "note": "混沌回忆第 44 期「物竞天择」：保留全部 12 关原始数据（生成器按用户 2026-10-30 裁定只暴露其十二 + 星启，见 expose）。hp = 该模式难度乘区（HardLevelGroup=3）下的逐怪血量；半/关血量 = 逐怪 hp × count 合计。星启 = 2026-10-30 从 ?p=1036 星启段补入（页面总血 1,920,368，逐怪合计 1,920,367）。",
   "difficultyGroup": 3,
   "modeMechanics": [
     {

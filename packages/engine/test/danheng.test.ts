@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // 丹恒 1002（风/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §6）。
-// 锚点来自 test/danheng-dump.test.ts 实跑（%TEMP%/opencode/danheng-dump.txt）。
+// 锚点来自 test/danheng-dump.test.ts 实跑（%TEMP%/临时目录/danheng-dump.txt）。
 // 关键口径：终结技对「减速」目标的 +120% 是**加算到倍率**（400%→520%）；
 // 减速 = 怪侧真降速（speedPct −12%，E6 −20%）；战技触发暴击才判定减速（暴击按面板期望自掷 1 次）。
 

@@ -4,7 +4,7 @@ import type { RelicPieceState, RelicSubState } from './storage.js';
 
 /* ------------------------------------------------------------------ */
 /* Enka.Network HSR 展示柜响应（按 2026-10-26 实测结构，非官方文档）       */
-/* 端点：GET https://enka.network/api/hsr/uid/{uid}                     */
+/* 端点：展示柜接口 /{uid}                                              */
 /* 关键实测：没有 player / avatarList；角色在 detailInfo.avatarDetailList */
 /* 遗器没有顶层 setId / rarity；_flat.props 是 Enka 解算好的词条精确值     */
 /* 0 星魂 / +0 遗器时 rank、level 字段整个缺失 → 一律按 0 处理             */

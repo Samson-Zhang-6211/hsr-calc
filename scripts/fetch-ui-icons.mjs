@@ -1,18 +1,19 @@
-// 下载 nanoka 的元素图标与命途图标到本地 public 目录。
+// 下载 社区数据源 的元素图标与命途图标到本地 public 目录。
 // 用途：全真模拟战场可视化（属性徽章 / 命途徽章）。
 //
 // 用法：
 //   node scripts/fetch-ui-icons.mjs [--force]
 //
-// 已知路径约定（2026-10 实测，来源 hsr.nanoka.cc 实际网络请求）：
+// 已知路径约定（2026-10 实测，来源 站点 实际网络请求）：
 //   元素：assets/hsr/element/{小写英文名}.webp   —— 32x32 alpha，0.7–1.0KB
 //   命途：assets/hsr/pathicon/{小写英文名}.webp   —— 612x612（memory/elation 为 512x512）alpha，13–35KB
 import { mkdirSync, existsSync, statSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const CDN = 'https://static.nanoka.cc/assets/hsr';
+const CDN = assetBase();
 const PUBLIC = join(ROOT, 'apps', 'web', 'public');
 
 const SETS = [

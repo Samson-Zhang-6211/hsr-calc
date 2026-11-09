@@ -5,9 +5,7 @@
   "title": "落叶归根",
   "p": 10,
   "roundMode": "arbiter",
-  "difficultyGroup": 3,
-  "source": "https://sr.appfeng.com/challenge/arb?p=10",
-  "note": "站点仲裁期号用 ?p=10（不是 4000+N；4000+N 会返回空壳）。按用户 2026-10-30 裁定拆成 5 个独立关卡：王棋（站点「将杀王棋·上半」Lv.100）/ 绝境王棋（站点「苦难阶段」Lv.120）/ 骑士（三/二/一）。关卡机制按站点原文抄录（stage 级 + 该段级），实现见 docs/AGENTS-stages.md；难度乘区 = HardLevelGroup=3。",
+  "difficultyGroup": 3,  "note": "站点仲裁期号用 ?p=10（不是 4000+N；4000+N 会返回空壳）。按用户 2026-10-30 裁定拆成 5 个独立关卡：王棋（站点「将杀王棋·上半」Lv.100）/ 绝境王棋（站点「苦难阶段」Lv.120）/ 骑士（三/二/一）。关卡机制按站点原文抄录（stage 级 + 该段级），实现见 docs/AGENTS-stages.md；难度乘区 = HardLevelGroup=3。",
   "expose": [
     1,
     2,

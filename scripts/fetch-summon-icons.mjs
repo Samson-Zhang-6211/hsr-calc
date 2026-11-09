@@ -1,7 +1,7 @@
 // 下载「忆灵/召唤物」图标到 apps/web/public/summon-icon/。
 //
 // 路径约定来自角色数据 `zh.memosprite.icon`（如 `SpriteOutput/ServantIconTeam/11402B.png`），
-// 站点把它转成了 `https://static.nanoka.cc/assets/hsr/servanticonteam/<名字>.webp`（256×216，带 alpha）。
+// 站点把它转成了 `（静态资源根地址）/servanticonteam/<名字>.webp`（256×216，带 alpha）。
 //
 // 用法：
 //   node scripts/fetch-summon-icons.mjs           只补缺失的
@@ -15,10 +15,11 @@
 import { existsSync, mkdirSync, writeFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const OUT_DIR = join(ROOT, 'apps/web/public/summon-icon');
-const CDN = 'https://static.nanoka.cc/assets/hsr/servanticonteam';
+const CDN = assetBase('servanticonteam');
 const FORCE = process.argv.includes('--force');
 const MIN_BYTES = 3 * 1024;
 

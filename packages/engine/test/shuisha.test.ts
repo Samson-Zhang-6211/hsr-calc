@@ -7,7 +7,7 @@ import {
 } from '../src/index.js';
 
 /** 水砂1513（砂金•戏浪）接入回归测试——全部锚点取自 2026-10-09 dump
- * （%TEMP%/opencode/shuisha-dump.txt 第4批，seed=20261009 单机复现）。
+ * （%TEMP%/临时目录/shuisha-dump.txt 第4批，seed=20261009 单机复现）。
  * 钩子裁定：阿哈时刻事件含 source≠水砂 的伤害段才触发天赋/point07（2026-10-09 用户原话「有队友段才触发」）。 */
 
 const mkPanel = (over: Record<string, unknown> = {}) => ({

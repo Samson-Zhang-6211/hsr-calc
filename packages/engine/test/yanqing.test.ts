@@ -11,7 +11,7 @@ import {
 } from '../src/index.js';
 
 // 彦卿 1209（冰/巡猎）接入回归（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §5）。
-// 锚点全部来自 test/yanqing-dump.test.ts 实跑（%TEMP%/opencode/yanqing-dump.txt）。
+// 锚点全部来自 test/yanqing-dump.test.ts 实跑（%TEMP%/临时目录/yanqing-dump.txt）。
 // 关键口径：【智剑连心】= 暴率+20%/暴伤+30%/受击概率降低（嘲讽 −25）/效果抵抗+20%，受击立即消失；
 // 天赋追击 60% 固定概率（50% 攻击力冰伤）+ 65% 固定概率冻结；冻结每回合开始受 50% 攻击力冰附加伤害。
 // ⚠ 木桩必须用「冻结抗性 < 100%」的怪：可可利亚 1004011 冻结抵抗 = 1（本测试用 1012010）。

@@ -1,6 +1,6 @@
-// 下载 nanoka 的角色立绘到 apps/web/public/ 下。
-// 路径约定来自 nanoka 前端站点 bundle；两种图各有用处：
-//   draw（avatardrawcard）= 2048×2048 正方形带 alpha 原图，单张 0.6–1.6MB。nanoka 角色卡就是拿这张图
+// 下载 社区数据源 的角色立绘到 apps/web/public/ 下。
+// 路径约定来自 社区数据源 前端站点 bundle；两种图各有用处：
+//   draw（avatardrawcard）= 2048×2048 正方形带 alpha 原图，单张 0.6–1.6MB。社区数据源 角色卡就是拿这张图
 //     用 CSS 裁成圆角竖卡 + 叠属性/命途徽章 + 底部名字条。做「完整卡」复刻时用这张，裁切参数可控。
 //   shop（avatarshopicon）= 站点已裁好的竖版半身图，单张约 100KB。直接当竖版用最省事。
 // 用法：
@@ -17,6 +17,7 @@
 import { access, mkdir, readdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { setTimeout as delay } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const argv = process.argv.slice(2);
 const FORCE = argv.includes('--force');
@@ -39,7 +40,7 @@ for (const k of kindNames) {
   }
 }
 
-const CDN_BASE = 'https://static.nanoka.cc/assets/hsr';
+const CDN_BASE = assetBase();
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const SRC_DIR = `${ROOT}data/characters`;
 const PUBLIC_DIR = `${ROOT}apps/web/public`;

@@ -16,7 +16,7 @@ import { Timeline } from '../src/timeline.js';
  * ② 优先级最高（压过已插入的终结技插队），多个额外回合同级 FIFO；
  * ③ 事件带 `extraTurn: true`，与触发它的行动同刻。
  *
- * 场景锚点全部来自 dump（%TEMP%/opencode/blade-extra-v2.txt、huohua-laugh.txt，已删）。
+ * 场景锚点全部来自 dump（%TEMP%/临时目录/blade-extra-v2.txt、huohua-laugh.txt，已删）。
  */
 
 describe('Timeline · 额外回合原语', () => {

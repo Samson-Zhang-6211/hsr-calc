@@ -32,11 +32,11 @@ Requires Node `^20.19.0 || >=22.12.0` and pnpm 12.
 
 ```bash
 pnpm install
-pnpm --filter @hsr-calc/web dev     # http://localhost:5173/hsr/
+pnpm --filter @hsr-calc/web dev     # port 5173, path /hsr/
 ```
 
 > The site is built for the `/hsr/` sub-path (`base` in `apps/web/vite.config.ts`), so the dev server
-> only answers at `http://localhost:5173/hsr/`. To host it elsewhere, change that `base` value.
+> only answers on port 5173 under the `/hsr/` path. To host it elsewhere, change that `base` value.
 
 ```bash
 pnpm -r typecheck   # engine + web, including test tsconfigs
@@ -80,9 +80,13 @@ come from `scripts/gen-*.mjs` — edit `data/` and re-run the pipeline instead o
 
 ## Data
 
-Game data is extracted from the public mirrors used by the community ([nanoka](https://hsr.nanoka.cc/))
+Game data comes from community-maintained static mirrors
 and pinned in `data/source.lock.json`. Large artwork (portraits, enemy art, icons) is **not** committed —
 fetch it on demand:
+
+> ⚠️ No site address is stored in this repository. Set `HSR_ASSET_BASE` (asset root) and
+> `HSR_DATA_BASE` (data root) before running the fetch/generate scripts; they exit with a
+> message when unset.
 
 ```bash
 node scripts/fetch-portraits.mjs --kind=both   # 99 MB

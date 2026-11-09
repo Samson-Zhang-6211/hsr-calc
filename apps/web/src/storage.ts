@@ -134,7 +134,7 @@ const BATTLE_HISTORY_MAX = 30;
 
 /**
  * 生成本地记录 id。`crypto.randomUUID` 只在安全上下文（HTTPS/localhost）可用——
- * 云端 http://IP:25566 为非安全上下文，该函数为 undefined，直接调用会抛
+ * 云端 独立端口部署 为非安全上下文，该函数为 undefined，直接调用会抛
  * TypeError 导致保存失败（2026-10-11 用户报「云端角色管理无法保存」根因，CDP 实测确认）。
  * 降级：时间戳 + 双随机段，本应用单机 localStorage 冲突概率可忽略。
  */

@@ -10,7 +10,7 @@ import {
  * 裁定（2026-10-09 question 原话）：①风口/潮流持续到下一次施放欢愉技（覆盖刷新）
  * ②首施无比较对象→潮流触发 ③单波开战=波次开始回1SP ④按光锥 id 激活、叠影经
  * lcParams 覆写；暴击率=面板词条不进引擎。全部锚点取自 2026-10-09 dump
- * （%TEMP%/opencode/lc64-dump.txt，seed=20261009 单机复现）。 */
+ * （%TEMP%/临时目录/lc64-dump.txt，seed=20261009 单机复现）。 */
 
 const mkPanel = (over: Record<string, unknown> = {}) => ({
   level: 80,

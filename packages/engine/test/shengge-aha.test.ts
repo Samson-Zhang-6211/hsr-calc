@@ -19,7 +19,7 @@ import { simulateBattle, type BattleConfig, type CombatMember, type CombatEvent 
  * | 真珠 150329 #1 | 【好活】上限 | 天赋上限 | 升格上限 | 升格上限（同值） |
  * | 水砂 151329 | 独水砂模式 | —（该模式定义即「啊哈为唯一欢愉队友」，天然要求啊哈在队） | | |
  *
- * dump 实锚（`%TEMP%\opencode\sg2-dump.txt`，seed 20261009、12 回合）：
+ * dump 实锚（`%TEMP%\临时目录\sg2-dump.txt`，seed 20261009、12 回合）：
  * 爻光 终招 t=297.0/792.1 三档 en=**10 / 22 / 40**、laugh=8 / 18 / 18.33；
  * 开拓者 终招暴伤覆盖 `[trailblazer]`（无啊哈）→ `[trailblazer, seele, aha]`（啊哈 E0）。
  */

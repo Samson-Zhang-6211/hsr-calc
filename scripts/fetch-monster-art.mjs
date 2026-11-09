@@ -1,4 +1,4 @@
-// 下载 nanoka 的怪物美术到本地 public 目录，供全真模拟战场可视化当敌方头像。
+// 下载 社区数据源 的怪物美术到本地 public 目录，供全真模拟战场可视化当敌方头像。
 //
 // 路径约定（2026-10 实测）：文件名带 Monster_ 前缀，缺前缀一律 404。
 //   monsterfigure/Monster_{id}.webp     —— 1024x1024 alpha，42–224KB（大立绘）
@@ -12,9 +12,10 @@
 import { mkdirSync, existsSync, writeFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { assetBase } from './lib/env-base.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const CDN = 'https://static.nanoka.cc/assets/hsr';
+const CDN = assetBase();
 const PUBLIC = join(ROOT, 'apps', 'web', 'public');
 const MONSTER_DIR = join(ROOT, 'data', 'monsters');
 

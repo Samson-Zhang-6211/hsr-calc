@@ -10,7 +10,7 @@ import {
 } from '../src/index.js';
 
 // 遗器套装批4（301/302/304/305/306/307/308/309/310/311/319/320/322/328/329/330 位面）。
-// 锚点全部由 relic-batch4-dump.test.ts 实跑定锚（%TEMP%/opencode/relic-batch4-dump.txt），勿凭推理改数。
+// 锚点全部由 relic-batch4-dump.test.ts 实跑定锚（%TEMP%/临时目录/relic-batch4-dump.txt），勿凭推理改数。
 // 关键口径（2026-10-13 批4裁定）：速度门槛=进战一次判定；306/309 当前暴率逐 hit 实时；
 // 322 攻击力实时；330 跨佩戴者单实例；329 挂秘技段后判欢愉度；308 拉条在 init 块。
 // 声明 planarsetId 会清 GEAR DEFAULT 字段（jingyuan bananaCritDmg 等）→ 干扰组用绝对值锚；

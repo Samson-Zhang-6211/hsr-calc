@@ -11,7 +11,7 @@ import {
 
 // ── 受击回能 + 召唤物随主人死亡退场（2026-10-09，四项裁定见 AGENTS）──
 // ①单体10/扩散5/全体5 ②×充能效率 ③仅敌方攻击技能（DoT跳伤不回）④主人死亡=召唤物直接退场清状态。
-// 锚点由 hit-energy-dump 临时测试实跑写 %TEMP%/opencode/hit-energy-dump.txt 后据实定锚。
+// 锚点由 hit-energy-dump 临时测试实跑写 %TEMP%/临时目录/hit-energy-dump.txt 后据实定锚。
 
 const ALL: Element[] = ['Physical', 'Fire', 'Ice', 'Wind', 'Thunder', 'Quantum', 'Imaginary'];
 

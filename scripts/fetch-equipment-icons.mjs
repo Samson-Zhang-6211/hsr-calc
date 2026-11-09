@@ -1,7 +1,7 @@
 // 下载光锥/遗器套装图标到 apps/web/public/（2026-10-29）。
-// 数据源与 nanoka 前端一致：
-//   光锥   https://static.nanoka.cc/assets/hsr/lightconemediumicon/{id}.webp
-//   遗器套装 https://static.nanoka.cc/assets/hsr/itemfigures/{iconId}.webp
+// 数据源与 社区数据源 前端一致：
+//   光锥   （静态资源根地址）/lightconemediumicon/{id}.webp
+//   遗器套装 （静态资源根地址）/itemfigures/{iconId}.webp
 //            （iconId 来自套装详情 zh/relicset/{id}.json 的 icon: "SpriteOutput/ItemIcon/71000.png"）
 // 用法：
 //   node scripts/fetch-equipment-icons.mjs              全量（已存在且够大的跳过）
@@ -11,6 +11,7 @@
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolveVersion } from './lib/data-source.mjs';
+import { assetBase } from './lib/env-base.mjs';
 
 const argv = process.argv.slice(2);
 const FORCE = argv.includes('--force');
@@ -19,7 +20,7 @@ const only = onlyArg || 'both';
 
 // 版本口径唯一来源 = data/source.lock.json（遗器套装详情按 relicsets 口径）
 const VERSION = await resolveVersion(null, 'relicsets');
-const CDN = 'https://static.nanoka.cc';
+const CDN = assetBase();
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const PUBLIC = `${ROOT}apps/web/public`;
 const MIN_BYTES = 4 * 1024;

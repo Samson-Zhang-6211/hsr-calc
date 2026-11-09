@@ -3,7 +3,7 @@ import type { Element } from '@hsr-calc/shared';
 import { simulateBattle, type BattleConfig, type BattleResult } from '../src/index.js';
 
 /** 风堇 1409：小伊卡受击/被动治疗/冻结抵抗/解控/消失拉条的确定性锚点。
- * 锚点来自 %TEMP%/opencode/fj-freeze-dump.txt 实测（2026-10），勿纯推理改写。 */
+ * 锚点来自 %TEMP%/临时目录/fj-freeze-dump.txt 实测（2026-10），勿纯推理改写。 */
 
 type Ev = BattleResult['events'][number];
 

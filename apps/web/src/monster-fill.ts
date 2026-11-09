@@ -1,6 +1,6 @@
 // 木桩配置「怪物+等级 → 自动填充全套」（2026-10-09 裁定2：覆盖手配，之后仍可手改）。
 // 两页（数值代理模拟/全真模拟）共用；防御值换算有结果但战斗公式按等级制不消费、
-// UI 无字段，故不填充（见 AGENTS.md）。
+// UI 无字段，故不填充（见 项目维护记录）。
 import { computeMonsterStats } from './monster-stats.js';
 
 export interface MonsterFillValues {

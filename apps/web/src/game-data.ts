@@ -3,7 +3,8 @@ import { LIGHTCONE_ROSTER_VERSION } from './data/lightcone-roster.js';
 import { RELICSET_ROSTER_VERSION } from './data/relicset-roster.js';
 import { createLocalSource, type LocalSource } from './local-data.js';
 
-const BASE = 'https://static.nanoka.cc/hsr';
+/** 在线兜底数据源：默认关闭。需要时用 VITE_DATA_BASE 指定，仓库内不含任何地址。 */
+const BASE = (import.meta.env.VITE_DATA_BASE as string | undefined) ?? '';
 
 // ---- 本地文档优先（data/ 目录，由 scripts/fetch-local-data.mjs 下载） ----
 
@@ -314,6 +315,7 @@ export async function fetchCharacterDetail(
   } catch {
     /* 缓存损坏则忽略 */
   }
+  if (!BASE) throw new Error('未配置数据源：本地数据缺失时需要 VITE_DATA_BASE');
   const res = await fetch(`${BASE}/${ROSTER_VERSION}/${lang}/character/${id}.json`);
   if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
   const detail = trim((await res.json()) as Record<string, unknown>);

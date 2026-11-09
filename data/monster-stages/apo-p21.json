@@ -5,9 +5,7 @@
   "title": "支配遗忘",
   "p": 3021,
   "roundMode": "phantom",
-  "difficultyGroup": 1,
-  "source": "https://sr.appfeng.com/challenge/apo?p=3021",
-  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。",
+  "difficultyGroup": 1,  "note": "按用户 2026-10-30 裁定只收录最难关（F4）+ 星启。hp = 逐怪 hp × count 的合计（与页面半边血量口径一致，页面显示存在的 ±几 舍入差已按逐怪合计对齐）；页面原值记在 pageHp。难度乘区 = HardLevelGroup=1。",
   "expose": [
     4,
     0

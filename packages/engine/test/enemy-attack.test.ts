@@ -5,7 +5,7 @@ import { simulateBattle, type BattleConfig, type CombatEvent, type CombatMember,
 // ── 可可利亚技能脚本（2026-10-09，用户裁定③「数据表+战斗挂点」+ 三项实施裁定：
 //    AI 等概率随机 / 单体随机存活成员 / PhaseList 全部可用）──
 // 倍率来源：Dimbreath/turnbasedgamedata ExcelOutput/MonsterSkillConfig.json（GitLab 62701613）。
-// 锚点由 enemy-attack-dump 临时测试实跑写 %TEMP%/opencode/enemy-attack-dump.txt 后据实定锚。
+// 锚点由 enemy-attack-dump 临时测试实跑写 %TEMP%/临时目录/enemy-attack-dump.txt 后据实定锚。
 
 const ALL: Element[] = ['Physical', 'Fire', 'Ice', 'Wind', 'Thunder', 'Quantum', 'Imaginary'];
 
