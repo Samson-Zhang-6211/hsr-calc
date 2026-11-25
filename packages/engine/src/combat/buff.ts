@@ -105,7 +105,13 @@ export type BuffKey =
   | 'asBaitResDown'
   /** 嘲讽值修正（**加算点数**，非比例；2026-10-24 用户裁定）：受击概率 = 本单位嘲讽值 ÷ 池内之和，
    * 「受击概率提高/降低」= +25/−25，「大幅提高」= +50。只被 tauntOf 消费。 */
-  | 'taunt';
+  | 'taunt'
+  /** 【咬痕】（艾莲 1514 战技）：**怪侧**「受到的普攻伤害提高」——只在 `attackKind==='basic'`
+   *  的伤害段进易伤区（dealAttackInner 里按 lcAttackKind 消费），不吃战技/终结技/追伤/DoT。 */
+  | 'basicVuln'
+  /** 【切分音】（耀嘉音 1515 天赋）：**我方**「普攻造成的伤害提高」——只在 `attackKind==='basic'`
+   *  的伤害段加算进增伤区。E1 结界期间改由 damageBonus 键（labelKey 区分）覆盖全攻击类型。 */
+  | 'basicDmgBonus';
 
 export type BuffTick = 'holderEnd' | 'permanent';
 

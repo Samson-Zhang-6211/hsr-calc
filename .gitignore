@@ -38,3 +38,9 @@ AGENTS.md
 data/clause-ledger/
 # 五、预告片剪辑脚本：写死本机 ffmpeg 与附件绝对路径，不对外提供
 scripts/trailer/
+
+# ─── 本地发布工作区（2026-11-18 整理）──────────────────────────────────────
+# 一、Release 附件原件（172MB+）：已在 GitHub Release 上，不入库
+artifacts/
+# 二、发布流程说明：含上游站点地址与脱敏检查命令，仅本地保存，勿提交
+发布流程.md

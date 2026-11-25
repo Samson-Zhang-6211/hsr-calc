@@ -52,8 +52,10 @@ export type TimelineEvent =
    * 额外回合（2026-11 用户裁定）：与跑道无关的插入回合。
    * 出队即行动，**不需要 finishAction**；不改 av、不推进时间、不算新回合。
    * 优先级高于 `insertAction`（终结技插队）与跑道行动，同级按入队顺序。
+   * `allowUlt`（4.7.52 文案新增，2026-11-17 用户裁定）：该额外回合**可插入施放终结技**，
+   * 缺省 false = 旧口径（期间不能插入终结技）。
    */
-  | { type: 'extraTurn'; time: number; round: number; unitId: string; tag?: string };
+  | { type: 'extraTurn'; time: number; round: number; unitId: string; tag?: string; allowUlt?: boolean };
 
 export interface TimelineOptions {
   /** 是否启用轮次计时器（忘却之庭），默认 true */
@@ -83,7 +85,7 @@ export class Timeline {
   private readonly units = new Map<string, UnitState>();
   private readonly queue: TimelineEvent[] = [];
   /** 额外回合队列（2026-11 裁定：最高优先、同级 FIFO、与跑道无关） */
-  private readonly extraQueue: { unitId: string; tag?: string }[] = [];
+  private readonly extraQueue: { unitId: string; tag?: string; allowUlt?: boolean }[] = [];
   /** 定时行动序列条目（绝对时刻触发；不占跑道、不需 finishAction） */
   private readonly scheduled: { unitId: string; atTime: number; tag: string }[] = [];
   private readonly roundsEnabled: boolean;
@@ -180,7 +182,14 @@ export class Timeline {
     // 额外回合优先（2026-11 裁定）：压过插队终结技，与跑道、av、时间全无关
     if (this.extraQueue.length > 0) {
       const e = this.extraQueue.shift()!;
-      return { type: 'extraTurn', time: this.t, round: this.currentRound, unitId: e.unitId, tag: e.tag };
+      return {
+        type: 'extraTurn',
+        time: this.t,
+        round: this.currentRound,
+        unitId: e.unitId,
+        tag: e.tag,
+        ...(e.allowUlt ? { allowUlt: true as const } : {}),
+      };
     }
     if (this.queue.length > 0) {
       return this.queue.shift()!;
@@ -334,10 +343,12 @@ export class Timeline {
    * - 优先级最高：出队早于 `insertAction`（终结技插队）与跑道行动；
    * - 同级 FIFO：多个额外回合按入队顺序依次执行；
    * - 可在别的单位行动结算**之前**入队（如火花 E2 在阿哈时刻内触发），出队在 finishAction 之后。
+   * - `allowUlt`（4.7.52 文案新增，2026-11-17 用户裁定）：该额外回合内**可插入施放终结技**；
+   *   缺省 false 保持旧口径。仅艾莲 E6 与零号连线（给耀嘉音）三处置 true。
    */
-  insertExtraTurn(unitId: string, tag?: string): void {
+  insertExtraTurn(unitId: string, tag?: string, allowUlt = false): void {
     this.require(unitId);
-    this.extraQueue.push({ unitId, tag });
+    this.extraQueue.push(allowUlt ? { unitId, tag, allowUlt: true } : { unitId, tag });
   }
 
   /** 是否有待执行的额外回合（主循环据此让额外回合压过终结技插队） */

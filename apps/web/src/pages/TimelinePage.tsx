@@ -51,6 +51,8 @@ import {
 import { ownerOfSource, planFrames } from '../battle-anim.js';
 import { useBattleAnim } from '../use-battle-anim.js';
 import { HintCard } from '../hint-card.js';
+import { fmtNum } from '../num-format.js';
+import { resourceText, unitResourceRows } from '../unit-resources.js';
 
 const ALL_ELEMENTS: Element[] = [
   'Physical',
@@ -210,6 +212,9 @@ const MANUAL_DEFAULTS: Record<CharId, { speed: string; energyRegen: string }> = 
   phainon: { speed: '94', energyRegen: '0.194' },
   ratio: { speed: '102', energyRegen: '0.194' },
   topaz: { speed: '110', energyRegen: '0.194' },
+  /** 4.7.51 新增：艾莲 1514（基础速度 96）/ 耀嘉音 1515（基础速度 99） */
+  ellen: { speed: '96', energyRegen: '0' },
+  yaojiayin: { speed: '99', energyRegen: '0' },
 };
 
 /** 战斗支持的全部角色（引擎 SUPPORTED_IDS 白名单；槽位可从这里添加） */
@@ -313,7 +318,12 @@ const BATTLE_CHAR_IDS: CharId[] = [
   'phainon',
   'ratio',
   'topaz',
+  'ellen',
+  'yaojiayin',
 ];
+
+/** 队伍人数上限 = 引擎口径（`battle.ts` 的 1-4 名角色；游戏一场最多 4 人） */
+const TEAM_MAX = 4;
 
 /** 战斗槽位角色 → 名册 id：轴 TEAM_ROSTER_ID（5 人固定阵容）+ 啊哈 1511 + 爻光 1502 + 火花 1501（轴不接后三者） */
 const BATTLE_ROSTER_ID: Record<CharId, string> = {
@@ -412,6 +422,9 @@ const BATTLE_ROSTER_ID: Record<CharId, string> = {
   phainon: '1408',
   ratio: '1305',
   topaz: '1112',
+  /** 4.7.51 新增两人（名册 id = 数据文件名） */
+  ellen: '1514',
+  yaojiayin: '1515',
 };
 
 /** 欢愉角色（点运行前弹啊哈对话框，裁定：两页配置区 slots 含任一欢愉角色时触发） */
@@ -471,6 +484,8 @@ export default function TimelinePage() {
     archer: '',
     boothill: '',
   ashveil: '',
+  ellen: '',
+  yaojiayin: '',
   sanyueqi2: '',
   moze: '',
   feixiao: '',
@@ -603,7 +618,8 @@ export default function TimelinePage() {
     return i18n.language === 'en' ? `${name} ${short}` : `${name}${short}`;
   };
   const [battle, setBattle] = useState<BattleResult | null>(null);
-  const [battleErr, setBattleErr] = useState(false);
+  /** 运行失败原因（null = 无错）：区分「没选面板档」与「超过 4 人上限」 */
+  const [battleErr, setBattleErr] = useState<null | 'needSaved' | 'teamTooMany'>(null);
   const [battleSaved, setBattleSaved] = useState(false);
   const [searchParams] = useSearchParams();
 
@@ -627,7 +643,7 @@ export default function TimelinePage() {
     const found = storage.getBattleHistory().find((b) => b.id === id);
     if (found) {
       setBattle(found.result);
-      setBattleErr(false);
+      setBattleErr(null);
     }
   }, [searchParams]);
 
@@ -783,7 +799,10 @@ export default function TimelinePage() {
           id !== 'feixiao' &&
           id !== 'moze' &&
           id !== 'sanyueqi2' &&
-          id !== 'ashveil',
+          id !== 'ashveil' &&
+          // 4.7.51 新增两人同样不进 5 人数值代理轴（轴 CharId 独立；只有全真模拟支持）
+          id !== 'ellen' &&
+          id !== 'yaojiayin',
       )
       .map((id) => {
         const saved = teamPick[id] ? chars.find((c) => c.id === teamPick[id]) : undefined;
@@ -886,6 +905,8 @@ export default function TimelinePage() {
             | 'moze'
             | 'sanyueqi2'
             | 'ashveil'
+            | 'ellen'
+            | 'yaojiayin'
           >,
           speed: Number(saved?.speed ?? m.speed) || 0,
           energyRegen: Number(saved?.energyRegen ?? m.energyRegen) || 0,
@@ -917,7 +938,13 @@ export default function TimelinePage() {
   function runBattle() {
     if (slots.length === 0) {
       setBattle(null);
-      setBattleErr(true);
+      setBattleErr('needSaved');
+      return;
+    }
+    // 队伍人数上限与引擎一致（游戏口径 4 人）；UI 侧加人已封顶，这里兜底旧存档/导入的 5+ 人
+    if (slots.length > 4) {
+      setBattle(null);
+      setBattleErr('teamTooMany');
       return;
     }
     const horizon = Number(maxTime) > 0 ? Number(maxTime) : 350;
@@ -938,7 +965,7 @@ export default function TimelinePage() {
       const saved = teamPick[id] ? chars.find((c) => c.id === teamPick[id]) : undefined;
       if (!saved) {
         setBattle(null);
-        setBattleErr(true);
+        setBattleErr('needSaved');
         return;
       }
       const fallback = MANUAL_DEFAULTS[id];
@@ -989,7 +1016,7 @@ export default function TimelinePage() {
       attack: Number(mAttack) || 0,
       monsterId: mMonsterId || undefined,
     };
-    setBattleErr(false);
+    setBattleErr(null);
     // 关卡预设 → 波次阵容（每波最多 3 只，对应 monster1/2/3 槽）；否则走手配单怪
     const stageWaves = preset ? preset.waves : undefined;
     // 关卡级机制（2026-10-30 rulings 15~19 = A）：站点中文名 → 引擎 id
@@ -1029,7 +1056,7 @@ export default function TimelinePage() {
       setRevealed(0);
       setReplayPlaying(false);
       stageAnim.stop();
-      setBattleErr(true);
+      setBattleErr('needSaved');
     }
   }
 
@@ -1586,8 +1613,10 @@ export default function TimelinePage() {
               )}
               {saved && (
                 <span className="muted">
-                  {t('timeline.speed')} {saved.speed ?? t('timeline.team.manual')} ·{' '}
-                  {t('timeline.team.energyRegen')} {saved.energyRegen ?? 0}
+                  {t('timeline.speed')}{' '}
+                  {saved.speed == null ? t('timeline.team.manual') : fmtNum(saved.speed)} ·{' '}
+                  {t('timeline.team.energyRegen')}{' '}
+                  {saved.energyRegen == null ? 0 : fmtNum(saved.energyRegen, 4)}
                 </span>
               )}
               {/* 调序/移除（至少保留 1 人；移除主C 时自动转移给第一位） */}
@@ -1637,12 +1666,15 @@ export default function TimelinePage() {
             </div>
           );
         })}
-        {slots.length < BATTLE_CHAR_IDS.length && (
+        {/* 队伍上限 = 引擎口径（1~4 人，游戏同款）；到顶后不再显示加人按钮 */}
+        {slots.length < TEAM_MAX ? (
           <p>
             <button type="button" onClick={() => setPickOpen(true)}>
               {t('fullsim.addChar')}…
             </button>
           </p>
+        ) : (
+          <p className="muted">{t('battle.teamMax')}</p>
         )}
         <CharPickerModal
           open={pickOpen}
@@ -1650,7 +1682,7 @@ export default function TimelinePage() {
           onClose={() => setPickOpen(false)}
           onSelect={(rid) => {
             const id = BATTLE_CHAR_IDS.find((c) => BATTLE_ROSTER_ID[c] === rid);
-            if (id) setSlots((s) => (s.includes(id) ? s : [...s, id]));
+            if (id) setSlots((s) => (s.includes(id) || s.length >= TEAM_MAX ? s : [...s, id]));
             setPickOpen(false);
           }}
         />
@@ -2035,7 +2067,13 @@ export default function TimelinePage() {
           {t('battle.run')}
         </button>
         {slots.length === 0 && <p className="muted">{t('battle.needMember')}</p>}
-        {slots.length > 0 && battleErr && <p className="muted">{t('battle.needSaved')}</p>}
+        {slots.length > 0 && battleErr && (
+          <p className="muted">
+            {battleErr === 'teamTooMany'
+              ? t('battle.teamTooMany', { n: slots.length })
+              : t('battle.needSaved')}
+          </p>
+        )}
         <p className="muted" style={{ fontSize: 12 }}>
           {t('battle.historyTip')}
         </p>
@@ -2078,6 +2116,12 @@ export default function TimelinePage() {
             enemyHpLeft: (stageStatus?.monsters ?? []).reduce((s, m) => s + m.hp, 0),
             allyHpLeft: slots.reduce((s, id) => s + (stageStatus?.hp[id] ?? 0), 0),
             actionDamage: stageAnim.frame?.totalDamage ?? 0,
+            // 4.7.51 新增资源 HUD（艾莲【咬合力】/【热量】、耀嘉音【切分音】）
+            shared: unitResourceRows(stageStatus).map((r) => ({
+              key: r.key,
+              label: t(r.labelKey),
+              value: resourceText(r),
+            })),
           }}
           frame={stageAnim.frame}
           onEnemyArtError={(id) => setArtFail((s) => ({ ...s, [id]: true }))}

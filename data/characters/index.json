@@ -1,6 +1,6 @@
 {
-  "version": "4.6.54",
-  "count": 99,
+  "version": "4.7.53",
+  "count": 101,
   "items": [
     {
       "id": "1001",
@@ -107,7 +107,19 @@
         "path": "Warlock",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1005-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1005-enhanced.mjs",
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "StatusProbabilityBase": 1
+        },
+        "portrait": "/portraits/1005.webp",
+        "portraitShop": "/portraits-shop/1005.webp"
       }
     },
     {
@@ -119,7 +131,19 @@
         "path": "Warlock",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1006-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1006-enhanced.mjs",
+        "effectiveSubstats": [
+          "StatusProbabilityBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1006.webp",
+        "portraitShop": "/portraits-shop/1006.webp"
       }
     },
     {
@@ -595,7 +619,21 @@
       "meta": {
         "element": "Thunder",
         "path": "Mage",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1204.webp",
+        "portraitShop": "/portraits-shop/1204.webp"
       }
     },
     {
@@ -607,7 +645,22 @@
         "path": "Warrior",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1205-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1205-enhanced.mjs",
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.8,
+        "portrait": "/portraits/1205.webp",
+        "portraitShop": "/portraits-shop/1205.webp"
       }
     },
     {
@@ -756,7 +809,22 @@
         "path": "Warrior",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1212-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1212-enhanced.mjs",
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "critRateTarget": 0.35,
+        "portrait": "/portraits/1212.webp",
+        "portraitShop": "/portraits-shop/1212.webp"
       }
     },
     {
@@ -766,7 +834,21 @@
       "meta": {
         "element": "Imaginary",
         "path": "Warrior",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1213.webp",
+        "portraitShop": "/portraits-shop/1213.webp"
       }
     },
     {
@@ -824,7 +906,19 @@
         "path": "Priest",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1217-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1217-enhanced.mjs",
+        "effectiveSubstats": [
+          "HPAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "HPAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1217.webp",
+        "portraitShop": "/portraits-shop/1217.webp"
       }
     },
     {
@@ -1116,7 +1210,19 @@
         "path": "Shaman",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1306-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1306-enhanced.mjs",
+        "effectiveSubstats": [
+          "CriticalDamageBase",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "SpeedDelta": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1306.webp",
+        "portraitShop": "/portraits-shop/1306.webp"
       }
     },
     {
@@ -1128,7 +1234,19 @@
         "path": "Warlock",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1307-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1307-enhanced.mjs",
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "StatusProbabilityBase"
+        ],
+        "substatWeights": {
+          "StatusProbabilityBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1307.webp",
+        "portraitShop": "/portraits-shop/1307.webp"
       }
     },
     {
@@ -1138,7 +1256,21 @@
       "meta": {
         "element": "Thunder",
         "path": "Warlock",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1308.webp",
+        "portraitShop": "/portraits-shop/1308.webp"
       }
     },
     {
@@ -1172,7 +1304,19 @@
         "path": "Warrior",
         "rarity": 5,
         "patched": "enhanced-buff-2026-10",
-        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1310-enhanced.mjs"
+        "patchNote": "基础 skills/ranks/skill_trees 已用 enhanced[1]（老角色加强版）覆写；重爬本文件后需重跑 scripts/apply-1310-enhanced.mjs",
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1310.webp",
+        "portraitShop": "/portraits-shop/1310.webp"
       }
     },
     {
@@ -1649,7 +1793,21 @@
       "meta": {
         "element": "Fire",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1501.webp",
+        "portraitShop": "/portraits-shop/1501.webp"
       }
     },
     {
@@ -1659,7 +1817,19 @@
       "meta": {
         "element": "Physical",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "CriticalChanceBase": 3,
+          "CriticalDamageBase": 3
+        },
+        "portrait": "/portraits/1502.webp",
+        "portraitShop": "/portraits-shop/1502.webp"
       }
     },
     {
@@ -1669,7 +1839,19 @@
       "meta": {
         "element": "Ice",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 5,
+          "SpeedDelta": 5,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/1503.webp",
+        "portraitShop": "/portraits-shop/1503.webp"
       }
     },
     {
@@ -1703,7 +1885,19 @@
       "meta": {
         "element": "Physical",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalDamageBase",
+          "CriticalChanceBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 1
+        },
+        "portrait": "/portraits/1505.webp",
+        "portraitShop": "/portraits-shop/1505.webp"
       }
     },
     {
@@ -1713,7 +1907,21 @@
       "meta": {
         "element": "Imaginary",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1506.webp",
+        "portraitShop": "/portraits-shop/1506.webp"
       }
     },
     {
@@ -1820,7 +2028,19 @@
       "meta": {
         "element": "Quantum",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3
+        },
+        "portrait": "/portraits/1511.webp",
+        "portraitShop": "/portraits-shop/1511.webp"
       }
     },
     {
@@ -1855,7 +2075,69 @@
       "meta": {
         "element": "Quantum",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta",
+          "AttackAddedRatio"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3,
+          "AttackAddedRatio": 1
+        },
+        "portrait": "/portraits/1513.webp",
+        "portraitShop": "/portraits-shop/1513.webp"
+      }
+    },
+    {
+      "id": "1514",
+      "zh": "艾莲",
+      "en": "Ellen",
+      "meta": {
+        "element": "Ice",
+        "path": "Warrior",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/1514.webp",
+        "portraitShop": "/portraits-shop/1514.webp"
+      }
+    },
+    {
+      "id": "1515",
+      "zh": "耀嘉音",
+      "en": "Astra Yao",
+      "meta": {
+        "element": "Quantum",
+        "path": "Shaman",
+        "rarity": 5,
+        "effectiveSubstats": [
+          "AttackAddedRatio",
+          "SpeedDelta",
+          "CriticalDamageBase",
+          "CriticalChanceBase"
+        ],
+        "substatWeights": {
+          "SpeedDelta": 5,
+          "AttackAddedRatio": 3,
+          "CriticalDamageBase": 3,
+          "CriticalChanceBase": 1
+        },
+        "portrait": "/portraits/1515.webp",
+        "portraitShop": "/portraits-shop/1515.webp"
       }
     },
     {
@@ -1865,7 +2147,21 @@
       "meta": {
         "element": "Physical",
         "path": "Warrior",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8001.webp",
+        "portraitShop": "/portraits-shop/8001.webp"
       }
     },
     {
@@ -1875,7 +2171,21 @@
       "meta": {
         "element": "Physical",
         "path": "Warrior",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8002.webp",
+        "portraitShop": "/portraits-shop/8002.webp"
       }
     },
     {
@@ -1885,7 +2195,19 @@
       "meta": {
         "element": "Fire",
         "path": "Knight",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/8003.webp",
+        "portraitShop": "/portraits-shop/8003.webp"
       }
     },
     {
@@ -1895,7 +2217,19 @@
       "meta": {
         "element": "Fire",
         "path": "Knight",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "DefenceAddedRatio",
+          "SpeedDelta",
+          "StatusResistanceBase"
+        ],
+        "substatWeights": {
+          "DefenceAddedRatio": 5,
+          "SpeedDelta": 3,
+          "StatusResistanceBase": 1
+        },
+        "portrait": "/portraits/8004.webp",
+        "portraitShop": "/portraits-shop/8004.webp"
       }
     },
     {
@@ -1905,7 +2239,17 @@
       "meta": {
         "element": "Imaginary",
         "path": "Shaman",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 5
+        },
+        "portrait": "/portraits/8005.webp",
+        "portraitShop": "/portraits-shop/8005.webp"
       }
     },
     {
@@ -1915,7 +2259,17 @@
       "meta": {
         "element": "Imaginary",
         "path": "Shaman",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "BreakDamageAddedRatioBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "BreakDamageAddedRatioBase": 5,
+          "SpeedDelta": 5
+        },
+        "portrait": "/portraits/8006.webp",
+        "portraitShop": "/portraits-shop/8006.webp"
       }
     },
     {
@@ -1925,7 +2279,19 @@
       "meta": {
         "element": "Ice",
         "path": "Memory",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8007.webp",
+        "portraitShop": "/portraits-shop/8007.webp"
       }
     },
     {
@@ -1935,7 +2301,19 @@
       "meta": {
         "element": "Ice",
         "path": "Memory",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalDamageBase",
+          "AttackAddedRatio",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "AttackAddedRatio": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8008.webp",
+        "portraitShop": "/portraits-shop/8008.webp"
       }
     },
     {
@@ -1945,7 +2323,19 @@
       "meta": {
         "element": "Thunder",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8009.webp",
+        "portraitShop": "/portraits-shop/8009.webp"
       }
     },
     {
@@ -1955,7 +2345,19 @@
       "meta": {
         "element": "Thunder",
         "path": "Elation",
-        "rarity": 5
+        "rarity": 5,
+        "effectiveSubstats": [
+          "CriticalChanceBase",
+          "CriticalDamageBase",
+          "SpeedDelta"
+        ],
+        "substatWeights": {
+          "CriticalDamageBase": 5,
+          "CriticalChanceBase": 3,
+          "SpeedDelta": 3
+        },
+        "portrait": "/portraits/8010.webp",
+        "portraitShop": "/portraits-shop/8010.webp"
       }
     }
   ]

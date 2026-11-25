@@ -1,4 +1,4 @@
-// 由 scripts/gen-relicsets.mjs 生成（数据源 static.nanoka.cc，版本 4.6.54），请勿手改
+// 由 scripts/gen-relicsets.mjs 生成（数据源 static.nanoka.cc，版本 4.7.53），请勿手改
 export interface RosterRelicSet {
   id: string;
   zh: string;
@@ -7,7 +7,7 @@ export interface RosterRelicSet {
   fourPiece: boolean;
 }
 
-export const RELICSET_ROSTER_VERSION = '4.6.54';
+export const RELICSET_ROSTER_VERSION = '4.7.53';
 
 export const RELICSET_ROSTER: readonly RosterRelicSet[] = [
   {

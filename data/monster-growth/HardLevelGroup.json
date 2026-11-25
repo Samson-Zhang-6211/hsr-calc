@@ -11739,5 +11739,685 @@
     ],
     "StatusProbability": 0.4,
     "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 30,
+    "AttackRatio": 2.052631,
+    "DefenceRatio": 1.619048,
+    "HPRatio": 2.276821,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      840,
+      256,
+      640,
+      0
+    ]
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 40,
+    "AttackRatio": 6.719308,
+    "DefenceRatio": 2.571429,
+    "HPRatio": 3.4777,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1904,
+      508,
+      1704,
+      888
+    ]
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 50,
+    "AttackRatio": 9.944709,
+    "DefenceRatio": 3,
+    "HPRatio": 13.309242,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      2456,
+      732,
+      2228,
+      1744
+    ]
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 60,
+    "AttackRatio": 17.056755,
+    "DefenceRatio": 3.666667,
+    "HPRatio": 53.105511,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3248,
+      1232,
+      2968,
+      3916
+    ],
+    "StatusProbability": 0.056,
+    "StatusResistance": 0.028
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 70,
+    "AttackRatio": 20.41964,
+    "DefenceRatio": 3.952381,
+    "HPRatio": 104.644885,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3752,
+      1500,
+      3452,
+      4448
+    ],
+    "StatusProbability": 0.104,
+    "StatusResistance": 0.052
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 80,
+    "AttackRatio": 31.614259,
+    "DefenceRatio": 4.904762,
+    "HPRatio": 200.194951,
+    "SpeedRatio": 1.2,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.264,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4701,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 324.378861,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 30,
+    "AttackRatio": 2.348891,
+    "DefenceRatio": 1.714286,
+    "HPRatio": 2.526325,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      896,
+      268,
+      688,
+      44
+    ]
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 40,
+    "AttackRatio": 7.357718,
+    "DefenceRatio": 2.666667,
+    "HPRatio": 7.811794,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1976,
+      544,
+      1768,
+      1012
+    ]
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 50,
+    "AttackRatio": 14.16034,
+    "DefenceRatio": 3.428571,
+    "HPRatio": 28.256923,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3044,
+      1064,
+      2784,
+      3460
+    ],
+    "StatusProbability": 0.016,
+    "StatusResistance": 0.008
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 60,
+    "AttackRatio": 20.41964,
+    "DefenceRatio": 3.952381,
+    "HPRatio": 65.403053,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3752,
+      1500,
+      3452,
+      4448
+    ],
+    "StatusProbability": 0.104,
+    "StatusResistance": 0.052
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 70,
+    "AttackRatio": 26.800628,
+    "DefenceRatio": 4.47619,
+    "HPRatio": 125.077371,
+    "SpeedRatio": 1.1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4440,
+      2144,
+      4096,
+      5328
+    ],
+    "StatusProbability": 0.192,
+    "StatusResistance": 0.096
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 80,
+    "AttackRatio": 28.894765,
+    "DefenceRatio": 5.238095,
+    "HPRatio": 289.836409,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.32,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4702,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 375.438496,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 30,
+    "AttackRatio": 2.200761,
+    "DefenceRatio": 1.666667,
+    "HPRatio": 2.401573,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      868,
+      256,
+      664,
+      32
+    ]
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 40,
+    "AttackRatio": 7.676923,
+    "DefenceRatio": 2.714286,
+    "HPRatio": 8.23999,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      2008,
+      564,
+      1800,
+      1068
+    ]
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 50,
+    "AttackRatio": 12.128327,
+    "DefenceRatio": 3.238095,
+    "HPRatio": 19.61701,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      2648,
+      920,
+      2400,
+      2896
+    ]
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 60,
+    "AttackRatio": 22.586353,
+    "DefenceRatio": 4.142857,
+    "HPRatio": 62.245622,
+    "SpeedRatio": 1.1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3928,
+      1720,
+      3608,
+      4740
+    ],
+    "StatusProbability": 0.136,
+    "StatusResistance": 0.068
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 70,
+    "AttackRatio": 26.800628,
+    "DefenceRatio": 4.47619,
+    "HPRatio": 125.077371,
+    "SpeedRatio": 1.1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4440,
+      2144,
+      4096,
+      5328
+    ],
+    "StatusProbability": 0.192,
+    "StatusResistance": 0.096
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 80,
+    "AttackRatio": 32.572203,
+    "DefenceRatio": 5.047619,
+    "HPRatio": 234.903181,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.288,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4703,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 375.438496,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 30,
+    "AttackRatio": 1.46011,
+    "DefenceRatio": 1.428571,
+    "HPRatio": 1.777814,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      724,
+      248,
+      540,
+      0
+    ]
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 40,
+    "AttackRatio": 4.19195,
+    "DefenceRatio": 2.142857,
+    "HPRatio": 4.133972,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1384,
+      372,
+      1144,
+      336
+    ]
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 50,
+    "AttackRatio": 10.381433,
+    "DefenceRatio": 3.047619,
+    "HPRatio": 14.570795,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      2496,
+      768,
+      2264,
+      1940
+    ]
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 60,
+    "AttackRatio": 17.636038,
+    "DefenceRatio": 3.714286,
+    "HPRatio": 46.607341,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3292,
+      1268,
+      3004,
+      4008
+    ],
+    "StatusProbability": 0.064,
+    "StatusResistance": 0.032
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 70,
+    "AttackRatio": 24.211388,
+    "DefenceRatio": 4.285714,
+    "HPRatio": 94.987167,
+    "SpeedRatio": 1.1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4064,
+      1892,
+      3728,
+      4936
+    ],
+    "StatusProbability": 0.16,
+    "StatusResistance": 0.08
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 80,
+    "AttackRatio": 33.559173,
+    "DefenceRatio": 5.190476,
+    "HPRatio": 275.082294,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.312,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4704,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 375.438496,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 30,
+    "AttackRatio": 0.64,
+    "DefenceRatio": 1,
+    "HPRatio": 0.592,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 40,
+    "AttackRatio": 1.904501,
+    "DefenceRatio": 1.571429,
+    "HPRatio": 1.606879,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      808,
+      252,
+      616,
+      0
+    ]
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 50,
+    "AttackRatio": 6.400103,
+    "DefenceRatio": 2.52381,
+    "HPRatio": 6.527203,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1868,
+      488,
+      1676,
+      820
+    ]
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 60,
+    "AttackRatio": 14.739623,
+    "DefenceRatio": 3.47619,
+    "HPRatio": 43.136862,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3084,
+      1096,
+      2820,
+      3560
+    ],
+    "StatusProbability": 0.024,
+    "StatusResistance": 0.012
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 70,
+    "AttackRatio": 20.961318,
+    "DefenceRatio": 4,
+    "HPRatio": 69.629355,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3796,
+      1556,
+      3488,
+      4528
+    ],
+    "StatusProbability": 0.112,
+    "StatusResistance": 0.056
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 80,
+    "AttackRatio": 33.894765,
+    "DefenceRatio": 5.238095,
+    "HPRatio": 336.934826,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.32,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4705,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 355.019911,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 30,
+    "AttackRatio": 1.238569,
+    "DefenceRatio": 1.238095,
+    "HPRatio": 1.496191,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      612,
+      244,
+      448,
+      0
+    ]
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 40,
+    "AttackRatio": 2.941412,
+    "DefenceRatio": 1.904762,
+    "HPRatio": 3.025332,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      1016,
+      312,
+      788,
+      176
+    ]
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 50,
+    "AttackRatio": 9.071262,
+    "DefenceRatio": 2.904762,
+    "HPRatio": 10.786134,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      2380,
+      656,
+      2164,
+      1392
+    ]
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 60,
+    "AttackRatio": 17.056755,
+    "DefenceRatio": 3.666667,
+    "HPRatio": 43.548938,
+    "SpeedRatio": 1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      3248,
+      1232,
+      2968,
+      3916
+    ],
+    "StatusProbability": 0.056,
+    "StatusResistance": 0.028
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 70,
+    "AttackRatio": 24.211388,
+    "DefenceRatio": 4.285714,
+    "HPRatio": 94.987167,
+    "SpeedRatio": 1.1,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4064,
+      1892,
+      3728,
+      4936
+    ],
+    "StatusProbability": 0.16,
+    "StatusResistance": 0.08
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 80,
+    "AttackRatio": 33.894765,
+    "DefenceRatio": 5.238095,
+    "HPRatio": 289.836409,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.32,
+    "StatusResistance": 0.1
+  },
+  {
+    "HardLevelGroup": 4706,
+    "Level": 95,
+    "AttackRatio": 34.75065,
+    "DefenceRatio": 5.47619,
+    "HPRatio": 375.438496,
+    "SpeedRatio": 1.32,
+    "StanceRatio": 1,
+    "CombatPowerList": [
+      4632,
+      2648,
+      4252,
+      5896
+    ],
+    "StatusProbability": 0.36,
+    "StatusResistance": 0.1
   }
 ]

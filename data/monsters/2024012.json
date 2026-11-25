@@ -1,7 +1,7 @@
 {
   "id": "2024012",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "丰饶玄鹿（完整）",
     "en": "Abundant Ebon Deer (Complete)"
@@ -488,7 +488,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": null,
+        "stance_modify_value": 330,
         "stance_weak_list": [
           "Fire",
           "Ice",
@@ -1155,7 +1155,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": null,
+        "stance_modify_value": 330,
         "stance_weak_list": [
           "Fire",
           "Ice",

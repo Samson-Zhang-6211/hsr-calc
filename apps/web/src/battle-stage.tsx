@@ -21,7 +21,7 @@ import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { assetUrl } from './asset-url.js';
 import type { AnimFrame } from './battle-anim.js';
-import { EXTRA_SUMMON_OWNERS, POP_LIFETIME_MS } from './battle-anim.js';
+import { EXTRA_SUMMON_OWNERS } from './battle-anim.js';
 
 /** 属性徽章：nanoka 七元素图标（路径见 scripts/fetch-ui-icons.mjs） */
 export const elementIcon = (el: string): string => assetUrl(`element/${el.toLowerCase()}.webp`);
@@ -234,7 +234,7 @@ export function StagePops({
               className="stage-pop-tag"
               style={{
                 animationDelay: `${n.delayMs}ms`,
-                ['--anim-dur' as string]: `${POP_LIFETIME_MS}ms`,
+                ['--anim-dur' as string]: `${n.lifetimeMs}ms`,
                 ['--pop-x' as string]: `${n.offsetX}px`,
                 ['--pop-y' as string]: `${n.offsetY}px`,
               }}
@@ -248,7 +248,10 @@ export function StagePops({
             style={{
               color: n.color,
               animationDelay: `${n.delayMs}ms`,
-              ['--anim-dur' as string]: `${POP_LIFETIME_MS}ms`,
+              // 存活时长按动作段数收缩（battle-anim 的 popLifetimeMs）
+              ['--anim-dur' as string]: `${n.lifetimeMs}ms`,
+              // 字号连续分级：CSS 里是 calc(30px * var(--pop-scale))
+              ['--pop-scale' as string]: String(n.sizeScale),
               ['--pop-rot' as string]: `${n.angleDeg}deg`,
               ['--pop-x' as string]: `${n.offsetX}px`,
               ['--pop-y' as string]: `${n.offsetY}px`,
@@ -323,6 +326,21 @@ export function BattleStage(props: BattleStageProps): ReactNode {
     onEnemyArtError,
   } = props;
 
+  /**
+   * 战场轻震（2026-11-07 用户裁定：只给暴击 / 击破 / 终结技这个三种高光时刻）：
+   * 5× 倍速（帧时长 < 400ms）时不震——否则连续震会糊成抖动。
+   * 用帧号奇偶在两个同名 keyframes 间切换，避免 remount 立绘（同 `*-alt` 约定）。
+   */
+  const quakeFrame =
+    !!frame &&
+    frame.durationMs >= 400 &&
+    (frame.kind === 'ult' || frame.numbers.some((n) => n.tag !== undefined));
+  const quakeClass = quakeFrame
+    ? frame!.id % 2 === 1
+      ? ' stage-quake'
+      : ' stage-quake-alt'
+    : '';
+
   return (
     <section
       className="panel"
@@ -355,7 +373,10 @@ export function BattleStage(props: BattleStageProps): ReactNode {
         </div>
       )}
 
-      <div className="stage" style={{ padding: 14, background: 'linear-gradient(180deg,#121a33 0%,#0b1020 100%)' }}>
+      <div
+        className={`stage${quakeClass}`}
+        style={{ padding: 14, background: 'linear-gradient(180deg,#121a33 0%,#0b1020 100%)' }}
+      >
         {/* ── 左侧：竖排行动条（出手顺序，调用方注入） ── */}
         {rail && (
           <div className="stage-col stage-col--rail">

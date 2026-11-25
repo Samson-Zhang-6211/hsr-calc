@@ -1,10 +1,10 @@
 {
   "id": "5032020",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "部位左",
-    "en": "Part Left"
+    "en": "Giant Hand of Destiny"
   },
   "meta": {
     "rank": "MinionLv2",
@@ -164,7 +164,7 @@
   },
   "en": {
     "id": 5032020,
-    "name": "Part Left",
+    "name": "Giant Hand of Destiny",
     "desc": "...",
     "monster_camp_id": null,
     "attack_base": 18,

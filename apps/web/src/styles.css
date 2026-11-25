@@ -913,28 +913,58 @@ tbody tr:hover {
   animation-name: stageFlashAlt;
 }
 
-/* —— 伤害飘字（敌方用 +；我方受击时组件在文案前加 -） —— */
 /* —— 伤害飘字（敌方用 +；我方受击时组件在文案前加 -） ——
-   2026-10-25 按实战录屏重写：带自身倾斜（--pop-rot）、横向错开（--pop-x）、
-   纵向摊开（--pop-y），先「弹一下」再上飘淡出，存活 1000ms。 */
-@keyframes stagePop {
+   2026-10-25 按实战录屏重写（倾斜 + 横向错开 + 纵向摊开）。
+   2026-11-07 飙字批（用户裁定「按伤害大小连续分级 / 左右交替散开」）重写曲线：
+     ① 入场改成「小 → 冲过头 → 回弹」：0.55 → 1.16 → 0.99 → 1，不再是从 1.45 缩回来；
+     ② 位移与透明度**拆成两条动画**（stagePopMove / stagePopFade），
+        否则淡出会和上飘绑死、只能从 70% 才慢慢透明；
+     ③ 落定后**停住可读**，62% 才开始上飘 38px 并轻微缩小；
+     ④ 出生带 ±9° 倾斜，14% 处回正（一直是歪的会像贴歪了）；
+     ⑤ 字号由 JS 注入 `--pop-scale`（按伤害连续分级，见 battle-anim.ts 的 popSizeScale）。 */
+@keyframes stagePopMove {
+  0% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) + 14px))
+      rotate(var(--pop-rot, 0deg)) scale(calc(var(--pop-scale, 1) * 0.55));
+  }
+  /* 冲过头（打击感来源） */
+  7% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 5px))
+      rotate(var(--pop-rot, 0deg)) scale(calc(var(--pop-scale, 1) * 1.16));
+  }
+  /* 回弹落定 + 回正 */
+  14% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), var(--pop-y, 0px)) rotate(0deg)
+      scale(calc(var(--pop-scale, 1) * 0.99));
+  }
+  22% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), var(--pop-y, 0px)) rotate(0deg)
+      scale(var(--pop-scale, 1));
+  }
+  /* 停留到 62% 才开始上飘 */
+  62% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 10px))
+      rotate(0deg) scale(var(--pop-scale, 1));
+  }
+  100% {
+    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 38px))
+      rotate(0deg) scale(calc(var(--pop-scale, 1) * 0.94));
+  }
+}
+
+/* 透明度单独一条：5% 就完全显形，64% 之后才淡出（数字先「亮出来」再走） */
+@keyframes stagePopFade {
   0% {
     opacity: 0;
-    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) + 10px))
-      rotate(var(--pop-rot, 0deg)) scale(1.45);
   }
-  14% {
+  5% {
     opacity: 1;
-    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 8px))
-      rotate(var(--pop-rot, 0deg)) scale(1);
   }
-  70% {
+  64% {
     opacity: 1;
-    }
+  }
   100% {
     opacity: 0;
-    transform: translate(calc(-50% + var(--pop-x, 0px)), calc(var(--pop-y, 0px) - 54px))
-      rotate(var(--pop-rot, 0deg)) scale(1);
   }
 }
 
@@ -963,16 +993,19 @@ tbody tr:hover {
     2px -2px 0 var(--stage-pop-stroke, #16101a),
     -2px -2px 0 var(--stage-pop-stroke, #16101a),
     0 4px 12px rgba(0, 0, 0, 0.95);
-  animation: stagePop var(--anim-dur, 1000ms) cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  /* 2026-11-07 飙字批：位移/透明度拆两条动画（同一 --anim-dur），缓动只给位移那条 */
+  animation:
+    stagePopMove var(--anim-dur, 1400ms) cubic-bezier(0.16, 1, 0.3, 1) both,
+    stagePopFade var(--anim-dur, 1400ms) linear both;
 }
 
-/* 主伤害（大号）/ 散射·次级（小号）——实测主伤害约为次级的 2.5 倍 */
+/* 主伤害（大号）/ 散射·次级（小号）× 连续分级倍率（JS 注入 --pop-scale） */
 .stage-pop--main {
-  font-size: 30px;
+  font-size: calc(30px * var(--pop-scale, 1));
 }
 
 .stage-pop--sub {
-  font-size: 19px;
+  font-size: calc(19px * var(--pop-scale, 1));
 }
 
 /**
@@ -1250,6 +1283,48 @@ tbody tr:hover {
   animation: stageUltName var(--anim-dur, 2400ms) ease-out both;
 }
 
+/* —— 暴击 / 击破 / 终结技命中时的战场轻震（2026-11-07 用户裁定：只给这三种高光时刻） ——
+   用 transform 位移，不触发重排；两个同名 keyframes 供「同 id 奇偶切换」重播（同 *-alt 约定）。 */
+@keyframes stageQuake {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  22% {
+    transform: translate3d(-3px, 1px, 0);
+  }
+  52% {
+    transform: translate3d(2px, -1px, 0);
+  }
+  78% {
+    transform: translate3d(-1px, 0, 0);
+  }
+}
+
+@keyframes stageQuakeAlt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  22% {
+    transform: translate3d(3px, -1px, 0);
+  }
+  52% {
+    transform: translate3d(-2px, 1px, 0);
+  }
+  78% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+
+.stage-quake {
+  animation: stageQuake 150ms ease-out both;
+}
+
+.stage-quake-alt {
+  animation: stageQuakeAlt 150ms ease-out both;
+}
+
 /* —— 无障碍：用户系统偏好减少动态效果时关闭全部动画（只留数值变化） —— */
 @media (prefers-reduced-motion: reduce) {
   .stage-sprite,
@@ -1259,7 +1334,9 @@ tbody tr:hover {
   .stage-skillname,
   .stage-ult-whiteout,
   .stage-ult-portrait,
-  .stage-ult-name {
+  .stage-ult-name,
+  .stage-quake,
+  .stage-quake-alt {
     animation: none !important;
   }
 

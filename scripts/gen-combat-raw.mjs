@@ -238,6 +238,13 @@ for (const id of ['122301', '122302', '122303', '122304', '122307']) out[id] = g
 for (const id of ['122401', '122402', '122403', '122404', '122407', '122408']) out[id] = get('data/characters/1224.json', id, 'skill');
 // 不死途 1504：普攻/战技/终结技/天赋/秘技（150406 MazeNormal 不进战斗）
 for (const id of ['150401', '150402', '150403', '150404', '150407']) out[id] = get('data/characters/1504.json', id, 'skill');
+// 艾莲 1514：普攻/战技/终结技/天赋(鲨牙布)/零号连线/秘技/冰海潜游式(强化普攻)/
+// 联线变体(151410 冰海潜游式空参、151412 利齿修剪法空参、151418 冰海潜游式两参=联线触发版)；
+// 151406 MazeNormal 不进战斗
+for (const id of ['151401', '151402', '151403', '151404', '151405', '151406', '151407', '151408', '151410', '151412', '151418']) out[id] = get('data/characters/1514.json', id, 'skill');
+// 耀嘉音 1515：普攻/战技/终结技/天赋(切分音)/零号连线/秘技/高歌，倾落华彩(强化普攻)/共舞，跃动轻音(联线触发)；
+// 151510 强化普攻空参变体、151506 MazeNormal 不进战斗
+for (const id of ['151501', '151502', '151503', '151504', '151505', '151506', '151507', '151508', '151510', '151512']) out[id] = get('data/characters/1515.json', id, 'skill');
 
 fs.writeFileSync('packages/engine/src/combat/skill-raw.json', JSON.stringify(out), 'utf8');
 console.log('raw entries:', Object.keys(out).join(','));

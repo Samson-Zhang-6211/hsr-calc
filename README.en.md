@@ -23,8 +23,8 @@ in order. No backend, no account, no telemetry: builds and battle logs live in y
   refuse cross-origin requests).
 - **Bilingual UI** — Chinese / English, key-symmetric at the type level.
 
-Coverage: **99 characters · 665 enemies · 172 light cones · 64 relic sets · 5 stage packs**,
-game data pinned to **4.6.54**.
+Coverage: **101 characters · 666 enemies · 174 light cones · 64 relic sets · 5 stage packs**,
+game data pinned to **4.7.53**.
 
 ## Quick start
 
@@ -41,7 +41,7 @@ pnpm --filter @hsr-calc/web dev     # port 5173, path /hsr/
 ```bash
 pnpm -r typecheck   # engine + web, including test tsconfigs
 pnpm lint
-pnpm -r test        # 1,358 engine tests / 231 web tests
+pnpm -r test        # 1,385 engine tests / 243 web tests
 pnpm -r build
 ```
 

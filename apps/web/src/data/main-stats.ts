@@ -95,6 +95,8 @@ export const CHARACTER_MAIN_STATS: Record<string, MainStatKind> = {
   '1511': 'special',
   '1512': 'hp',
   '1513': 'atk',
+  '1514': 'atk',
+  '1515': 'atk',
   '8001': 'atk',
   '8002': 'atk',
   '8003': 'def',

@@ -144,6 +144,9 @@ const WT = {
   '8008': { [cd]: 5, [atk]: 3, [spd]: 3 },
   '8009': { [cd]: 5, [cr]: 3, [spd]: 3 },
   '8010': { [cd]: 5, [cr]: 3, [spd]: 3 },
+  // 批18（4.7.51 新增，2026-11-12 用户裁定）
+  '1514': DIRECT, // 艾莲：直伤暴击 C
+  '1515': { [spd]: 5, [atk]: 3, [cd]: 3, [cr]: 1 }, // 耀嘉音：辅助向（速度优先，拐力吃攻击力）
 };
 
 // 爆率上限非默认（仅 11 条；其余缺省 0.95 不写）
@@ -162,13 +165,13 @@ const CRIT = {
 };
 
 const ids = Object.keys(WT);
-if (ids.length !== 99) throw new Error(`权重清单应为 99 条，实际 ${ids.length}`);
+if (ids.length !== 101) throw new Error(`权重清单应为 101 条，实际 ${ids.length}`);
 if (Object.keys(CRIT).length !== 11) throw new Error('爆率非默认应为 11 条');
 
 // 与有效词条清单交叉校验：id 集必须一致、权重键必须属于该角色有效词条
 const effSrc = readFileSync('scripts/gen-effective-substats.mjs', 'utf8');
 const effIds = new Set([...effSrc.matchAll(/^ {2}'(\d+)': \[/gm)].map(m => m[1]));
-if (effIds.size !== 99) throw new Error(`有效词条清单解析应为 99 条，实际 ${effIds.size}`);
+if (effIds.size !== 101) throw new Error(`有效词条清单解析应为 101 条，实际 ${effIds.size}`);
 for (const id of ids) {
   if (!effIds.has(id)) throw new Error(`${id}: 不在有效词条清单中`);
 }
@@ -208,4 +211,4 @@ for (const [id, weights] of Object.entries(WT)) {
   ok++;
 }
 if (problems.length) throw new Error('问题：\n' + problems.join('\n'));
-console.log(`权重写入完成：${ok}/99（meta.substatWeights）+ 爆率上限 ${Object.keys(CRIT).length} 条（meta.critRateTarget）`);
+console.log(`权重写入完成：${ok}/${ids.length}（meta.substatWeights）+ 爆率上限 ${Object.keys(CRIT).length} 条（meta.critRateTarget）`);

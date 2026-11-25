@@ -1,7 +1,7 @@
 {
   "id": "4035012",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "反造物主，流溢之恨",
     "en": "Anti-Creator, Hatred Inundate"
@@ -259,7 +259,7 @@
           {
             "id": 403501206,
             "skill_name": "The Spirit's Prison Shall Burn",
-            "skill_desc": "Deals massive Imaginary DMG and inflicts the \"Action Lock\" state to the locked-on target.",
+            "skill_desc": "Deals massive Imaginary DMG to the locked-on target.",
             "damage_type": "Imaginary",
             "sp_hit_base": 15,
             "extra": {}
@@ -291,7 +291,7 @@
           {
             "id": 403501213,
             "skill_name": "Reversal",
-            "skill_desc": "After using \"Resist and Destroy,\" this unit gains \"Reversal,\" its Toughness cannot be reduced, and all DMG taken is greatly reduced. \"Mythos\" and \"Logos\" gain \"Non-Existence,\" DMG taken from non-memosprite units is greatly reduced, DMG taken from memosprite units is slightly reduced, and the efficiency of DMG dealt by memosprites in dispelling \"Non-Existence\" greatly increases. When the \"Non-Existence\" on \"Mythos\" and \"Logos\" is dispelled, this unit's \"Reversal\" is dispelled, and this unit takes massive DMG and its DMG taken increases. If this unit's HP drops to a certain threshold before using \"Resist and Destroy,\" immediately uses \"Resist and Destroy.\"",
+            "skill_desc": "After using \"Resist and Destroy,\" this unit gains \"Reversal,\" its Toughness cannot be reduced, and all DMG taken is greatly reduced. \"Mythos\" and \"Logos\" gain \"Non-Existence,\" DMG taken from non-memosprite units is greatly reduced, DMG taken from memosprite units is slightly reduced, and the efficiency of DMG dealt by memosprites in dispelling \"Non-Existence\" greatly increases. When the \"Non-Existence\" on \"Mythos\" and \"Logos\" is dispelled, this unit's \"Reversal\" is dispelled, this unit takes massive DMG, and DMG taken by this unit increases. If this unit's HP drops to a certain threshold before using \"Resist and Destroy,\" immediately uses \"Resist and Destroy.\"",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {}

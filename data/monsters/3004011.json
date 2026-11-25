@@ -1,7 +1,7 @@
 {
   "id": "3004011",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "昔在、今在、永在的剧目（完整）",
     "en": "The Past, Present, and Eternal Show (Complete)"
@@ -113,7 +113,7 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 1.259259,
+        "hp_modify_ratio": 1.481481,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
@@ -344,7 +344,7 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 1.259259,
+        "hp_modify_ratio": 1.481481,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,

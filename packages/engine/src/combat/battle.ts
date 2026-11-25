@@ -269,6 +269,10 @@ export const ENERGY_MAX: Record<CharId, number> = {
   dahlia: 130,
   /** 忘归人 1225：sp_need=130（1225.json zh.sp_need，正常能量体系） */
   fugue: 130,
+  /** 艾莲 1514：sp_need=240（1514.json zh.sp_need）——上限 ≥200，专武23066「单次消耗≥200能量」必触发 */
+  ellen: 240,
+  /** 耀嘉音 1515：sp_need=240（1515.json zh.sp_need）——专武23067「消耗≥240」必然满足 */
+  yaojiayin: 240,
 };
 /** 晴歌大招【特邀嘉宾】额外气氛（151203 #2，全等级恒 2） */
 const GUEST_MOOD = 2;
@@ -1381,7 +1385,7 @@ const TRACE = {
     eidolon4DefIgnore: 0.18,
     eidolon6DmgBonus: 7.29,
   },
-  /** 花火 1306（加强版 4.6：zh.enhanced['1'] 实读；接入六项裁定见 项目维护记录） */
+  /** 花火 1306（加强版 4.6：zh.enhanced['1'] 实读；接入六项裁定见 AGENTS.md） */
   huahuo: {
     /** 行迹岁时记 point06 [10,1]：普攻额外回#1=10能量（×充能）；持战技暴伤 buff 者
      * 每消耗 1 战技点 → 花火回 #2=1 能量（×充能） */
@@ -1404,7 +1408,7 @@ const TRACE = {
     /** 大招溢出记录 SP 池上限（130603 #5；仅大招恢复的溢出入池——2026-10 用户裁定） */
     overflowPoolMax: 10,
   },
-  /** 藿藿 1217（加强版 4.6：zh.enhanced['1'] 实读；丰饶接入，裁定见 项目维护记录）。
+  /** 藿藿 1217（加强版 4.6：zh.enhanced['1'] 实读；丰饶接入，裁定见 AGENTS.md）。
    * 技能参数走 skillParams('1217xx')：普攻121701 SingleAttack 藿藿生命上限0.7(lv10) sp20/bp+1、
    * 战技121702 [0.24,640,0.192,512,1] 主目标治疗+#1生命上限+#2/编队相邻+#3生命上限+#4（负面解除#5跳过）、
    * 大招121703 [0.2,0.4,2] 除自身外队友各回#1×各自能量上限(×充能)+攻+#2持续#3回合、
@@ -1521,7 +1525,7 @@ const TRACE = {
     eidolon4Energy: 5,
     eidolon6BasicHpPct: 0.4,
   },
-  /** 玲可 1110（量子/Priest；1110.json 实读 2026-10；裁定见 项目维护记录）。
+  /** 玲可 1110（量子/Priest；1110.json 实读 2026-10；裁定见 AGENTS.md）。
    * 技能参数走 skillParams('1110xx')：普攻111001 0.7×hp量子单体 sp20/stance30、
    * 战技111002 [0.075,200,2,0.12,320,5] 求生反应7.5%上限+200持2回合+直疗12%上限+320 sp30、
    * 终招111003 [1,0.135,360] 全队治13.5%上限+360（p0=1解负面跳过）sp5、
@@ -1538,7 +1542,7 @@ const TRACE = {
     eidolon4Turns: 1,
     eidolon6HpPct: 0.06,
   },
-  /** 白露 1211（雷/Priest；1211.json 实读 2026-10；裁定见 项目维护记录）。
+  /** 白露 1211（雷/Priest；1211.json 实读 2026-10；裁定见 AGENTS.md）。
    * 技能参数走 skillParams('1211xx')：普攻121101 1.4×atk雷单体 sp20、
    * 战技121102 [0.117,312,0.15,2] 主目标直疗11.7%上限+312、随机单体2次治疗递减15%、
    * 终招121103 [0.135,360,2] 全队治13.5%上限+360 + 生息2回合（已有延长1回合）sp5、
@@ -3268,6 +3272,91 @@ const TRACE = {
     skillDefDown: 0.4,
     skillSpBack: 1,
   },
+  /** 艾莲 1514（1514.json 实读 2026-11-13；**4.7.53 机制重做** 2026-11-25） */
+  ellen: {
+    /** 天赋151404：咬合力上限 6（#段文案「艾莲拥有6点【咬合力】上限」） */
+    biteCap: 6,
+    /** 强化普攻151408：咬合力 ≥3 激活【冰海潜游式】，消耗全部 */
+    diveThreshold: 3,
+    /** 冰海潜游式额外随机段门槛：每多消耗 1 点（超过 3）→ 1 段 #3（151408 下标 2） */
+    diveExtraBase: 3,
+    /** 行迹 point07「潜水状态」（4.7.53 重写，params `[3,0.1,2]`）：进战 +3 咬合力；
+     *  咬合力**满上限后**每额外获得 1 点 → 行动提前 10%，每回合最多 2 次，艾莲自身回合结束重置 */
+    p07StartBite: 3,
+    p07Advance: 0.1,
+    p07AdvanceCap: 2,
+    /** 行迹 point08「用餐礼仪」（4.7.53 只留前半句，params `[1]`）：鲨牙布攻击后 +1 咬合力（每次鲨牙布行动 1 次） */
+    p08BitePerShark: 1,
+    /** 行迹 point06「漫游模式」：每名「提供增益」的队友 → 暴伤 +64%（最多计 2 名）；2 名时伤害 +48% */
+    p06CritDmg: 0.64,
+    p06MaxCount: 2,
+    p06DmgBonus: 0.48,
+    /** E1（4.7.53 重写，params `[0.25,4,0.36]`）：艾莲回合开始回 4 点咬合力；
+     *  冰海潜游式**无条件**无视 36% 防御；本次**消耗 6 点** → 攻击结束后行动提前 25% */
+    e1DefIgnore: 0.36,
+    e1Advance: 0.25,
+    e1TurnStartBite: 4,
+    /** E2（4.7.53 重写，params `[5,0.4,1]`）：冰海潜游式后鲨牙布**立即追加攻击**；
+     *  鲨牙布每次攻击 → 回 5 能 + 1 咬合力 + 下一次冰海潜游式暴伤 +40%（不可叠加） */
+    e2Energy: 5,
+    e2Bite: 1,
+    e2CritDmg: 0.4,
+    /** E4（4.7.53 重写，params `[0.12]`）：冰海潜游式**固定**冰属性抗穿 12%（与消耗量解耦） */
+    e4ResPen: 0.12,
+    /** E6（4.7.53 上限 2→1，params `[1,1,6,0.2,3]`）：冰海潜游式冰抗穿 +20%、随机单体段 +3；
+     *  终结技 +1 层狂宴时刻（**上限 1 层**）；回合结束/零号连线结束消耗 1 层 → 额外回合 + 回 6 咬合力 */
+    e6ResPen: 0.2,
+    e6ExtraHits: 3,
+    e6FeastCap: 1,
+    e6BiteBack: 6,
+    /** 秘技151407（参数实读 [20,3,10,0.5]，取后三项） */
+    techBite: 3,
+    techEnergy: 10,
+    techMult: 0.5,
+  },
+  /** 耀嘉音 1515（1515.json 实读 2026-11-13；**4.7.53 E1/E2 重做** 2026-11-25；量子·同谐） */
+  yaojiayin: {
+    /** 战技151502：全队攻击力 += 自身攻击 ×#1 + #3（快照），持续 #2 回合（自身回合开始减 1） */
+    skillAtkTurns: 3,
+    /** E2：战技攻击力额外 +12% 自身攻击 */
+    e2SkillAtkExtra: 0.12,
+    /** 结界151503：#2 回合（自身回合开始减 1）、敌方易伤 #3、普攻附加伤害 #4 */
+    fieldTurns: 4,
+    /** 天赋151504：每次攻击 +1 层切分音、上限 #3=10、持续 #2=3 回合（整体刷新） */
+    segPerHit: 1,
+    segMax: 10,
+    segTurns: 3,
+    /** 行迹 point06「幻想音阶」：暴击率 +50%；攻击 >#2=2000 后每 200 点 → 暴伤 +20%，上限 +200% */
+    p06CritRate: 0.5,
+    p06AtkBase: 2000,
+    p06AtkStep: 200,
+    p06CritDmgStep: 0.2,
+    p06CritDmgCap: 2,
+    /** 行迹 point07「鎏金乐章」：施放高歌回 10 能（E1 提升至 20） */
+    p07Energy: 10,
+    p07EnergyE1: 20,
+    /** 行迹 point08「不夜巡演」：我方普攻额外 +1 层切分音；持有层数时全队伤害 +40% */
+    p08SegExtra: 1,
+    p08Dmg: 0.4,
+    /** E1（4.7.53 重做，params `[0.24,20]`）：结界期间，我方角色施放**造成普攻伤害的攻击**后，
+     *  对命中目标中当前生命值最高者额外造成 1 次 = **本次攻击总伤害值 ×24%** 的【真实伤害】
+     *  （不吃任何乘区、不视为 1 次攻击 —— 2026-11-24 用户裁定 Q1）。
+     *  行迹 point07 回能提升至 20 点（与 `p07EnergyE1` 一致，保留）。 */
+    e1TrueRatio: 0.24,
+    /** E4：高歌倍率 +60% 原倍率；终结技倍率 +100% 原倍率 */
+    e4GaogeBonus: 0.6,
+    e4UltBonus: 1,
+    /** E6：结界期间全队全属性抗穿 +20%；终结技后固定回 240 能（每 4 次终结技触发 1 次）；
+     *  进战 +10 层切分音 */
+    e6ResPen: 0.2,
+    e6UltEnergy: 240,
+    e6UltEvery: 4,
+    e6StartSeg: 10,
+    /** 零号连线151505：队伍不含艾莲 → 终结技后额外回 #1=40 能 */
+    zeroLineSoloEnergy: 40,
+    /** 秘技151507：下一次战斗开始自动触发 1 次战技（不耗 SP） */
+    techFreeSkill: 1,
+  },
 } as const;
 
 /** 击破 DoT 元素映射（冰/虚数无常规击破 DoT）与持续时长（常规口径，待游戏内复核） */
@@ -3294,7 +3383,7 @@ const BREAK_DOT_DURATION: Record<BreakDotType, number> = {
  * 当前阿格莱雅「披星百裂」、绯英「落英·散者皆忆」（150507 tag=MazeAttack）、
  * 水砂「于静水掀起风浪」（151307 tag=MazeAttack）为攻击类；
  * 腾荒「地坼」tag=Impair（区域晕眩、无伤害）非攻击类。 */
-const ATTACK_TECHNIQUE_IDS: ReadonlySet<CharId> = new Set<CharId>(['aglaea', 'feiying', 'shuisha', 'xiedie', 'natasha', 'gallagher', 'kafka', 'yinlang', 'huangquan', 'qianye', 'pela', 'luka', 'guinaifen', 'saifeir', 'asta', 'hanya', 'serval', 'jade', 'argenti', 'blade', 'gilgamesh', 'firefly', 'xueyi', 'arlan', 'hook', 'danhengIL', 'phainon', 'sushang', 'ashveil', 'feixiao']);
+const ATTACK_TECHNIQUE_IDS: ReadonlySet<CharId> = new Set<CharId>(['aglaea', 'feiying', 'shuisha', 'xiedie', 'natasha', 'gallagher', 'kafka', 'yinlang', 'huangquan', 'qianye', 'pela', 'luka', 'guinaifen', 'saifeir', 'asta', 'hanya', 'serval', 'jade', 'argenti', 'blade', 'gilgamesh', 'firefly', 'xueyi', 'arlan', 'hook', 'danhengIL', 'phainon', 'sushang', 'ashveil', 'feixiao', 'ellen']);
 /** 毁灭开拓者 8001/8002（同构双形态，技能/参数共用） */
 const TB_DESTROY_IDS: ReadonlySet<CharId> = new Set<CharId>(['trailblazerDestroy', 'trailblazerDestroy2']);
 /** 欢愉命途角色（参演阿哈时刻/生成实体的判定集合） */
@@ -3338,7 +3427,7 @@ export type AllyTargetKind = 'single' | 'blast' | 'aoe' | 'none';
  *    啊哈151101/02/03、爻光150201/02/03、火花150101/02/03、狼尊150601/02/03、绯英150501/02/03、水砂151301/02/03）
  * - 类型由 `skill-data.ts` 的 `skillTag()` 实读得出：SingleAttack→single / Blast→blast / AoEAttack→aoe，
  *   其余 tag（Summon/Support/Defence/Enhance…）均为无敌方目标的辅助技能 → none
- * - 2026-10-10 生成脚本 `%TEMP%\临时目录\gen-target-kinds.mjs`（解析 skill-data.ts 的 id→tag + 角色技能键序）
+ * - 2026-10-10 生成脚本 `%TEMP%\opencode\gen-target-kinds.mjs`（解析 skill-data.ts 的 id→tag + 角色技能键序）
  *
  * 用途：全真模拟点选敌方目标时，主目标黄框加粗、blast 的相邻目标只加粗。 */
 export const ALLY_TARGET_KINDS: Readonly<Record<CharId, Readonly<Record<AllyAction, AllyTargetKind>>>> = {
@@ -3498,6 +3587,12 @@ export const ALLY_TARGET_KINDS: Readonly<Record<CharId, Readonly<Record<AllyActi
   sanyueqi2: { basic: 'single', skill: 'none', ult: 'single' },
   /** 不死途：普攻/战技/终结技均单体（战技/终结技另挂【饲饵】） */
   ashveil: { basic: 'single', skill: 'single', ult: 'single' },
+  /** 艾莲 1514：普攻常态单体 / 咬合力≥3 时强化为【冰海潜游式】扩散 → 记 blast（UI 相邻加粗）；
+   *  战技扩散、终结技全体 */
+  ellen: { basic: 'blast', skill: 'blast', ult: 'aoe' },
+  /** 耀嘉音 1515：战技无敌方目标（支援）；普攻常态单体、战技强化后为【高歌，倾落华彩】全体
+   *  → 记 aoe（强化态是常态）；终结技全体 */
+  yaojiayin: { basic: 'aoe', skill: 'none', ult: 'aoe' },
 };
 
 /** 召唤物 → 主人（BattleStatus.summons 顺序；仅列主人已入队的召唤物，UI 排在主人卡右侧） */
@@ -3512,6 +3607,8 @@ export const SUMMON_OWNERS: readonly { id: AllyUnitId; owner: CharId }[] = [
   { id: 'changye', owner: 'changyeyue' },
   { id: 'demiurge', owner: 'xilian' },
   { id: 'fuyuan', owner: 'lingsha' },
+  /** 艾莲 1514 天赋【邦布帮帮】召唤的【鲨牙布】：普通召唤物（非忆灵），独立行动条 */
+  { id: 'shazabu', owner: 'ellen' },
 ];
 
 /** 星期日星魂1：目标 → 该目标的召唤物（无视防御 40% 挂哪个 holder） */
@@ -3520,6 +3617,8 @@ const SUNDAY_E1_SUMMON: Partial<Record<CharId, CombatUnitId>> = {
   tenghuang: 'longling',
   qingge: 'memo',
   aglaea: 'yijiang',
+  /** 艾莲 1514 天赋召唤物【鲨牙布】（2026-11-13：星期日 E1「目标及其召唤物」覆盖普通召唤物） */
+  ellen: 'shazabu',
 };
 
 /** 可入场角色 → 命途（遗器314 出云「同命途队友」进战判定；面板无 path 字段的对照表，
@@ -3631,6 +3730,11 @@ const CHAR_PATH: Record<string, string> = {
   seele: 'Rogue',
   archer: 'Rogue',
   boothill: 'Rogue',
+  // 4.7.51 新增两角色（2026-11-12 数据层入场；2026-11-13 引擎接入）
+  /** 艾莲 1514：meta.path=Warrior（冰·毁灭），嘲讽 125 */
+  ellen: 'Warrior',
+  /** 耀嘉音 1515：meta.path=Shaman（量子·同谐），嘲讽 100 */
+  yaojiayin: 'Shaman',
 };
 
 /** 命途等价名：CHAR_PATH 里 6 个旧名（瓦尔特/佩拉/桑博/卢卡/桂乃芬/赛飞儿）写的是 'Nihility'，
@@ -3784,8 +3888,8 @@ const TAUNT_MEMO: Record<string, number> = {
   xiaoyika: 100,
 };
 
-/** 不可受击的我方单位（后援/界外）：神君、龙灵、死龙、德谬歌、浮元 —— 不进受击池，嘲讽值 0 */
-const UNTARGETABLE_UNITS: ReadonlySet<string> = new Set(['shenjun', 'longling', 'silong', 'demiurge', 'fuyuan']);
+/** 不可受击的我方单位（后援/界外）：神君、龙灵、死龙、德谬歌、浮元、鲨牙布 —— 不进受击池，嘲讽值 0 */
+const UNTARGETABLE_UNITS: ReadonlySet<string> = new Set(['shenjun', 'longling', 'silong', 'demiurge', 'fuyuan', 'shazabu']);
 
 /** 有 HP 模型、可被敌方攻击的忆灵单位（2026-10 完整链 question 裁定：小伊卡/迷迷/晴空乐手）：
  * 进受击池 + 敌伤走专用分支（memberHp/shieldValues 按单位 id 记账）+ HP 归零退场效果 */
@@ -4126,6 +4230,10 @@ const EIDOLON_SKILL_UP: Partial<
   sanyueqi2: { e3: { skill: 2, basic: 1 }, e5: { ult: 2, talent: 2 } },
   // 不死途 E3 终结技+2/普攻+1；E5 战技+2/天赋+2
   ashveil: { e3: { ult: 2, basic: 1 }, e5: { skill: 2, talent: 2 } },
+  // 艾莲 1514 E3 战技+2/天赋+2；E5 终结技+2/普攻+1（1514.json zh.ranks[3]/[5].desc 实读）
+  ellen: { e3: { skill: 2, talent: 2 }, e5: { ult: 2, basic: 1 } },
+  // 耀嘉音 1515 E3 战技+2/天赋+2；E5 终结技+2/普攻+1（1515.json zh.ranks[3]/[5].desc 实读）
+  yaojiayin: { e3: { skill: 2, talent: 2 }, e5: { ult: 2, basic: 1 } },
     topaz: { e3: { skill: 2, basic: 1 }, e5: { ult: 2, talent: 2 } },
   };
 
@@ -4139,7 +4247,7 @@ const EIDOLON_SKILL_UP: Partial<
  * - 木桩只挨打不反击（用户确认），其行动仅用于击破 DoT 跳伤。
  * - 气氛值整数（倒计时扣除后向下取整）。
  *
- * 简化与待核点（详见 项目维护记录 与交付说明）：
+ * 简化与待核点（详见 AGENTS.md 与交付说明）：
  * - 击破基数=80 级锚点（全等级表未缺）；破韧后韧性立即回满且保持已破韧状态（×1 不再 ×0.9）；
  * - 非弱点属性削韧×0.2（常规口径）；神君每段削韧15、龙灵追加削韧60 待游戏内复核。
  * - 忆灵继承晴歌暴击/增伤面板；忆灵行动给晴歌回 20 能量（1151201 sp_base，×充能效率）、
@@ -4197,6 +4305,16 @@ export interface BattleStatus {
   };
   /** 召唤物实时状态（战斗可视化：主人卡右侧小卡）。仅列出主人已入队的召唤物 */
   summons: SummonStatus[];
+  /** 艾莲【咬合力】（缺省 = 不在队；HUD 显示用）。4.7.53 起【热量】已删除 */
+  ellenBite?: number;
+  /** 耀嘉音【切分音】层数（缺省 = 不在队；HUD 显示用） */
+  yaoSeg?: number;
+  /**
+   * 当前正在执行的「额外回合」口径（缺省 = 不在额外回合）。
+   * `allowUlt=false` → 该额外回合不能插入施放终结技（全真模拟应禁终结技按钮）；
+   * 4.7.52 文案新增「可插入施放终结技的额外回合」→ 艾莲 E6 与零号连线三处为 true。
+   */
+  extraTurn?: { allowUlt: boolean };
 }
 
 /** 敌方召唤物实时状态（独立敌方实体；在场才能被我方指定为目标） */
@@ -4668,6 +4786,12 @@ function* battleSteps(
       case 'ashveil':
         // 战技=挂【饲饵】+已饲饵时额外段+回 SP → SP 足时战技
         return ctx.sp >= 1 ? 'skill' : 'basic';
+      case 'ellen':
+        // 咬合力 ≥3 → 强化普攻【冰海潜游式】把资源打出去；否则战技补咬合力 + 挂【咬痕】
+        return ellenBite >= TRACE.ellen.diveThreshold ? 'basic' : ctx.sp >= 1 ? 'skill' : 'basic';
+      case 'yaojiayin':
+        // 战技（全队攻击 + 强化普攻）到期 → 补战技；强化期间普攻自动走【高歌，倾落华彩】
+        return yaoSkillTurns <= 0 && ctx.sp >= 1 ? 'skill' : 'basic';
       case 'blade':
         // 地狱变中普攻=强化普攻；否则战技进入地狱变
         return bladeInHell() ? 'basic' : 'skill';
@@ -5014,6 +5138,10 @@ function* battleSteps(
     saifeir: ENERGY_MAX.saifeir / 2,
     dahlia: ENERGY_MAX.dahlia / 2 + TRACE.dahlia.talentInitEnergy,
     fugue: ENERGY_MAX.fugue / 2,
+    /** 艾莲 1514：无开局回能行迹 → 初始=上限50%（120/240）；秘技另 +10 */
+    ellen: ENERGY_MAX.ellen / 2,
+    /** 耀嘉音 1515：无开局回能行迹 → 初始=上限50%（120/240） */
+    yaojiayin: ENERGY_MAX.yaojiayin / 2,
   };
   let stacks = techniques ? 6 : 3;
   let mood = 0;
@@ -5376,7 +5504,7 @@ function* battleSteps(
     );
   }
 
-  // ===== 爻光 1502 / 结界与大吉大利状态（2026-10 接入，裁定见 项目维护记录） =====
+  // ===== 爻光 1502 / 结界与大吉大利状态（2026-10 接入，裁定见 AGENTS.md） =====
   /** 【结界】剩余回合（150202 #1=3：爻光自身每回合开始 -1；0=无结界） */
   let ygZoneLeft = 0;
   /** 【凶星低语】敌方全体 debuff 由 mon.buffs 承载（vulnerability，同源覆盖刷新），无独立状态 */
@@ -5386,7 +5514,7 @@ function* battleSteps(
   let ygE2SpeedApplied = false;
   /** 升格150229 爽点回能已按 4.6.53 新文案移除（改为终招后固定回能，见 castUltFor yaoguang 分支） */
 
-  // ===== 星神★阿哈 1511 / 欢愉系统状态（2026-10 接入，裁定见 项目维护记录 欢愉角色接入节） =====
+  // ===== 星神★阿哈 1511 / 欢愉系统状态（2026-10 接入，裁定见 AGENTS.md 欢愉角色接入节） =====
   /** 【愿力】0-10（激活门槛 TRACE.aha.willPowerMax=8；151104 #11 溢出上限 10；开大耗 8；啊哈不在队恒 0） */
   let willPower = 0;
   // ===== 【虚构叙事·荒腔走板】战意值（0-100，2026-11-02 用户提供文案）=====
@@ -5469,7 +5597,7 @@ function* battleSteps(
   /** 效果命中/抵抗独立随机流（避免新 debuff 判定扰动敌方技能与目标选择的既有种子序列） */
   let debuffRngState = ((config.seed ?? 20261007) ^ 0x9e3779b9) >>> 0;
 
-  // ===== 狼尊 1506（银狼LV.999）/ 无敌玩家·隐藏分·盲盒状态（2026-10 接入，裁定见 项目维护记录） =====
+  // ===== 狼尊 1506（银狼LV.999）/ 无敌玩家·隐藏分·盲盒状态（2026-10 接入，裁定见 AGENTS.md） =====
   /** 【隐藏分】0-300（上限=60+240、升格=60+360 待核；开大耗 60；退出状态清空、E1 保留 20%） */
   let hiddenScore = 0;
   /** 【无敌玩家】状态（150603 进入并立即行动；完整施放 3 次强化普攻后退出；状态内禁开大） */
@@ -5489,7 +5617,7 @@ function* battleSteps(
    * 下一次 record 前合并进 allNotes） */
   let lzExtraNotes: string[] = [];
 
-  // ===== 绯英 1505 / 天赋互转·狐狸老师状态（2026-10 接入，裁定见 项目维护记录） =====
+  // ===== 绯英 1505 / 天赋互转·狐狸老师状态（2026-10 接入，裁定见 AGENTS.md） =====
   /** 天赋150504 累计能量（单次获能量最多记 240、达 240 消耗并发动【狐狸老师】追加攻击） */
   let fyEnergyAccum = 0;
   /** 升格150529 #1：累计【绝活共赏】计步器（每满 #4=480 → 武装下一次终招倍率） */
@@ -5520,7 +5648,7 @@ function* battleSteps(
     }
   }
 
-  // ===== 水砂 1513 砂金•戏浪 / 热意·举杯·All in 状态（2026-10 接入，14 项裁定见 项目维护记录） =====
+  // ===== 水砂 1513 砂金•戏浪 / 热意·举杯·All in 状态（2026-10 接入，14 项裁定见 AGENTS.md） =====
   /** 【热意】当前值（上限=天赋 #4=30、E2=50；举杯不消耗〔裁定⑧〕，All in 施放时消耗全部） */
   let shHeat = 0;
   /** 已触发过的举杯阈值（边沿触发：热意从低于阈值升到阈值才触发一次；E1=10/20/30、E2 另加 40/50） */
@@ -5545,7 +5673,7 @@ function* battleSteps(
   /** 终招速度 buff 的乘数（1+percent；还原用，防除不尽漂移） */
   let shSpeedMult = 1;
 
-  // ===== 真珠 1503 / 深度学习·抵御·底本状态（2026-10 接入，十项裁定见 项目维护记录） =====
+  // ===== 真珠 1503 / 深度学习·抵御·底本状态（2026-10 接入，十项裁定见 AGENTS.md） =====
   /** 【好活当赏】独立池（天赋持续无限不递减；上限 50/升格 75；受击抵挡消耗、治疗/技能获得） */
   let zzGoodWork = 0;
   /** 【深度学习】已激活（终结技/秘技开启；普攻强化、充能耗尽结束） */
@@ -5574,7 +5702,7 @@ function* battleSteps(
   let zzExtraGrantGood = 0;
   let zzExtraGrantLaugh = 0;
 
-  // ===== 开拓者·欢愉 8009/8010 / 天赋·行迹·星魂状态（2026-10 接入，六项裁定见 项目维护记录） =====
+  // ===== 开拓者·欢愉 8009/8010 / 天赋·行迹·星魂状态（2026-10 接入，六项裁定见 AGENTS.md） =====
   /** E1 相信光的时间：战技后叠层（下一次终结技目标好活 +2×层、最多3层，开大消费后清零） */
   let tbE1Stacks = 0;
   /** 升格800929 #3：开拓者额外欢愉技的伤害总量（待被「随后的阿哈欢愉技真伤」替换消费；0 = 无待结算） */
@@ -5584,7 +5712,7 @@ function* battleSteps(
   /** 开拓者散落备注（欢愉技 E4/E6/秘技等 helper 无法直达 notes；下一次 record 前合并） */
   let tbExtraNotes: string[] = [];
 
-  // ===== 火花 1501 / 直播连线·爆点状态（2026-10 接入，裁定见 项目维护记录） =====
+  // ===== 火花 1501 / 直播连线·爆点状态（2026-10 接入，裁定见 AGENTS.md） =====
   /** 【直播连线】已开启（战技开启；强化普攻结算后关闭；开启期间普攻=强化普攻） */
   let hhLinkOn = false;
   /** 本次连线累计发动的【互动陷阱】次数（天赋额外欢愉段按此计；强化普攻结算后清零） */
@@ -5597,6 +5725,14 @@ function* battleSteps(
   let hhE4DegreeLeft = 0;
   /** E2：阿哈时刻结束获额外回合（不消耗回合数、期间禁插终结技；其行动结束清除） */
   let hhExtraTurnBlock = false;
+  /**
+   * 额外回合口径（4.7.52 文案 + 2026-11-17 用户裁定）：
+   * - `inExtraTurn`：当前事件是否为额外回合（statusOf 据此给 UI 出 `extraTurn` 字段）；
+   * - `extraTurnAllowUlt`：该额外回合是否**可插入施放终结技**（仅艾莲 E6 与零号连线三处）。
+   *   普通型（false）沿用旧口径：额外回合期间队列/跟放大招都要让位。
+   */
+  let inExtraTurn = false;
+  let extraTurnAllowUlt = false;
   /** 专武23053：每消耗1SP（含爆点抵扣）无视防御+5%≤4层；同回合消耗≥4SP→【推流】
    * （全队欢愉度+#4%；推流持续回合文案未写，先按永久、待游戏内复核） */
   let hhLcDefStacks = 0;
@@ -5858,8 +5994,15 @@ function* battleSteps(
   /** 23063【新声】速度剩余回合 */
   const lc5cVoiceLeft = new Map<string, number>();
   const lc5cVoiceSpeed = new Map<string, number>();
+  // ===== 专武23066 雨天请勿排班（毁灭，艾莲专武；2026-11-13 接入）=====
+  /** 佩戴者（无 = 无人装备） */
+  let lc66Wear: CharId | undefined;
+  /** 【零食】剩余回合（施放普攻获得，2 回合；持有期间攻击力 +#2 —— #2 由 web 烘焙，这里只记持续时间） */
+  let lc66SnackLeft = 0;
+  /** 【冰饮】剩余回合（单次消耗 ≥200 能施放终结技获得，3 回合；普攻/终结技无视 #3 防御） */
+  let lc66IceLeft = 0;
 
-  // ===== 虚无命途光锥批（2026-10-15，24 锥；G1-G8 裁定见 项目维护记录）=====
+  // ===== 虚无命途光锥批（2026-10-15，24 锥；G1-G8 裁定见 AGENTS.md）=====
   /** 【末法余烬】破韧 → 立即阿哈额外回合的固定计入笑点（占位，可调） */
 const STAGE_EMBER_AHA_LAUGH = 10;
 /** 【记忆紊流】极乐漩涡附带阿哈额外回合的固定笑点（文案「固定计入 20 笑点」） */
@@ -5877,7 +6020,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** 23022 重塑时光之忆（先知）：每佩戴者本场已叠过的 DoT 类型（一次一种） */
   const lc22Seen = new Map<CharId, Set<string>>();
 
-  // ===== 缇宝 1403 状态（2026-10 接入；七项机制裁定见 项目维护记录 m0072） =====
+  // ===== 缇宝 1403 状态（2026-10 接入；七项机制裁定见 AGENTS.md m0072） =====
   /** 【神启】剩余回数（战技/秘技获得；自身每回合开始 -1；持有期间全队全属性抗穿） */
   let tibaoShenqi = 0;
   /** 结界剩余回数（大招开启；自身每回合开始 -1；持有期间敌受伤+%、我方攻击后附伤） */
@@ -5936,7 +6079,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   // 等后置 let，须在全部状态声明完成后加算（energy map 初始化时会 TDZ）
   if (ids.has('tibao')) energy.tibao += TRACE.tibao.point08Energy * errMul('tibao');
 
-  // ===== 花火 1306（加强版）状态与专武 23021（2026-10 接入；六项裁定见 项目维护记录 m0025） =====
+  // ===== 花火 1306（加强版）状态与专武 23021（2026-10 接入；六项裁定见 AGENTS.md m0025） =====
   /** 大招溢出记录 SP 池（130603 #5=10；仅大招恢复的溢出入池，其余来源溢出丢弃——用户裁定） */
   let hh2Overflow = 0;
   /** 【幻相】层数（130604：花火个人，每层使敌方全体受伤+%）；cipher=谜诡触发层（10%）、
@@ -5967,7 +6110,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let lc21MaskSkip = false;
   let lc21Flames = 0;
 
-  // ===== 开拓者·记忆 8007/8008 / 迷迷·史诗·声援状态（2026-10 接入，十项裁定见 项目维护记录） =====
+  // ===== 开拓者·记忆 8007/8008 / 迷迷·史诗·声援状态（2026-10 接入，十项裁定见 AGENTS.md） =====
   /** 迷迷【充能】百分比（0-100；天赋1800705 召唤+50、战技已在场+10、终招+40、
    * 天赋累计回能每10点+1、强化普攻+10、忆灵技放完+5；满100→迷迷立即行动放
    * 1800707【我会！帮你！】，触发后清零〔裁定②⑧〕） */
@@ -6165,7 +6308,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     if (gained > 0) archerCheckP08();
   }
 
-  // ===== 藿藿 1217（加强版）状态与专武 23017「惊魂夜」（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 藿藿 1217（加强版）状态与专武 23017「惊魂夜」（2026-10 接入；裁定见 AGENTS.md） =====
   /** 【禳命】剩余回合（战技/大招/point06 获得；藿藿每回合开始-1；
    * 拥有时我方回合开始/开大触发天赋治疗） */
   let rangelMing = 0;
@@ -6175,7 +6318,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let tailsE2Charges = TRACE.tails.eidolon2Charges;
   /** 回合开始触发天赋的散落备注（主循环写入、charAction 后并入该行动事件——hhPendingNotes 同款） */
   let tailsPendingNotes: string[] = [];
-  // ===== 罗刹 1203 状态（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 罗刹 1203 状态（2026-10 接入；裁定见 AGENTS.md） =====
   /** 白花之刻层数（战技/终招+1；满层消耗并展开结界） */
   let luochaFlowers = 0;
   /** 结界剩余回合（每罗刹行动开始-1；0=未展开；死亡解除） */
@@ -6188,7 +6331,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let luochaE4VulnOn = false;
   /** 结界回血/自动奶散落备注（伤害钩子写入、主循环并入下一事件——tailsPendingNotes 同款） */
   let luochaPendingNotes: string[] = [];
-  // ===== 灵砂 1222 状态（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 灵砂 1222 状态（2026-10 接入；裁定见 AGENTS.md） =====
   /** 浮元剩余行动次数（0=未召唤/已消失；战技召唤+#7次、在场再施放战技+#7、封顶#5；
    * 行动时-1、耗尽或灵砂退场消失——天赋122204 #5/#7 随天赋等级走 skillParams） */
   let lingshaFuyuanActions = 0;
@@ -6196,7 +6339,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   let lingshaE6ResOn = false;
   /** 浮元行动/天赋治疗散落备注（主循环写入、record 并入下一事件——luochaPendingNotes 同款） */
   let lingshaPendingNotes: string[] = [];
-  // ===== 娜塔莎 1105 状态（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 娜塔莎 1105 状态（2026-10 接入；裁定见 AGENTS.md） =====
   /** E1 受击低血自疗单场 1 次已用 */
   let natashaE1Used = false;
   /** 娜塔莎散落备注（受击钩子/HoT tick 写入、record 并入下一事件——luochaPendingNotes 同款） */
@@ -6210,12 +6353,12 @@ const STAGE_NS_ULT_LAUGH = 5;
   const bailuLifeTriggers: Partial<Record<CharId, number>> = {};
   /** 白露天赋急救（致命保护）已用次数：单场全局 1 次、E6 +1 */
   let bailuReviveUsed = 0;
-  // ===== 加拉赫 1301 状态（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 加拉赫 1301 状态（2026-10 接入；裁定见 AGENTS.md） =====
   /** 终招触发的强化普攻待发（下次普攻用 130108 替代 130101，用完回落） */
   let gallagherNextEnhanced = false;
   /** 加拉赫散落备注（酩酊回血钩子等写入、record 并入下一事件——bailuPendingNotes 同款） */
   let gallagherPendingNotes: string[] = [];
-  // ===== 海瑟音 1410 状态（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 海瑟音 1410 状态（2026-10 接入；裁定见 AGENTS.md） =====
   /** 结界剩余回合（自身回合开始-1；0=未展开；无法战斗解除） */
   let hysilensFieldLeft = 0;
   /** 本结界已触发追加次数（总上限 8、E6 12；每次展开重置） */
@@ -6224,10 +6367,10 @@ const STAGE_NS_ULT_LAUGH = 5;
   let hysilensPendingNotes: string[] = [];
   /** 【暖流】（昔涟诗篇 1141522）：施放攻击后消耗回 60 能量 */
   let poemOceanWarm = false;
-  // ===== 黑天鹅 1307 状态（2026-10-17 接入；裁定见 项目维护记录） =====
+  // ===== 黑天鹅 1307 状态（2026-10-17 接入；裁定见 AGENTS.md） =====
   /** 黑天鹅散落备注（天赋挂层等写入、record 并入下一事件——hysilensPendingNotes 同款） */
   let bsPendingNotes: string[] = [];
-  // ===== 卡芙卡 1005 状态（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
+  // ===== 卡芙卡 1005 状态（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
   /** 天赋追击剩余次数（进场满 2、上限=talent#5；卡芙卡回合结束恢复 1、终招后恢复 1——荆棘） */
   let kafkaTalentCharges = 0;
   /** 卡芙卡散落备注（触电施加等写入、record 并入下一事件——bsPendingNotes 同款） */
@@ -7217,6 +7360,37 @@ const STAGE_NS_ULT_LAUGH = 5;
   let asGreedTotal = 0;
   /** 当前【饲饵】目标（仅最新有效） */
   let asBait: MonsterId | undefined;
+  // ===== 艾莲 1514 状态（2026-11-13 接入；**4.7.53 重做**：删【热量】整套，point07 改行动提前） =====
+  /** 【咬合力】0..6（行迹 point07「潜水状态」进战 +3） */
+  let ellenBite: number = TRACE.ellen.p07StartBite;
+  /** 行迹 point07 本回合已触发的「满上限额外获得 → 行动提前」次数（0..2，艾莲自身回合结束重置） */
+  let ellenP07Count = 0;
+  /** 行迹 point07 待结算的行动提前（艾莲**自己行动内**触发时不能直接改 av：
+   *  finishAction 会重置一圈 → 积累到行动结束再一次性 `tl.actionAdvance`） */
+  let ellenP07Pending = 0;
+  /** 艾莲正处于自身行动（charAction）内——咬合力溢出时决定「立即提前」还是「挂起」 */
+  let ellenActing = false;
+  /** 【咬痕】目标（怪侧 basicVuln，全目标唯一；无存活咬痕时自动补标最高血敌） */
+  let ellenMark: MonsterId | null = null;
+  /** E2：下一次【冰海潜游式】暴击伤害 +40%（不可叠加，用后清零） */
+  let ellenNextDiveCritDmg = 0;
+  /** E6【狂宴时刻】层数 0..1（4.7.53 上限 1） */
+  let ellenFeast = 0;
+  /** E1 攻击后自身行动提前（本行动内不可直接 actionAdvance，finishAction 会覆盖） */
+  let ellenAdvancePending = 0;
+  /** 零号连线互触发护栏（避免艾莲/耀嘉音互相套娃） */
+  let zeroLineGuard = false;
+  // ===== 耀嘉音 1515 状态（2026-11-13 接入；1515.json + 用户裁定口径） =====
+  /** 战技【虹光为你闪耀】剩余回合（强化普攻 + 全队攻击力；自身回合开始 -1） */
+  let yaoSkillTurns = 0;
+  /** 结界【星夜的安可曲】剩余回合（自身回合开始 -1） */
+  let yaoFieldTurns = 0;
+  /** 【切分音】层数 0..10 */
+  let yaoStacks = 0;
+  /** 【切分音】整体剩余回合（获得即刷新；归零清空层数与派生 buff） */
+  let yaoSegTurns = 0;
+  /** 已施放终结技次数（E6：每 4 次终结技后固定回 240 能） */
+  let yaoUltCount = 0;
   // ===== 飞霄 1220 状态（2026-10-29 接入；裁定见 docs/AGENTS-rogue.md §11） =====
   /** 【飞黄】0..12（独立资源；energy.feixiao 只做展示映射） */
   let feixiaoFeihuang = 0;
@@ -7370,7 +7544,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     atkTurns: TRACE.tails.lcAtkTurns,
   };
 
-  // ===== 遐蝶 1407 状态（2026-10 接入；无能量→【新蕊】资源，裁定见 项目维护记录） =====
+  // ===== 遐蝶 1407 状态（2026-10 接入；无能量→【新蕊】资源，裁定见 AGENTS.md） =====
   /** 【新蕊】当前值（每损失1HP+1；死龙在场无法获得——损失转化为死龙HP） */
   let xinrui = 0;
   /** 新蕊上限 = 场上我方角色等级和 ×100（2026-10 用户裁定） */
@@ -7448,7 +7622,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     return pkSubMembers.has(source as CharId) ? 'sub' : pkField;
   };
 
-  // ===== 风堇 1409 状态（2026-10 接入；治疗累计含溢出，裁定见 项目维护记录） =====
+  // ===== 风堇 1409 状态（2026-10 接入；治疗累计含溢出，裁定见 AGENTS.md） =====
   /** 本场累计治疗量（含溢出部分——2026-10 用户裁定；乌云伤害基数、清空按%） */
   let fjHealAccum = 0;
   /** 雨过天晴剩余回合（风堇每回合开始-1） */
@@ -8004,7 +8178,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** E1 攻击后回风堇8%上限HP（雨过天晴中每次攻击） */
   /** E2 我方HP降低时速度+30% 2回合——经 fjOnHpLoss 统一触发 */
 
-  // ===== 长夜月 1413 状态（2026-10 接入；忆质独立字段，裁定见 项目维护记录） =====
+  // ===== 长夜月 1413 状态（2026-10 接入；忆质独立字段，裁定见 AGENTS.md） =====
   /** 【忆质】当前值（天赋/战技/忆灵技获得；≥16→长夜立即行动） */
   let memShard = 0;
   /** 【至暗之谜】剩余充能（终招获得2、迷梦消耗1、回合开始无充能退出） */
@@ -8020,7 +8194,7 @@ const STAGE_NS_ULT_LAUGH = 5;
   /** 长夜点06施技耗当前5%HP→双方暴伤+15% buff 挂点（经战技分支） */
   /** E6 迷梦后长夜月获消耗忆质30%（一次性记录消费量） */
 
-  // ===== 昔涟 1415 状态（2026-10 接入；无能量→【追忆】资源，裁定见 项目维护记录） =====
+  // ===== 昔涟 1415 状态（2026-10 接入；无能量→【追忆】资源，裁定见 AGENTS.md） =====
   /** 【追忆】当前值（普攻/战技/未来消耗获得；≥24可开大、状态内≥12、溢出至27） */
   let zhuiyi = 0;
   /** 【往昔的涟漪】状态（终招141503开启：普攻强化141508、结界无持续时间） */
@@ -8091,7 +8265,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
   }
 
-  // ===== 刻律德菈 1412 状态（2026-10 接入；同谐四人，裁定见 项目维护记录） =====
+  // ===== 刻律德菈 1412 状态（2026-10 接入；同谐四人，裁定见 AGENTS.md） =====
   /** 军功持有者（仅最新目标生效；目标改变→充能清0、旧军功移除） */
   let cdMeritTarget: CharId | undefined;
   /** 爵位状态（充能≥阈值时军功→爵位；爵位者视为持军功） */
@@ -9691,7 +9865,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     });
   }
 
-  // ===== 白露 1211 helpers（2026-10 接入；生息=受击回血 + 天赋急救，裁定见 项目维护记录） =====
+  // ===== 白露 1211 helpers（2026-10 接入；生息=受击回血 + 天赋急救，裁定见 AGENTS.md） =====
   /** 白露星魂等级 */
   function bailuEidolon(): number {
     return members.find((x) => x.id === 'bailu')?.eidolonLevel ?? 0;
@@ -9828,7 +10002,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     if (!notes.includes('gaDrunkHeal')) notes.push('gaDrunkHeal');
   }
 
-  // ===== 海瑟音 1410 helpers（2026-10 接入；裁定见 项目维护记录） =====
+  // ===== 海瑟音 1410 helpers（2026-10 接入；裁定见 AGENTS.md） =====
   /** 海瑟音星魂等级 */
   function hysilensEidolon(): number {
     return members.find((x) => x.id === 'hysilens')?.eidolonLevel ?? 0;
@@ -10093,7 +10267,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
   }
 
-  // ===== 黑天鹅 1307 helpers（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
+  // ===== 黑天鹅 1307 helpers（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
   function bsEidolon(): number {
     return members.find((x) => x.id === 'blackswan')?.eidolonLevel ?? 0;
   }
@@ -10222,7 +10396,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     bsSyncE1(target);
   }
 
-  // ===== 卡芙卡 1005 helpers（2026-10-17 接入；裁定见 项目维护记录 虚无批） =====
+  // ===== 卡芙卡 1005 helpers（2026-10-17 接入；裁定见 AGENTS.md 虚无批） =====
   function kafkaEidolon(): number {
     return members.find((x) => x.id === 'kafka')?.eidolonLevel ?? 0;
   }
@@ -16216,6 +16390,8 @@ const STAGE_NS_ULT_LAUGH = 5;
   //（lcParams 对 gen 进 IDS 的 11 个 id 恒非 null；refinement 缺省=R1=desc P1）
   for (const lcId of [
     '20023', '20024', '21064', '21065', '21066', '22007', '22009', '23055', '23057', '23058', '24006',
+    // 4.7.51 新增专武（2026-11-13 接入）：23066 雨天请勿排班（毁灭/艾莲）、23067 闪亮如她（同谐/耀嘉音）
+    '23066', '23067',
   ]) {
     const wearers = members.filter((m) => m.lightconeId === lcId && lcPathOk(m.id, lcId));
     if (wearers.length === 0) continue;
@@ -16651,6 +16827,13 @@ const STAGE_NS_ULT_LAUGH = 5;
       tl.speedChange(m.id, tl.getUnit(m.id).speed * (1 + p63[2]));
     }
   }
+  // 专武23066 雨天请勿排班：无条件面板句（暴伤 #1 / 充能效率 #5）由 web 烘焙，引擎只接条件半句
+  //（4.7.53：【冰饮】改为「**战斗开始时或**施放终结技时」获得 3 回合 → 进战直接给，终结技不再看能量门槛）
+  for (const w66 of lcWearersParams.get('23066')?.keys() ?? []) {
+    lc66Wear = w66;
+    lc66IceLeft = 3;
+    break;
+  }
   // 位面308生命的翁瓦克（腾荒）：速度≥120 进入战斗行动提前 40%（与行迹叠加）
   if (
     ids.has('tenghuang') &&
@@ -16998,6 +17181,18 @@ const STAGE_NS_ULT_LAUGH = 5;
     jingyuanExLeft = jingyuanExOn ? TRACE.jingyuan.exTurns : 0;
     tl.addUnit({ id: 'shenjun', side: 'ally', speed: shenjunSpeed(), order: members.length });
   }
+  // 艾莲 1514 天赋151404【邦布帮帮】：「战斗开始时召唤【鲨牙布】」→ 独立行动条单位（固定速度 #1=200）
+  if (ids.has('ellen')) {
+    const pShark = skillParams('151404', levelsOf('ellen').talent);
+    tl.addUnit({ id: 'shazabu', side: 'ally', speed: pShark[0], order: members.length });
+  }
+  // 耀嘉音 1515 E6：「战斗开始时，耀嘉音获得 10 个【切分音】」
+  if (ids.has('yaojiayin') && yaojiayinEidolon() >= 6) {
+    yaoStacks = TRACE.yaojiayin.e6StartSeg;
+    yaoSegTurns = Math.round(skillParams('151504', levelsOf('yaojiayin').talent)[1]);
+    yaojiayinSyncStacks();
+  }
+  // 耀嘉音 E1（4.7.53 重做）：旧「每个波次开始时恢复 30 点能量」条款已删除
   // 灵砂星魂1：弱点击破效率 +50%（进战常驻；两条削韧通道 buffSum('breakEfficiency') 消费）
   if (ids.has('lingsha') && lingshaEidolon() >= 1) {
     addBuff(holderOf('lingsha'), {
@@ -17525,6 +17720,11 @@ const STAGE_NS_ULT_LAUGH = 5;
         : {}),
       ...(tl.has(s.id) ? { speed: tl.getUnit(s.id).speed } : {}),
     })),
+    // 4.7.51 新增：资源 HUD（艾莲【咬合力】、耀嘉音【切分音】）。4.7.53 删除【热量】
+    ellenBite: ids.has('ellen') ? ellenBite : undefined,
+    yaoSeg: ids.has('yaojiayin') ? yaoStacks : undefined,
+    // 4.7.52 新增：当前额外回合口径（UI 据此在「不可插入」的额外回合禁终结技按钮）
+    extraTurn: inExtraTurn ? { allowUlt: extraTurnAllowUlt } : undefined,
   });
   const actionCounts: Record<string, number> = {};
   let ultCount = 0;
@@ -18417,6 +18617,101 @@ const STAGE_NS_ULT_LAUGH = 5;
         });
         for (const sq of seqs) e.hitSeqs!.push(sq);
         rbE6Left -= 1;
+      }
+    }
+    // ===== 艾莲 1514 天赋【邦布帮帮】/ 耀嘉音 1515 天赋【切分音】+ 结界附加伤害 =====
+    if (
+      (e.kind === 'action' || e.kind === 'ult') &&
+      e.action !== 'technique' &&
+      e.action !== 'dot' &&
+      (e.hitSeqs?.length ?? 0) > 0
+    ) {
+      // 本事件的「我方打出的直伤/欢愉段」及其命中目标（DoT/击破段不算「攻击」）
+      const hookHits = (e.hitSeqs ?? [])
+        .map((s) => hits.find((h) => h.seq === s))
+        .filter(
+          (h): h is NonNullable<typeof h> =>
+            !!h && (h.kind === 'direct' || h.kind === 'elation') && !!h.target && isMonsterId(h.target),
+        );
+      if (hookHits.length > 0) {
+        const dmgTargets = new Set<MonsterId>(
+          hookHits.map((h) => h.target as MonsterId),
+        );
+        const actorIsMember = members.some((mm) => mm.id === e.unitId);
+        // 艾莲：我方**角色**普攻/战技/终结技命中敌方 → +1 咬合力
+        //（追伤/召唤物不计；【冰海潜游式】自身不计 —— 用户裁定）
+        if (
+          ids.has('ellen') &&
+          !isDead('ellen') &&
+          actorIsMember &&
+          (e.action === 'basic' || e.action === 'skill' || e.action === 'ult') &&
+          e.skillCode !== 'ellen.dive'
+        ) {
+          const tp = skillParams('151404', levelsOf('ellen').talent);
+          const hookNotes: string[] = [];
+          ellenGainBite(tp[2] ?? 1, hookNotes);
+          if (hookNotes.length > 0) e.note = [...(e.note ?? []), ...hookNotes];
+        }
+        // 耀嘉音：我方目标（角色或召唤物）攻击敌方 → +1 切分音；行迹 point08 普攻额外 +1
+        if (ids.has('yaojiayin') && !isDead('yaojiayin')) {
+          const segNotes: string[] = [];
+          const extra = e.action === 'basic' ? TRACE.yaojiayin.p08SegExtra : 0;
+          yaojiayinGainSeg(TRACE.yaojiayin.segPerHit + extra, segNotes);
+          if (segNotes.length > 0) e.note = [...(e.note ?? []), ...segNotes];
+        }
+        // 耀嘉音结界附加伤害：我方**角色普攻**命中后，对本次命中的每个目标各 1 次 #4 攻击力量子伤
+        if (
+          ids.has('yaojiayin') &&
+          !isDead('yaojiayin') &&
+          actorIsMember &&
+          e.action === 'basic' &&
+          yaoFieldTurns > 0
+        ) {
+          const attachNotes: string[] = [];
+          const attachSeqs = yaojiayinAttach([...dmgTargets], attachNotes);
+          if (attachSeqs.length > 0) {
+            e.hitSeqs = [...(e.hitSeqs ?? []), ...attachSeqs];
+            e.note = [...(e.note ?? []), ...attachNotes];
+          }
+        }
+        // 耀嘉音 E1（4.7.53 重做）：结界期间，我方**角色**施放造成普攻伤害的攻击后，
+        // 对命中目标中**当前生命值最高者**额外造成 1 次 = **本次攻击所有命中段最终伤害之和 ×24%**
+        // 的【真实伤害】。2026-11-24 用户裁定 Q1：不吃任何乘区、不取整、**不视为 1 次攻击**
+        //（kind='trueDamage' → 不叠切分音/不回能/不涨观星债务/不触发命中类效果）。
+        // 「本次攻击」口径（2026-11-25 用户逐条裁定）：
+        // - **只算攻击命中段**（`kind === 'direct'`）→ 不含本次顺带打出的击破/超击破段；
+        // - 含耀嘉音的结界**附加伤害**（同属本次攻击）；
+        // - **不含**本次攻击触发的其他单位攻击（如艾莲 E2 让【鲨牙布】立即施放的追加攻击）。
+        if (
+          ids.has('yaojiayin') &&
+          !isDead('yaojiayin') &&
+          actorIsMember &&
+          e.action === 'basic' &&
+          yaoFieldTurns > 0 &&
+          yaojiayinEidolon() >= 1
+        ) {
+          const actorId = e.unitId as CharId;
+          let atkTotal = 0;
+          for (const s of e.hitSeqs ?? []) {
+            const h = hits.find((x) => x.seq === s);
+            if (!h || h.kind !== 'direct') continue;
+            if (h.source !== actorId && h.skillCode !== 'yaojiayin.attach') continue;
+            atkTotal += h.total;
+          }
+          const aliveHitTargets = [...dmgTargets].filter((t) => (monsters[t]?.hp ?? 0) > 0);
+          if (atkTotal > 0 && aliveHitTargets.length > 0) {
+            const target = aliveHitTargets.reduce((a, b) =>
+              monsters[b].hp > monsters[a].hp ? b : a,
+            );
+            const trueSeq = pushHit(
+              computeTrueDamage({ originalTotal: atkTotal, ratio: TRACE.yaojiayin.e1TrueRatio }),
+              { source: 'yaojiayin', skillCode: 'yaojiayin.e1True', note: 'yaoE1True', target },
+              'trueDamage',
+            );
+            e.hitSeqs = [...(e.hitSeqs ?? []), trueSeq];
+            e.note = [...(e.note ?? []), 'yaoE1True'];
+          }
+        }
       }
     }
     // ===== 阮•梅残梅绽标记（130303 结界）：结界中我方攻击后对命中目标施加【残梅绽】（仅 0→1 可标）=====
@@ -20028,7 +20323,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     return ids.has('qingge') ? (memberOf('qingge').eidolonLevel ?? 0) : 0;
   }
 
-  // ===== 同谐批 asta/bronya/tingyun/yukong/hanya（2026-10-24 接入；裁定见 项目维护记录） =====
+  // ===== 同谐批 asta/bronya/tingyun/yukong/hanya（2026-10-24 接入；裁定见 AGENTS.md） =====
   const astaEidolon = (): number => (ids.has('asta') ? (memberOf('asta').eidolonLevel ?? 0) : 0);
   const bronyaEidolon = (): number => (ids.has('bronya') ? (memberOf('bronya').eidolonLevel ?? 0) : 0);
   const tingyunEidolon = (): number => (ids.has('tingyun') ? (memberOf('tingyun').eidolonLevel ?? 0) : 0);
@@ -21127,7 +21422,7 @@ const STAGE_NS_ULT_LAUGH = 5;
     });
   }
 
-  // ===== 虚无命途光锥批（24 锥）公共 helper（2026-10-15；G1-G8 裁定见 项目维护记录）=====
+  // ===== 虚无命途光锥批（24 锥）公共 helper（2026-10-15；G1-G8 裁定见 AGENTS.md）=====
   /** 施放者当前效果命中（面板 + buff） */
   function effectHitOf(id: CharId): number {
     return (panelOf(id).effectHit ?? 0) + buffSum(holderOf(id).buffs, 'effectHit');
@@ -22626,6 +22921,11 @@ const STAGE_NS_ULT_LAUGH = 5;
           });
         }
       }
+    }
+    // 23066 雨天请勿排班：装备者施放普攻 → 获得【零食】2 回合（持有期间攻击力 +#2 由 web 烘焙；
+    // 这里只维护持续时间，作为【好心情】双持判定的一半）
+    if (lc66Wear === w && kind === 'basic') {
+      lc66SnackLeft = 2;
     }
     // 23063【新声】速度递减
     {
@@ -26533,6 +26833,13 @@ const STAGE_NS_ULT_LAUGH = 5;
     relic325CheckAll();
     let damageBonus =
       0 + panelDamageBonus(spec.panelSource ?? spec.source, spec.element) + buffSum(holder.buffs, 'damageBonus') + spec.damageBonusExtra + relicPlanarTypeBonus;
+    // 耀嘉音 1515 天赋【切分音】：我方全体「普攻」造成的伤害每层 +5%（上限 10 层）——
+    // 只在普攻通道加算进增伤区（战技/终结技/追伤不吃；E1 结界期间另由 damageBonus 覆盖全类型）
+    if (lcAttackKind === 'basic') damageBonus += buffSum(holder.buffs, 'basicDmgBonus');
+    // 艾莲 1514 行迹 point06【漫游模式】：计入 2 名队友时，造成的伤害额外 +48%
+    if ((spec.panelSource ?? spec.source) === 'ellen' && ellenRoamCount() >= TRACE.ellen.p06MaxCount) {
+      damageBonus += TRACE.ellen.p06DmgBonus;
+    }
     // 献予「理性」之诗（1141518）【真知】的战技增伤半句：只作用智识命途角色的战技伤害
     if (
       poemInsightSkillDmg > 0 &&
@@ -26694,6 +27001,10 @@ const STAGE_NS_ULT_LAUGH = 5;
       const hpRatio = (memberHp.himeko ?? maxHpOf('himeko')) / maxHpOf('himeko');
       if (hpRatio >= TRACE.himeko.point08HpRatio) critRate0 += TRACE.himeko.point08CritRate;
     }
+    // 耀嘉音 1515 行迹 point06「幻想音阶」：暴击率 +50%（暴伤随攻击力换算的半句在 critDmg 声明后补）
+    if (!critLocked && (spec.panelSource ?? spec.source) === 'yaojiayin') {
+      critRate0 += TRACE.yaojiayin.p06CritRate;
+    }
     // 黄泉E1：对陷入负面效果的敌方目标伤害时暴击率+18%（集真赤计负面；仅黄泉、动态）
     if (
       !critLocked &&
@@ -26706,6 +27017,19 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
     let critDmg = spec.critDmg + (critLocked ? 0 : buffSum(holder.buffs, 'critDmg'));
     if (!critLocked) critDmg += wcb.dmg;
+    // 耀嘉音 1515 行迹 point06「幻想音阶」暴伤半句：攻击力 >2000 时每超 200 点 → 暴伤 +20%，
+    // 上限 +200%（2026-11-13 用户裁定：param #5=2 按 200% 解释）
+    if (!critLocked && (spec.panelSource ?? spec.source) === 'yaojiayin') {
+      const yAtk = atkNowOf('yaojiayin', holderOf('yaojiayin'));
+      const ySteps = Math.floor(
+        Math.max(0, yAtk - TRACE.yaojiayin.p06AtkBase) / TRACE.yaojiayin.p06AtkStep,
+      );
+      critDmg += Math.min(TRACE.yaojiayin.p06CritDmgCap, ySteps * TRACE.yaojiayin.p06CritDmgStep);
+    }
+    // 艾莲 1514 行迹 point06【漫游模式】：每名「提供增益」的队友 → 暴伤 +64%（最多计 2 名）
+    if (!critLocked && (spec.panelSource ?? spec.source) === 'ellen' && ids.has('ellen')) {
+      critDmg += ellenRoamCount() * TRACE.ellen.p06CritDmg;
+    }
     // 不死途 1504 point08：我方目标暴伤 +40%，我方目标**追击**暴伤额外 +80%（追击共 +120%）
     if (!critLocked && ids.has('ashveil') && !isDead('ashveil')) {
       critDmg += TRACE.ashveil.p08CritDmg;
@@ -27023,6 +27347,8 @@ const STAGE_NS_ULT_LAUGH = 5;
       return elSeqs;
     }
     const snapshot = zoneSnapshot(spec.element, spec.level, spec.source, target);
+    // 艾莲 1514 战技【咬痕】：目标「受到的普攻伤害提高」——只在普攻通道进易伤区
+    if (lcAttackKind === 'basic') snapshot.vulnerability += buffSum(mon.buffs, 'basicVuln');
     if (spec.zoneExtras) {
       if (spec.zoneExtras.defIgnore) snapshot.defIgnore += spec.zoneExtras.defIgnore;
       if (spec.zoneExtras.resPenetration) snapshot.resPenetration += spec.zoneExtras.resPenetration;
@@ -27032,6 +27358,16 @@ const STAGE_NS_ULT_LAUGH = 5;
       snapshot.vulnerability += buffSum(mon.buffs, 'topazDebt');
       for (const b of mon.buffs.buffs) {
         if (b.key === 'topazExecuted') critDmg += b.value * b.stacks;
+      }
+    }
+    // 专武23066【冰饮】/【好心情】：装备者的**普攻与终结技**伤害无视目标 #3（双持再 +#4）防御
+    if (lc66Wear !== undefined && lc66IceLeft > 0 && ownerOfUnit(spec.panelSource ?? spec.source) === lc66Wear) {
+      if (lcAttackKind === 'basic' || lcAttackKind === 'ult') {
+        const p66d = lcWearerParamOf('23066', lc66Wear);
+        if (p66d) {
+          snapshot.defIgnore += p66d[2];
+          if (lc66SnackLeft > 0) snapshot.defIgnore += p66d[3];
+        }
       }
     }
     // 貊泽 1223：point08【猎物】受到的追加攻击伤害 +25%（仅 followup）；E2 我方对【猎物】造成伤害时暴伤 +40%
@@ -27329,6 +27665,8 @@ const STAGE_NS_ULT_LAUGH = 5;
     if (source === 'changye') return panelOf('changyeyue');
     if (source === 'demiurge') return panelOf('xilian');
     if (source === 'fuyuan') return panelOf('lingsha');
+    /** 艾莲 1514 天赋召唤物【鲨牙布】：读召唤时艾莲面板（普通召唤物，不继承 buff） */
+    if (source === 'shazabu') return panelOf('ellen');
     if (source === 'topazNumby') return panelOf('topaz');
     return panelOf(source as CharId);
   }
@@ -32120,6 +32458,117 @@ const STAGE_NS_ULT_LAUGH = 5;
         });
         harmonyApplySpeed(ally, 1, panelOf('hanya').speed * p[2], turns);
         notes.push('hanyaUlt');
+      } else if (m.id === 'ellen') {
+        // 终结技151403【欢迎来到冰河纪】：全体 400%；对【咬痕】目标额外 240%（4.7.53 params `[4,2.4]`）
+        // 4.7.53 已删除原 #3「下一次【冰海潜游式】全部伤害 +400%」——不再挂任何后续增伤
+        const p = skillParams('151403', lv.ult);
+        energy[m.id] = 0;
+        gainEnergy(m.id, 5);
+        const panelE = panelOf('ellen');
+        const stanceE = stanceOf('151403', lv.ult);
+        const base = {
+          source: 'ellen' as const,
+          element: panelE.element,
+          level: panelE.level,
+          statValue: panelE.attack,
+          damageBonusExtra: 0,
+          critRate: panelE.critRate,
+          critDmg: panelE.critDmg,
+          attackerBuffs: holderOf('ellen'),
+          attackKind: 'ult' as const,
+        };
+        for (const t of aliveMonsters()) {
+          hitSeqs.push(...dealAttack({ ...base, skillCode: 'ellen.ult', multiplier: p[0], stance: stanceE, target: t }));
+        }
+        for (const t of aliveMonsters()) {
+          if (!ellenMarked(monsters[t])) continue;
+          hitSeqs.push(...dealAttack({ ...base, skillCode: 'ellen.ult', multiplier: p[1], stance: 0, target: t, note: 'ellenUltMark' }));
+        }
+        // E6：施放终结技后 +1 层【狂宴时刻】（4.7.53 上限 1 层）
+        if (ellenEidolon() >= 6) {
+          ellenFeast = Math.min(TRACE.ellen.e6FeastCap, ellenFeast + 1);
+          notes.push('ellenE6Feast');
+        }
+        // 【零号连线】：自动冰海潜游式 → 耀嘉音共舞 → 耀嘉音额外回合
+        hitSeqs.push(...zeroLineAfterEllenUlt(notes));
+        notes.push('ellenUlt');
+      } else if (m.id === 'yaojiayin') {
+        // 终结技151503【星夜的安可曲】：全体 320%（E4 +100% 原倍率）→ 展开结界 4 回合
+        const p = skillParams('151503', lv.ult);
+        energy[m.id] = 0;
+        gainEnergy(m.id, 5);
+        const panelY = panelOf('yaojiayin');
+        const addY = yaojiayinEidolon() >= 4 ? p[0] * TRACE.yaojiayin.e4UltBonus : 0;
+        const stanceY = stanceOf('151503', lv.ult);
+        const baseY = {
+          source: 'yaojiayin' as const,
+          element: panelY.element,
+          level: panelY.level,
+          statValue: panelY.attack,
+          damageBonusExtra: 0,
+          critRate: panelY.critRate,
+          critDmg: panelY.critDmg,
+          attackerBuffs: holderOf('yaojiayin'),
+          attackKind: 'ult' as const,
+        };
+        for (const t of aliveMonsters()) {
+          hitSeqs.push(...dealAttack({ ...baseY, skillCode: 'yaojiayin.ult', multiplier: p[0] + addY, stance: stanceY, target: t }));
+        }
+        yaojiayinOpenField(notes);
+        yaoUltCount += 1;
+        // E6：施放终结技后固定回 #2=240 能 —— 2026-11-13 用户裁定首次触发点 = **第 1 次**，
+        // 之后「每施放 4 次终结技后可再次触发」→ 第 1/5/9… 次（间隔 4 次）
+        if (
+          yaojiayinEidolon() >= 6 &&
+          (yaoUltCount - 1) % TRACE.yaojiayin.e6UltEvery === 0
+        ) {
+          gainEnergyRaw('yaojiayin', TRACE.yaojiayin.e6UltEnergy);
+          notes.push('yaoE6Energy');
+        }
+        if (zeroLineActive()) {
+          // 【零号连线】：高歌 → 艾莲利齿修剪法(+1 咬合力) → 艾莲冰海潜游式(0 消耗)
+          hitSeqs.push(...zeroLineAfterYaoUlt(notes));
+        } else if (!ids.has('ellen')) {
+          // 队伍中不包含艾莲：终结技后额外恢复 40 点能量（151505 #1）
+          gainEnergy('yaojiayin', TRACE.yaojiayin.zeroLineSoloEnergy);
+          notes.push('yaoZeroSolo');
+        }
+        notes.push('yaojiayinUlt');
+      }
+      // 专武23066 雨天请勿排班（毁灭）：4.7.53 起【冰饮】**战斗开始时或施放终结技时**获得 3 回合
+      //（删除旧「单次消耗 ≥200 能量」门槛；普攻与终结技伤害无视 #3 防御，与【零食】同时在手 → 额外无视 #4）
+      {
+        const p66 = lcWearerParamOf('23066', m.id);
+        if (p66) {
+          lc66Wear = m.id;
+          lc66IceLeft = 3;
+          notes.push('lc23066Ice');
+        }
+      }
+      // 专武23067 闪亮如她（同谐，**4.7.53 条款重做**）：装备者施放终结技后，
+      // **我方全体行动提前 #2=24%**，同时装备者获得【你我的旋律】→ **我方全体暴伤 +#3** 持续 #4 回合。
+      // 删除旧口径的「非编队首位才推进」与「本次消耗 ≥#5 能量才给暴伤」两个条件（新参数只有 4 项）
+      {
+        const p67 = lcWearerParamOf('23067', m.id);
+        if (p67) {
+          for (const mm of members) {
+            if (isDead(mm.id) || !tl.has(mm.id)) continue;
+            tl.actionAdvance(mm.id, p67[1]);
+          }
+          notes.push('lc23067Advance');
+          for (const h of allHolders()) {
+            addBuff(h, {
+              key: 'critDmg',
+              value: p67[2],
+              stacks: 1,
+              duration: Math.round(p67[3]),
+              tick: 'holderEnd',
+              source: m.id,
+              labelKey: 'lc23067',
+            });
+          }
+          notes.push('lc23067Song');
+        }
       }
       ultCount += 1;
       // 爻光天赋【大吉大利】：终结技后（有伤害才触发；爻光大招自身无伤害——hitSeqs 来自
@@ -32485,6 +32934,589 @@ const STAGE_NS_ULT_LAUGH = 5;
     }
     return { energy: out, caps };
   };
+
+  // ===================== 艾莲 1514 / 耀嘉音 1515（2026-11-13 接入） =====================
+  // 数据来源：data/characters/1514.json、1515.json（4.7.51 数据层）；机制裁定见本轮 question 答复：
+  //   ①【咬痕】永久、目标死亡后下次我方行动自动补标最高血敌；
+  //   ②咬合力只在「普攻/战技/终结技**命中敌方**」时 +1（追伤不计、冰海潜游式自身不计，
+  //     鲨牙布走行迹 point08 单独 +1）；
+  //   ③行迹 point06 按「队友身上存在来源≠自身的 buff」严格计数（上限 2 名）；
+  //   ④耀嘉音行迹 point06 上限按 +200%；
+  //   ⑤切分音每次我方攻击 +1（含自身）、上限 10、3 回合整体刷新；
+  //   ⑥零号连线触发的冰海潜游式用 151408 参数、0 消耗、无额外随机段（E6 +3 段仍生效）。
+  function ellenEidolon(): number {
+    return members.find((x) => x.id === 'ellen')?.eidolonLevel ?? 0;
+  }
+  function yaojiayinEidolon(): number {
+    return members.find((x) => x.id === 'yaojiayin')?.eidolonLevel ?? 0;
+  }
+  /** 【零号连线】（151405/151505）：两人都在队且都存活才互触发 */
+  function zeroLineActive(): boolean {
+    return ids.has('ellen') && ids.has('yaojiayin') && !isDead('ellen') && !isDead('yaojiayin');
+  }
+  /** 解除控制类负面（零号连线：一方施放终结技后解除对方的控制类负面） */
+  function zeroLineCleanse(target: CharId): void {
+    memberFreeze.delete(target);
+    memberDrunk.delete(target);
+    memberImprison.delete(target);
+    memberEntangle.delete(target);
+    fearPending.delete(target);
+  }
+  /** 【咬痕】是否挂在目标身上（怪侧 basicVuln 实例） */
+  function ellenMarked(mon: MonsterState): boolean {
+    return mon.buffs.buffs.some(
+      (b) => b.key === 'basicVuln' && b.source === 'ellen' && b.labelKey === 'ellenMark',
+    );
+  }
+  /** 给目标挂【咬痕】（受到的普攻伤害提高 = 战技 #5；全目标唯一） */
+  function ellenApplyMark(target: MonsterId, notes?: string[]): void {
+    if (!ids.has('ellen') || isDead('ellen')) return;
+    const mon = monsters[target];
+    if (!mon || mon.hp <= 0) return;
+    const p = skillParams('151402', levelsOf('ellen').skill);
+    for (const mid of MONSTER_IDS) {
+      if (mid !== target) {
+        removeBuffInstance(monsters[mid].buffs, { key: 'basicVuln', source: 'ellen', labelKey: 'ellenMark' });
+      }
+    }
+    addBuff(mon.buffs, {
+      key: 'basicVuln',
+      value: p[4] ?? 0.5,
+      stacks: 1,
+      duration: -1,
+      tick: 'permanent',
+      source: 'ellen',
+      labelKey: 'ellenMark',
+    });
+    ellenMark = target;
+    notes?.push('ellenBiteMark');
+  }
+  /** 场上无存活【咬痕】→ 使生命值最高的敌方目标陷入（我方目标回合开始或行动时） */
+  function ellenEnsureMark(notes?: string[]): void {
+    if (!ids.has('ellen') || isDead('ellen')) return;
+    const alive = aliveMonsters();
+    if (alive.length === 0) return;
+    const cur = alive.find((m) => ellenMarked(monsters[m]));
+    if (cur) {
+      ellenMark = cur;
+      return;
+    }
+    let best = alive[0];
+    let bestHp = -1;
+    for (const m of alive) {
+      const hp = monsters[m].hp;
+      if (hp > bestHp) {
+        bestHp = hp;
+        best = m;
+      }
+    }
+    ellenApplyMark(best, notes);
+  }
+  /**
+   * 艾莲 1514 行迹 point06【漫游模式】：每有 1 名队友为艾莲提供至少 1 个仍在生效的增益 →
+   * 艾莲暴伤 +64%（最多计入 2 名）。口径（2026-11-13 用户裁定）= **严格**：
+   * 该队友持有「来源 ≠ 该队友自身」的 buff 才计数（含召唤物/光锥来源）；阵亡不计。
+   */
+  function ellenRoamCount(): number {
+    if (!ids.has('ellen')) return 0;
+    let n = 0;
+    for (const m of members) {
+      if (m.id === 'ellen' || isDead(m.id)) continue;
+      if (holderOf(m.id).buffs.some((b) => b.source !== m.id)) n += 1;
+    }
+    return Math.min(TRACE.ellen.p06MaxCount, n);
+  }
+  /**
+   * 【咬合力】入账：未满直接加点；**满上限后**每额外获得 1 点 → 行迹 point07「行动提前 10%」,
+   * 每回合最多 2 次（艾莲自身回合结束重置次数）。
+   * 4.7.53：整套【热量】模型（overflow/heatCap/p07HeatPer）已删除。
+   * 艾莲自己行动内触发时挂起到行动结束（`ellenP07Pending`），否则立即改跑道。
+   */
+  function ellenGainBite(n: number, notes?: string[]): void {
+    if (!ids.has('ellen') || n <= 0) return;
+    let left = n;
+    let gained = false;
+    while (left > 0) {
+      if (ellenBite < TRACE.ellen.biteCap) {
+        ellenBite += 1;
+        left -= 1;
+        gained = true;
+        continue;
+      }
+      // 满上限后的「额外获得」：每点 1 次行动提前，每回合至多 2 次
+      left -= 1;
+      if (ellenP07Count >= TRACE.ellen.p07AdvanceCap) continue;
+      ellenP07Count += 1;
+      gained = true;
+      if (ellenActing) {
+        // 自己的行动内由 finishAction 覆盖 → 挂起到行动结束（额外回合不结算跑道，同样跳过）
+        ellenP07Pending += TRACE.ellen.p07Advance;
+      } else if (tl.has('ellen') && !victory) {
+        tl.actionAdvance('ellen', TRACE.ellen.p07Advance);
+      }
+      notes?.push('ellenP07');
+    }
+    if (gained) notes?.push('ellenBite');
+  }
+  /**
+   * 【冰海潜游式】（151408，等级=普攻）：主 560% / 相邻 336%；消耗全部咬合力，
+   * 每多消耗 1 点（>3）追加 1 段 280% 随机单体（优先主目标与相邻）；E6 固定 +3 段。
+   * consume=false 为【零号连线】触发版：0 消耗、不吃 E1 的「消耗 6 点→行动提前」，
+   * 但 4.7.53 起 E1 无视防御与 E4 抗穿**无条件生效**；并额外按 151405 弹射 (#1=200% × #2=3 次)。
+   */
+  function ellenDive(
+    consume: boolean,
+    opts?: { target?: MonsterId; skillCode?: string; notes?: string[] },
+  ): number[] {
+    if (!ids.has('ellen') || isDead('ellen')) return [];
+    const lvE = levelsOf('ellen');
+    const p = skillParams('151408', lvE.basic);
+    const panel = panelOf('ellen');
+    const eid = ellenEidolon();
+    const notes = opts?.notes;
+    const alive = aliveMonsters();
+    if (alive.length === 0) return [];
+    const spent = consume ? ellenBite : 0;
+    if (consume) ellenBite = 0;
+    const main = opts?.target && alive.includes(opts.target) ? opts.target : resolveMain();
+    const adj = resolveAdjacent(main).filter((t) => alive.includes(t));
+    const stance = SKILL_TABLES['151408']?.stance ?? [60, 0, 30];
+    const critExtra = ellenNextDiveCritDmg;
+    let resPen = eid >= 6 ? TRACE.ellen.e6ResPen : 0;
+    // E4（4.7.53）：固定 12% 冰抗穿，与消耗量无关
+    if (eid >= 4) resPen += TRACE.ellen.e4ResPen;
+    // E1（4.7.53）：无条件无视 36% 防御（旧口径的 spent>=6 门槛只留「行动提前」）
+    const defIgnore = eid >= 1 ? TRACE.ellen.e1DefIgnore : 0;
+    ellenNextDiveCritDmg = 0;
+    const skillCode = opts?.skillCode ?? 'ellen.dive';
+    const base = {
+      source: 'ellen' as const,
+      element: panel.element,
+      level: panel.level,
+      statValue: panel.attack,
+      critRate: panel.critRate,
+      critDmg: panel.critDmg + critExtra,
+      attackerBuffs: holderOf('ellen'),
+      attackKind: 'basic' as const,
+      damageBonusExtra: 0,
+      zoneExtras: { defIgnore, resPenetration: resPen },
+    };
+    const seqs: number[] = [];
+    seqs.push(...dealAttack({ ...base, skillCode, multiplier: p[0], stance: stance[0], target: main }));
+    for (const t of adj) {
+      seqs.push(...dealAttack({ ...base, skillCode, multiplier: p[1], stance: stance[2], target: t }));
+    }
+    const extraHits =
+      Math.max(0, spent - TRACE.ellen.diveExtraBase) + (eid >= 6 ? TRACE.ellen.e6ExtraHits : 0);
+    const pool = [main, ...adj].filter((t) => monsters[t].hp > 0);
+    for (let i = 0; i < extraHits && pool.length > 0; i += 1) {
+      const t = pool[Math.min(pool.length - 1, Math.floor(rand01() * pool.length))];
+      seqs.push(...dealAttack({ ...base, skillCode, multiplier: p[2], stance: 0, target: t }));
+    }
+    // 【零号连线】151405（4.7.53 新增 `[2,3]`）：联线冰潜额外弹射 #2=3 次 #1=200%（优先主目标与相邻）。
+    // 2026-11-24 用户裁定 Q2：与 E6 的「随机单体 +3 段」**叠加**（最多 3+3=6 段）。
+    if (!consume) {
+      const p405 = skillParams('151405', lvE.talent);
+      const bounceTimes = Math.round(p405[1] ?? 0);
+      for (let i = 0; i < bounceTimes; i += 1) {
+        const poolNow = [main, ...adj].filter((t) => monsters[t].hp > 0);
+        if (poolNow.length === 0) break;
+        const t = poolNow[Math.min(poolNow.length - 1, Math.floor(rand01() * poolNow.length))];
+        seqs.push(
+          ...dealAttack({ ...base, skillCode, multiplier: p405[0], stance: 0, target: t }),
+        );
+      }
+    }
+    // E1（4.7.53）：本次**消耗了 6 点**咬合力 → 本次攻击结束后行动提前 25%
+    if (consume && spent >= TRACE.ellen.biteCap && eid >= 1) {
+      ellenAdvancePending += TRACE.ellen.e1Advance;
+      notes?.push('ellenE1');
+    }
+    // E2（4.7.53）：【冰海潜游式】后【鲨牙布】**立即施放一次追加攻击**（不再行动提前）
+    if (eid >= 2) {
+      const e2Notes: string[] = [];
+      seqs.push(...ellenShazabuAttack(e2Notes));
+      notes?.push('ellenE2', ...e2Notes);
+    }
+    return seqs;
+  }
+  /** 艾莲单体普攻段（零号连线触发【利齿修剪法】：不恢复战技点、优先【咬痕】目标） */
+  function ellenBasicTrigger(notes: string[]): number[] {
+    if (!ids.has('ellen') || isDead('ellen')) return [];
+    const lvE = levelsOf('ellen');
+    const p = skillParams('151401', lvE.basic);
+    const panel = panelOf('ellen');
+    const alive = aliveMonsters();
+    if (alive.length === 0) return [];
+    const target = ellenMark && alive.includes(ellenMark) ? ellenMark : resolveMain();
+    notes.push('ellenBasic');
+    return dealAttack({
+      source: 'ellen',
+      skillCode: 'ellen.basic',
+      element: panel.element,
+      level: panel.level,
+      statValue: panel.attack,
+      multiplier: p[0],
+      damageBonusExtra: 0,
+      critRate: panel.critRate,
+      critDmg: panel.critDmg,
+      stance: stanceOf('151401', lvE.basic),
+      attackerBuffs: holderOf('ellen'),
+      target,
+      attackKind: 'basic',
+    });
+  }
+  /** 【鲨牙布】行动（151404）：单体追加攻击（优先【咬痕】目标）+ 行迹 point08 + E2。
+   *  4.7.53：E2「冰潜后立即施放一次追加攻击」直接复用本函数（不推进跑道、不消耗自身行动）。 */
+  function ellenShazabuAttack(notes: string[]): number[] {
+    if (!ids.has('ellen')) return [];
+    const lvE = levelsOf('ellen');
+    const p = skillParams('151404', lvE.talent);
+    const panel = panelOf('ellen');
+    const eid = ellenEidolon();
+    const alive = aliveMonsters();
+    if (alive.length === 0) return [];
+    let target = ellenMark && alive.includes(ellenMark) ? ellenMark : resolveMain();
+    if (!alive.includes(target)) target = alive[0];
+    const seqs = dealAttack({
+      source: 'shazabu',
+      skillCode: 'ellen.shazabu',
+      element: panel.element,
+      level: panel.level,
+      statValue: panel.attack,
+      multiplier: p[1],
+      damageBonusExtra: 0,
+      critRate: panel.critRate,
+      critDmg: panel.critDmg,
+      stance: stanceOf('151404', lvE.talent),
+      attackerBuffs: holderOf('ellen'),
+      target,
+      attackKind: 'followup',
+      note: 'ellenShazabu',
+    });
+    // 行迹 point08【用餐礼仪】：鲨牙布攻击后艾莲 +1 咬合力（每次鲨牙布行动最多 1 次）
+    ellenGainBite(TRACE.ellen.p08BitePerShark, notes);
+    notes.push('ellenP08');
+    // E2（4.7.53）：每次鲨牙布攻击 → 艾莲回 5 能 + 1 咬合力 + 下一次【冰海潜游式】暴伤 +40%（不可叠加）
+    if (eid >= 2) {
+      gainEnergy('ellen', TRACE.ellen.e2Energy);
+      ellenGainBite(TRACE.ellen.e2Bite, notes);
+      ellenNextDiveCritDmg = TRACE.ellen.e2CritDmg;
+      notes.push('ellenE2Follow');
+    }
+    return seqs;
+  }
+
+  /** 耀嘉音战技151502：全队攻击力 += 自身攻击 ×#1 + #3（快照；E2 再 +12% 自身攻击） */
+  function yaojiayinApplySkill(notes: string[]): void {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin')) return;
+    const lvY = levelsOf('yaojiayin');
+    const p = skillParams('151502', lvY.skill);
+    const panel = panelOf('yaojiayin');
+    const eid = yaojiayinEidolon();
+    const atk = panel.attack * (p[0] + (eid >= 2 ? TRACE.yaojiayin.e2SkillAtkExtra : 0)) + p[2];
+    for (const h of allHolders()) {
+      addBuff(h, {
+        key: 'atkFlat',
+        value: atk,
+        stacks: 1,
+        duration: -1,
+        tick: 'permanent',
+        source: 'yaojiayin',
+        labelKey: 'yaoSkillAtk',
+      });
+    }
+    yaoSkillTurns = Math.round(p[1]);
+    notes.push('yaoSkill');
+  }
+  /** 战技到期：移除全队攻击力（强化普攻同源关闭） */
+  function yaojiayinClearSkill(): void {
+    for (const h of allHolders()) {
+      removeBuffInstance(h, { key: 'atkFlat', source: 'yaojiayin', labelKey: 'yaoSkillAtk' });
+    }
+    yaoSkillTurns = 0;
+  }
+  /** 结界151503（终结技）：#2 回合，敌方全体受到的伤害提高 #3 */
+  function yaojiayinOpenField(notes: string[]): void {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin')) return;
+    const lvY = levelsOf('yaojiayin');
+    const p = skillParams('151503', lvY.ult);
+    yaoFieldTurns = Math.round(p[1]);
+    for (const mid of MONSTER_IDS) {
+      if ((monsters[mid]?.hp ?? 0) <= 0) continue;
+      addBuff(monsters[mid].buffs, {
+        key: 'vulnerability',
+        value: p[2],
+        stacks: 1,
+        duration: -1,
+        tick: 'permanent',
+        source: 'yaojiayin',
+        labelKey: 'yaoField',
+      });
+    }
+    yaojiayinSyncField();
+    notes.push('yaoField');
+  }
+  function yaojiayinCloseField(notes?: string[]): void {
+    for (const mid of MONSTER_IDS) {
+      removeBuffInstance(monsters[mid].buffs, {
+        key: 'vulnerability',
+        source: 'yaojiayin',
+        labelKey: 'yaoField',
+      });
+    }
+    yaoFieldTurns = 0;
+    yaojiayinSyncField();
+    notes?.push('yaoFieldEnd');
+  }
+  /** 结界派生：E6 结界期间全队全属性抗穿 +20%。
+   *  4.7.53：E1 旧的「每层切分音无视 1.5% 防御 / 每波次回能」两条款已删除。 */
+  function yaojiayinSyncField(): void {
+    if (!ids.has('yaojiayin')) return;
+    const eid = yaojiayinEidolon();
+    const on = yaoFieldTurns > 0;
+    for (const h of allHolders()) {
+      if (on && eid >= 6) {
+        addBuff(h, {
+          key: 'resPenetration',
+          value: TRACE.yaojiayin.e6ResPen,
+          stacks: 1,
+          duration: -1,
+          tick: 'permanent',
+          source: 'yaojiayin',
+          labelKey: 'yaoE6',
+        });
+      } else {
+        removeBuffInstance(h, { key: 'resPenetration', source: 'yaojiayin', labelKey: 'yaoE6' });
+      }
+    }
+  }
+  /**
+   * 切分音（天赋151504）派生 buff 同步：
+   * - `basicDmgBonus` ×层数（仅普攻通道消费，见 dealAttackInner）；
+   * - 行迹 point08：持有层数时全队造成的伤害 +40%（damageBonus）；
+   * - E2（4.7.53 重做）：该增伤对**除普攻外的其他攻击类型**同样生效 → 不再要求结界、不再要求 E1，
+   *   直接以 `damageBonus` ×层数覆盖全攻击类型。
+   */
+  function yaojiayinSyncStacks(): void {
+    if (!ids.has('yaojiayin')) return;
+    const p = skillParams('151504', levelsOf('yaojiayin').talent);
+    const eid = yaojiayinEidolon();
+    for (const h of allHolders()) {
+      if (yaoStacks > 0) {
+        addBuff(h, {
+          key: 'basicDmgBonus',
+          value: p[0],
+          stacks: yaoStacks,
+          duration: -1,
+          tick: 'permanent',
+          source: 'yaojiayin',
+          labelKey: 'yaoSeg',
+        });
+        addBuff(h, {
+          key: 'damageBonus',
+          value: TRACE.yaojiayin.p08Dmg,
+          stacks: 1,
+          duration: -1,
+          tick: 'permanent',
+          source: 'yaojiayin',
+          labelKey: 'yaoP08',
+        });
+        if (eid >= 2) {
+          addBuff(h, {
+            key: 'damageBonus',
+            value: p[0],
+            stacks: yaoStacks,
+            duration: -1,
+            tick: 'permanent',
+            source: 'yaojiayin',
+            labelKey: 'yaoE2All',
+          });
+        } else {
+          removeBuffInstance(h, { key: 'damageBonus', source: 'yaojiayin', labelKey: 'yaoE2All' });
+        }
+      } else {
+        removeBuffInstance(h, { key: 'basicDmgBonus', source: 'yaojiayin', labelKey: 'yaoSeg' });
+        removeBuffInstance(h, { key: 'damageBonus', source: 'yaojiayin', labelKey: 'yaoP08' });
+        removeBuffInstance(h, { key: 'damageBonus', source: 'yaojiayin', labelKey: 'yaoE2All' });
+      }
+    }
+  }
+  /** 获得【切分音】：上限 10，获得即刷新 3 回合（整体刷新，到期清空） */
+  function yaojiayinGainSeg(n: number, notes?: string[]): void {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin') || n <= 0) return;
+    const p = skillParams('151504', levelsOf('yaojiayin').talent);
+    yaoStacks = Math.min(TRACE.yaojiayin.segMax, yaoStacks + n);
+    yaoSegTurns = Math.round(p[1]);
+    yaojiayinSyncStacks();
+    notes?.push('yaoSeg');
+    yaojiayinSyncField();
+  }
+  /** 切分音到期：层数与全部派生 buff 一并清空 */
+  function yaojiayinClearSeg(notes?: string[]): void {
+    if (yaoStacks === 0 && yaoSegTurns === 0) return;
+    yaoStacks = 0;
+    yaoSegTurns = 0;
+    yaojiayinSyncStacks();
+    yaojiayinSyncField();
+    notes?.push('yaoSegEnd');
+  }
+  /** 结界附加伤害（151503 #4；4.7.53 删除 E2 的 +80% 半句）：本次普攻命中的每个目标各 1 次「不视为攻击」的伤害 */
+  function yaojiayinAttach(targets: MonsterId[], notes: string[]): number[] {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin') || yaoFieldTurns <= 0) return [];
+    const lvY = levelsOf('yaojiayin');
+    const p = skillParams('151503', lvY.ult);
+    const panel = panelOf('yaojiayin');
+    const mult = p[3] ?? 0;
+    const seqs: number[] = [];
+    for (const t of targets) {
+      if ((monsters[t]?.hp ?? 0) <= 0) continue;
+      seqs.push(
+        ...dealAttack({
+          source: 'yaojiayin',
+          skillCode: 'yaojiayin.attach',
+          element: panel.element,
+          level: panel.level,
+          statValue: panel.attack,
+          multiplier: mult,
+          damageBonusExtra: 0,
+          critRate: panel.critRate,
+          critDmg: panel.critDmg,
+          stance: 0,
+          attackerBuffs: holderOf('yaojiayin'),
+          target: t,
+          attackKind: 'followup',
+          note: 'yaoAttach',
+        }),
+      );
+    }
+    if (seqs.length > 0) notes.push('yaoAttach');
+    return seqs;
+  }
+  /** 高歌，倾落华彩（151508，强化普攻：全体；E4 倍率 +60% 原倍率；行迹 point07 额外回能） */
+  function yaojiayinGaoge(notes: string[]): number[] {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin')) return [];
+    const lvY = levelsOf('yaojiayin');
+    const p = skillParams('151508', lvY.basic);
+    const panel = panelOf('yaojiayin');
+    const add = yaojiayinEidolon() >= 4 ? p[0] * TRACE.yaojiayin.e4GaogeBonus : 0;
+    const stance = stanceOf('151508', lvY.basic);
+    const seqs: number[] = [];
+    for (const t of aliveMonsters()) {
+      seqs.push(
+        ...dealAttack({
+          source: 'yaojiayin',
+          skillCode: 'yaojiayin.gaoge',
+          element: panel.element,
+          level: panel.level,
+          statValue: panel.attack,
+          multiplier: p[0] + add,
+          damageBonusExtra: 0,
+          critRate: panel.critRate,
+          critDmg: panel.critDmg,
+          stance,
+          attackerBuffs: holderOf('yaojiayin'),
+          target: t,
+          attackKind: 'basic',
+        }),
+      );
+    }
+    notes.push('yaoGaoge');
+    // 行迹 point07【鎏金乐章】：施放【高歌，倾落华彩】额外恢复 10 点能量（E1 提升至 20）
+    gainEnergy(
+      'yaojiayin',
+      yaojiayinEidolon() >= 1 ? TRACE.yaojiayin.p07EnergyE1 : TRACE.yaojiayin.p07Energy,
+    );
+    return seqs;
+  }
+  /** 共舞，跃动轻音（151512 扩散；【零号连线】联动段，主目标优先【咬痕】） */
+  function yaojiayinDance(notes: string[]): number[] {
+    if (!ids.has('yaojiayin') || isDead('yaojiayin')) return [];
+    const lvY = levelsOf('yaojiayin');
+    const p = skillParams('151512', lvY.basic);
+    const panel = panelOf('yaojiayin');
+    const alive = aliveMonsters();
+    if (alive.length === 0) return [];
+    const main = ellenMark && alive.includes(ellenMark) ? ellenMark : resolveMain();
+    const adj = resolveAdjacent(main).filter((t) => alive.includes(t));
+    const stance = SKILL_TABLES['151512']?.stance ?? [60, 0, 30];
+    const base = {
+      source: 'yaojiayin' as const,
+      element: panel.element,
+      level: panel.level,
+      statValue: panel.attack,
+      damageBonusExtra: 0,
+      critRate: panel.critRate,
+      critDmg: panel.critDmg,
+      attackerBuffs: holderOf('yaojiayin'),
+      attackKind: 'followup' as const,
+    };
+    const seqs: number[] = [];
+    seqs.push(...dealAttack({ ...base, skillCode: 'yaojiayin.dance', multiplier: p[0], stance: stance[0], target: main }));
+    for (const t of adj) {
+      seqs.push(...dealAttack({ ...base, skillCode: 'yaojiayin.dance', multiplier: p[1], stance: stance[2], target: t }));
+    }
+    notes.push('yaoDance');
+    return seqs;
+  }
+  /**
+   * 【零号连线】艾莲终结技后（4.7.52 文案，2026-11-17 用户裁定）：
+   * ① **先**解除耀嘉音的控制类负面；② 自动【冰海潜游式】(0 消耗)；③ 立即触发耀嘉音【共舞，跃动轻音】；
+   * ④ 耀嘉音获得 1 个**可插入施放终结技的**额外回合。
+   * E6「零号连线结束后」：消耗 1 层【狂宴时刻】→ 艾莲额外回合 + 回 6 点咬合力。
+   */
+  function zeroLineAfterEllenUlt(notes: string[]): number[] {
+    if (!zeroLineActive() || zeroLineGuard) return [];
+    zeroLineGuard = true;
+    const seqs: number[] = [];
+    try {
+      // ① 解控提前到所有触发攻击之前（4.7.52 文案变化）
+      zeroLineCleanse('yaojiayin');
+      const target =
+        ellenMark && (monsters[ellenMark]?.hp ?? 0) > 0 ? ellenMark : undefined;
+      seqs.push(...ellenDive(false, { target, skillCode: 'ellen.diveZero', notes }));
+      seqs.push(...yaojiayinDance(notes));
+      notes.push('zeroLineEllen');
+      // ④ 可插入施放终结技的额外回合
+      if (tl.has('yaojiayin')) tl.insertExtraTurn('yaojiayin', 'zeroLine', true);
+    } finally {
+      zeroLineGuard = false;
+    }
+    if (ids.has('ellen') && ellenFeast > 0 && tl.has('ellen')) {
+      ellenFeast -= 1;
+      ellenGainBite(TRACE.ellen.e6BiteBack, notes);
+      // 艾莲 E6：同样是「可插入施放终结技的额外回合」
+      tl.insertExtraTurn('ellen', 'ellenE6Feast', true);
+      notes.push('ellenE6');
+    }
+    return seqs;
+  }
+  /**
+   * 【零号连线】耀嘉音终结技后（4.7.52 文案，2026-11-17 用户裁定）：
+   * ① **先**解除艾莲的控制类负面；② 自动【高歌，倾落华彩】；③ 立即触发艾莲【利齿修剪法】
+   * （不恢复战技点，艾莲 +1 咬合力）；④ **该次利齿的攻击结束后**再触发 1 次【冰海潜游式】
+   * （0 消耗，以利齿结算后的咬合力/热量/咬痕状态结算）。
+   */
+  function zeroLineAfterYaoUlt(notes: string[]): number[] {
+    if (!zeroLineActive() || zeroLineGuard) return [];
+    zeroLineGuard = true;
+    const seqs: number[] = [];
+    try {
+      // ① 解控提前到所有触发攻击之前（4.7.52 文案变化）
+      zeroLineCleanse('ellen');
+      seqs.push(...yaojiayinGaoge(notes));
+      // ③ 利齿修剪法：dealAttack 同步结算，事件/伤害段立即产出 → ④ 读到的必是结算后状态
+      seqs.push(...ellenBasicTrigger(notes));
+      ellenGainBite(1, notes);
+      const target =
+        ellenMark && (monsters[ellenMark]?.hp ?? 0) > 0 ? ellenMark : undefined;
+      seqs.push(...ellenDive(false, { target, skillCode: 'ellen.diveZero', notes }));
+      notes.push('zeroLineYao');
+    } finally {
+      zeroLineGuard = false;
+    }
+    return seqs;
+  }
 
   const charAction = (
     id: CharId,
@@ -37817,6 +38849,74 @@ const STAGE_NS_ULT_LAUGH = 5;
         gainEnergy(id, 20);
         return { type: 'basic', notes, hitSeqs, targetId: picks?.enemyTarget };
       }
+      case 'ellen': {
+        // 我方目标行动时：场上无存活【咬痕】→ 自动补标最高血敌（151402 后半句）
+        ellenEnsureMark(notes);
+        const pE = panelOf('ellen');
+        if (decision === 'skill') {
+          // 战技151402【暴风雪特调】：+1 咬合力 → 挂【咬痕】→ 主 400% / 相邻 240%（扩散）
+          spendSp(1, 'ellen');
+          const p = skillParams('151402', lv.skill);
+          const main = resolveMain();
+          ellenGainBite(p[2] ?? 1, notes);
+          ellenApplyMark(main, notes);
+          const adj = resolveAdjacent(main).filter((t) => monsters[t].hp > 0);
+          const stance = SKILL_TABLES['151402']?.stance ?? [60, 0, 30];
+          const spec = {
+            source: 'ellen' as const,
+            skillCode: 'ellen.skill',
+            element: pE.element,
+            level: pE.level,
+            statValue: pE.attack,
+            damageBonusExtra: 0,
+            critRate: pE.critRate,
+            critDmg: pE.critDmg,
+            attackerBuffs: holderOf('ellen'),
+            attackKind: 'skill' as const,
+          };
+          hitSeqs.push(...dealAttack({ ...spec, multiplier: p[0], stance: stance[0], target: main }));
+          for (const t of adj) {
+            hitSeqs.push(...dealAttack({ ...spec, multiplier: p[1], stance: stance[2], target: t }));
+          }
+          gainEnergy('ellen', 30);
+          notes.push('ellenSkill');
+          return { type: 'skill', notes, hitSeqs, targetId: main, skillCode: 'ellen.skill' };
+        }
+        // 普攻：咬合力 ≥3 → 【冰海潜游式】（消耗全部；**不恢复战技点**）
+        if (ellenBite >= TRACE.ellen.diveThreshold) {
+          const mainD = resolveMain();
+          hitSeqs.push(...ellenDive(true, { target: mainD, notes }));
+          gainEnergy('ellen', 20);
+          notes.push('ellenDive');
+          return { type: 'basic', notes, hitSeqs, targetId: mainD, skillCode: 'ellen.dive' };
+        }
+        gainSp(1);
+        hitSeqs.push(...charAttack('ellen', 'ellen.basic', '151401', 'basic'));
+        gainEnergy('ellen', 20);
+        notes.push('ellenBasic');
+        return { type: 'basic', notes, hitSeqs, targetId: picks?.enemyTarget, skillCode: 'ellen.basic' };
+      }
+      case 'yaojiayin': {
+        if (decision === 'skill') {
+          // 战技151502【虹光为你闪耀】：全队攻击力（快照）+ 自身普攻强化，均 3 回合
+          spendSp(1, 'yaojiayin');
+          yaojiayinApplySkill(notes);
+          gainEnergy('yaojiayin', 30);
+          return { type: 'skill', notes, hitSeqs, skillCode: 'yaojiayin.skill' };
+        }
+        // 普攻：战技强化期间 → 【高歌，倾落华彩】(151508 全体)；否则普通单体
+        if (yaoSkillTurns > 0) {
+          gainSp(1);
+          hitSeqs.push(...yaojiayinGaoge(notes));
+          gainEnergy('yaojiayin', 20);
+          return { type: 'basic', notes, hitSeqs, targetId: picks?.enemyTarget, skillCode: 'yaojiayin.gaoge' };
+        }
+        gainSp(1);
+        hitSeqs.push(...charAttack('yaojiayin', 'yaojiayin.basic', '151501', 'basic'));
+        gainEnergy('yaojiayin', 20);
+        notes.push('yaojiayinBasic');
+        return { type: 'basic', notes, hitSeqs, targetId: picks?.enemyTarget, skillCode: 'yaojiayin.basic' };
+      }
     }
     } finally {
       lcActClose();
@@ -40432,6 +41532,63 @@ if (ids.has('fugue')) {
       });
       countAction('robin');
     }
+    // ===== 4.7.51 新增角色秘技（2026-11-13 接入）=====
+    // 艾莲秘技151407「狩猎巡游」（MazeAttack 攻击类）：进战 +3 咬合力 + 回 10 能 + 敌方全体 50% 冰伤
+    if (attackTechFirst === 'ellen') {
+      const ep = panelOf('ellen');
+      const tp = skillParams('151407', 1);
+      const seqs: number[] = [];
+      for (const t of aliveMonsters()) {
+        seqs.push(
+          ...dealAttack({
+            source: 'ellen',
+            skillCode: 'ellen.tech',
+            element: ep.element,
+            level: ep.level,
+            statValue: ep.attack,
+            multiplier: tp[3],
+            damageBonusExtra: 0,
+            critRate: ep.critRate,
+            critDmg: ep.critDmg,
+            stance: stanceOf('151407', 1),
+            attackerBuffs: holderOf('ellen'),
+            target: t,
+            attackKind: 'skill',
+          }),
+        );
+      }
+      ellenGainBite(TRACE.ellen.techBite);
+      gainEnergy('ellen', TRACE.ellen.techEnergy);
+      record({
+        time: 0,
+        round: 0,
+        kind: 'action',
+        unitId: 'ellen',
+        action: 'technique',
+        skillCode: 'ellen.tech',
+        spAfter: sp,
+        energyAfter: energyAfterOf('ellen'),
+        note: ['technique', 'ellenTech'],
+        hitSeqs: seqs.length > 0 ? seqs : undefined,
+      });
+      countAction('ellen');
+    }
+    // 耀嘉音秘技151507「游梦序曲」（Support 非攻击类）：下一次战斗开始时自动触发 1 次战技（不耗 SP）
+    if (ids.has('yaojiayin') && !isDead('yaojiayin')) {
+      yaojiayinApplySkill([]);
+      record({
+        time: 0,
+        round: 0,
+        kind: 'action',
+        unitId: 'yaojiayin',
+        action: 'technique',
+        skillCode: 'yaojiayin.skill',
+        spAfter: sp,
+        energyAfter: energyAfterOf('yaojiayin'),
+        note: ['technique', 'yaoTech'],
+      });
+      countAction('yaojiayin');
+    }
   }
   // 遗器套装101「过客」4pc：战斗开始时每名佩戴者恢复1点战技点（溢出丢弃）。
   // 位于秘技段之后——LC23021 等全部状态已初始化，gainSp 可安全调用（2026-10 批1裁定）
@@ -40474,6 +41631,12 @@ if (ids.has('fugue')) {
     lcVulnTickHolder(id);
     // 花火溢出池：我方成员行动后 SP<上限 → 从池补满（130603 #5，我方成员 tick 入口）
     if (id in memberHp) hh2OverflowRefill();
+    // 专武23066：【零食】2 回合 / 【冰饮】3 回合，按装备者行动结束递减
+    //（终结技不 tick → 大招挂上的【冰饮】覆盖其后 3 次装备者行动）
+    if (id === lc66Wear) {
+      if (lc66SnackLeft > 0) lc66SnackLeft -= 1;
+      if (lc66IceLeft > 0) lc66IceLeft -= 1;
+    }
     const tick = (uid: string): void => tickHolderBuffs(holderOf(uid));
     // 【特邀嘉宾】：持有者常规行动结束递减（151203「该角色每回合开始时持续回合数减1」）
     if (id === invitedTarget && invitedTurns > 0) invitedTurns -= 1;
@@ -41496,6 +42659,7 @@ if (ids.has('fugue')) {
     if (roundMode === 'forgotten') tl.refreshAllAv();
     // 智识三人换波入场钩子（2026-10-25）：那刻夏加弱点/E2、翡翠当品、银枝回能
     onEnemyEnterAll();
+    // 耀嘉音 E1（4.7.53 重做）：旧「每个波次开始时恢复 30 点能量」条款已删除
     // 新一波开始：大黑塔随机精英 +25 解读；姬子•启行秘技每波免费施放 1 次战技。
     if (ids.has('herta') && !isDead('herta')) hertaWaveStart();
     if (ids.has('himekoNova') && techniques) himekoNovaFreeSkill();
@@ -43376,6 +44540,10 @@ if (ids.has('fugue')) {
     const ev: TimelineEvent | null = tl.advance();
     if (!ev) break;
     if (ev.time > maxTime) break;
+    // 额外回合口径按事件重置：非「角色行动」事件（怪物/轮次/阿哈时刻等）一律视为不在额外回合，
+    // 避免 statusOf 把上一次额外回合的 allowUlt 透到非行动事件上（角色行动分支会按事件重新赋值）
+    inExtraTurn = false;
+    extraTurnAllowUlt = false;
 
     // 【末法余烬】破韧 → 立即触发一次「阿哈额外回合」（末日 P21 关卡机制尾句）：
     // 固定计入 10 笑点跑一次完整阿哈时刻（欢愉技参演 + 好活当赏转化），无可参演者时不产生事件。
@@ -44486,6 +45654,35 @@ if (ids.has('fugue')) {
       qyCloseField();
       continue;
     }
+    if (id === 'shazabu') {
+      // 艾莲 1514 天赋【邦布帮帮】召唤物【鲨牙布】（普通召唤物，神君/浮元先例）：
+      // 独立行动条、固定 200 速；行动时发起追加攻击（优先【咬痕】目标）+ 行迹 point08 + E2
+      clearAglaeaE2();
+      const notes: string[] = [];
+      const hitSeqs: number[] = [];
+      relicFollowupStart('shazabu');
+      try {
+        hitSeqs.push(...ellenShazabuAttack(notes));
+      } finally {
+        relicFollowupEnd();
+      }
+      record({
+        time: ev.time,
+        round: ev.round,
+        kind: 'action',
+        unitId: 'shazabu',
+        action: 'shazabu',
+        skillCode: 'ellen.shazabu',
+        spAfter: sp,
+        note: notes,
+        hitSeqs,
+      });
+      countAction('shazabu');
+      // 召唤物行动=追加攻击不算回合 → 不递减 buff（同神君/浮元）
+      tl.finishAction('shazabu');
+      checkVictory();
+      continue;
+    }
     if (id === 'fuyuan') {
       // 星魂2先例口径：召唤物行动=主动施放技能 → 清空阿雅无视防御层数
       clearAglaeaE2();
@@ -44651,6 +45848,18 @@ if (ids.has('fugue')) {
      * 由 `tl.insertExtraTurn` 入队、`advance()` 以 `type:'extraTurn'` 返回。
      */
     const isExtraTurn = ev.type === 'extraTurn';
+    /**
+     * 额外回合口径（4.7.52 + 2026-11-17 用户裁定）：
+     * - 普通型（`allowUlt` 缺省）：期间**不能**插入终结技（队列与跟放大招都要让位，旧口径）；
+     * - 可插入型（艾莲 E6 / 零号连线给耀嘉音）：该额外回合内可插大招 —— 之前被让位的
+     *   「跟放终结技」在此刻补放（同刻、afterSkill），随后本回合行动照常结算。
+     */
+    inExtraTurn = isExtraTurn;
+    extraTurnAllowUlt = isExtraTurn && ev.type === 'extraTurn' && ev.allowUlt === true;
+    if (extraTurnAllowUlt && deferredAfterUlts.length > 0) {
+      const list = deferredAfterUlts.splice(0);
+      for (const u of list) castQueuedUlt({ id: u.id, target: u.target, afterSkill: true });
+    }
     // 死亡退场（2026-10 裁定4）：hp≤0 的成员从行动条移除、跳过本轮行动并清盾。
     // 本轮无木桩攻击挂点（裁定2）→ 此分支为受击结算预留，当前不可达。
     if (isDead(charId)) {
@@ -45159,6 +46368,35 @@ if (ids.has('fugue')) {
     // 位于决策 yield 之前（status/predictAfter 自动含模块带来的能量/层数，无漂移）；
     // 模块写入的 note 经 modulePendingNotes 并入本次行动事件（charAction 之后统一 unshift）
     CHAR_MODULES[charId]?.onTurnStart?.(charModuleCtx(modulePendingNotes));
+    // ===== 艾莲 1514 / 耀嘉音 1515 回合开始（2026-11-13 接入）=====
+    // 【咬痕】文案「我方目标回合开始或行动时，若场上不存在陷入【咬痕】状态的敌方目标…」
+    // → 每名我方角色回合开始都补检一次（艾莲自己也在内）
+    if (ids.has('ellen') && !isDead('ellen')) ellenEnsureMark(modulePendingNotes);
+    // 艾莲 E1（4.7.53）：「艾莲回合开始时恢复 #2=4 点【咬合力】」——只在她**自己的常规回合**开始
+    //（额外回合整段跳过回合开始结算 → 不触发；进战当回合由 init 的 +3 负责，这里不重复加）
+    if (ids.has('ellen') && charId === 'ellen' && !isDead('ellen') && ellenEidolon() >= 1) {
+      ellenGainBite(TRACE.ellen.e1TurnStartBite, modulePendingNotes);
+      modulePendingNotes.push('ellenE1Turn');
+    }
+    if (charId === 'yaojiayin' && ids.has('yaojiayin')) {
+      // 战技（全队攻击 + 强化普攻）/ 结界 / 切分音：文案均写「自身每回合开始时持续回合数减1」
+      if (yaoSkillTurns > 0) {
+        yaoSkillTurns -= 1;
+        if (yaoSkillTurns <= 0) {
+          yaojiayinClearSkill();
+          modulePendingNotes.push('yaoSkillEnd');
+        }
+      }
+      if (yaoFieldTurns > 0) {
+        yaoFieldTurns -= 1;
+        if (yaoFieldTurns <= 0) yaojiayinCloseField(modulePendingNotes);
+        else yaojiayinSyncField();
+      }
+      if (yaoSegTurns > 0) {
+        yaoSegTurns -= 1;
+        if (yaoSegTurns <= 0) yaojiayinClearSeg(modulePendingNotes);
+      }
+    }
     // 青雀天赋：我方目标回合开始抽 1 张；青雀自己的战技额外行动不重复抽牌/暗杠判定
     if (ids.has('qingque') && charId !== 'qingque') {
       qingqueDraw(1, qingqueTurnNotes);
@@ -45200,8 +46438,12 @@ if (ids.has('fugue')) {
           yield { type: 'event', event: events[emitted++], status: statusOf() };
         }
         let casted = false;
-        while (ultQueue && ultQueue.length > 0) {
-          if (castQueuedUlt(ultQueue.shift()!)) casted = true;
+        // 普通型额外回合内**不能**插终结技（4.7.52 前口径；全真模拟 UI 也已禁按钮）；
+        // 可插入型（艾莲 E6 / 零号连线给耀嘉音）放行
+        if (!isExtraTurn || extraTurnAllowUlt) {
+          while (ultQueue && ultQueue.length > 0) {
+            if (castQueuedUlt(ultQueue.shift()!)) casted = true;
+          }
         }
         if (casted) continue;
         const input = yield {
@@ -45238,8 +46480,10 @@ if (ids.has('fugue')) {
           yield { type: 'event', event: events[emitted++], status: statusOf() };
         }
         let casted = false;
-        while (ultQueue && ultQueue.length > 0) {
-          if (castQueuedUlt(ultQueue.shift()!)) casted = true;
+        if (!isExtraTurn || extraTurnAllowUlt) {
+          while (ultQueue && ultQueue.length > 0) {
+            if (castQueuedUlt(ultQueue.shift()!)) casted = true;
+          }
         }
         if (casted) continue;
         const input = yield {
@@ -45270,7 +46514,15 @@ if (ids.has('fugue')) {
     pelaE2SpeedTick(charId);
     spActor = charId;
     mydeiHealChargeUsed = 0;
-    const result = charAction(charId, decision, picks);
+    // 艾莲 1514：自身行动窗口标记（行迹 point07 的「满上限额外获得 → 行动提前」在她的行动内
+    // 必须等 finishAction（av 重置）之后再改 av，否则会被覆盖）
+    ellenActing = charId === 'ellen';
+    let result: ReturnType<typeof charAction>;
+    try {
+      result = charAction(charId, decision, picks);
+    } finally {
+      ellenActing = false;
+    }
     // 连线开场/陷阱备注（决策环内产生）并入本次行动事件（时序在最前）
     if (hhPendingNotes.length > 0) {
       result.notes.unshift(...hhPendingNotes);
@@ -45442,6 +46694,7 @@ if (ids.has('fugue')) {
       note: allNotes.length > 0 ? allNotes : undefined,
       hitSeqs: result.hitSeqs.length > 0 ? result.hitSeqs : undefined,
       extraTurn: isExtraTurn ? true : undefined,
+      extraTurnAllowUlt: isExtraTurn && extraTurnAllowUlt ? true : undefined,
     });
     // 立即行动必须先 finishAction 再释放跟放终结技——否则大招内「自身立即行动」
     // 的 av 归 0 会被 finishAction（av 重置一圈）覆盖，大招后行动不再紧接（2026-10 修复）
@@ -45452,7 +46705,11 @@ if (ids.has('fugue')) {
     // 额外回合优先（2026-11 用户裁定）：本行动若已挣得额外回合，跟放的终结技让位——
     // 先记入 deferredAfterUlts，等额外回合链跑完再由主循环补放（顺序：额外回合 → 跟放终结技）。
     if (afterUlts && afterUlts.length > 0) {
-      if (hasPendingExtraTurn()) {
+      // 可插入型额外回合（4.7.52）：艾莲 E6 在本行动尾挣得的额外回合允许插大招 →
+      // 先让位，等主循环在「该额外回合开始时」补放（同刻、afterSkill），即「在该额外回合内结算」
+      const earnsAllowUltExtra =
+        !isExtraTurn && charId === 'ellen' && ids.has('ellen') && ellenFeast > 0 && tl.has('ellen');
+      if (hasPendingExtraTurn() || earnsAllowUltExtra) {
         deferredAfterUlts.push(...afterUlts);
       } else {
         for (const u of afterUlts) castQueuedUlt({ id: u.id, target: u.target, afterSkill: true });
@@ -45471,6 +46728,26 @@ if (ids.has('fugue')) {
         // 流萤 E2：额外回合（2026-11 裁定 → 插入回合，不动跑道）
         tl.insertExtraTurn('firefly', 'fireflyE2');
       }
+    }
+    // 艾莲 1514：E1「本次攻击结束后，艾莲行动提前 25%」+ 行迹 point07「满上限额外获得 → 行动提前 10%」
+    //（本行动已 finishAction，可直接改 av；额外回合不结算跑道 → 只清标志）
+    if (ellenAdvancePending > 0 || ellenP07Pending > 0) {
+      const advPct = ellenAdvancePending + ellenP07Pending;
+      ellenAdvancePending = 0;
+      ellenP07Pending = 0;
+      if (!isExtraTurn && tl.has('ellen') && !victory) tl.actionAdvance('ellen', advPct);
+    }
+    // 行迹 point07（4.7.53）：「该效果艾莲每回合可触发 2 次」→ 艾莲自身回合结束重置计数
+    if (!isExtraTurn && charId === 'ellen') ellenP07Count = 0;
+    // 艾莲 1514 E6【狂宴时刻】：持有层数时「艾莲回合结束」消耗 1 层 → 立即获得额外回合 + 回 6 咬合力。
+    // 2026-11-13 用户裁定：**只有常规普攻/战技结束**算「回合结束」；额外回合结束不算
+    //（与项目铁律「额外回合不算回合、整段回合结算跳过」一致）。零号连线结束的消费在联线函数里。
+    if (!isExtraTurn && charId === 'ellen' && !victory && ellenFeast > 0 && tl.has('ellen')) {
+      ellenFeast -= 1;
+      ellenGainBite(TRACE.ellen.e6BiteBack, allNotes);
+      // 4.7.52：艾莲 E6 的额外回合「可插入施放终结技」
+      tl.insertExtraTurn('ellen', 'ellenE6Feast', true);
+      allNotes.push('ellenE6');
     }
     // 毁灭批：刃满层追击 / 万敌血仇额外回合；刃【地狱变】战技后的额外回合
     bladeFlushFollowup();
@@ -46104,7 +47381,7 @@ export function createInteractiveBattle(config: BattleConfig): InteractiveBattle
   };
 }
 
-  const SUPPORTED_IDS = new Set<string>(['qingge', 'sunday', 'jingyuan', 'himeko', 'rappa', 'tenghuang', 'aglaea', 'aha', 'yaoguang', 'huohua', 'langzun', 'feiying', 'shuisha', 'zhenzhu', 'trailblazer', 'trailblazer2', 'trailblazerMem', 'trailblazerMem2', 'tibao', 'huahuo', 'tails', 'xiedie', 'fengjin', 'changyeyue', 'xilian', 'luocha', 'lingsha', 'natasha', 'lynx', 'bailu', 'gallagher', 'cerdra', 'robin', 'ruanmei', 'trailblazerShaman', 'trailblazerShaman2', 'hysilens', 'blackswan', 'kafka', 'welt', 'pela', 'sampo', 'luka', 'guinaifen', 'saifeir', 'yinlang', 'jiaoqiu', 'huangquan', 'qianye', 'dahlia', 'fugue', 'asta', 'bronya', 'tingyun', 'yukong', 'hanya', 'sanyueqi', 'gepard', 'aventurine', 'herta', 'himekoNova', 'herta4', 'serval', 'anaxa', 'jade', 'argenti', 'qingque', 'rin', 'blade', 'jingliu', 'mydei', 'saber', 'gilgamesh', 'misha', 'firefly', 'xueyi', 'yunli', 'clara', 'arlan', 'hook', 'trailblazerDestroy', 'trailblazerDestroy2', 'danhengIL', 'phainon', 'ratio', 'topaz', 'fuxuan', 'trailblazerKnight', 'trailblazerKnight2', 'sushang', 'yanqing', 'danheng', 'seele', 'archer', 'boothill', 'feixiao', 'moze', 'sanyueqi2', 'ashveil']);
+  const SUPPORTED_IDS = new Set<string>(['qingge', 'sunday', 'jingyuan', 'himeko', 'rappa', 'tenghuang', 'aglaea', 'aha', 'yaoguang', 'huohua', 'langzun', 'feiying', 'shuisha', 'zhenzhu', 'trailblazer', 'trailblazer2', 'trailblazerMem', 'trailblazerMem2', 'tibao', 'huahuo', 'tails', 'xiedie', 'fengjin', 'changyeyue', 'xilian', 'luocha', 'lingsha', 'natasha', 'lynx', 'bailu', 'gallagher', 'cerdra', 'robin', 'ruanmei', 'trailblazerShaman', 'trailblazerShaman2', 'hysilens', 'blackswan', 'kafka', 'welt', 'pela', 'sampo', 'luka', 'guinaifen', 'saifeir', 'yinlang', 'jiaoqiu', 'huangquan', 'qianye', 'dahlia', 'fugue', 'asta', 'bronya', 'tingyun', 'yukong', 'hanya', 'sanyueqi', 'gepard', 'aventurine', 'herta', 'himekoNova', 'herta4', 'serval', 'anaxa', 'jade', 'argenti', 'qingque', 'rin', 'blade', 'jingliu', 'mydei', 'saber', 'gilgamesh', 'misha', 'firefly', 'xueyi', 'yunli', 'clara', 'arlan', 'hook', 'trailblazerDestroy', 'trailblazerDestroy2', 'danhengIL', 'phainon', 'ratio', 'topaz', 'fuxuan', 'trailblazerKnight', 'trailblazerKnight2', 'sushang', 'yanqing', 'danheng', 'seele', 'archer', 'boothill', 'feixiao', 'moze', 'sanyueqi2', 'ashveil', 'ellen', 'yaojiayin']);
 
 function buildReport(
   hits: readonly HitLog[],

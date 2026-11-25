@@ -1,7 +1,7 @@
 {
   "id": "3003041",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "「同音共律的来日」",
     "en": "\"Tomorrow in Harmonious Chords\""
@@ -461,7 +461,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 60,
+        "stance_modify_value": 180,
         "stance_weak_list": [
           "Physical",
           "Fire",
@@ -1158,7 +1158,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 60,
+        "stance_modify_value": 180,
         "stance_weak_list": [
           "Physical",
           "Fire",

@@ -1,7 +1,7 @@
 {
   "id": "5034011",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "堕神之血•亚婆离",
     "en": "Blood of the Fallen God: Yabuli"
@@ -197,6 +197,17 @@
         "world_level": 6,
         "display_item_list": []
       }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 2
+      }
     ]
   },
   "en": {
@@ -381,6 +392,17 @@
         "monster_template_id": 5034011,
         "world_level": 6,
         "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 2
       }
     ]
   }

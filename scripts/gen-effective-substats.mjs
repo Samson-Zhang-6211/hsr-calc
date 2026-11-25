@@ -120,10 +120,13 @@ const EFF = {
   '8008': [cd, atk, spd],
   '8009': [cr, cd, spd],
   '8010': [cr, cd, spd],
+  // 批18（4.7.51 新增）
+  '1514': [cr, cd, atk, spd], // 艾莲：冰/毁灭 直伤暴击 C（鲨牙布为普通召唤物，不吃词条）
+  '1515': [atk, spd, cd, cr], // 耀嘉音：同谐辅助，拐力吃攻击力；行迹自带 +50% 暴击率 → 暴伤也有效
 };
 
 const ids = Object.keys(EFF);
-if (ids.length !== 99) throw new Error(`清单应为 99 条，实际 ${ids.length}`);
+if (ids.length !== 101) throw new Error(`清单应为 101 条，实际 ${ids.length}`);
 
 let ok = 0;
 const problems = [];
@@ -143,4 +146,4 @@ for (const [id, subs] of Object.entries(EFF)) {
   ok++;
 }
 if (problems.length) throw new Error('问题：\n' + problems.join('\n'));
-console.log(`有效词条写入完成：${ok}/99（meta.effectiveSubstats）`);
+console.log(`有效词条写入完成：${ok}/${ids.length}（meta.effectiveSubstats）`);

@@ -1,7 +1,7 @@
 {
   "id": "1511",
   "type": "character",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "星神★阿哈",
     "en": "Aeon ★ Aha"
@@ -19,7 +19,9 @@
       "SpeedDelta": 5,
       "CriticalDamageBase": 5,
       "CriticalChanceBase": 3
-    }
+    },
+    "portrait": "/portraits/1511.webp",
+    "portraitShop": "/portraits-shop/1511.webp"
   },
   "zh": {
     "name": "星神★阿哈",
@@ -101,7 +103,300 @@
             "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
             "param": []
           }
-        }
+        },
+        "description_refs": [
+          {
+            "token": "#{series_ref_skill_desc:UIText_SeriesSkillDescFormat,151129,2}",
+            "format": "• #1：#2",
+            "entries": [
+              {
+                "avatar_id": 1506,
+                "avatar_name": "银狼LV.<unbreak>999</unbreak>",
+                "skill_id": 150629,
+                "level": 2,
+                "name": "欢愉万相★全息幻象",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，【隐藏分】达到上限后可溢出至<color=#f29e38ff><unbreak>#1[i]</unbreak></color>，暴击伤害提高<unbreak>#3[i]%</unbreak>，每获得1点【<u>绝活共赏</u>】，同时获得相当于该点数<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>的【隐藏分】。",
+                "param_list": [
+                  999,
+                  0.4,
+                  0.4
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1505,
+                "avatar_name": "绯英",
+                "skill_id": 150529,
+                "level": 2,
+                "name": "欢愉万相★书中折花",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，可积攒最多<color=#f29e38ff><unbreak>#3[i]</unbreak></color>点溢出能量，施放终结技后清空并恢复相应的能量值，本次恢复不会触发天赋的获得<u>好活当赏</u>效果。造成的伤害无视敌方目标<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>的防御力，每累计获得<unbreak>#4[i]</unbreak>点【<u>绝活共赏</u>】，使下一次终结技的伤害倍率及本次终结技通过天赋造成的<u>欢愉伤害</u>倍率提高原倍率的<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，该效果无法叠加。",
+                "param_list": [
+                  1.5,
+                  0.24,
+                  240,
+                  480
+                ],
+                "extra": {
+                  "10000028": {
+                    "name": "欢愉伤害",
+                    "desc": "计入的笑点越多，欢愉度、角色等级越高，则造成的欢愉伤害越高。\\n欢愉伤害不受伤害提高类效果所影响。",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "好活当赏",
+                    "desc": "使参演阿哈时刻的角色获得【好活当赏】状态，并将本次阿哈时刻的笑点计入该状态，持续2回合。【好活当赏】状态产生的技能效果和欢愉伤害以【好活当赏】计入的笑点数计算。\\n多个【好活当赏】计入的笑点数合并计算。\\n各个【好活当赏】的持续时间各自独立计算。",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1501,
+                "avatar_name": "火花",
+                "skill_id": 150129,
+                "level": 2,
+                "name": "欢愉万相★兔子戏法",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，欢愉技的伤害倍率提高原倍率的<color=#f29e38ff><unbreak>#5[i]%</unbreak></color>，我方目标造成伤害时无视敌方目标<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>防御力，每持有<unbreak>#2[i]</unbreak>点【<u>绝活共赏</u>】，【红红火火】触发时额外提供<unbreak>#3[i]</unbreak>点<u>爽点</u>，最多额外提供<color=#f29e38ff><unbreak>#4[i]</unbreak></color>点。",
+                "param_list": [
+                  0.2,
+                  10,
+                  1,
+                  12,
+                  1.2
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "爽点",
+                    "desc": "获得爽点时视为获得笑点，爽点会在阿哈时刻结束时，重新获得消耗值的一部分。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1502,
+                "avatar_name": "爻光",
+                "skill_id": 150229,
+                "level": 2,
+                "name": "欢愉万相★心灵感应",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，【大吉大利】效果的伤害倍率提高，提高数值等同于原伤害倍率的<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>。爻光施放终结技后固定恢复<color=#f29e38ff><unbreak>#2[i]</unbreak></color>点能量并获得<unbreak>#4[i]</unbreak><u>爽点</u>。",
+                "param_list": [
+                  0.4,
+                  30,
+                  0,
+                  10
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "爽点",
+                    "desc": "获得爽点时视为获得笑点，爽点会在阿哈时刻结束时，重新获得消耗值的一部分。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1503,
+                "avatar_name": "真珠",
+                "skill_id": 150329,
+                "level": 2,
+                "name": "欢愉万相★跃然纸上",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，真珠的【<u>绝活共赏</u>】持有上限提高至<unbreak>#1[i]</unbreak>点。终结技提供的<u>额外回合</u>开始时获得的【<u>好活当赏</u>】和<u>笑点</u>，在<u>额外回合</u>结束时会保留<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>和<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>。",
+                "param_list": [
+                  75,
+                  0.2,
+                  0.2
+                ],
+                "extra": {
+                  "10000000": {
+                    "name": "额外回合",
+                    "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+                    "param": []
+                  },
+                  "10000027": {
+                    "name": "笑点",
+                    "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "好活当赏",
+                    "desc": "使参演阿哈时刻的角色获得【好活当赏】状态，并将本次阿哈时刻的笑点计入该状态，持续2回合。【好活当赏】状态产生的技能效果和欢愉伤害以【好活当赏】计入的笑点数计算。\\n多个【好活当赏】计入的笑点数合并计算。\\n各个【好活当赏】的持续时间各自独立计算。",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1513,
+                "avatar_name": "砂金•戏浪",
+                "skill_id": 151329,
+                "level": 2,
+                "name": "欢愉万相★三赌牌局",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，若只有星神★阿哈1位「欢愉」命途的队友，则行迹【纵享惊涛】中只存在砂金•戏浪1名「欢愉」命途角色时的效果也会生效，且该效果获得加强：我方全体速度提高<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>，队友施放攻击后，砂金•戏浪额外获得<color=#f29e38ff><unbreak>#3[i]</unbreak></color>点【热意】以及<color=#f29e38ff><unbreak>#4[i]</unbreak></color>个<u>爽点</u>。",
+                "param_list": [
+                  0,
+                  0.25,
+                  2,
+                  2
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "爽点",
+                    "desc": "获得爽点时视为获得笑点，爽点会在阿哈时刻结束时，重新获得消耗值的一部分。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 8009,
+                "avatar_name": "{NICKNAME}",
+                "skill_id": 800929,
+                "level": 2,
+                "name": "欢愉万相★主角光环",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，终结技的暴击伤害提高效果额外提高<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，并对我方全体生效。终结技触发星神★阿哈的欢愉技前，额外触发一次开拓者的欢愉技，本次欢愉技的伤害倍率提高原倍率的<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>，并基于我方角色持有的【<u>绝活共赏</u>】最高值进行计算。随后触发的星神★阿哈欢愉技，其<u>真实伤害</u>改为按上述开拓者欢愉技造成伤害的<unbreak>#3[i]%</unbreak>计算，由敌方全体均分。",
+                "param_list": [
+                  0.3,
+                  3,
+                  0.2
+                ],
+                "extra": {
+                  "10000017": {
+                    "name": "真实伤害",
+                    "desc": "不受任何效果所影响的无属性伤害，本次伤害不视为造成了1次攻击。",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 8010,
+                "avatar_name": "{NICKNAME}",
+                "skill_id": 801029,
+                "level": 2,
+                "name": "欢愉万相★主角光环",
+                "desc": "当<color=#cb2f2f><u>「欢愉」命途升格</u></color>时，终结技的暴击伤害提高效果额外提高<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，并对我方全体生效。终结技触发星神★阿哈的欢愉技前，额外触发一次开拓者的欢愉技，本次欢愉技的伤害倍率提高原倍率的<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>，并基于我方角色持有的【<u>绝活共赏</u>】最高值进行计算。随后触发的星神★阿哈欢愉技，其<u>真实伤害</u>改为按上述开拓者欢愉技造成伤害的<unbreak>#3[i]%</unbreak>计算，由敌方全体均分。",
+                "param_list": [
+                  0.3,
+                  3,
+                  0.2
+                ],
+                "extra": {
+                  "10000017": {
+                    "name": "真实伤害",
+                    "desc": "不受任何效果所影响的无属性伤害，本次伤害不视为造成了1次攻击。",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1511,
+                "avatar_name": "星神★阿哈",
+                "skill_id": 151129,
+                "level": 2,
+                "name": "欢愉万相★无中生有",
+                "desc": "持有【欢愉万相】状态时，星神★阿哈使我方<color=#cb2f2f><u>「欢愉」命途升格</u></color>，<u>笑点</u>与【<u>好活当赏</u>】状态强化为<u>爽点</u>和【<u>绝活共赏</u>】状态。<u>爽点</u>会在阿哈时刻结束时，重新获得消耗<u>爽点</u>的<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>。【欢愉万相】期间，星神★阿哈暴击率提高<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>，造成的伤害无视敌方目标<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>的防御力。",
+                "param_list": [
+                  0.1,
+                  0.6,
+                  0.2
+                ],
+                "extra": {
+                  "10000027": {
+                    "name": "笑点",
+                    "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "好活当赏",
+                    "desc": "使参演阿哈时刻的角色获得【好活当赏】状态，并将本次阿哈时刻的笑点计入该状态，持续2回合。【好活当赏】状态产生的技能效果和欢愉伤害以【好活当赏】计入的笑点数计算。\\n多个【好活当赏】计入的笑点数合并计算。\\n各个【好活当赏】的持续时间各自独立计算。",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "「欢愉」命途升格",
+                    "desc": "星神★阿哈持有【欢愉万相】状态时，【笑点】与【好活当赏】强化为【爽点】和【绝活共赏】，我方「欢愉」命途角色将激活【固有行迹】效果。",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "爽点",
+                    "desc": "获得爽点时视为获得笑点，爽点会在阿哈时刻结束时，重新获得消耗值的一部分。",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "绝活共赏",
+                    "desc": "获得【绝活共赏】状态时视为获得【好活当赏】状态，【绝活共赏】数值将影响我方「欢愉」命途角色的【固有行迹】效果。",
+                    "param": []
+                  }
+                }
+              }
+            ]
+          }
+        ]
       },
       "3": {
         "id": 151103,
@@ -186,7 +481,7 @@
         "id": 151101,
         "name": "点星，开幕！",
         "desc": "对指定敌方单体造成<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>的量子属性<u>欢愉伤害</u>。",
-        "simple_desc": "对敌方单体造成少量量子属性<u>欢愉伤害</u>。",
+        "simple_desc": "对敌方单体造成量子属性<u>欢愉伤害</u>。",
         "type": "Normal",
         "type_name": "普攻",
         "tag": "SingleAttack",
@@ -481,8 +776,8 @@
       "151103": {
         "id": 151103,
         "name": "啊哈！宇宙笑点大爆炸",
-        "desc": "使<u>阿哈</u><u>行动提前</u><unbreak>#5[i]%</unbreak>，星神★阿哈获得【欢愉万相】状态，持续<unbreak>#6[i]</unbreak>回合，星神★阿哈每回合开始时持续时间减1。对敌方全体造成<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>的量子属性<u>欢愉伤害</u>，随后造成<unbreak>#3[i]</unbreak>次伤害，每次伤害对敌方随机单体造成<color=#f29e38ff><unbreak>#4[i]%</unbreak></color>的量子属性<u>欢愉伤害</u>。",
-        "simple_desc": "使<u>阿哈</u><u>行动提前</u>，星神★阿哈获得【欢愉万相】状态。对敌方全体造成量子属性<u>欢愉伤害</u>，随后对敌方随机单体造成量子属性<u>欢愉伤害</u>，共弹射<color=#f29e38ff><unbreak>#3[i]</unbreak></color>次。",
+        "desc": "使<u>阿哈</u><u>行动提前</u><unbreak>#5[i]%</unbreak>，星神★阿哈获得【欢愉万相】状态，持续<unbreak>#6[i]</unbreak>回合，星神★阿哈每回合开始时持续回合数减1。对敌方全体造成<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>的量子属性<u>欢愉伤害</u>，随后造成<unbreak>#3[i]</unbreak>次伤害，每次伤害对敌方随机单体造成<color=#f29e38ff><unbreak>#4[i]%</unbreak></color>的量子属性<u>欢愉伤害</u>。",
+        "simple_desc": "使<u>阿哈</u><u>行动提前</u>，星神★阿哈获得【欢愉万相】状态。对敌方全体造成大量量子属性<u>欢愉伤害</u>，随后对敌方随机单体造成量子属性<u>欢愉伤害</u>，共弹射<color=#f29e38ff><unbreak>#3[i]</unbreak></color>次。",
         "type": "Ultra",
         "type_name": "终结技",
         "tag": "AoEAttack",
@@ -1234,7 +1529,7 @@
         "desc": "星神★阿哈与队友造成伤害时，对敌方目标额外造成等同于损失的生命值<unbreak>#1[i]%</unbreak>的<u>【欢愉负债】</u>效果，敌方目标阶段转换时会保留<u>【欢愉负债】</u>，最高不超过目标生命上限的<unbreak>#3[i]%</unbreak>。",
         "simple_desc": "星神★阿哈与队友造成伤害时，对敌方目标额外造成<u>【欢愉负债】</u>效果，敌方目标阶段转换时会保留<u>【欢愉负债】</u>。",
         "type": null,
-        "type_name": "天赋",
+        "type_name": "星神权能",
         "tag": "Enhance",
         "sp_base": null,
         "bp_need": -1,
@@ -1282,7 +1577,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1319,7 +1614,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1356,7 +1651,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1393,7 +1688,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1430,7 +1725,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1467,7 +1762,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1490,7 +1785,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1522,7 +1817,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1559,7 +1854,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1596,7 +1891,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1633,7 +1928,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1670,7 +1965,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1707,7 +2002,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1749,7 +2044,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1791,7 +2086,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1833,7 +2128,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1856,7 +2151,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1888,7 +2183,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1925,7 +2220,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1962,7 +2257,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -1999,7 +2294,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2036,7 +2331,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2073,7 +2368,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2115,7 +2410,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2157,7 +2452,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2199,7 +2494,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2222,7 +2517,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2254,7 +2549,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2291,7 +2586,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2328,7 +2623,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2365,7 +2660,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2402,7 +2697,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2439,7 +2734,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2481,7 +2776,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2523,7 +2818,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2565,7 +2860,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -2588,359 +2883,8 @@
           "point_id": 1511007,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 5,
+          "point_trigger_key": "PointMaze",
           "point_type": 2,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        }
-      },
-      "point22": {
-        "1": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": null,
-          "avatar_level_limit": null,
-          "default_unlock": true,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "2": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 1,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 2000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116001,
-              "item_num": 2,
-              "rarity": "NotNormal"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "3": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 2,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 4000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110261,
-              "item_num": 3,
-              "rarity": "NotNormal"
-            },
-            {
-              "item_id": 116001,
-              "item_num": 5,
-              "rarity": "NotNormal"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "4": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 3,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 8000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 2,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 3,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "5": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 4,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 15000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 4,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 3,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "6": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 4,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 24000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 6,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 5,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "7": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 5,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 32000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 2,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 2,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "8": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 5,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 65000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "9": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 6,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 120000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 6,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "10": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 6,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 250000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 12,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "欢愉技",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
           "pre_point": [],
           "status_add_list": [],
           "extra": {}
@@ -2980,7 +2924,7 @@
           "point_id": 1511101,
           "point_name": "愚弄众神的玩笑",
           "point_desc": "战技的<u>追加攻击</u>额外造成持有【「欢愉」令使】状态的目标<unbreak>#1[i]%</unbreak>的对应属性<u>欢愉伤害</u>并恢复<unbreak>#3[i]</unbreak>点战技点。本次额外造成的<u>欢愉伤害</u>不视为1次攻击。",
-          "point_trigger_key": 6,
+          "point_trigger_key": "PointB1",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -3036,7 +2980,7 @@
           "point_id": 1511102,
           "point_name": "戏中人的异想国",
           "point_desc": "受到队友提供的治疗效果或护盾时，获得<unbreak>#1[i]</unbreak>点【愿力】，最多触发<unbreak>#2[i]</unbreak>次，施放终结技后重置可触发次数。",
-          "point_trigger_key": 7,
+          "point_trigger_key": "PointB2",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -3084,7 +3028,7 @@
           "point_id": 1511103,
           "point_name": "盒中蕴藏的世界",
           "point_desc": "当星神★阿哈的速度大于等于<unbreak>#1[i]</unbreak>/<unbreak>#2[i]</unbreak>点时，欢愉度提高<unbreak>#3[i]%</unbreak>/<unbreak>#4[i]%</unbreak>。战斗开始时，使自身<u>行动提前</u><unbreak>#5[i]%</unbreak>。",
-          "point_trigger_key": 8,
+          "point_trigger_key": "PointB3",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -3122,7 +3066,7 @@
           "point_id": 1511201,
           "point_name": "暴击伤害强化",
           "point_desc": null,
-          "point_trigger_key": 9,
+          "point_trigger_key": "PointS1",
           "point_type": 1,
           "pre_point": [],
           "status_add_list": [
@@ -3165,7 +3109,7 @@
           "point_id": 1511202,
           "point_name": "暴击率强化",
           "point_desc": null,
-          "point_trigger_key": 10,
+          "point_trigger_key": "PointS2",
           "point_type": 1,
           "pre_point": [],
           "status_add_list": [
@@ -3208,7 +3152,7 @@
           "point_id": 1511203,
           "point_name": "暴击伤害强化",
           "point_desc": null,
-          "point_trigger_key": 11,
+          "point_trigger_key": "PointS3",
           "point_type": 1,
           "pre_point": [
             1511101
@@ -3253,7 +3197,7 @@
           "point_id": 1511204,
           "point_name": "速度强化",
           "point_desc": null,
-          "point_trigger_key": 12,
+          "point_trigger_key": "PointS4",
           "point_type": 1,
           "pre_point": [
             1511101
@@ -3298,7 +3242,7 @@
           "point_id": 1511205,
           "point_name": "暴击伤害强化",
           "point_desc": null,
-          "point_trigger_key": 13,
+          "point_trigger_key": "PointS5",
           "point_type": 1,
           "pre_point": [
             1511102
@@ -3343,7 +3287,7 @@
           "point_id": 1511206,
           "point_name": "暴击率强化",
           "point_desc": null,
-          "point_trigger_key": 14,
+          "point_trigger_key": "PointS6",
           "point_type": 1,
           "pre_point": [
             1511205
@@ -3388,7 +3332,7 @@
           "point_id": 1511207,
           "point_name": "暴击伤害强化",
           "point_desc": null,
-          "point_trigger_key": 15,
+          "point_trigger_key": "PointS7",
           "point_type": 1,
           "pre_point": [
             1511206
@@ -3433,7 +3377,7 @@
           "point_id": 1511208,
           "point_name": "速度强化",
           "point_desc": null,
-          "point_trigger_key": 16,
+          "point_trigger_key": "PointS8",
           "point_type": 1,
           "pre_point": [
             1511103
@@ -3478,7 +3422,7 @@
           "point_id": 1511209,
           "point_name": "暴击率强化",
           "point_desc": null,
-          "point_trigger_key": 17,
+          "point_trigger_key": "PointS9",
           "point_type": 1,
           "pre_point": [
             1511208
@@ -3523,7 +3467,7 @@
           "point_id": 1511210,
           "point_name": "暴击伤害强化",
           "point_desc": null,
-          "point_trigger_key": 18,
+          "point_trigger_key": "PointS10",
           "point_type": 1,
           "pre_point": [
             1511209
@@ -3535,6 +3479,357 @@
               "name": "暴击伤害"
             }
           ],
+          "extra": {}
+        }
+      },
+      "point22": {
+        "1": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": null,
+          "avatar_level_limit": null,
+          "default_unlock": true,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "2": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 1,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 2000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116001,
+              "item_num": 2,
+              "rarity": "NotNormal"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "3": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 2,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 4000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110261,
+              "item_num": 3,
+              "rarity": "NotNormal"
+            },
+            {
+              "item_id": 116001,
+              "item_num": 5,
+              "rarity": "NotNormal"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "4": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 3,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 8000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 2,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 3,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "5": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 4,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 15000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 4,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 3,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "6": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 4,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 24000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 6,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 5,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "7": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 5,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 32000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 2,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 2,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "8": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 5,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 65000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "9": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 6,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 120000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 6,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "10": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 6,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 250000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 12,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "欢愉技",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
           "extra": {}
         }
       },
@@ -3558,7 +3853,7 @@
           "point_id": 1511601,
           "point_name": "阿哈正传",
           "point_desc": "星神★阿哈与队友造成伤害时，对敌方目标额外造成等同于损失的生命值<unbreak>#1[i]%</unbreak>的<u>【欢愉负债】</u>效果，敌方目标阶段转换时会保留<u>【欢愉负债】</u>，最高不超过目标生命上限的<unbreak>#3[i]%</unbreak>。",
-          "point_trigger_key": 23,
+          "point_trigger_key": "PointAeonPower",
           "point_type": 6,
           "pre_point": [],
           "status_add_list": [],
@@ -3908,7 +4203,9 @@
         "backup_group_list3": []
       }
     ],
-    "skin": {}
+    "skin": {
+      "1151101": ""
+    }
   },
   "en": {
     "name": "Aeon ★ Aha",
@@ -3939,7 +4236,7 @@
       "1": {
         "id": 151101,
         "name": "Who Giggled at the Primordial Hush?",
-        "desc": "When entering combat, immediately gains <unbreak>#1[i]</unbreak> point(s) of \"Wishpower.\" When Aeon ★ Aha is present, <u>merrymakes</u> <u>Elation DMG</u> dealt by all ally targets by <unbreak>#2[i]%</unbreak>.",
+        "desc": "When entering combat, immediately gains <unbreak>#1[i]</unbreak> \"Wishpower.\" When Aeon ★ Aha is present, <u>Elation DMG</u> dealt by all ally targets <u>merrymakes</u> by <unbreak>#2[i]%</unbreak>.",
         "icon": "SkillIcon_1511_Rank1.png",
         "param_list": [
           5,
@@ -3961,7 +4258,7 @@
       "2": {
         "id": 151102,
         "name": "Between THEIR Eyes and Yours",
-        "desc": "Enhances <u>Path of Elation Ascension</u> effects: \\n#{series_ref_skill_desc:UIText_SeriesSkillDescFormat,151129,2}\\n",
+        "desc": "Enhances the <u>\"Elation\" Path Ascension</u> effects: \\n#{series_ref_skill_desc:UIText_SeriesSkillDescFormat,151129,2}",
         "icon": "SkillIcon_1511_Rank2.png",
         "param_list": [],
         "extra": {
@@ -3976,21 +4273,314 @@
             "param": []
           },
           "10015111": {
-            "name": "Path of Elation Ascension",
-            "desc": "When Aeon ★ Aha has the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" are enhanced to \"Bliss\" and \"Party Trick,\" and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+            "name": "\"Elation\" Path Ascension",
+            "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
             "param": []
           },
           "10015112": {
             "name": "Bliss",
-            "desc": "Gaining Bliss is considered the same as gaining Punchline. At the end of the \"Aha Instant\" turn, a portion of the value taken into account is regained as Bliss.",
+            "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
             "param": []
           },
           "10015113": {
             "name": "Party Trick",
-            "desc": "When gaining the \"Party Trick\" state, it is considered the same as gaining the \"Certified Banger\" state. The \"Party Trick\" will affect the \"Innate Trace\" effects of ally Elation characters.",
+            "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
             "param": []
           }
-        }
+        },
+        "description_refs": [
+          {
+            "token": "#{series_ref_skill_desc:UIText_SeriesSkillDescFormat,151129,2}",
+            "format": "• #1: #2",
+            "entries": [
+              {
+                "avatar_id": 1506,
+                "avatar_name": "Silver Wolf LV.<unbreak>999</unbreak>",
+                "skill_id": 150629,
+                "level": 2,
+                "name": "Faces of Elation ★ Holographic Mirage",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, \"Hidden MMR\" can overflow up to <color=#f29e38ff><unbreak>#1[i]</unbreak></color> after reaching its upper limit. Increases CRIT DMG by <unbreak>#3[i]%</unbreak>. For every 1 point of \"<u>Party Trick</u>\" gained, simultaneously grants \"Hidden MMR\" equal to <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of that amount.",
+                "param_list": [
+                  999,
+                  0.4,
+                  0.4
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1505,
+                "avatar_name": "Evanescia",
+                "skill_id": 150529,
+                "level": 2,
+                "name": "Faces of Elation ★ Pages to Petals",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, overflow Energy can accumulate up to <color=#f29e38ff><unbreak>#3[i]</unbreak></color>. After using Ultimate, clears this accumulation to regenerate an equal amount of Energy. This instance of regeneration will not trigger the Talent's <u>Certified Banger</u> gain effect. The DMG dealt ignores <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of the enemy target's DEF. For every <unbreak>#4[i]</unbreak> \"<u>Party Trick</u>\" accumulated, the DMG multiplier of the next Ultimate and the multiplier of the <u>Elation DMG</u> dealt by that Ultimate via the Talent increases by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of their respective original values. This effect cannot stack.",
+                "param_list": [
+                  1.5,
+                  0.24,
+                  240,
+                  480
+                ],
+                "extra": {
+                  "10000028": {
+                    "name": "Elation DMG",
+                    "desc": "The more Punchline taken into account, and the higher the Elation and Character Level, the greater the Elation DMG dealt.\\nElation DMG is not affected by DMG Boost effects.",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "Certified Banger",
+                    "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently.",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1501,
+                "avatar_name": "Sparxie",
+                "skill_id": 150129,
+                "level": 2,
+                "name": "Faces of Elation ★ Hat Trick",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, Elation Skill's DMG multiplier increases by <color=#f29e38ff><unbreak>#5[i]%</unbreak></color> of its original multiplier, and ally targets ignore <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of the enemy target's DEF when dealing DMG. For every <unbreak>#2[i]</unbreak> \"<u>Party Trick</u>\" held, triggering \"Straight Fire\" additionally provides <unbreak>#3[i]</unbreak> <u>Bliss</u>, up to <color=#f29e38ff><unbreak>#4[i]</unbreak></color>.",
+                "param_list": [
+                  0.2,
+                  10,
+                  1,
+                  12,
+                  1.2
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "Bliss",
+                    "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1502,
+                "avatar_name": "Yao Guang",
+                "skill_id": 150229,
+                "level": 2,
+                "name": "Faces of Elation ★ Mind Reading",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, the DMG multiplier of the \"Great Boon\" effect increases by an amount equal to <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of its original value. After using Ultimate, Yao Guang regenerates a fixed amount of <color=#f29e38ff><unbreak>#2[i]</unbreak></color> Energy and gains <unbreak>#4[i]</unbreak> <u>Bliss</u>.",
+                "param_list": [
+                  0.4,
+                  30,
+                  0,
+                  10
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "Bliss",
+                    "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1503,
+                "avatar_name": "Pearl",
+                "skill_id": 150329,
+                "level": 2,
+                "name": "Faces of Elation ★ Leaping Off the Page",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, the upper limit for Pearl's \"<u>Party Trick</u>\" increases to <unbreak>#1[i]</unbreak>. When the <u>extra turn</u> granted by the Ultimate ends, <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of the \"<u>Certified Banger</u>\" and <color=#f29e38ff><unbreak>#3[i]%</unbreak></color> of the <u>Punchline</u> gained at the start of the <u>extra turn</u> are retained.",
+                "param_list": [
+                  75,
+                  0.2,
+                  0.2
+                ],
+                "extra": {
+                  "10000000": {
+                    "name": "Extra Turn",
+                    "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+                    "param": []
+                  },
+                  "10000027": {
+                    "name": "Punchline",
+                    "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "Certified Banger",
+                    "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently.",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1513,
+                "avatar_name": "Aventurine • Waveflair",
+                "skill_id": 151329,
+                "level": 2,
+                "name": "Faces of Elation ★ Three-Card Monte",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, if Aeon ★ Aha is the only Elation teammate, then in the Trace \"Revel in Raging Tides,\" the effect that normally requires Aventurine • Waveflair to be the only Elation character will also become active. And this effect is enhanced: The SPD of all allies increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color>. After a teammate attacks, Aventurine • Waveflair additionally gains <color=#f29e38ff><unbreak>#3[i]</unbreak></color> \"Fervor\" and <color=#f29e38ff><unbreak>#4[i]</unbreak></color> <u>Bliss</u>.",
+                "param_list": [
+                  0,
+                  0.25,
+                  2,
+                  2
+                ],
+                "extra": {
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "Bliss",
+                    "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 8009,
+                "avatar_name": "{NICKNAME}",
+                "skill_id": 800929,
+                "level": 2,
+                "name": "Faces of Elation ★ Plot Armor",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, the Ultimate's CRIT DMG boost effect additionally increases by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and applies to all allies. Before the Ultimate triggers Aeon ★ Aha's Elation Skill, additionally triggers one instance of the Trailblazer's Elation Skill. And the DMG multiplier of this Elation Skill increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of its original value, and is calculated based on the highest value of \"<u>Party Trick</u>\" held by ally characters. For the Aeon ★ Aha's Elation Skill triggered afterward, its <u>True DMG</u> is instead calculated as <unbreak>#3[i]%</unbreak> of the DMG dealt by the aforementioned Trailblazer's Elation Skill, and is distributed evenly among all enemies.",
+                "param_list": [
+                  0.3,
+                  3,
+                  0.2
+                ],
+                "extra": {
+                  "10000017": {
+                    "name": "True DMG",
+                    "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack.",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 8010,
+                "avatar_name": "{NICKNAME}",
+                "skill_id": 801029,
+                "level": 2,
+                "name": "Faces of Elation ★ Plot Armor",
+                "desc": "When the <color=#cb2f2f><u>Path of Elation ascends</u></color>, the Ultimate's CRIT DMG boost effect additionally increases by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and applies to all allies. Before the Ultimate triggers Aeon ★ Aha's Elation Skill, additionally triggers one instance of the Trailblazer's Elation Skill. And the DMG multiplier of this Elation Skill increases by <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of its original value, and is calculated based on the highest value of \"<u>Party Trick</u>\" held by ally characters. For the Aeon ★ Aha's Elation Skill triggered afterward, its <u>True DMG</u> is instead calculated as <unbreak>#3[i]%</unbreak> of the DMG dealt by the aforementioned Trailblazer's Elation Skill, and is distributed evenly among all enemies.",
+                "param_list": [
+                  0.3,
+                  3,
+                  0.2
+                ],
+                "extra": {
+                  "10000017": {
+                    "name": "True DMG",
+                    "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as launching 1 attack.",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              },
+              {
+                "avatar_id": 1511,
+                "avatar_name": "Aeon ★ Aha",
+                "skill_id": 151129,
+                "level": 2,
+                "name": "Faces of Elation ★ Ex Nihilo",
+                "desc": "While holding the \"Faces of Elation\" state, Aeon ★ Aha enables allies' <color=#cb2f2f><u>Path of Elation to ascend</u></color>, and enhances <u>Punchline</u> and \"<u>Certified Banger</u>\" into <u>Bliss</u> and \"<u>Party Trick</u>,\" respectively. <u>Bliss</u> recovers <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of its consumed amount when Aha Instant ends. During \"Faces of Elation,\" Aeon ★ Aha's CRIT Rate increases by <color=#f29e38ff><unbreak>#3[i]%</unbreak></color>, and the DMG dealt ignores <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of the enemy target's DEF.",
+                "param_list": [
+                  0.1,
+                  0.6,
+                  0.2
+                ],
+                "extra": {
+                  "10000027": {
+                    "name": "Punchline",
+                    "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                    "param": []
+                  },
+                  "10000029": {
+                    "name": "Certified Banger",
+                    "desc": "Characters participating in the Aha Instant gain the \"Certified Banger\" state. And the Punchline points from the current Aha Instant are taken into account for this state, lasting for 2 turns. Ability effects and Elation DMG produced by the \"Certified Banger\" state are calculated based on the Punchline points taken into account.\\nPunchline points taken into account for multiple \"Certified Banger\" states are combined for the calculation.\\nThe duration of each \"Certified Banger\" state is tracked independently.",
+                    "param": []
+                  },
+                  "10015111": {
+                    "name": "\"Elation\" Path Ascension",
+                    "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+                    "param": []
+                  },
+                  "10015112": {
+                    "name": "Bliss",
+                    "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
+                    "param": []
+                  },
+                  "10015113": {
+                    "name": "Party Trick",
+                    "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
+                    "param": []
+                  }
+                }
+              }
+            ]
+          }
+        ]
       },
       "3": {
         "id": 151103,
@@ -4003,7 +4593,7 @@
       "4": {
         "id": 151104,
         "name": "A Joke's Fate Boxed in Black",
-        "desc": "The multiplier of the <u>True DMG</u> dealt by Elation Skills increases by <unbreak>#2[i]%</unbreak> of the original multiplier. When Aeon ★ Aha deals <u>Elation DMG</u>, an additional <unbreak>#1[i]%</unbreak> of the cumulative \"<u>Certified Banger</u>\" stacks possessed by teammates will be taken into account.",
+        "desc": "The multiplier of the <u>True DMG</u> dealt by Elation Skill increases by <unbreak>#2[i]%</unbreak> of its original value. When Aeon ★ Aha deals <u>Elation DMG</u>, an additional <unbreak>#1[i]%</unbreak> of the total \"<u>Certified Banger</u>\" held by teammates will be taken into account.",
         "icon": "SkillIcon_1511_Rank4.png",
         "param_list": [
           1,
@@ -4038,7 +4628,7 @@
       "6": {
         "id": 151106,
         "name": "For THEY Said: You Are Elation",
-        "desc": "Enemy targets always have the <u>\"Elation Debt\"</u> effect that is at least equal to <unbreak>#1[i]%</unbreak> of the target's Max HP. The first time Aeon ★ Aha uses THEIR Ultimate, <u>Aha</u>'s <u>action advances</u> by <unbreak>#3[i]%</unbreak>, and Aha gains <unbreak>#2[i]</unbreak> <u>Punchline(s)</u>.",
+        "desc": "Enemy targets always carry an <u>\"Elation Debt\"</u> effect that claims at least <unbreak>#1[i]%</unbreak> of their Max HP. After Aeon ★ Aha uses Ultimate for the first time, <u>Aha</u>'s <u>action advances</u> by <unbreak>#3[i]%</unbreak>, and Aha gains <unbreak>#2[i]</unbreak> <u>Punchline</u>.",
         "icon": "SkillIcon_1511_Rank6.png",
         "param_list": [
           0.2,
@@ -4063,7 +4653,7 @@
           },
           "10015114": {
             "name": "Elation Debt",
-            "desc": "Elation Debt occupies Max HP. If the occupied portion includes current HP, that portion of current HP is immediately lost.",
+            "desc": "Elation Debt will claim part of Max HP. Any current HP within the claimed portion is lost immediately.",
             "param": []
           }
         }
@@ -4075,7 +4665,7 @@
         "id": 151101,
         "name": "Starfrost, Showtime!",
         "desc": "Deals <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> Quantum <u>Elation DMG</u> to one designated enemy target.",
-        "simple_desc": "Deals minor Quantum <u>Elation DMG</u> to one enemy target.",
+        "simple_desc": "Deals Quantum <u>Elation DMG</u> to one enemy target.",
         "type": "Normal",
         "type_name": "Basic ATK",
         "tag": "SingleAttack",
@@ -4172,8 +4762,8 @@
       "151102": {
         "id": 151102,
         "name": "This Emanator Was Certified by Aha™",
-        "desc": "Causes one designated ally character (except this unit) to gain the \"Emanator of Elation\" state, then immediately launches a <u>Follow-up ATK</u>, dealing <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> Quantum <u>Elation DMG</u> to all enemies. The \"Emanator of Elation\" state lasts for the entire battle until switching to the next target. The target with the \"Emanator of Elation\" state has their Elation stat increased by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and, at the start of their turn, causes Aeon ★ Aha to gain <unbreak>#6[i]</unbreak> point(s) of \"Wishpower.\"",
-        "simple_desc": "Causes one designated ally character (except this unit) to gain the Emanator of Elation state, then immediately launches a <u>Follow-Up ATK</u>, dealing Quantum <u>Elation DMG</u> to all enemies. Targets that possess the Emanator of Elation state will have their Elation increased and cause Aeon ★ Aha to gain \"Wishpower\" at the start of their turn.",
+        "desc": "Enables one designated ally character (excluding this unit) to gain the \"Emanator of Elation\" state, then immediately launches <u>Follow-up ATK</u>, dealing <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> Quantum <u>Elation DMG</u> to all enemies. The \"Emanator of Elation\" state lasts for the entire battle until it switches to the next target. The target with the \"Emanator of Elation\" state has their Elation stat increased by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> and, at the start of their turn, enables Aeon ★ Aha to gain <unbreak>#6[i]</unbreak> point(s) of \"Wishpower.\"",
+        "simple_desc": "Enables one designated ally character (excluding this unit) to gain the Emanator of Elation state, then immediately launches <u>Follow-Up ATK</u>, dealing Quantum <u>Elation DMG</u> to all enemies. The target with the Emanator of Elation state has their Elation stat increased and at the start of their turn, enables Aeon ★ Aha to gain \"Wishpower.\"",
         "type": "BPSkill",
         "type_name": "Skill",
         "tag": "Support",
@@ -4370,8 +4960,8 @@
       "151103": {
         "id": 151103,
         "name": "Aha! Let There Be Laughter",
-        "desc": "Causes <u>Aha</u>'s <u>action to advance</u> by <unbreak>#5[i]%</unbreak>. Aeon ★ Aha gains the \"Faces of Elation\" state, lasting for <unbreak>#6[i]</unbreak> turn(s). At the start of each Aeon ★ Aha's turn, duration decreases by 1. Deals <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> Quantum <u>Elation DMG</u> to all enemies, then deals <unbreak>#3[i]</unbreak> instance(s) of DMG. Each instance deals <color=#f29e38ff><unbreak>#4[i]%</unbreak></color> Quantum <u>Elation DMG</u> to one random enemy.",
-        "simple_desc": "Causes <u>Aha</u>'s <u>action to advance</u>. Aeon ★ Aha gains the \"Faces of Elation\" state. Deals Quantum <u>Elation DMG</u> to all enemies, then deals Quantum <u>Elation DMG</u> to one random enemy, bouncing a total of <color=#f29e38ff><unbreak>#3[i]</unbreak></color> time(s).",
+        "desc": "<u>Aha</u>'s <u>action advances</u> by <unbreak>#5[i]%</unbreak>. Aeon ★ Aha gains the \"Faces of Elation\" state, lasting for <unbreak>#6[i]</unbreak> turn(s). This duration decreases by 1 at the start of Aeon ★ Aha's every turn. Deals <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> Quantum <u>Elation DMG</u> to all enemies. Then, deals <unbreak>#3[i]</unbreak> instance(s) of DMG, with each instance dealing <color=#f29e38ff><unbreak>#4[i]%</unbreak></color> Quantum <u>Elation DMG</u> to one random enemy.",
+        "simple_desc": "<u>Aha</u>'s <u>action advances</u>. Aeon ★ Aha gains the \"Faces of Elation\" state. Deals massive Quantum <u>Elation DMG</u> to all enemies. Then, deals Quantum <u>Elation DMG</u> to random single enemies, bouncing a total of <color=#f29e38ff><unbreak>#3[i]</unbreak></color> time(s).",
         "type": "Ultra",
         "type_name": "Ultimate",
         "tag": "AoEAttack",
@@ -4573,8 +5163,8 @@
       "151104": {
         "id": 151104,
         "name": "Work Wonders with THEM",
-        "desc": "The Ultimate can be activated once \"Wishpower\" reaches <unbreak>#8[i]</unbreak> point(s). Wishpower can overflow until <unbreak>#11[i]</unbreak> after reaching its max. Aeon ★ Aha gains <unbreak>#7[i]</unbreak> point(s) of \"Wishpower\" after using Basic ATK, Skill, or Elation Skill. Once allies' <u>Punchline</u> reaches <unbreak>#2[i]</unbreak> point(s) for the first time, Aeon ★ Aha will immediately gain <unbreak>#3[i]</unbreak> points of \"Wishpower\" and increase all allies' CRIT DMG by <color=#f29e38ff><unbreak>#9[i]%</unbreak></color>, lasting for <unbreak>#10[i]</unbreak> turn(s). This can be triggered again after <u>Aha</u>'s turn ends.",
-        "simple_desc": "The Ultimate can be activated once \"Wishpower\" reaches <color=#f29e38ff><unbreak>#8[i]</unbreak></color> point(s). Wishpower can overflow until <unbreak>#11[i]</unbreak> after reaching its max. Aeon ★ Aha gains Wishpower after using Basic ATK, Skill, or Elation Skill. Once allies' <u>Punchline</u> reaches a certain threshold for the first time, Aeon ★ Aha will immediately gain \"Wishpower\" and increase all allies' CRIT DMG. This can be triggered again after <u>Aha</u>'s turn ends.",
+        "desc": "Can activate Ultimate after \"Wishpower\" reaches <unbreak>#8[i]</unbreak>. After reaching its upper limit, Wishpower can still overflow up to <unbreak>#11[i]</unbreak>. After using Basic ATK, Skill, or Elation Skill, Aeon ★ Aha gains <unbreak>#7[i]</unbreak> \"Wishpower.\" After allies' <u>Punchline</u> reaches <unbreak>#2[i]</unbreak> for the first time, Aeon ★ Aha will immediately gain <unbreak>#3[i]</unbreak> \"Wishpower\" and then increase all allies' CRIT DMG by <color=#f29e38ff><unbreak>#9[i]%</unbreak></color>, lasting for <unbreak>#10[i]</unbreak> turn(s). This can trigger again after <u>Aha</u>'s turn ends.",
+        "simple_desc": "Can activate Ultimate after \"Wishpower\" reaches <color=#f29e38ff><unbreak>#8[i]</unbreak></color>. After reaching its upper limit, Wishpower can still overflow up to <unbreak>#11[i]</unbreak>. After using Basic ATK, Skill, or Elation Skill, Aeon ★ Aha gains \"Wishpower.\" After allies' <u>Punchline</u> reaches a certain threshold for the first time, Aeon ★ Aha will immediately gain \"Wishpower\" and increase all allies' CRIT DMG. This can trigger again after <u>Aha</u>'s turn ends.",
         "type": null,
         "type_name": "Talent",
         "tag": "Enhance",
@@ -4872,8 +5462,8 @@
       "151107": {
         "id": 151107,
         "name": "ABRACADABRA!",
-        "desc": "After using the Technique, creates a Special Dimension around this unit lasting <unbreak>#2[i]</unbreak> second(s). Enemies within the Special Dimension are inflicted with \"Misjudgment.\" Enemies inflicted with \"Misjudgment\" cannot detect ally targets. After entering combat, <u>Aha</u> immediately gains 1 <u>extra turn</u> that takes a fixed <unbreak>#1[i]</unbreak> <u>Punchline</u> into account. Only 1 dimension effect created by allies can exist at the same time.",
-        "simple_desc": "After using the Technique, creates a Special Dimension around this unit. Enemies within the Special Dimension are inflicted with \"Misjudgment.\" Enemies inflicted with \"Misjudgment\" cannot detect ally targets. After entering combat, <u>Aha</u> immediately gains 1 <u>extra turn</u> that adds a fixed amount of <u>Punchline</u> to the count.",
+        "desc": "After using Technique, creates a Special Dimension around this unit, lasting for <unbreak>#2[i]</unbreak> second(s). Enemies within this Special Dimension get inflicted with \"Optical Illusion.\" Once inflicted with \"Optical Illusion,\" they cannot detect ally targets. After entering combat, <u>Aha</u> immediately gains 1 <u>extra turn</u> where a fixed amount of <unbreak>#1[i]</unbreak> <u>Punchline</u> is taken into account. This turn does not consume <u>Punchline</u>. Only 1 dimension effect created by allies can exist at the same time.",
+        "simple_desc": "After using the Technique, creates a Special Dimension around this unit. Enemies within the Special Dimension are inflicted with \"Optical Illusion.\" Enemies inflicted with \"Optical Illusion\" cannot detect ally targets. After entering combat, <u>Aha</u> immediately gains 1 <u>extra turn</u> where a fixed amount of <u>Punchline</u> is taken into account. This turn does not consume <u>Punchline</u>.",
         "type": "Maze",
         "type_name": "Technique",
         "tag": "Enhance",
@@ -4917,8 +5507,8 @@
       "151120": {
         "id": 151120,
         "name": "Yes Aha At Full Moon",
-        "desc": "Ignores <u>Participant ID</u> and is always used at the end of the Aha Instant. Deals Quantum <u>Elation DMG</u> equal to <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> to all enemies, then deals <u>True DMG</u> equal to <unbreak>#2[i]%</unbreak> of total non-True DMG dealt by ally targets this Aha Instant, equally distributed among all enemies.",
-        "simple_desc": "Ignores <u>Participant ID</u> and is always used at the end of the Aha Instant. Deals Quantum <u>Elation DMG</u> to all enemies, then deals <u>True DMG</u> based on the total non-True DMG dealt by ally targets this Aha Instant, equally distributed among all enemies.",
+        "desc": "Always gets used at the end of Aha Instant regardless of Participant ID. Deals <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> Quantum <u>Elation DMG</u> to all enemies, and deals <u>True DMG</u> based on <unbreak>#2[i]%</unbreak> of total non-True DMG dealt by ally targets during this Aha Instant, distributed evenly among all enemies.",
+        "simple_desc": "Always gets used at the end of Aha Instant regardless of Participant ID. Deals Quantum <u>Elation DMG</u> to all enemies, and deals <u>True DMG</u> based on the total non-True DMG dealt by ally targets during this Aha Instant, distributed evenly among all enemies.",
         "type": "ElationDamage",
         "type_name": "Elation Skill",
         "tag": "AoEAttack",
@@ -5056,8 +5646,8 @@
       "151129": {
         "id": 151129,
         "name": "Faces of Elation ★ Ex Nihilo",
-        "desc": "While possessing the \"Faces of Elation\" state, Aeon ★ Aha causes allies' <color=#cb2f2f><u>Path of Elation to ascend</u></color>, enhancing <u>Punchline</u> and the \"<u>Certified Banger</u>\" state into <u>Bliss</u> and the \"<u>Party Trick</u>\" state. <u>Bliss</u> recovers <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of the consumed Punchline at the end of the \"Aha Instant\" turn. During \"Faces of Elation,\" Aeon ★ Aha's CRIT Rate increases by <color=#f29e38ff><unbreak>#3[i]%</unbreak></color>, and the DMG dealt by Aeon ★ Aha ignores <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of the enemy target's DEF.",
-        "simple_desc": "While possessing the \"Faces of Elation\" state, causes allies' <color=#cb2f2f><u>Path of Elation to ascend</u></color>, enhancing <u>Punchline</u> and the \"<u>Certified Banger</u>\" state into <u>Bliss</u> and the \"<u>Party Trick</u>\" state. <u>Bliss</u> recovers a portion of the consumed Punchline at the end of the \"Aha Instant\" turn. During \"Faces of Elation,\" Aeon ★ Aha's CRIT Rate increases, and DMG dealt by Aeon ★ Aha ignores a portion of the enemy target's DEF.",
+        "desc": "While holding the \"Faces of Elation\" state, Aeon ★ Aha enables allies' <color=#cb2f2f><u>Path of Elation to ascend</u></color>, and enhances <u>Punchline</u> and \"<u>Certified Banger</u>\" into <u>Bliss</u> and \"<u>Party Trick</u>,\" respectively. <u>Bliss</u> recovers <color=#f29e38ff><unbreak>#1[i]%</unbreak></color> of its consumed amount when Aha Instant ends. During \"Faces of Elation,\" Aeon ★ Aha's CRIT Rate increases by <color=#f29e38ff><unbreak>#3[i]%</unbreak></color>, and the DMG dealt ignores <color=#f29e38ff><unbreak>#2[i]%</unbreak></color> of the enemy target's DEF.",
+        "simple_desc": "While holding the \"Faces of Elation\" state, enables allies' <color=#cb2f2f><u>Path of Elation to ascend</u></color>, and enhances <u>Punchline</u> and \"<u>Certified Banger</u>\" into <u>Bliss</u> and \"<u>Party Trick</u>,\" respectively. <u>Bliss</u> recovers a portion of its consumed amount when Aha Instant ends. During \"Faces of Elation,\" Aeon ★ Aha's CRIT Rate increases, and the DMG dealt ignores a portion of the enemy target's DEF.",
         "type": null,
         "type_name": "Innate Trace",
         "tag": "Enhance",
@@ -5083,18 +5673,18 @@
             "param": []
           },
           "10015111": {
-            "name": "Path of Elation Ascension",
-            "desc": "When Aeon ★ Aha has the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" are enhanced to \"Bliss\" and \"Party Trick,\" and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
+            "name": "\"Elation\" Path Ascension",
+            "desc": "While Aeon ★ Aha holds the \"Faces of Elation\" state, \"Punchline\" and \"Certified Banger\" get enhanced to \"Bliss\" and \"Party Trick\" respectively, and ally characters on the Path of Elation will activate their \"Innate Trace\" effects.",
             "param": []
           },
           "10015112": {
             "name": "Bliss",
-            "desc": "Gaining Bliss is considered the same as gaining Punchline. At the end of the \"Aha Instant\" turn, a portion of the value taken into account is regained as Bliss.",
+            "desc": "Gaining Bliss is considered as gaining Punchline. At the end of the Aha Instant, a portion of the consumed value is regained as Bliss.",
             "param": []
           },
           "10015113": {
             "name": "Party Trick",
-            "desc": "When gaining the \"Party Trick\" state, it is considered the same as gaining the \"Certified Banger\" state. The \"Party Trick\" will affect the \"Innate Trace\" effects of ally Elation characters.",
+            "desc": "When gaining the \"Party Trick\" state, it is considered as gaining the \"Certified Banger\" state. The \"Party Trick\" value will affect the \"Innate Trace\" effects of Elation ally characters.",
             "param": []
           }
         },
@@ -5120,10 +5710,10 @@
       "151131": {
         "id": 151131,
         "name": "The True Story of Aha",
-        "desc": "When Aeon ★ Aha and teammates deal DMG, additionally deal <u>\"Elation Debt\"</u> effect equal to <unbreak>#1[i]%</unbreak> of DMG to the enemy target. During the enemy target's phase transition, they maintain the <u>\"Elation Debt\"</u> value, with a maximum not exceeding <unbreak>#3[i]%</unbreak> of the target's Max HP.",
-        "simple_desc": "When Aeon ★ Aha and teammates deal DMG, additionally deal <u>\"Elation Debt\"</u> effect to the enemy target. During the enemy target's phase transition, they maintain the <u>\"Elation Debt\"</u> value.",
+        "desc": "When Aeon ★ Aha or a teammate deals DMG, additionally applies the <u>\"Elation Debt\"</u> effect onto the enemy target, equal to <unbreak>#1[i]%</unbreak> of their HP loss. <u>Elation Debt</u> persists through the enemy target's phase transition, capped at <unbreak>#3[i]%</unbreak> of the target's Max HP.",
+        "simple_desc": "When Aeon ★ Aha or a teammate deals DMG, additionally applies the <u>\"Elation Debt\"</u> effect onto the enemy target. <u>Elation Debt</u> persists through the enemy target's phase transition.",
         "type": null,
-        "type_name": "Talent",
+        "type_name": "Aeonic Authority",
         "tag": "Enhance",
         "sp_base": null,
         "bp_need": -1,
@@ -5138,7 +5728,7 @@
         "extra": {
           "10015114": {
             "name": "Elation Debt",
-            "desc": "Elation Debt occupies Max HP. If the occupied portion includes current HP, that portion of current HP is immediately lost.",
+            "desc": "Elation Debt will claim part of Max HP. Any current HP within the claimed portion is lost immediately.",
             "param": []
           }
         },
@@ -5171,7 +5761,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5208,7 +5798,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5245,7 +5835,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5282,7 +5872,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5319,7 +5909,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5356,7 +5946,7 @@
           "point_id": 1511001,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 1,
+          "point_trigger_key": "PointNormal",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5379,7 +5969,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5411,7 +6001,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5448,7 +6038,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5485,7 +6075,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5522,7 +6112,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5559,7 +6149,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5596,7 +6186,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5638,7 +6228,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5680,7 +6270,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5722,7 +6312,7 @@
           "point_id": 1511002,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 2,
+          "point_trigger_key": "PointBPSkill",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5745,7 +6335,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5777,7 +6367,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5814,7 +6404,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5851,7 +6441,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5888,7 +6478,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5925,7 +6515,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -5962,7 +6552,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6004,7 +6594,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6046,7 +6636,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6088,7 +6678,7 @@
           "point_id": 1511003,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 3,
+          "point_trigger_key": "PointUltra",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6111,7 +6701,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6143,7 +6733,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6180,7 +6770,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6217,7 +6807,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6254,7 +6844,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6291,7 +6881,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6328,7 +6918,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6370,7 +6960,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6412,7 +7002,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6454,7 +7044,7 @@
           "point_id": 1511004,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 4,
+          "point_trigger_key": "PointPassive",
           "point_type": 2,
           "pre_point": [],
           "status_add_list": [],
@@ -6477,359 +7067,8 @@
           "point_id": 1511007,
           "point_name": null,
           "point_desc": null,
-          "point_trigger_key": 5,
+          "point_trigger_key": "PointMaze",
           "point_type": 2,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        }
-      },
-      "point22": {
-        "1": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": null,
-          "avatar_level_limit": null,
-          "default_unlock": true,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "2": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 1,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 2000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116001,
-              "item_num": 2,
-              "rarity": "NotNormal"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "3": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 2,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 4000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110261,
-              "item_num": 3,
-              "rarity": "NotNormal"
-            },
-            {
-              "item_id": 116001,
-              "item_num": 5,
-              "rarity": "NotNormal"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "4": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 3,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 8000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 2,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 3,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "5": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 4,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 15000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 4,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 3,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "6": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 4,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 24000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110262,
-              "item_num": 6,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 116002,
-              "item_num": 5,
-              "rarity": "Rare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "7": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 5,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 32000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 2,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 2,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "8": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 5,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 65000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "9": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 6,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 120000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 6,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
-          "pre_point": [],
-          "status_add_list": [],
-          "extra": {}
-        },
-        "10": {
-          "anchor": "Point22",
-          "avatar_promotion_limit": 6,
-          "avatar_level_limit": null,
-          "default_unlock": false,
-          "icon": "SkillIcon_1511_Elation.png",
-          "level_up_skill_id": [
-            151120
-          ],
-          "material_list": [
-            {
-              "item_id": 2,
-              "item_num": 250000,
-              "rarity": "Rare"
-            },
-            {
-              "item_id": 110263,
-              "item_num": 12,
-              "rarity": "VeryRare"
-            },
-            {
-              "item_id": 116003,
-              "item_num": 4,
-              "rarity": "VeryRare"
-            }
-          ],
-          "max_level": 10,
-          "param_list": [],
-          "point_id": 1511420,
-          "point_name": "Elation Skill",
-          "point_desc": null,
-          "point_trigger_key": 22,
-          "point_type": 4,
           "pre_point": [],
           "status_add_list": [],
           "extra": {}
@@ -6868,8 +7107,8 @@
           ],
           "point_id": 1511101,
           "point_name": "A Prank on Aeons",
-          "point_desc": "Skill's Follow-Up ATK additionally deals <unbreak>#1[i]%</unbreak> <u>Elation DMG</u> of the corresponding Type to the target with \"Emanator of Elation\" state and recovers <unbreak>#3[i]</unbreak> Skill Point(s). The Elation DMG additionally dealt in this instance does not count as 1 instance of attack.",
-          "point_trigger_key": 6,
+          "point_desc": "Skill's <u>Follow-Up ATK</u> additionally deals <unbreak>#1[i]%</unbreak> <u>Elation DMG</u> of the same Type as the target who holds the \"Emanator of Elation\" state, and recovers <unbreak>#3[i]</unbreak> Skill Point(s). This additionally dealt <u>Elation DMG</u> is not considered as an instance of attack.",
+          "point_trigger_key": "PointB1",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -6924,8 +7163,8 @@
           ],
           "point_id": 1511102,
           "point_name": "A Carnival in Whimsy",
-          "point_desc": "When receiving healing or a Shield provided by a teammate, gains <unbreak>#1[i]</unbreak> point(s) of \"Wishpower.\" This can be triggered up to <unbreak>#2[i]</unbreak> times. The trigger count resets after using Ultimate.",
-          "point_trigger_key": 7,
+          "point_desc": "When receiving healing or a Shield provided by a teammate, gains <unbreak>#1[i]</unbreak> \"Wishpower.\" This can be triggered up to <unbreak>#2[i]</unbreak> time(s). The trigger count resets after the Ultimate is used.",
+          "point_trigger_key": "PointB2",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -6972,8 +7211,8 @@
           ],
           "point_id": 1511103,
           "point_name": "A Box of Everything",
-          "point_desc": "When Aeon ★ Aha's SPD reaches <unbreak>#1[i]</unbreak>/<unbreak>#2[i]</unbreak> or higher, Elation increases by <unbreak>#3[i]%</unbreak>/<unbreak>#4[i]%</unbreak>. When entering combat, <u>advances THEIR own action</u> by <unbreak>#5[i]%</unbreak>.",
-          "point_trigger_key": 8,
+          "point_desc": "When Aeon ★ Aha's SPD reaches <unbreak>#1[i]</unbreak>/<unbreak>#2[i]</unbreak> or higher, the Elation stat increases by <unbreak>#3[i]%</unbreak>/<unbreak>#4[i]%</unbreak>, respectively. When combat starts, own <u>action advances</u> by <unbreak>#5[i]%</unbreak>.",
+          "point_trigger_key": "PointB3",
           "point_type": 3,
           "pre_point": [],
           "status_add_list": [],
@@ -7011,7 +7250,7 @@
           "point_id": 1511201,
           "point_name": "CRIT DMG Boost",
           "point_desc": null,
-          "point_trigger_key": 9,
+          "point_trigger_key": "PointS1",
           "point_type": 1,
           "pre_point": [],
           "status_add_list": [
@@ -7054,7 +7293,7 @@
           "point_id": 1511202,
           "point_name": "CRIT Rate Boost",
           "point_desc": null,
-          "point_trigger_key": 10,
+          "point_trigger_key": "PointS2",
           "point_type": 1,
           "pre_point": [],
           "status_add_list": [
@@ -7097,7 +7336,7 @@
           "point_id": 1511203,
           "point_name": "CRIT DMG Boost",
           "point_desc": null,
-          "point_trigger_key": 11,
+          "point_trigger_key": "PointS3",
           "point_type": 1,
           "pre_point": [
             1511101
@@ -7142,7 +7381,7 @@
           "point_id": 1511204,
           "point_name": "SPD Boost",
           "point_desc": null,
-          "point_trigger_key": 12,
+          "point_trigger_key": "PointS4",
           "point_type": 1,
           "pre_point": [
             1511101
@@ -7187,7 +7426,7 @@
           "point_id": 1511205,
           "point_name": "CRIT DMG Boost",
           "point_desc": null,
-          "point_trigger_key": 13,
+          "point_trigger_key": "PointS5",
           "point_type": 1,
           "pre_point": [
             1511102
@@ -7232,7 +7471,7 @@
           "point_id": 1511206,
           "point_name": "CRIT Rate Boost",
           "point_desc": null,
-          "point_trigger_key": 14,
+          "point_trigger_key": "PointS6",
           "point_type": 1,
           "pre_point": [
             1511205
@@ -7277,7 +7516,7 @@
           "point_id": 1511207,
           "point_name": "CRIT DMG Boost",
           "point_desc": null,
-          "point_trigger_key": 15,
+          "point_trigger_key": "PointS7",
           "point_type": 1,
           "pre_point": [
             1511206
@@ -7322,7 +7561,7 @@
           "point_id": 1511208,
           "point_name": "SPD Boost",
           "point_desc": null,
-          "point_trigger_key": 16,
+          "point_trigger_key": "PointS8",
           "point_type": 1,
           "pre_point": [
             1511103
@@ -7367,7 +7606,7 @@
           "point_id": 1511209,
           "point_name": "CRIT Rate Boost",
           "point_desc": null,
-          "point_trigger_key": 17,
+          "point_trigger_key": "PointS9",
           "point_type": 1,
           "pre_point": [
             1511208
@@ -7412,7 +7651,7 @@
           "point_id": 1511210,
           "point_name": "CRIT DMG Boost",
           "point_desc": null,
-          "point_trigger_key": 18,
+          "point_trigger_key": "PointS10",
           "point_type": 1,
           "pre_point": [
             1511209
@@ -7424,6 +7663,357 @@
               "name": "CRIT DMG"
             }
           ],
+          "extra": {}
+        }
+      },
+      "point22": {
+        "1": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": null,
+          "avatar_level_limit": null,
+          "default_unlock": true,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "2": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 1,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 2000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116001,
+              "item_num": 2,
+              "rarity": "NotNormal"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "3": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 2,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 4000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110261,
+              "item_num": 3,
+              "rarity": "NotNormal"
+            },
+            {
+              "item_id": 116001,
+              "item_num": 5,
+              "rarity": "NotNormal"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "4": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 3,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 8000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 2,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 3,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "5": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 4,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 15000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 4,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 3,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "6": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 4,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 24000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110262,
+              "item_num": 6,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 116002,
+              "item_num": 5,
+              "rarity": "Rare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "7": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 5,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 32000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 2,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 2,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "8": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 5,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 65000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "9": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 6,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 120000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 6,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
+          "extra": {}
+        },
+        "10": {
+          "anchor": "Point22",
+          "avatar_promotion_limit": 6,
+          "avatar_level_limit": null,
+          "default_unlock": false,
+          "icon": "SkillIcon_1511_Elation.png",
+          "level_up_skill_id": [
+            151120
+          ],
+          "material_list": [
+            {
+              "item_id": 2,
+              "item_num": 250000,
+              "rarity": "Rare"
+            },
+            {
+              "item_id": 110263,
+              "item_num": 12,
+              "rarity": "VeryRare"
+            },
+            {
+              "item_id": 116003,
+              "item_num": 4,
+              "rarity": "VeryRare"
+            }
+          ],
+          "max_level": 10,
+          "param_list": [],
+          "point_id": 1511420,
+          "point_name": "Elation Skill",
+          "point_desc": null,
+          "point_trigger_key": "PointElation",
+          "point_type": 4,
+          "pre_point": [],
+          "status_add_list": [],
           "extra": {}
         }
       },
@@ -7446,15 +8036,15 @@
           ],
           "point_id": 1511601,
           "point_name": "The True Story of Aha",
-          "point_desc": "When Aeon ★ Aha and teammates deal DMG, additionally deal <u>\"Elation Debt\"</u> effect equal to <unbreak>#1[i]%</unbreak> of DMG to the enemy target. During the enemy target's phase transition, they maintain the <u>\"Elation Debt\"</u> value, with a maximum not exceeding <unbreak>#3[i]%</unbreak> of the target's Max HP.",
-          "point_trigger_key": 23,
+          "point_desc": "When Aeon ★ Aha or a teammate deals DMG, additionally applies the <u>\"Elation Debt\"</u> effect onto the enemy target, equal to <unbreak>#1[i]%</unbreak> of their HP loss. <u>Elation Debt</u> persists through the enemy target's phase transition, capped at <unbreak>#3[i]%</unbreak> of the target's Max HP.",
+          "point_trigger_key": "PointAeonPower",
           "point_type": 6,
           "pre_point": [],
           "status_add_list": [],
           "extra": {
             "10015114": {
               "name": "Elation Debt",
-              "desc": "Elation Debt occupies Max HP. If the occupied portion includes current HP, that portion of current HP is immediately lost.",
+              "desc": "Elation Debt will claim part of Max HP. Any current HP within the claimed portion is lost immediately.",
               "param": []
             }
           }
@@ -7797,6 +8387,8 @@
         "backup_group_list3": []
       }
     ],
-    "skin": {}
+    "skin": {
+      "1151101": ""
+    }
   }
 }

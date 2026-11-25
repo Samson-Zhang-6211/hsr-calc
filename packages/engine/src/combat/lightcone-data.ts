@@ -5630,6 +5630,87 @@ export const LIGHTCONE_SKILLS: Record<string, LightconeSkill> = {
       ]
     }
   },
+  23066: {
+    name: '雨天请勿排班',
+    skillName: '摸鱼',
+    desc: '使装备者的暴击伤害提高<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，能量恢复效率提高<color=#f29e38ff><unbreak>#5[i]%</unbreak></color>。装备者施放普攻时，获得【零食】，持续 2 回合。持有【零食】时，装备者的攻击力提高<color=#f29e38ff><unbreak>#2[i]%</unbreak></color>。装备者战斗开始时或施放终结技时，获得【冰饮】，持续 3 回合。持有【冰饮】时，装备者造成的普攻和终结技伤害无视目标<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>的防御力。同时持有【零食】和【冰饮】时，额外获得【好心情】，造成的普攻和终结技伤害额外无视目标<color=#f29e38ff><unbreak>#4[i]%</unbreak></color>的防御力。',
+    path: 'Warrior',
+    levels: {
+      1: [
+        0.24,
+        0.2,
+        0.12,
+        0.12,
+        0.12
+      ],
+      2: [
+        0.28,
+        0.23,
+        0.14,
+        0.14,
+        0.14
+      ],
+      3: [
+        0.32,
+        0.26,
+        0.16,
+        0.16,
+        0.16
+      ],
+      4: [
+        0.36,
+        0.29,
+        0.18,
+        0.18,
+        0.18
+      ],
+      5: [
+        0.4,
+        0.32,
+        0.2,
+        0.2,
+        0.2
+      ]
+    }
+  },
+  23067: {
+    name: '闪亮如她',
+    skillName: '咏唱',
+    desc: '使装备者的攻击力提高<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，装备者施放终结技后，使我方全体行动提前<unbreak>#2[i]%</unbreak>，同时装备者获得【你我的旋律】，使我方全体的暴击伤害提高<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>，持续<unbreak>#4[i]</unbreak>回合。',
+    path: 'Shaman',
+    levels: {
+      1: [
+        0.36,
+        0.24,
+        0.4,
+        4
+      ],
+      2: [
+        0.45,
+        0.24,
+        0.5,
+        4
+      ],
+      3: [
+        0.54,
+        0.24,
+        0.6,
+        4
+      ],
+      4: [
+        0.63,
+        0.24,
+        0.7,
+        4
+      ],
+      5: [
+        0.72,
+        0.24,
+        0.8,
+        4
+      ]
+    }
+  },
   24000: {
     name: '记一位星神的陨落',
     skillName: '扑火',

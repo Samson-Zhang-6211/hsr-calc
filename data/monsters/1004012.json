@@ -1,7 +1,7 @@
 {
   "id": "1004012",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "可可利亚（完整）",
     "en": "Cocolia (Complete)"
@@ -130,11 +130,11 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 1.6875,
+        "hp_modify_ratio": 1.875,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": null,
+        "stance_modify_value": 390,
         "stance_weak_list": [
           "Fire",
           "Thunder",
@@ -387,11 +387,11 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 1.6875,
+        "hp_modify_ratio": 1.875,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": null,
+        "stance_modify_value": 390,
         "stance_weak_list": [
           "Fire",
           "Thunder",

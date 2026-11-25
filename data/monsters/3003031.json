@@ -1,7 +1,7 @@
 {
   "id": "3003031",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "「身陷樊笼的往昔」",
     "en": "\"Past Confined and Caged\""
@@ -338,7 +338,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 120,
+        "stance_modify_value": 240,
         "stance_weak_list": [
           "Fire",
           "Thunder",
@@ -906,7 +906,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 120,
+        "stance_modify_value": 240,
         "stance_weak_list": [
           "Fire",
           "Thunder",

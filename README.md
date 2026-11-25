@@ -10,7 +10,7 @@
 - **展示柜**：输入 UID 拉取公开面板（需自备转发代理，见下）。
 - **Helper**：内置使用说明层，中英双语（`i18n.ts`）。
 
-覆盖范围：99 名角色 / 665 只怪物（含 5 个关卡包：忘却、异相仲裁、虚构叙事、末日幻影、寰宇蝗灾）/ 172 张光锥 / 64 套遗器。
+覆盖范围：101 名角色 / 666 只怪物（含 5 个关卡包：忘却、异相仲裁、虚构叙事、末日幻影、寰宇蝗灾）/ 174 张光锥 / 64 套遗器。
 
 ## 快速开始
 
@@ -58,7 +58,7 @@ node scripts/build-offline.mjs
 | `public/lightcones/` | `node scripts/fetch-equipment-icons.mjs` | 10MB | 光锥图标裂图（遗器套装图另存，已入库） |
 | `public/relicpieces/` | `node scripts/fetch-relic-pieces.mjs` | 6.5MB | 遗器部位图标裂图 |
 
-**已随仓库提交**（不用拉）：`skillicon` 380 张、`relicsets` 64 张、`element` 7 张、`pathicon` 9 张、`summon-icon` 6 张。其中 6 张召唤物图标被 `src/summon-art.test.tsx` 用 `existsSync` 断言，所以必须入库。
+**已随仓库提交**（不用拉）：`skillicon` 388 张、`relicsets` 64 张、`element` 7 张、`pathicon` 9 张、`summon-icon` 6 张。其中 6 张召唤物图标被 `src/summon-art.test.tsx` 用 `existsSync` 断言，所以必须入库。
 
 只拉部分图也能启动，缺失处显示裂图，不影响数值计算与测试。
 
@@ -76,7 +76,7 @@ node scripts/build-offline.mjs
 ```bash
 pnpm -r typecheck     # 引擎 + 前端类型检查（含测试侧 tsconfig）
 pnpm lint
-pnpm -r test          # 引擎 198 个测试文件 / 1358 用例；前端 37 个 / 227 用例
+pnpm -r test          # 引擎 200 个测试文件 / 1385 用例；前端 40 个 / 243 用例
 pnpm -r build         # 引擎 tsc + 前端 vite build
 ```
 
@@ -120,7 +120,7 @@ sync-data → apply-*-enhanced → gen-combat-raw → gen-combat-skill-data
 
 ## 致谢与参考
 
-- 游戏数据源：社区公开静态数据站 与官方数据，版本口径见 `data/source.lock.json`（当前 4.6.54）。
+- 游戏数据源：社区公开静态数据站 与官方数据，版本口径见 `data/source.lock.json`（当前 4.7.53）。
 - 展示柜接口：mihomo、Enka.Network。
 
 ## 免责声明

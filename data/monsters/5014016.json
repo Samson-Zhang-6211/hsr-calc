@@ -1,7 +1,7 @@
 {
   "id": "5014016",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "火花大会@Official",
     "en": "@SparxiConOfficial"
@@ -457,7 +457,7 @@
           {
             "id": 501401611,
             "skill_name": "Eternal Repertoire",
-            "skill_desc": "After using \"Get On the Mic!\", enemy targets in the prime-field gain \"Eternal Repertoire,\" their Toughness cannot be reduced, and all DMG taken by this unit is greatly reduced. Enemy targets in the sub-field gain \"Euphoria,\" their Toughness cannot be reduced, and all non-Elation DMG taken is greatly reduced. Elation DMG taken is slightly reduced, and the efficiency of Elation DMG in dispelling \"Euphoria\" greatly increases. When <u>Live Showdown</u> is dispelled, \"Eternal Repertoire\" on enemy targets in the prime-field is dispelled. If all enemy targets in the sub-field are defeated, this unit takes massive DMG, and DMG taken by all enemies increases. If this unit's HP drops to a certain threshold before releasing \"Get On the Mic!\", it immediately releases \"Get On the Mic!\"",
+            "skill_desc": "After using \"Get On the Mic!\", enemy targets in the prime-field gain \"Eternal Repertoire,\" their Toughness cannot be reduced, and all DMG taken by this unit is greatly reduced. Enemy targets in the sub-field gain \"Euphoria,\" their Toughness cannot be reduced, and all non-Elation DMG taken is greatly reduced. Elation DMG taken is slightly reduced, and the efficiency of Elation DMG in dispelling \"Euphoria\" greatly increases. When <u>Live Showdown</u> is dispelled, \"Eternal Repertoire\" on enemy targets in the prime-field is dispelled. If all enemy targets in the sub-field are defeated, this unit takes massive DMG, and DMG taken by all enemies increases. If this unit's HP drops to a certain threshold before using \"Get On the Mic!\", immediately uses \"Get On the Mic!\"",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {}

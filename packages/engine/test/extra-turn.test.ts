@@ -16,7 +16,7 @@ import { Timeline } from '../src/timeline.js';
  * ② 优先级最高（压过已插入的终结技插队），多个额外回合同级 FIFO；
  * ③ 事件带 `extraTurn: true`，与触发它的行动同刻。
  *
- * 场景锚点全部来自 dump（%TEMP%/临时目录/blade-extra-v2.txt、huohua-laugh.txt，已删）。
+ * 场景锚点全部来自 dump（%TEMP%/opencode/blade-extra-v2.txt、huohua-laugh.txt，已删）。
  */
 
 describe('Timeline · 额外回合原语', () => {
@@ -231,6 +231,116 @@ describe('额外回合 · 「回合开始」结算整体跳过', () => {
     const thirst = r.events.filter((e) => (e.note ?? []).includes('stageBloodthirst'));
     // 只有两次常规行动各扣一次；额外回合不触发（否则会出现第三条 100 时刻）
     expect(thirst.map((e) => Math.round(e.time))).toEqual([100, 200]);
+  });
+});
+
+describe('额外回合 · 可插入施放终结技（4.7.52 文案，2026-11-17 用户裁定）', () => {
+  it('原语：allowUlt 透传到 extraTurn 事件，缺省不设置', () => {
+    const tl = new Timeline({ rounds: false });
+    tl.addUnit({ id: 'a', side: 'ally', speed: 100 });
+    tl.insertExtraTurn('a', 'plain');
+    tl.insertExtraTurn('a', 'ult-ok', true);
+    expect(tl.advance()).toMatchObject({ type: 'extraTurn', tag: 'plain' });
+    expect(tl.advance()).toMatchObject({ type: 'extraTurn', tag: 'ult-ok', allowUlt: true });
+  });
+
+  /** 交互走一遍：在额外回合内尝试插入队友终结技（每回合只试一次），并收集事件与 status 口径 */
+  function walk(
+    config: BattleConfig,
+    opts: { selfUltFor?: string } = {},
+  ): {
+    events: CombatEvent[];
+    extraStatuses: { allowUlt: boolean }[];
+    requests: number;
+  } {
+    const ctl = createInteractiveBattle(config);
+    const events: CombatEvent[] = [];
+    const extraStatuses: { allowUlt: boolean }[] = [];
+    const requested = new Set<string>();
+    let requests = 0;
+    let step = ctl.advance();
+    let guard = 0;
+    while (step && guard < 6000) {
+      guard += 1;
+      if (step.type === 'event') {
+        events.push(step.event);
+        step = ctl.advance();
+        continue;
+      }
+      if (step.status.extraTurn) extraStatuses.push(step.status.extraTurn);
+      const acting = step.unitId;
+      // 同一次额外回合（同单位同刻）只尝试插一次（否则被挡住的请求会反复回到同一决策）
+      const key = `${acting}:${Math.round(step.status.time)}`;
+      const others = step.status.ultReady.filter((x) => x !== acting);
+      if (step.status.extraTurn && others.length > 0 && !requested.has(key)) {
+        requested.add(key);
+        requests += 1;
+        ctl.requestUlt(others[0]!);
+        step = ctl.advance();
+        continue;
+      }
+      if (opts.selfUltFor === acting && step.status.ultReady.includes(acting)) {
+        ctl.requestUlt(acting);
+        step = ctl.advance();
+        continue;
+      }
+      step = ctl.advance({ action: step.status.sp >= 1 ? 'skill' : 'basic' });
+    }
+    return { events, extraStatuses, requests };
+  }
+
+  it('可插入型（艾莲 E6）：额外回合内插入的终结技在该回合行动之前结算', () => {
+    const r = walk(
+      {
+        members: [
+          { id: 'ellen', panel: mp({ element: 'Ice', speed: 120, energyRegen: 0.8 }), eidolonLevel: 6 },
+          { id: 'danheng', panel: mp({ speed: 115 }), eidolonLevel: 0 },
+        ] as CombatMember[],
+        monster: mon(),
+        maxTime: 2000,
+        initialSp: 3,
+        seed: 1,
+        techniques: true,
+      } as BattleConfig,
+      { selfUltFor: 'ellen' },
+    );
+    expect(r.extraStatuses.length).toBeGreaterThan(0);
+    // 艾莲 E6 的所有额外回合都是「可插入」型
+    expect(r.extraStatuses.every((s) => s.allowUlt)).toBe(true);
+    expect(r.requests, '没等到额外回合内队友能量满').toBeGreaterThan(0);
+    const extraIdx = r.events.findIndex((e) => e.extraTurn === true && e.unitId === 'ellen');
+    expect(extraIdx).toBeGreaterThanOrEqual(0);
+    // 插入的终结技事件在额外回合的行动事件**之前**
+    const ultBefore = r.events
+      .slice(0, extraIdx)
+      .some((e) => e.kind === 'ult' && e.unitId !== 'ellen');
+    expect(ultBefore).toBe(true);
+  });
+
+  it('普通型（刃）：额外回合内无法插入终结技（队列被挡到该回合之后）', () => {
+    const r = walk({
+      members: [
+        // 刃慢、丹恒快且高充能：保证刃的额外回合出现时丹恒已满能（可被尝试插入）；
+        // 刃战技会按比例自耗 HP，这里抬高生命上限避免中途阵亡吞掉额外回合事件
+        { id: 'blade', panel: mp({ speed: 60, hp: 500000 }), eidolonLevel: 0 },
+        { id: 'danheng', panel: mp({ speed: 200, energyRegen: 0.8 }), eidolonLevel: 0 },
+      ] as CombatMember[],
+      monster: mon(),
+      maxTime: 1200,
+      initialSp: 3,
+      seed: 1,
+      techniques: false,
+    } as BattleConfig);
+    expect(r.extraStatuses.length).toBeGreaterThan(0);
+    expect(r.extraStatuses.every((s) => !s.allowUlt)).toBe(true);
+    expect(r.requests, '没等到额外回合内队友能量满').toBeGreaterThan(0);
+    const extraIdx = r.events.findIndex((e) => e.extraTurn === true && e.unitId === 'blade');
+    expect(extraIdx).toBeGreaterThanOrEqual(0);
+    // 队列里的终结技不得出现在额外回合行动之前（被挡到该回合之后）
+    const ultBefore = r.events
+      .slice(0, extraIdx)
+      .some((e) => e.kind === 'ult' && e.unitId !== 'blade');
+    expect(ultBefore).toBe(false);
   });
 });
 

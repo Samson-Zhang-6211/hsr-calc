@@ -29,6 +29,7 @@ import {
 } from '@hsr-calc/engine';
 import { newId, storage, type StoredBattleEntry, type StoredCharacter } from '../storage.js';
 import { assetUrl } from '../asset-url.js';
+import { resourceText, unitResourceRows } from '../unit-resources.js';
 import { BattleStage, skillIcon, type StageAlly, type StageEnemy } from '../battle-stage.js';
 import {
   ActionRail,
@@ -59,6 +60,7 @@ import { StageMechanicsRow, StageNavRow } from '../stage-mechanics.js';
 import { summonIconUrl } from '../summon-art.js';
 import { isEmptyMonsterTurn } from '../stage-events.js';
 import { HintCard } from '../hint-card.js';
+import { fmtNum } from '../num-format.js';
 
 const ALL_ELEMENTS: Element[] = [
   'Physical',
@@ -176,6 +178,9 @@ const MANUAL_DEFAULTS: Record<CharId, { speed: string; energyRegen: string }> = 
   phainon: { speed: '94', energyRegen: '0.194' },
   ratio: { speed: '102', energyRegen: '0.194' },
   topaz: { speed: '110', energyRegen: '0.194' },
+  /** 4.7.51 新增：艾莲 1514（基础速度 96）/ 耀嘉音 1515（基础速度 99） */
+  ellen: { speed: '96', energyRegen: '0' },
+  yaojiayin: { speed: '99', energyRegen: '0' },
 };
 
 /** 战斗支持的全部角色（引擎 SUPPORTED_IDS 白名单；槽位可从这里添加） */
@@ -279,7 +284,12 @@ const BATTLE_CHAR_IDS: CharId[] = [
   'trailblazerKnight2',
   'gepard',
   'aventurine',
+  'ellen',
+  'yaojiayin',
 ];
+
+/** 队伍人数上限 = 引擎口径（`battle.ts` 的 1-4 名角色；游戏一场最多 4 人） */
+const TEAM_MAX = 4;
 
 /** 战斗槽位角色 → 名册 id：轴 TEAM_ROSTER_ID（5 人固定阵容）+ 啊哈 1511 + 爻光 1502 + 火花 1501（轴不接后三者）。
  *  导出供 CharactersPage 星魂显示口径判定（引擎已接入角色）使用，改名单时两页+此处同步。 */
@@ -379,6 +389,9 @@ export const BATTLE_ROSTER_ID: Record<CharId, string> = {
   phainon: '1408',
   ratio: '1305',
   topaz: '1112',
+  /** 4.7.51 新增两人（名册 id = 数据文件名） */
+  ellen: '1514',
+  yaojiayin: '1515',
 };
 
 /** 战斗明细的一行：按伤害类型分组后的合计（isTotal = 多类型时的「总伤」行） */
@@ -484,6 +497,8 @@ export default function FullSimPage() {
     archer: '',
     boothill: '',
   ashveil: '',
+  ellen: '',
+  yaojiayin: '',
   sanyueqi2: '',
   moze: '',
   feixiao: '',
@@ -639,7 +654,8 @@ export default function FullSimPage() {
   /** 输出倍速（0.5× … 5×），实际组间延迟 = BASE_GROUP_DELAY ÷ speed */
   const [speed, setSpeed] = useState(1);
   const [ended, setEnded] = useState(false);
-  const [err, setErr] = useState(false);
+  /** 开局失败原因（null = 无错）：区分「没选面板档」与「超过 4 人上限」 */
+  const [err, setErr] = useState<null | 'needSaved' | 'teamTooMany'>(null);
   /** 战报是否刚存进历史（按钮闪「已保存」1.5s，与数值代理模拟页同一套交互） */
   const [battleSaved, setBattleSaved] = useState(false);
   /** 每输出一批 +1，驱动 pump 继续排下一批定时器 */
@@ -831,7 +847,13 @@ export default function FullSimPage() {
 
   function start(): void {
     if (slots.length === 0) {
-      setErr(true);
+      setErr('needSaved');
+      setStarted(false);
+      return;
+    }
+    // 队伍人数上限与引擎一致（游戏口径 4 人）；UI 侧加人已封顶，这里兜底旧存档/导入的 5+ 人
+    if (slots.length > TEAM_MAX) {
+      setErr('teamTooMany');
       setStarted(false);
       return;
     }
@@ -849,7 +871,7 @@ export default function FullSimPage() {
     }
     const cfg = buildConfig();
     if (!cfg) {
-      setErr(true);
+      setErr('needSaved');
       setStarted(false);
       return;
     }
@@ -889,13 +911,13 @@ export default function FullSimPage() {
       setStatus(null);
       setPaused(false);
       setEnded(false);
-      setErr(false);
+      setErr(null);
       setStarted(true);
       setVersion((v) => v + 1);
     } catch (e) {
       console.error('battle start failed', e);
       ctlRef.current = null;
-      setErr(true);
+      setErr('needSaved');
       setStarted(false);
     }
   }
@@ -1648,19 +1670,23 @@ export default function FullSimPage() {
   // ── 战场/命令区入参（2026-11-07 命令区一体化：内联战场改为共用 BattleStage） ──────────
   /** 卡底终结技槽：能量满＝立即插队释放；预估技能后满＝加入跟放；待确认＝点即释放 */
   const ultSlotFor = (id: CharId): ReactNode => {
+    // 4.7.52：普通型额外回合内不能插入终结技（引擎侧也会挡队列；UI 同步置灰）
+    const extraNoUlt = visStatus?.extraTurn !== undefined && !visStatus.extraTurn.allowUlt;
     const ultOk = (visStatus?.ultReady ?? []).includes(id);
     const ultAfter = afterCandidates.includes(id);
     const ultQueued = afterPicks.some((p) => p.id === id);
     const ultPending = pending?.kind === 'ult' && pending.unit === id;
     const ultMarked = ultPending && ((!needs.ally && !needs.enemy) || selTarget !== null);
-    const ultClickable = (ultOk || ultAfter || ultMarked) && !ended;
-    const ultTitle = ultMarked
-      ? t('fullsim.ultConfirm')
-      : ultOk
-        ? t('fullsim.ultReadyNow')
-        : ultAfter
-          ? t('fullsim.ultAfterSkill')
-          : t('battle.skillShort.ult');
+    const ultClickable = (ultOk || ultAfter || ultMarked) && !ended && !extraNoUlt;
+    const ultTitle = extraNoUlt
+      ? t('fullsim.ultBlockedExtra')
+      : ultMarked
+        ? t('fullsim.ultConfirm')
+        : ultOk
+          ? t('fullsim.ultReadyNow')
+          : ultAfter
+            ? t('fullsim.ultAfterSkill')
+            : t('battle.skillShort.ult');
     const onClick = (): void =>
       ultMarked ? confirmPending() : ultOk ? pickUlt(id) : toggleAfterUlt(id);
     const border = ultMarked
@@ -1910,12 +1936,19 @@ export default function FullSimPage() {
   /**
    * 中心数据区的「全队共享资源」行（2026-11-07 用户需求）：笑点放在本行动伤害**上方**。
    * 只有欢愉队伍（或已有笑点）才显示，免得非欢愉队伍多一行恒 0 的噪音。
+   * 2026-11-13：追加 4.7.51 新增角色资源 HUD（艾莲【咬合力】/【热量】、耀嘉音【切分音】）。
    */
   const laughPoints = visStatus?.laughPoints ?? 0;
-  const centerShared =
-    slots.some((id) => ELATION_CHAR_IDS.has(id)) || laughPoints > 0
+  const centerShared = [
+    ...(slots.some((id) => ELATION_CHAR_IDS.has(id)) || laughPoints > 0
       ? [{ key: 'laugh', label: t('battle.laughPoints'), value: String(laughPoints) }]
-      : [];
+      : []),
+    ...unitResourceRows(visStatus).map((r) => ({
+      key: r.key,
+      label: t(r.labelKey),
+      value: resourceText(r),
+    })),
+  ];
 
   /**
    * 键盘快捷键（2026-11-07 第二批）：1 普攻 / 2 战技 / Enter 确定 / Esc 取消 / 空格 暂停继续。
@@ -2070,8 +2103,10 @@ export default function FullSimPage() {
                 )}
                 {saved && (
                   <span className="muted">
-                    {t('timeline.speed')} {saved.speed ?? t('timeline.team.manual')} ·{' '}
-                    {t('timeline.team.energyRegen')} {saved.energyRegen ?? 0}
+                    {t('timeline.speed')}{' '}
+                    {saved.speed == null ? t('timeline.team.manual') : fmtNum(saved.speed)} ·{' '}
+                    {t('timeline.team.energyRegen')}{' '}
+                    {saved.energyRegen == null ? 0 : fmtNum(saved.energyRegen, 4)}
                   </span>
                 )}
                 {/* 调序/移除（至少保留 1 人；移除主C 时自动转移给第一位） */}
@@ -2121,12 +2156,15 @@ export default function FullSimPage() {
               </div>
             );
           })}
-          {slots.length < BATTLE_CHAR_IDS.length && (
+          {/* 队伍上限 = 引擎口径（1~4 人，游戏同款）；到顶后不再显示加人按钮 */}
+          {slots.length < TEAM_MAX ? (
             <p>
               <button type="button" onClick={() => setPickOpen(true)}>
                 {t('fullsim.addChar')}…
               </button>
             </p>
+          ) : (
+            <p className="muted">{t('battle.teamMax')}</p>
           )}
           <CharPickerModal
             open={pickOpen}
@@ -2134,7 +2172,7 @@ export default function FullSimPage() {
             onClose={() => setPickOpen(false)}
             onSelect={(rid) => {
               const id = BATTLE_CHAR_IDS.find((c) => BATTLE_ROSTER_ID[c] === rid);
-              if (id) setSlots((s) => (s.includes(id) ? s : [...s, id]));
+              if (id) setSlots((s) => (s.includes(id) || s.length >= TEAM_MAX ? s : [...s, id]));
               setPickOpen(false);
             }}
           />
@@ -2413,7 +2451,13 @@ export default function FullSimPage() {
             {t('fullsim.start')}
           </button>
           {slots.length === 0 && <p className="muted">{t('fullsim.needMember')}</p>}
-          {slots.length > 0 && err && <p className="muted">{t('fullsim.needSaved')}</p>}
+          {slots.length > 0 && err && (
+            <p className="muted">
+              {err === 'teamTooMany'
+                ? t('battle.teamTooMany', { n: slots.length })
+                : t('fullsim.needSaved')}
+            </p>
+          )}
           <p className="muted" style={{ fontSize: 12 }}>
             {t('battle.historyTip')}
           </p>

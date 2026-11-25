@@ -1,6 +1,6 @@
 {
-  "version": "4.6.54",
-  "count": 172,
+  "version": "4.7.53",
+  "count": 174,
   "items": [
     {
       "id": "20000",
@@ -1484,6 +1484,24 @@
       "en": "Upon the First Echo of \"Aha\"",
       "meta": {
         "path": "Elation",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "23066",
+      "zh": "雨天请勿排班",
+      "en": "No Shifts on Rainy Days",
+      "meta": {
+        "path": "Warrior",
+        "rarity": 5
+      }
+    },
+    {
+      "id": "23067",
+      "zh": "闪亮如她",
+      "en": "Shine Bright Like Her",
+      "meta": {
+        "path": "Shaman",
         "rarity": 5
       }
     },

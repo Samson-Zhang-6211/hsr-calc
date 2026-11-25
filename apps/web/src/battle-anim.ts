@@ -97,16 +97,23 @@ export interface AnimNumber {
   /** 显示值（已取整） */
   value: number;
   color: string;
-  /** 同一次出手内多段命中的错开延迟（ms） */
+  /** 同一次出手内多段命中的错开延迟（ms，已含「先挨打再冒字」的冲击延迟） */
   delayMs: number;
-  /** 字号档位（实测：主伤害大、散射小） */
+  /** 字号档位：主伤害 / 次级（再乘 sizeScale 才是最终字号） */
   tier: PopTier;
-  /** 自身旋转角度（实测每个数字都带轻微倾斜，-8°~+8°） */
+  /**
+   * 字号倍率（2026-11-07 飙字批）：按本帧最大伤害连续分级，暴击/击破/末段另加成。
+   * 组件把它注入 `--pop-scale`，CSS 用 `calc(30px * var(--pop-scale))` 落到字号上。
+   */
+  sizeScale: number;
+  /** 自身旋转角度（出生时的倾斜，动画里会回正；-9°~+9°） */
   angleDeg: number;
-  /** 横向错开（px，避免多个数字叠在同一像素；实测同帧数字是「一簇」错开的） */
+  /** 横向错开（px，同目标多段左右交替散开） */
   offsetX: number;
   /** 纵向错开（px，多段时依次往上摊开） */
   offsetY: number;
+  /** 本条飘字的存活时长（ms；段数多时缩短，避免压到下一个动作） */
+  lifetimeMs: number;
   /** 上方文字标签（暴击/击破）；undefined = 不显示 */
   tag?: PopTag;
   /** 彩虹渐变字（欢愉伤害） */
@@ -138,20 +145,33 @@ export interface AnimFrame {
 
 /**
  * 基础时长（ms @1×）——2026-10-26 用户裁定「固定节奏」：
- * 普攻/战技 1.0s、终结技 2.4s、每段命中 +160ms，再整体除以输出倍速。
+ * 普攻/战技 1.0s、终结技 2.4s，再整体除以输出倍速。
  */
 export const BASE_ATTACK_MS = 1000;
 export const BASE_ENEMY_MS = 1000;
 export const BASE_ULT_MS = 2400;
-/** 多段命中的错开间隔（ms @1×） */
-export const BASE_HIT_GAP_MS = 160;
+/**
+ * 段间错开（ms @1×）——2026-11-07 飙字批改成「连段节奏」：
+ * 第 1 段 0、第 2 段 110、第 3 段 220，之后每段再 ×0.92（越打越快，像连击而不是节拍器）。
+ * `BASE_HIT_GAP_MS` 保留为「首段的段间间隔」，外部只读这一个数时行为不变。
+ */
+export const BASE_HIT_GAP_MS = 110;
+/** 匀速段的段数（前 2 段）：第 index 段 = BASE_HIT_GAP_MS × index */
+export const HIT_GAP_LINEAR_UNTIL = 2;
+/** 第 3 段起的递减系数 */
+export const HIT_GAP_DECAY = 0.92;
 /** 倍速下限：再快也要看得见一眼（ms） */
 export const MIN_FRAME_MS = 320;
 
 /** 同一目标最多同时几条飘字；超出合并成一条「×N」 */
 export const MAX_POPS_PER_TARGET = 4;
 /** 同一目标内多条飘字的纵向排开步长（px） */
-export const STACK_STEP_PX = 26;
+export const STACK_STEP_PX = 22;
+/** 同目标多段飘字的横向交替散开：基础 10px + 每段 4px（左右交替） */
+export const SPREAD_BASE_PX = 10;
+export const SPREAD_STEP_PX = 4;
+/** 「先挨打、再冒字」：数字比受击闪光晚 45ms 出现（打击感先后） */
+export const IMPACT_DELAY_MS = 45;
 
 /** 按倍速缩放并夹下限（只用于「帧时长」，不要用于段间错开） */
 export function scaleMs(base: number, speed: number): number {
@@ -159,10 +179,19 @@ export function scaleMs(base: number, speed: number): number {
   return Math.max(MIN_FRAME_MS, Math.round(base / s));
 }
 
-/** 同一次出手内第 index 段的错开延迟（不夹下限，否则前几段会挤成 0） */
+/**
+ * 同一次出手内第 index 段的错开延迟（不夹下限，否则前几段会挤成 0）。
+ * 前 3 段等距 110ms，之后每段 ×0.92 —— 多段技能的飘字是「越打越快」。
+ */
 export function hitGapMs(index: number, speed: number): number {
   const s = Number.isFinite(speed) && speed > 0 ? speed : 1;
-  return Math.round((BASE_HIT_GAP_MS * index) / s);
+  let acc = 0;
+  let step = BASE_HIT_GAP_MS;
+  for (let i = 1; i <= index; i += 1) {
+    if (i > HIT_GAP_LINEAR_UNTIL) step *= HIT_GAP_DECAY;
+    acc += step;
+  }
+  return Math.round(acc / s);
 }
 
 /** 出手者 id → 元素（用于直伤飘字配色）；未知返回 undefined */
@@ -185,8 +214,33 @@ export interface PlanOptions {
 const isEnemyUnit = (id: string): boolean => /^enemy\d$/.test(id);
 const isMonsterSlot = (id: string): boolean => /^monster[123]$/.test(id);
 
-/** 飘字存活时长（ms @1×）——2026-10-26 用户裁定「太快」：从 1000 提到 1600 */
-export const POP_LIFETIME_MS = 1600;
+/** 飘字存活时长（ms @1×）——单段动作留久一点；多段动作缩短，避免压到下一个动作 */
+export const POP_LIFETIME_MS = 1400;
+/** 4 段以上动作的存活时长（ms） */
+export const POP_LIFETIME_DENSE_MS = 1150;
+
+/** 按本次出手的段数取存活时长 */
+export function popLifetimeMs(segments: number): number {
+  return segments >= 4 ? POP_LIFETIME_DENSE_MS : POP_LIFETIME_MS;
+}
+
+/**
+ * 字号连续分级（2026-11-07 用户裁定「按伤害大小连续分级」）：
+ * 以本帧最大伤害为 1.0，用 √ 曲线拉开差距——0.1 倍伤害 ≈ 0.86、1 倍 = 1.0；
+ * 暴击 ×1.08、击破 ×1.12、本帧最后一段 ×1.10，夹在 [0.72, 1.55]。
+ */
+export function popSizeScale(
+  value: number,
+  max: number,
+  opts: { crit?: boolean; break?: boolean; final?: boolean } = {},
+): number {
+  const ratio = max > 0 ? Math.min(1, Math.max(value, 1) / max) : 1;
+  let s = 0.8 + 0.2 * Math.sqrt(ratio);
+  if (opts.crit) s *= 1.08;
+  if (opts.break) s *= 1.12;
+  if (opts.final) s *= 1.1;
+  return Math.round(Math.min(1.55, Math.max(0.72, s)) * 1000) / 1000;
+}
 
 /** 确定性伪随机（0~1）：同一个 seq 永远得到同一个角度/偏移，重播时不会抖动 */
 function hash01(n: number): number {
@@ -211,13 +265,17 @@ function tagOf(h: HitLog): PopTag | undefined {
 }
 
 /**
- * 命中段 → 飘字（纵向排开 + 时间错开 + 超量合并）。
+ * 命中段 → 飘字（散开 + 连段错开 + 超量合并 + 字号分级）。
  *
- * 2026-10-26 用户裁定（原「同帧成簇」被打回：一跳一大片根本看不清）：
- *  - 同一目标的多条伤害**纵向排开**（每段间隔 STACK_STEP_PX），不再挤在同一像素；
- *  - 段间用 BASE_HIT_GAP_MS（160ms）**依次弹出**，而不是齐刷刷同时出现；
- *  - 同一目标超过 MAX_POPS_PER_TARGET 条时，超出的部分**合并进最后一条**并标 `multi`（显示 ×N）；
- *  - `tier`：该目标第一条走大号（main），其余小号（sub）。
+ * 2026-10-26 用户裁定：同一目标的多条伤害不能挤成一坨 → 纵向排开 + 依次弹出。
+ * 2026-11-07 飙字批（用户裁定「按伤害大小连续分级 / 左右交替散开」）在此基础上：
+ *  - **横向左右交替**散开（±(10 + slot×4)px），配合纵向 22px 步长，读起来像连击而不是列表；
+ *  - **字号连续分级**：本帧最大伤害 = 1.0，暴击/击破/末段另加成（`popSizeScale`）；
+ *  - **连段节奏**：前 3 段 110ms 等距，之后每段 ×0.92（越打越快，见 `hitGapMs`）；
+ *  - **先挨打再冒字**：统一 +`IMPACT_DELAY_MS`；
+ *  - **角度回正**：出生时 ±9° 倾斜，动画里 14% 处回正；
+ *  - **存活按时长收缩**：段数 ≥4 时 1150ms（`popLifetimeMs`），不再压到下一动作。
+ * 同一目标超过 MAX_POPS_PER_TARGET 条时，超出的部分合并进最后一条并标 `multi`（×N）。
  */
 function numbersOf(
   hits: readonly HitLog[],
@@ -225,9 +283,13 @@ function numbersOf(
   speed: number,
 ): AnimNumber[] {
   const out: AnimNumber[] = [];
+  const maxValue = Math.max(1, ...hits.map((h) => Math.floor(h.total)));
+  const lifetimeMs = popLifetimeMs(hits.length);
+  const lastIdx = hits.length - 1;
   const slotByTarget = new Map<string, number>();
   const overflow = new Map<string, { value: number; count: number }>();
-  for (const h of hits) {
+  for (let i = 0; i < hits.length; i += 1) {
+    const h = hits[i]!;
     const target = h.target ?? 'monster2';
     const slot = slotByTarget.get(target) ?? 0;
     slotByTarget.set(target, slot + 1);
@@ -239,16 +301,26 @@ function numbersOf(
       continue;
     }
     const seed = h.seq + slot * 7.3;
+    const value = Math.floor(h.total);
+    const tag = tagOf(h);
+    // 左右交替：偶数段偏左、奇数段偏右，段数越多散得越开（外加 ±3px 抖动避免完全对称）
+    const dir = slot % 2 === 0 ? -1 : 1;
     out.push({
       target,
-      value: Math.floor(h.total),
+      value,
       color: damageColor(h.kind, elementOf(h.source)),
-      delayMs: hitGapMs(slot, speed),
+      delayMs: IMPACT_DELAY_MS + hitGapMs(slot, speed),
       tier: slot === 0 ? 'main' : 'sub',
-      angleDeg: Math.round((hash01(seed + 11) - 0.5) * 16),
-      offsetX: Math.round((hash01(seed) - 0.5) * 16),
+      sizeScale: popSizeScale(value, maxValue, {
+        crit: tag === 'crit',
+        break: tag === 'break',
+        final: i === lastIdx,
+      }),
+      angleDeg: Math.round((hash01(seed + 11) - 0.5) * 18),
+      offsetX: dir * (SPREAD_BASE_PX + slot * SPREAD_STEP_PX) + Math.round((hash01(seed) - 0.5) * 6),
       offsetY: slot === 0 ? 0 : -slot * STACK_STEP_PX,
-      tag: tagOf(h),
+      lifetimeMs,
+      tag,
       rainbow: isRainbowKind(h.kind),
     });
   }
@@ -313,6 +385,8 @@ export function planFrames(
           ? ev.unitId
           : null;
       const label = labelOf?.(ev);
+      const enemyMax = Math.max(1, ...enemyHits.map((h) => Math.floor(h.damage)));
+      const enemyLife = popLifetimeMs(enemyHits.length);
       push({
         kind: 'enemy',
         actor,
@@ -322,11 +396,13 @@ export function planFrames(
           value: Math.floor(h.damage),
           // 我方受击：警示红
           color: '#ff5b5b',
-          delayMs: hitGapMs(i, speed),
+          delayMs: IMPACT_DELAY_MS + hitGapMs(i, speed),
           tier: i === 0 ? 'main' : 'sub',
-          angleDeg: Math.round((hash01(h.targetId.length + i * 13.7) - 0.5) * 14),
-          offsetX: Math.round((hash01(i * 3.1 + 5) - 0.5) * 16),
+          sizeScale: popSizeScale(Math.floor(h.damage), enemyMax, { final: i === enemyHits.length - 1 }),
+          angleDeg: Math.round((hash01(h.targetId.length + i * 13.7) - 0.5) * 18),
+          offsetX: (i % 2 === 0 ? -1 : 1) * (SPREAD_BASE_PX + i * SPREAD_STEP_PX),
           offsetY: i === 0 ? 0 : -i * STACK_STEP_PX,
+          lifetimeMs: enemyLife,
           tag: undefined,
           rainbow: false,
         })),

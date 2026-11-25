@@ -1,4 +1,4 @@
-// nanoka 静态数据源公共层：版本解析、条件请求、文档规范化、source.lock.json 读写。
+// 静态数据源公共层：版本解析、条件请求、文档规范化、source.lock.json 读写。
 // 只做 I/O 与规范化，不含任何游戏机制口径。
 // 被 fetch-local-data.mjs / fetch-monster-growth.mjs / gen-source-lock.mjs / sync-data.mjs 共用。
 //
@@ -13,8 +13,9 @@ import { fileURLToPath } from 'node:url';
 
 import { dataBase } from './env-base.mjs';
 
+/** 数据源根地址：由 HSR_DATA_BASE 提供，仓库内不保存任何站点地址 */
 export const SOURCE_BASE = dataBase();
-/** 站点首页 HTML 内嵌当前版本的静态地址，用于探测最新版本（静态源无版本索引接口） */
+/** 站点首页地址：由 HSR_SITE_URL 提供，用于探测最新版本（静态源无版本索引接口） */
 export const SITE_URL = process.env.HSR_SITE_URL ?? '';
 /** 锁文件缺失且未显式传版本时的兜底值（保持历史口径） */
 export const FALLBACK_VERSION = '4.6.51';
@@ -216,12 +217,56 @@ export async function resolveVersion(explicit, folder) {
   return lockVersion(lock, folder) ?? FALLBACK_VERSION;
 }
 
-/** 探测站点当前版本（首页内嵌 数据源/hsr/<版本>/ 地址）；失败返回 null */
+/**
+ * 探测站点当前版本（首页内嵌 `数据根地址/hsr/<版本>/` 地址）；失败返回 null。
+ *
+ * 2026-11-12 修：站点首页一度只暴露**两段式**版本（`hsr/4.7/`），旧正则要求三段 → 返回 null，
+ * 无参 `sync-data.mjs` 会静默回退到锁文件旧版本。现在两段式会向上探测三段构建号。
+ *
+ * 2026-11-17 修：**首页会滞后**（实测首页仍写 4.7.51，而 `4.7.52` 已于 11-17 上线），
+ * 所以三段式命中后也要继续向上探，取实际存在的最高构建号。
+ * ⚠ 两段式别名（`hsr/4.7/`）本身是**旧快照**（实测只有 99 角色，比 4.7.51 还旧）→ 绝不能直接采信。
+ */
 export async function detectLatestVersion() {
   try {
     const r = await fetchResource(SITE_URL);
-    const hits = [...(r.text ?? '').matchAll(/\/(\d+\.\d+\.\d+)\//g)].map((m) => m[1]);
-    return hits[0] ?? null;
+    const hits = [...(r.text ?? '').matchAll(/\/hsr\/(\d+\.\d+(?:\.\d+)?)\//g)].map((m) => m[1]);
+    const head = hits[0] ?? null;
+    if (!head) return null;
+    if (!/^\d+\.\d+\.\d+$/.test(head)) return (await probeHighestBuild(head)) ?? head;
+    return (await probeAbove(head)) ?? head;
+  } catch {
+    return null;
+  }
+}
+
+/** 两段式版本（4.7）→ 三段构建号（4.7.51）：从锁文件同主次版本的构建起向上探 */
+async function probeHighestBuild(majorMinor) {
+  try {
+    const lock = await readLock();
+    const known = Object.values(lock.byType ?? {})
+      .filter((v) => typeof v === 'string' && v.startsWith(`${majorMinor}.`))
+      .sort((a, b) => Number(b.split('.')[2] ?? 0) - Number(a.split('.')[2] ?? 0));
+    const start = known[0];
+    if (!start) return null;
+    return (await probeAbove(start)) ?? start;
+  } catch {
+    return null;
+  }
+}
+
+/** 从某个三段构建号向上探（最多 5 步），返回实际存在的最高构建号；一步都探不到返回 null */
+async function probeAbove(startVersion, maxSteps = 5) {
+  try {
+    const [major, minor, build] = startVersion.split('.');
+    let best = startVersion;
+    for (let i = 1; i <= maxSteps; i += 1) {
+      const next = `${major}.${minor}.${Number(build) + i}`;
+      const res = await fetchResource(`${SOURCE_BASE}/${next}/character.json`).catch(() => null);
+      if (!res || res.status !== 200) break;
+      best = next;
+    }
+    return best === startVersion ? null : best;
   } catch {
     return null;
   }

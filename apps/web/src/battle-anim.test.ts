@@ -4,14 +4,20 @@ import {
   BASE_ENEMY_MS,
   BASE_HIT_GAP_MS,
   BASE_ULT_MS,
+  IMPACT_DELAY_MS,
   MAX_POPS_PER_TARGET,
   MIN_FRAME_MS,
   POP_ELEMENT_COLORS,
+  POP_LIFETIME_DENSE_MS,
+  POP_LIFETIME_MS,
   STACK_STEP_PX,
   damageColor,
   framesDuration,
+  hitGapMs,
   isRainbowKind,
   planFrames,
+  popLifetimeMs,
+  popSizeScale,
   scaleMs,
 } from './battle-anim.js';
 import type { CombatEvent, HitLog } from '@hsr-calc/engine';
@@ -86,25 +92,71 @@ describe('battle-anim：帧规划', () => {
     expect(f.durationMs).toBe(BASE_ATTACK_MS);
   });
 
-  it('飘字排版：同目标纵向排开 + 逐段错开，首个目标首段走 main', () => {
-    // 同一目标 3 段：第 1 段 main，其余 sub，纵向每段 -26px、时间每段 +160ms
+  it('飘字排版：左右交替散开 + 纵向排开 + 连段错开，首个目标首段走 main', () => {
+    // 同一目标 3 段：第 1 段 main，其余 sub；纵向每段 -22px；延迟从冲击延迟起步、前 3 段等距
     const ev = { ...event({ hitSeqs: [1, 2, 3] }), note: [] } as CombatEvent;
     const frames = planFrames([ev], [hit(1), hit(2), hit(3)], { speed: 1, elementOf });
     const nums = frames[0]!.numbers;
     expect(nums.map((n) => n.tier)).toEqual(['main', 'sub', 'sub']);
     expect(nums.map((n) => n.offsetY)).toEqual([0, -STACK_STEP_PX, -STACK_STEP_PX * 2]);
-    expect(nums.map((n) => n.delayMs)).toEqual([0, BASE_HIT_GAP_MS, BASE_HIT_GAP_MS * 2]);
-    for (const n of nums) expect(Math.abs(n.angleDeg)).toBeLessThanOrEqual(8);
+    expect(nums.map((n) => n.delayMs)).toEqual([
+      IMPACT_DELAY_MS,
+      IMPACT_DELAY_MS + BASE_HIT_GAP_MS,
+      IMPACT_DELAY_MS + BASE_HIT_GAP_MS * 2,
+    ]);
+    // 2026-11-07：横向左右交替（偶数段偏左、奇数段偏右），不再是一簇随机偏移
+    expect(nums[0]!.offsetX).toBeLessThan(0);
+    expect(nums[1]!.offsetX).toBeGreaterThan(0);
+    expect(nums[2]!.offsetX).toBeLessThan(0);
+    expect(Math.abs(nums[2]!.offsetX)).toBeGreaterThan(Math.abs(nums[0]!.offsetX));
+    for (const n of nums) expect(Math.abs(n.angleDeg)).toBeLessThanOrEqual(10);
     // 不同目标各自从 0 起算延迟（跨目标互不等待）
     const multi = planFrames(
       [ev],
       [hit(1), hit(2, { target: 'monster1' }), hit(3, { target: 'monster3' })],
       { speed: 1, elementOf },
     );
-    expect(multi[0]!.numbers.map((n) => n.delayMs)).toEqual([0, 0, 0]);
+    expect(multi[0]!.numbers.map((n) => n.delayMs)).toEqual([
+      IMPACT_DELAY_MS,
+      IMPACT_DELAY_MS,
+      IMPACT_DELAY_MS,
+    ]);
     // 角度确定性（重播不抖）
     const again = planFrames([ev], [hit(1), hit(2), hit(3)], { speed: 1, elementOf });
     expect(again[0]!.numbers[0]!.angleDeg).toBe(nums[0]!.angleDeg);
+  });
+
+  it('连段节奏：前 3 段等距，之后每段更密（越打越快）', () => {
+    const gaps = [0, 1, 2, 3, 4].map((i) => hitGapMs(i, 1));
+    expect(gaps[0]).toBe(0);
+    expect(gaps[1]).toBe(BASE_HIT_GAP_MS);
+    expect(gaps[2]).toBe(BASE_HIT_GAP_MS * 2);
+    // 第 3 段起递减：步长 = 上一段步长 × HIT_GAP_DECAY
+    expect(gaps[4]! - gaps[3]!).toBeLessThan(gaps[3]! - gaps[2]!);
+    expect(gaps[3]! - gaps[2]!).toBeLessThan(gaps[2]! - gaps[1]!);
+    // 倍速整体缩放
+    expect(hitGapMs(2, 2)).toBe(Math.round((BASE_HIT_GAP_MS * 2) / 2));
+  });
+
+  it('字号连续分级：大伤害更大、暴击/击破/末段溢价、上下夹紧', () => {
+    const big = popSizeScale(1000, 1000);
+    const small = popSizeScale(100, 1000);
+    expect(big).toBeGreaterThan(small);
+    expect(big).toBeLessThanOrEqual(1.01);
+    expect(small).toBeGreaterThan(0.8);
+    expect(popSizeScale(1000, 1000, { crit: true })).toBeGreaterThan(big);
+    expect(popSizeScale(1000, 1000, { break: true })).toBeGreaterThan(big);
+    expect(popSizeScale(1000, 1000, { final: true })).toBeGreaterThan(big);
+    // 夹紧：极小值不低于 0.72，叠满不高于 1.55
+    expect(popSizeScale(0, 1000)).toBeGreaterThanOrEqual(0.72);
+    expect(popSizeScale(1000, 1000, { crit: true, break: true, final: true })).toBeLessThanOrEqual(1.55);
+  });
+
+  it('飘字存活：段数多时缩短，避免压到下一个动作', () => {
+    expect(popLifetimeMs(1)).toBe(POP_LIFETIME_MS);
+    expect(popLifetimeMs(3)).toBe(POP_LIFETIME_MS);
+    expect(popLifetimeMs(4)).toBe(POP_LIFETIME_DENSE_MS);
+    expect(popLifetimeMs(4)).toBeLessThan(popLifetimeMs(1));
   });
 
   it('同目标超过 4 段时合并成一条并标 ×N', () => {
@@ -269,7 +321,8 @@ describe('battle-anim：帧规划', () => {
     const ev = { ...event({ hitSeqs: seqs }), note: [] } as CombatEvent;
     const frames = planFrames([ev], seqs.map((s) => hit(s)), { speed: 1, elementOf });
     const delays = frames[0]!.numbers.map((n) => n.delayMs);
-    expect(delays[0]).toBe(0);
+    // 2026-11-07：整体后移 IMPACT_DELAY_MS（先挨打再冒字）
+    expect(delays[0]).toBe(IMPACT_DELAY_MS);
     for (let i = 1; i < delays.length; i += 1) expect(delays[i]!).toBeGreaterThanOrEqual(delays[i - 1]!);
   });
 });

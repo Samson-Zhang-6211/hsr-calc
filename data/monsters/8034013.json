@@ -1,7 +1,7 @@
 {
   "id": "8034013",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "「石心十人」诡弈砂金",
     "en": "Ten Stonehearts: Aventurine of Stratagems"
@@ -252,6 +252,21 @@
         "world_level": 6,
         "display_item_list": []
       }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 1.5
+      }
     ]
   },
   "en": {
@@ -491,6 +506,21 @@
         "monster_template_id": 8034013,
         "world_level": 6,
         "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 3,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 3,
+        "phase_max_hp_ratio": 1.5
       }
     ]
   }

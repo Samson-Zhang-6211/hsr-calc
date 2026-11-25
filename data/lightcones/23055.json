@@ -1,7 +1,7 @@
 {
   "id": "23055",
   "type": "lightcone",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "献给明日的色彩",
     "en": "Colors for Tomorrow"
@@ -257,7 +257,7 @@
     "base_type": "Elation",
     "refinements": {
       "name": "Ink Splash",
-      "desc": null,
+      "desc": "Increases the wearer's DEF by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. When the wearer uses Elation Skill on all allies, increases DMG taken by all enemies by <color=#f29e38ff><unbreak>#4[i]%</unbreak></color>, lasting for <unbreak>#3[i]</unbreak> turn(s). Regenerates a fixed <unbreak>#2[i]</unbreak> Energy for the wearer, and restores HP equal to <color=#f29e38ff><unbreak>#5[i]%</unbreak></color> of the wearer's DEF for all allies.",
       "level": {
         "1": {
           "param_list": [

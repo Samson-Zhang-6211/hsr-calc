@@ -1,7 +1,7 @@
 {
   "id": "5014025",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "合金机铠•帕姆王",
     "en": "Alloy Mechatron: King Pom-Pom"
@@ -150,7 +150,7 @@
           {
             "id": 501402509,
             "skill_name": "长效抗菌",
-            "skill_desc": "若在释放【高温消毒模式】前生命值降低到一定值，则立刻释放【高温消毒模式】。",
+            "skill_desc": "若在施放【高温消毒模式】前生命值降低到一定值，则立刻施放【高温消毒模式】。",
             "damage_type": "Quantum",
             "sp_hit_base": "",
             "extra": {

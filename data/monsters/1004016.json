@@ -1,7 +1,7 @@
 {
   "id": "1004016",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "可可利亚",
     "en": "Cocolia"
@@ -22,13 +22,13 @@
     "attack_base": 18,
     "critical_damage_base": 0.2,
     "defence_base": 210,
-    "hp_base": 1255.5,
+    "hp_base": 1395,
     "initial_delay_ratio": 1,
     "image_path": "SpriteOutput/MonsterFigure/Monster_1004010.png",
     "minimum_fatigue_ratio": 0.2,
     "rank": "LittleBoss",
     "speed_base": 144,
-    "stance_base": 360,
+    "stance_base": 750,
     "stance_count": 1,
     "status_resistance_base": 0.3,
     "child": [
@@ -182,13 +182,13 @@
     "attack_base": 18,
     "critical_damage_base": 0.2,
     "defence_base": 210,
-    "hp_base": 1255.5,
+    "hp_base": 1395,
     "initial_delay_ratio": 1,
     "image_path": "SpriteOutput/MonsterFigure/Monster_1004010.png",
     "minimum_fatigue_ratio": 0.2,
     "rank": "LittleBoss",
     "speed_base": 144,
-    "stance_base": 360,
+    "stance_base": 750,
     "stance_count": 1,
     "status_resistance_base": 0.3,
     "child": [

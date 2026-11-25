@@ -102,7 +102,11 @@ export type CharId =
   | 'feixiao'
   | 'moze'
   | 'sanyueqi2'
-  | 'ashveil';
+  | 'ashveil'
+  /** 艾莲 1514（冰·毁灭）：咬合力/热量 + 鲨牙布召唤 + 冰海潜游式 */
+  | 'ellen'
+  /** 耀嘉音 1515（量子·同谐）：切分音 + 结界 + 强化普攻 */
+  | 'yaojiayin';
 
 /** 我方实体（含召唤物） */
 export type AllyUnitId =
@@ -117,6 +121,8 @@ export type AllyUnitId =
   | 'changye'
   | 'demiurge'
   | 'fuyuan'
+  /** 艾莲 1514 天赋召唤物【鲨牙布】（**普通召唤物**，不是忆灵：走独立行动条） */
+  | 'shazabu'
   | 'qyCountdown';
 
 /** 敌方木桩（最多 5 个：monster1..5；monster3=中间默认主目标，2/4 为相邻，1/5 为最外侧） */
@@ -398,6 +404,8 @@ export type CombatActionType =
   | 'longling'
   /** 灵砂天赋召唤物【浮元】追加攻击（122204，独立行动轴单位） */
   | 'fuyuan'
+  /** 艾莲天赋召唤物【鲨牙布】追加攻击（151404，独立行动轴单位；普通召唤物非忆灵） */
+  | 'shazabu'
   | 'monster'
   | 'technique'
   | 'ahaMoment'
@@ -465,6 +473,9 @@ export interface CombatEvent {
   /** 额外回合（2026-11 用户裁定）：与跑道无关的插入回合——不改 av、不推进时间、
    * 不算新回合（buff/护盾/行动计数等回合结算全部跳过）。事件与触发它的行动同刻。 */
   extraTurn?: true;
+  /** 该额外回合**可插入施放终结技**（4.7.52 文案新增；2026-11-17 用户裁定）。
+   * 仅艾莲 E6 与零号连线（给耀嘉音）三处为 true；缺省 = 旧口径「期间无法插入」。 */
+  extraTurnAllowUlt?: true;
 }
 
 export interface HitLog {

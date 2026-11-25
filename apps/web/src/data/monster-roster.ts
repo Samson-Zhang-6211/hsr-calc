@@ -1,4 +1,4 @@
-// 由 scripts/gen-monsters.mjs 生成（数据源 static.nanoka.cc，版本 4.6.54），请勿手改
+// 由 scripts/gen-monsters.mjs 生成（数据源 static.nanoka.cc，版本 4.7.53），请勿手改
 export interface RosterMonster {
   id: string;
   zh: string;
@@ -7,7 +7,7 @@ export interface RosterMonster {
   weak: string[];
 }
 
-export const MONSTER_ROSTER_VERSION = '4.6.54';
+export const MONSTER_ROSTER_VERSION = '4.7.53';
 
 export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
@@ -5332,7 +5332,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5014024",
     "zh": "合金机铠•帕姆王",
-    "en": "Alloy Mechatron: King Pom-Pom",
+    "en": "The Long-Suffering Conductor",
     "rank": "LittleBoss",
     "weak": [
       "Physical",
@@ -5586,7 +5586,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032020",
     "zh": "部位左",
-    "en": "Part Left",
+    "en": "Giant Hand of Destiny",
     "rank": "MinionLv2",
     "weak": [
       "Ice",
@@ -5597,7 +5597,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032021",
     "zh": "部位",
-    "en": "Part",
+    "en": "Giant Hand of Destiny (Clenched)",
     "rank": "MinionLv2",
     "weak": [
       "Ice",
@@ -5608,7 +5608,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032022",
     "zh": "部位左",
-    "en": "Part Left",
+    "en": "Giant Hand of Destiny",
     "rank": "MinionLv2",
     "weak": [
       "Ice",
@@ -5619,7 +5619,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032023",
     "zh": "部位",
-    "en": "Part",
+    "en": "Giant Hand of Destiny (Clenched)",
     "rank": "MinionLv2",
     "weak": [
       "Ice",
@@ -5630,7 +5630,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032030",
     "zh": "部位右",
-    "en": "Part Right",
+    "en": "Giant Hand of Destiny",
     "rank": "MinionLv2",
     "weak": [
       "Fire",
@@ -5641,7 +5641,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032031",
     "zh": "部位",
-    "en": "Part",
+    "en": "Giant Hand of Destiny (Clenched)",
     "rank": "MinionLv2",
     "weak": [
       "Fire",
@@ -5652,7 +5652,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032032",
     "zh": "部位右",
-    "en": "Part Right",
+    "en": "Giant Hand of Destiny",
     "rank": "MinionLv2",
     "weak": [
       "Fire",
@@ -5663,7 +5663,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5032033",
     "zh": "部位",
-    "en": "Part",
+    "en": "Giant Hand of Destiny (Clenched)",
     "rank": "MinionLv2",
     "weak": [
       "Fire",
@@ -5737,9 +5737,20 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
     ]
   },
   {
+    "id": "5034014",
+    "zh": "堕神之血•亚婆离",
+    "en": "Blood of the Fallen God: Yabuli",
+    "rank": "LittleBoss",
+    "weak": [
+      "Ice",
+      "Quantum",
+      "Imaginary"
+    ]
+  },
+  {
     "id": "5035010",
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss",
+    "en": "Divine Skull of Indulgence",
     "rank": "BigBoss",
     "weak": [
       "Physical",
@@ -5750,7 +5761,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5035011",
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss",
+    "en": "Divine Skull of Indulgence",
     "rank": "BigBoss",
     "weak": [
       "Physical",
@@ -5761,7 +5772,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5035012",
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss",
+    "en": "Divine Skull of Indulgence",
     "rank": "BigBoss",
     "weak": [
       "Physical",
@@ -5772,7 +5783,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5035020",
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss",
+    "en": "\"Embryo of Philosophy\" Madness",
     "rank": "BigBoss",
     "weak": [
       "Physical",
@@ -5783,7 +5794,7 @@ export const MONSTER_ROSTER: readonly RosterMonster[] = [
   {
     "id": "5035021",
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss",
+    "en": "\"Embryo of Philosophy\" Madness",
     "rank": "BigBoss",
     "weak": [
       "Physical",

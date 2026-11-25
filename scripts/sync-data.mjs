@@ -681,6 +681,7 @@ async function promote() {
   const next = { ...lock, files: { ...lock.files }, byType: { ...lock.byType } };
   let written = 0;
   const patched = [];
+  const backfilled = [];
 
   for (const [folder, t] of Object.entries(manifest.types)) {
     if (typeFilter.size > 0 && !typeFilter.has(folder)) continue;
@@ -698,6 +699,16 @@ async function promote() {
       const res = spawnSync(process.execPath, [`scripts/${script}`], { cwd: REPO_ROOT, stdio: 'inherit' });
       if (res.status === 0) patched.push(`${rec.path} ← ${script}`);
       else console.error(`补丁失败：${script}（exit ${res.status}）`);
+    }
+    // meta 回填：上游文档里没有 `meta.effectiveSubstats / substatWeights / portrait / portraitShop /
+    // critRateTarget`（这些是本地回填字段），整份覆盖会把它们冲掉 → 必须按序回填。
+    // 顺序固定：effective-substats 先（gen-alloc-weights 会校验 substatWeights 的键都在有效词条内）。
+    if (folder === 'characters' && todo.length > 0) {
+      for (const s of ['gen-effective-substats', 'gen-alloc-weights', 'gen-portrait-meta']) {
+        const res = spawnSync(process.execPath, [`scripts/${s}.mjs`], { cwd: REPO_ROOT, stdio: 'inherit' });
+        if (res.status === 0) backfilled.push(s);
+        else console.error(`meta 回填失败：${s}（exit ${res.status}）`);
+      }
     }
     // 统一版本号：整类同步时，把该目录**所有**文档的 version 盖成本版版本。
     // 必要性：未变更的文件不会被重写，其 version 仍是旧值 → gen-source-lock 会报「版本混装」
@@ -769,6 +780,7 @@ async function promote() {
     console.log(`自动重跑补丁 ${patched.length} 个：`);
     for (const p of patched) console.log(`  ${p}`);
   }
+  if (backfilled.length) console.log(`自动 meta 回填：${backfilled.join(' → ')}`);
   console.log('\n下一步（派生链，按序）：');
   for (const s of [
     'node scripts/gen-combat-raw.mjs',

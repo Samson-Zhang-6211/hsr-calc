@@ -1,4 +1,4 @@
-// 由 scripts/gen-lightcones.mjs 生成（数据源 static.nanoka.cc，版本 4.6.54），请勿手改
+// 由 scripts/gen-lightcones.mjs 生成（数据源 static.nanoka.cc，版本 4.7.53），请勿手改
 export interface RosterLightcone {
   id: string;
   zh: string;
@@ -7,7 +7,7 @@ export interface RosterLightcone {
   rarity: number;
 }
 
-export const LIGHTCONE_ROSTER_VERSION = '4.6.54';
+export const LIGHTCONE_ROSTER_VERSION = '4.7.53';
 
 export const LIGHTCONE_ROSTER: readonly RosterLightcone[] = [
   {
@@ -1163,6 +1163,20 @@ export const LIGHTCONE_ROSTER: readonly RosterLightcone[] = [
     "zh": "当第一声「阿哈」响起",
     "en": "Upon the First Echo of \"Aha\"",
     "path": "Elation",
+    "rarity": 5
+  },
+  {
+    "id": "23066",
+    "zh": "雨天请勿排班",
+    "en": "No Shifts on Rainy Days",
+    "path": "Warrior",
+    "rarity": 5
+  },
+  {
+    "id": "23067",
+    "zh": "闪亮如她",
+    "en": "Shine Bright Like Her",
+    "path": "Shaman",
     "rarity": 5
   },
   {

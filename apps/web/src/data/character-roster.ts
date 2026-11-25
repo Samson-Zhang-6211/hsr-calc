@@ -1,4 +1,4 @@
-// 由 scripts/gen-roster.mjs 生成（数据源 static.nanoka.cc，版本 4.6.54），请勿手改
+// 由 scripts/gen-roster.mjs 生成（数据源 static.nanoka.cc，版本 4.7.53），请勿手改
 export interface RosterCharacter {
   id: string;
   zh: string;
@@ -8,7 +8,7 @@ export interface RosterCharacter {
   rarity: number;
 }
 
-export const ROSTER_VERSION = '4.6.54';
+export const ROSTER_VERSION = '4.7.53';
 
 export const CHARACTER_ROSTER: readonly RosterCharacter[] = [
   {
@@ -721,6 +721,22 @@ export const CHARACTER_ROSTER: readonly RosterCharacter[] = [
     "en": "Aventurine • Waveflair",
     "element": "Quantum",
     "path": "Elation",
+    "rarity": 5
+  },
+  {
+    "id": "1514",
+    "zh": "艾莲",
+    "en": "Ellen",
+    "element": "Ice",
+    "path": "Warrior",
+    "rarity": 5
+  },
+  {
+    "id": "1515",
+    "zh": "耀嘉音",
+    "en": "Astra Yao",
+    "element": "Quantum",
+    "path": "Shaman",
     "rarity": 5
   },
   {

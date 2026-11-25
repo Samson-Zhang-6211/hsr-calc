@@ -1,0 +1,483 @@
+{
+  "id": "23067",
+  "type": "lightcone",
+  "version": "4.7.53",
+  "name": {
+    "zh": "闪亮如她",
+    "en": "Shine Bright Like Her"
+  },
+  "meta": {
+    "path": "Shaman",
+    "rarity": 5
+  },
+  "zh": {
+    "name": "闪亮如她",
+    "desc": null,
+    "rarity": "CombatPowerLightconeRarity5",
+    "base_type": "Shaman",
+    "refinements": {
+      "name": "咏唱",
+      "desc": "使装备者的攻击力提高<color=#f29e38ff><unbreak>#1[i]%</unbreak></color>，装备者施放终结技后，使我方全体行动提前<unbreak>#2[i]%</unbreak>，同时装备者获得【你我的旋律】，使我方全体的暴击伤害提高<color=#f29e38ff><unbreak>#3[i]%</unbreak></color>，持续<unbreak>#4[i]</unbreak>回合。",
+      "level": {
+        "1": {
+          "param_list": [
+            0.36,
+            0.24,
+            0.4,
+            4
+          ]
+        },
+        "2": {
+          "param_list": [
+            0.45,
+            0.24,
+            0.5,
+            4
+          ]
+        },
+        "3": {
+          "param_list": [
+            0.54,
+            0.24,
+            0.6,
+            4
+          ]
+        },
+        "4": {
+          "param_list": [
+            0.63,
+            0.24,
+            0.7,
+            4
+          ]
+        },
+        "5": {
+          "param_list": [
+            0.72,
+            0.24,
+            0.8,
+            4
+          ]
+        }
+      }
+    },
+    "stats": [
+      {
+        "equipment_id": 23067,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 5000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111001,
+            "item_num": 8,
+            "rarity": "NotNormal"
+          }
+        ],
+        "player_level_require": 15,
+        "max_level": 20,
+        "base_hp": 43.2,
+        "base_hp_add": 6.48,
+        "base_attack": 26.4,
+        "base_attack_add": 3.96,
+        "base_defence": 24,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 1,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 10000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110161,
+            "item_num": 4,
+            "rarity": "NotNormal"
+          },
+          {
+            "item_id": 111001,
+            "item_num": 12,
+            "rarity": "NotNormal"
+          }
+        ],
+        "world_level_require": 1,
+        "max_level": 30,
+        "base_hp": 95.04,
+        "base_hp_add": 6.48,
+        "base_attack": 58.08,
+        "base_attack_add": 3.96,
+        "base_defence": 52.8,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 2,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 20000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110162,
+            "item_num": 4,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111002,
+            "item_num": 8,
+            "rarity": "Rare"
+          }
+        ],
+        "world_level_require": 2,
+        "max_level": 40,
+        "base_hp": 164.16,
+        "base_hp_add": 6.48,
+        "base_attack": 100.32,
+        "base_attack_add": 3.96,
+        "base_defence": 91.2,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 3,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 50000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110162,
+            "item_num": 8,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111002,
+            "item_num": 12,
+            "rarity": "Rare"
+          }
+        ],
+        "world_level_require": 3,
+        "max_level": 50,
+        "base_hp": 233.28,
+        "base_hp_add": 6.48,
+        "base_attack": 142.56,
+        "base_attack_add": 3.96,
+        "base_defence": 129.6,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 4,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 100000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110163,
+            "item_num": 5,
+            "rarity": "VeryRare"
+          },
+          {
+            "item_id": 111003,
+            "item_num": 6,
+            "rarity": "VeryRare"
+          }
+        ],
+        "world_level_require": 4,
+        "max_level": 60,
+        "base_hp": 302.4,
+        "base_hp_add": 6.48,
+        "base_attack": 184.8,
+        "base_attack_add": 3.96,
+        "base_defence": 168,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 5,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 200000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110163,
+            "item_num": 10,
+            "rarity": "VeryRare"
+          },
+          {
+            "item_id": 111003,
+            "item_num": 8,
+            "rarity": "VeryRare"
+          }
+        ],
+        "world_level_require": 5,
+        "max_level": 70,
+        "base_hp": 371.52,
+        "base_hp_add": 6.48,
+        "base_attack": 227.04,
+        "base_attack_add": 3.96,
+        "base_defence": 206.4,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 6,
+        "promotion_cost_list": [],
+        "world_level_require": 5,
+        "max_level": 80,
+        "base_hp": 440.64,
+        "base_hp_add": 6.48,
+        "base_attack": 269.28,
+        "base_attack_add": 3.96,
+        "base_defence": 244.8,
+        "base_defence_add": 3.6
+      }
+    ]
+  },
+  "en": {
+    "name": "Shine Bright Like Her",
+    "desc": null,
+    "rarity": "CombatPowerLightconeRarity5",
+    "base_type": "Shaman",
+    "refinements": {
+      "name": "Chant",
+      "desc": "Increases the wearer's ATK by <color=#f29e38ff><unbreak>#1[i]%</unbreak></color>. After the wearer uses their Ultimate, advances all allies' actions by <unbreak>#2[i]%</unbreak>, and the wearer gains \"Our Melody,\" which increases all allies' CRIT DMG by <color=#f29e38ff><unbreak>#3[i]%</unbreak></color>, lasting for <unbreak>#4[i]</unbreak> turn(s).",
+      "level": {
+        "1": {
+          "param_list": [
+            0.36,
+            0.24,
+            0.4,
+            4
+          ]
+        },
+        "2": {
+          "param_list": [
+            0.45,
+            0.24,
+            0.5,
+            4
+          ]
+        },
+        "3": {
+          "param_list": [
+            0.54,
+            0.24,
+            0.6,
+            4
+          ]
+        },
+        "4": {
+          "param_list": [
+            0.63,
+            0.24,
+            0.7,
+            4
+          ]
+        },
+        "5": {
+          "param_list": [
+            0.72,
+            0.24,
+            0.8,
+            4
+          ]
+        }
+      }
+    },
+    "stats": [
+      {
+        "equipment_id": 23067,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 5000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111001,
+            "item_num": 8,
+            "rarity": "NotNormal"
+          }
+        ],
+        "player_level_require": 15,
+        "max_level": 20,
+        "base_hp": 43.2,
+        "base_hp_add": 6.48,
+        "base_attack": 26.4,
+        "base_attack_add": 3.96,
+        "base_defence": 24,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 1,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 10000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110161,
+            "item_num": 4,
+            "rarity": "NotNormal"
+          },
+          {
+            "item_id": 111001,
+            "item_num": 12,
+            "rarity": "NotNormal"
+          }
+        ],
+        "world_level_require": 1,
+        "max_level": 30,
+        "base_hp": 95.04,
+        "base_hp_add": 6.48,
+        "base_attack": 58.08,
+        "base_attack_add": 3.96,
+        "base_defence": 52.8,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 2,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 20000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110162,
+            "item_num": 4,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111002,
+            "item_num": 8,
+            "rarity": "Rare"
+          }
+        ],
+        "world_level_require": 2,
+        "max_level": 40,
+        "base_hp": 164.16,
+        "base_hp_add": 6.48,
+        "base_attack": 100.32,
+        "base_attack_add": 3.96,
+        "base_defence": 91.2,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 3,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 50000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110162,
+            "item_num": 8,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 111002,
+            "item_num": 12,
+            "rarity": "Rare"
+          }
+        ],
+        "world_level_require": 3,
+        "max_level": 50,
+        "base_hp": 233.28,
+        "base_hp_add": 6.48,
+        "base_attack": 142.56,
+        "base_attack_add": 3.96,
+        "base_defence": 129.6,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 4,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 100000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110163,
+            "item_num": 5,
+            "rarity": "VeryRare"
+          },
+          {
+            "item_id": 111003,
+            "item_num": 6,
+            "rarity": "VeryRare"
+          }
+        ],
+        "world_level_require": 4,
+        "max_level": 60,
+        "base_hp": 302.4,
+        "base_hp_add": 6.48,
+        "base_attack": 184.8,
+        "base_attack_add": 3.96,
+        "base_defence": 168,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 5,
+        "promotion_cost_list": [
+          {
+            "item_id": 2,
+            "item_num": 200000,
+            "rarity": "Rare"
+          },
+          {
+            "item_id": 110163,
+            "item_num": 10,
+            "rarity": "VeryRare"
+          },
+          {
+            "item_id": 111003,
+            "item_num": 8,
+            "rarity": "VeryRare"
+          }
+        ],
+        "world_level_require": 5,
+        "max_level": 70,
+        "base_hp": 371.52,
+        "base_hp_add": 6.48,
+        "base_attack": 227.04,
+        "base_attack_add": 3.96,
+        "base_defence": 206.4,
+        "base_defence_add": 3.6
+      },
+      {
+        "equipment_id": 23067,
+        "promotion": 6,
+        "promotion_cost_list": [],
+        "world_level_require": 5,
+        "max_level": 80,
+        "base_hp": 440.64,
+        "base_hp_add": 6.48,
+        "base_attack": 269.28,
+        "base_attack_add": 3.96,
+        "base_defence": 244.8,
+        "base_defence_add": 3.6
+      }
+    ]
+  }
+}

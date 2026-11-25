@@ -1,7 +1,7 @@
 {
   "id": "4064011",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "金血忆灵•裁定忘却之形（完整）",
     "en": "Ichor Memosprite: Judge of Oblivion (Complete)"
@@ -176,7 +176,7 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 0.833333,
+        "hp_modify_ratio": 0.8,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
@@ -525,7 +525,7 @@
         "attack_modify_ratio": 1,
         "defence_modify_ratio": 1,
         "elite_group": 1,
-        "hp_modify_ratio": 0.833333,
+        "hp_modify_ratio": 0.8,
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,

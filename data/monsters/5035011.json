@@ -1,10 +1,10 @@
 {
   "id": "5035011",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "二相乐园BOSS",
-    "en": "Planarcadia Boss"
+    "en": "Divine Skull of Indulgence"
   },
   "meta": {
     "rank": "BigBoss",
@@ -129,7 +129,7 @@
           {
             "id": 503501107,
             "skill_name": "技能7",
-            "skill_desc": "让我方对自身<u>开枪</u>，我方可自选<u>开枪</u>或放弃，开枪会对自身造成量子属性伤害，但开枪有概率<u>炸膛</u>，使我方指定角色损失生命值，并清空能量。<u>笑点</u>会降低炸膛的概率。",
+            "skill_desc": "让我方对自身<u>开枪</u>，我方可自选<u>开枪</u>或放弃，开枪会对自身造成量子属性伤害，但开枪有概率<u>炸膛</u>，使我方目标损失生命值，并清空能量。<u>笑点</u>会降低炸膛的概率。",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {
@@ -156,7 +156,163 @@
             "skill_desc": "【倒计时】回合开始时，对我方全体造成大量量子属性欢愉伤害。",
             "damage_type": "Quantum",
             "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501109,
+            "skill_name": "技能9",
+            "skill_desc": "我方角色被抓走期间，发动阿哈时刻后，我方可自选一个【部位】消灭，即使选错，阿哈也会将其引爆，对其余的【部位】造成量子属性伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
             "extra": {}
+          },
+          {
+            "id": 503501110,
+            "skill_name": "技能<unbreak>10</unbreak>",
+            "skill_desc": "首次受到致命攻击后，生命上限修改为原本的一定比例并回复全部生命值，之后将受到的伤害的一定比例转化为【饕噬】，不计算溢出的伤害。若自身可回复的生命上限高于一定比例时不会被消灭，受到致命攻击后，回复全部生命值。每次发动该效果时，使【倒计时】行动提前。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 503501101,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.444444,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 503501101,
+            "skill_name": "技能1",
+            "skill_desc": "对我方全体造成少量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {}
+          },
+          {
+            "id": 503501102,
+            "skill_name": "技能2",
+            "skill_desc": "对我方全体造成量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {}
+          },
+          {
+            "id": 503501103,
+            "skill_name": "技能3",
+            "skill_desc": "召唤【部位】，并将指定我方角色藏于其中，下次行动时对该目标施放【技能4】。消灭抓走该目标的手可将其解救，使我方获得笑点，并使我方全体的全属性抗性穿透提高，但消灭错误的手会使我方全体受到量子属性伤害。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503501104,
+            "skill_name": "技能4",
+            "skill_desc": "引爆所有【部位】，对其中的角色造成大量量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503501105,
+            "skill_name": "技能5",
+            "skill_desc": "对我方全体造成量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503501106,
+            "skill_name": "技能6",
+            "skill_desc": "连续对指定我方角色<u>开枪</u>，每枪对目标造成量子属性伤害，但开枪有概率<u>炸膛</u>，对自身造成量子属性伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {
+              "503502004": {
+                "name": "开枪",
+                "desc": "对目标造成伤害，开枪的次数越多，伤害倍率越高。",
+                "param": []
+              },
+              "503502005": {
+                "name": "炸膛",
+                "desc": "敌方炸膛时，对敌方造成伤害，开枪的次数越多，炸膛的概率越高，炸膛的伤害倍率越高。我方炸膛时，使我方损失生命值，开枪的次数越多，炸膛的概率越高，炸膛损失的生命值倍率越高，该伤害优先消耗护盾。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501107,
+            "skill_name": "技能7",
+            "skill_desc": "让我方对自身<u>开枪</u>，我方可自选<u>开枪</u>或放弃，开枪会对自身造成量子属性伤害，但开枪有概率<u>炸膛</u>，使我方目标损失生命值，并清空能量。<u>笑点</u>会降低炸膛的概率。",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "笑点",
+                "desc": "笑点为全队共享。造成欢愉伤害时，计入的笑点越多，欢愉伤害越高。",
+                "param": []
+              },
+              "503502004": {
+                "name": "开枪",
+                "desc": "对目标造成伤害，开枪的次数越多，伤害倍率越高。",
+                "param": []
+              },
+              "503502005": {
+                "name": "炸膛",
+                "desc": "敌方炸膛时，对敌方造成伤害，开枪的次数越多，炸膛的概率越高，炸膛的伤害倍率越高。我方炸膛时，使我方损失生命值，开枪的次数越多，炸膛的概率越高，炸膛损失的生命值倍率越高，该伤害优先消耗护盾。",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501108,
+            "skill_name": "技能8",
+            "skill_desc": "【倒计时】回合开始时，对我方全体造成大量量子属性欢愉伤害。",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "控制类负面状态",
+                "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定，幸福傀儡，怨火灼身，麻痹。",
+                "param": []
+              }
+            }
           },
           {
             "id": 503501109,
@@ -212,11 +368,22 @@
         "world_level": 6,
         "display_item_list": []
       }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
+      }
     ]
   },
   "en": {
     "id": 5035011,
-    "name": "Planarcadia Boss",
+    "name": "Divine Skull of Indulgence",
     "desc": "...",
     "monster_camp_id": 19,
     "attack_base": 18,
@@ -269,7 +436,7 @@
         "skill_list": [
           {
             "id": 503501101,
-            "skill_name": "Ability 1",
+            "skill_name": "Puppet Show of Destiny",
             "skill_desc": "Deals minor Quantum DMG to all targets.",
             "damage_type": "Quantum",
             "sp_hit_base": 5,
@@ -277,7 +444,7 @@
           },
           {
             "id": 503501102,
-            "skill_name": "Ability 2",
+            "skill_name": "Sacrament-Chewing Ceremony",
             "skill_desc": "Deals Quantum DMG to all targets.",
             "damage_type": "Quantum",
             "sp_hit_base": 5,
@@ -285,23 +452,23 @@
           },
           {
             "id": 503501103,
-            "skill_name": "Ability 3",
-            "skill_desc": "Summons \"Part\" and hides a designated target character inside it. Upon the next action, uses \"Ability 4\" on this target. Defeating the hand that captured the target rescues them, grants targets Punchline, and increases All-Type RES PEN for all targets, but defeating the wrong hand causes all targets to take Quantum DMG.",
+            "skill_name": "A Show of Hand!",
+            "skill_desc": "Summons \"Giant Hand of Destiny (Clenched)\" and hides a designated target character inside it, causing them to be unable to act and be designated as target. Upon the next action, uses \"Sleight of Deathly Hand\" on this target. Defeating the hand that captured the target rescues them, grants targets Punchline, and increases All-Type RES PEN for all targets, but defeating the wrong hand causes all targets to take Quantum DMG.",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {}
           },
           {
             "id": 503501104,
-            "skill_name": "Ability 4",
-            "skill_desc": "Detonates all \"Parts,\" dealing massive Quantum DMG to the characters within.",
+            "skill_name": "Sleight of Deathly Hand",
+            "skill_desc": "Detonates all \"Giant Hand of Destiny (Clenched),\" dealing massive Quantum DMG to the characters within.",
             "damage_type": "Quantum",
             "sp_hit_base": 10,
             "extra": {}
           },
           {
             "id": 503501105,
-            "skill_name": "Ability 5",
+            "skill_name": "A Surprising Gift For All",
             "skill_desc": "Deals Quantum DMG to all targets.",
             "damage_type": "Quantum",
             "sp_hit_base": 10,
@@ -309,19 +476,19 @@
           },
           {
             "id": 503501106,
-            "skill_name": "Ability 6",
+            "skill_name": "That High-Stakes Roulette Called Destiny",
             "skill_desc": "Continuously <u>shoots</u> at a designated target character, dealing Quantum DMG to the target with each shot. However, there is a chance to <u>cause a burst barrel</u> and deal Quantum DMG to this unit.",
             "damage_type": "Quantum",
             "sp_hit_base": 5,
             "extra": {
               "503502004": {
                 "name": "Shoot",
-                "desc": "Deals DMG to the target. The more shots fired, the more DMG dealt.",
+                "desc": "Deals DMG to the target. The more shots fired, the higher the DMG multiplier.",
                 "param": []
               },
               "503502005": {
                 "name": "Burst Barrel",
-                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG dealt by the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss from the burst barrel. This DMG prioritizes consuming Shield.",
+                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG multiplier of the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss multiplier from the burst barrel. This DMG prioritizes consuming Shield.",
                 "param": []
               }
             }
@@ -329,7 +496,7 @@
           {
             "id": 503501107,
             "skill_name": "Ability 7",
-            "skill_desc": "Allows a target to <u>shoot</u> this unit. The target can choose to <u>shoot</u> or pass. Shooting deals Quantum DMG to this unit. However, shooting has a chance to <u>cause a burst barrel</u>, causing the designated target character to suffer HP loss and depleting Energy. <u>Punchline</u> reduces the chance of burst barrel being caused.",
+            "skill_desc": "Allows a target to <u>shoot</u> this unit. The target can choose to <u>shoot</u> or pass. Shooting deals Quantum DMG to this unit. However, shooting has a chance to <u>cause a burst barrel</u>, causing ally targets to suffer HP loss and depleting Energy. <u>Punchline</u> reduces the chance of burst barrel being caused.",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {
@@ -340,36 +507,192 @@
               },
               "503502004": {
                 "name": "Shoot",
-                "desc": "Deals DMG to the target. The more shots fired, the more DMG dealt.",
+                "desc": "Deals DMG to the target. The more shots fired, the higher the DMG multiplier.",
                 "param": []
               },
               "503502005": {
                 "name": "Burst Barrel",
-                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG dealt by the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss from the burst barrel. This DMG prioritizes consuming Shield.",
+                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG multiplier of the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss multiplier from the burst barrel. This DMG prioritizes consuming Shield.",
                 "param": []
               }
             }
           },
           {
             "id": 503501108,
-            "skill_name": "Ability 8",
-            "skill_desc": "At the start of \"Countdown's\" turn, deals massive Quantum Elation DMG to all targets.",
+            "skill_name": "God's Appetizer",
+            "skill_desc": "Adds \"Instant of Indulgence\" to the Action Order. Every time \"Instant of Indulgence\" takes action, dispels <u>Crowd Control debuffs</u> and the Weakness Broken state from all enemies and deals massive Quantum Elation DMG to all targets.",
             "damage_type": "Quantum",
             "sp_hit_base": 10,
-            "extra": {}
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
           },
           {
             "id": 503501109,
-            "skill_name": "Ability 9",
-            "skill_desc": "While a target character is captured, after triggering an Aha Instant, targets can choose one \"Part\" to defeat. Even if the wrong one is chosen, Aha will detonate it, dealing Quantum DMG to the remaining \"Parts.\"",
+            "skill_name": "Assistant Magician's Reminder",
+            "skill_desc": "While a target character is captured, after Aha takes action, targets can choose one \"Giant Hand of Destiny (Clenched)\" to defeat. Even if the wrong one is chosen, Aha will detonate it, dealing Quantum DMG to the remaining \"Giant Hands of Destiny (Clenched).\"",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {}
           },
           {
             "id": 503501110,
-            "skill_name": "Ability <unbreak>10</unbreak>",
-            "skill_desc": "Upon taking killing blow for the first time, modifies Max HP to a certain percentage of its original value and restores HP in full. Afterward, converts a certain percentage of DMG taken into \"Inglutition\" (overflow DMG is not calculated). If this unit's Maximum Restorable HP is higher than a certain percentage, this unit will not be defeated and will restore HP in full upon taking thee killing blow. Each time this effect is triggered, advances \"Countdown's\" action.",
+            "skill_name": "Ravenous Primal Desire",
+            "skill_desc": "Upon taking killing blow for the first time, modifies Max HP to a certain percentage of its original value and restores HP in full. Afterward, converts a certain percentage of DMG taken into \"Inglutition\" (overflow DMG is not calculated). If this unit's Maximum Restorable HP is higher than a certain percentage, this unit will not be defeated and will restore HP in full upon taking thee killing blow. Each time this effect is triggered, advances \"Instant of Indulgence's\" action.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          }
+        ]
+      },
+      {
+        "id": 503501101,
+        "attack_modify_ratio": 1,
+        "defence_modify_ratio": 1,
+        "elite_group": 1,
+        "hp_modify_ratio": 0.444444,
+        "speed_modify_ratio": 1,
+        "speed_modify_value": null,
+        "stance_modify_ratio": 1,
+        "stance_modify_value": null,
+        "stance_weak_list": [
+          "Physical",
+          "Quantum",
+          "Imaginary"
+        ],
+        "hard_level_group": 1,
+        "damage_type_resistance": [
+          {
+            "damage_type": "Fire",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Ice",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Thunder",
+            "value": 0.2
+          },
+          {
+            "damage_type": "Wind",
+            "value": 0.2
+          }
+        ],
+        "skill_list": [
+          {
+            "id": 503501101,
+            "skill_name": "Puppet Show of Destiny",
+            "skill_desc": "Deals minor Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {}
+          },
+          {
+            "id": 503501102,
+            "skill_name": "Sacrament-Chewing Ceremony",
+            "skill_desc": "Deals Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {}
+          },
+          {
+            "id": 503501103,
+            "skill_name": "A Show of Hand!",
+            "skill_desc": "Summons \"Giant Hand of Destiny (Clenched)\" and hides a designated target character inside it, causing them to be unable to act and be designated as target. Upon the next action, uses \"Sleight of Deathly Hand\" on this target. Defeating the hand that captured the target rescues them, grants targets Punchline, and increases All-Type RES PEN for all targets, but defeating the wrong hand causes all targets to take Quantum DMG.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503501104,
+            "skill_name": "Sleight of Deathly Hand",
+            "skill_desc": "Detonates all \"Giant Hand of Destiny (Clenched),\" dealing massive Quantum DMG to the characters within.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503501105,
+            "skill_name": "A Surprising Gift For All",
+            "skill_desc": "Deals Quantum DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {}
+          },
+          {
+            "id": 503501106,
+            "skill_name": "That High-Stakes Roulette Called Destiny",
+            "skill_desc": "Continuously <u>shoots</u> at a designated target character, dealing Quantum DMG to the target with each shot. However, there is a chance to <u>cause a burst barrel</u> and deal Quantum DMG to this unit.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 5,
+            "extra": {
+              "503502004": {
+                "name": "Shoot",
+                "desc": "Deals DMG to the target. The more shots fired, the higher the DMG multiplier.",
+                "param": []
+              },
+              "503502005": {
+                "name": "Burst Barrel",
+                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG multiplier of the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss multiplier from the burst barrel. This DMG prioritizes consuming Shield.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501107,
+            "skill_name": "Ability 7",
+            "skill_desc": "Allows a target to <u>shoot</u> this unit. The target can choose to <u>shoot</u> or pass. Shooting deals Quantum DMG to this unit. However, shooting has a chance to <u>cause a burst barrel</u>, causing ally targets to suffer HP loss and depleting Energy. <u>Punchline</u> reduces the chance of burst barrel being caused.",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {
+              "10000027": {
+                "name": "Punchline",
+                "desc": "Punchline is shared by the whole team. When dealing Elation DMG, the more Punchline taken into account, the higher the Elation DMG.",
+                "param": []
+              },
+              "503502004": {
+                "name": "Shoot",
+                "desc": "Deals DMG to the target. The more shots fired, the higher the DMG multiplier.",
+                "param": []
+              },
+              "503502005": {
+                "name": "Burst Barrel",
+                "desc": "When an enemy causes a burst barrel, deals DMG to the enemy. The more shots fired, the higher the chance of a burst barrel, and the higher the DMG multiplier of the burst barrel. When an ally causes a burst barrel, causes HP loss to the ally. The more shots fired, the higher the chance of a burst barrel, and the greater the HP loss multiplier from the burst barrel. This DMG prioritizes consuming Shield.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501108,
+            "skill_name": "God's Appetizer",
+            "skill_desc": "Adds \"Instant of Indulgence\" to the Action Order. Every time \"Instant of Indulgence\" takes action, dispels <u>Crowd Control debuffs</u> and the Weakness Broken state from all enemies and deals massive Quantum Elation DMG to all targets.",
+            "damage_type": "Quantum",
+            "sp_hit_base": 10,
+            "extra": {
+              "10000011": {
+                "name": "Crowd Control debuff",
+                "desc": "Freeze, Entanglement, Imprisonment, Dominance, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock, Happiness Puppet, Grudge Ablaze, Paralysis.",
+                "param": []
+              }
+            }
+          },
+          {
+            "id": 503501109,
+            "skill_name": "Assistant Magician's Reminder",
+            "skill_desc": "While a target character is captured, after Aha takes action, targets can choose one \"Giant Hand of Destiny (Clenched)\" to defeat. Even if the wrong one is chosen, Aha will detonate it, dealing Quantum DMG to the remaining \"Giant Hands of Destiny (Clenched).\"",
+            "damage_type": "",
+            "sp_hit_base": "",
+            "extra": {}
+          },
+          {
+            "id": 503501110,
+            "skill_name": "Ravenous Primal Desire",
+            "skill_desc": "Upon taking killing blow for the first time, modifies Max HP to a certain percentage of its original value and restores HP in full. Afterward, converts a certain percentage of DMG taken into \"Inglutition\" (overflow DMG is not calculated). If this unit's Maximum Restorable HP is higher than a certain percentage, this unit will not be defeated and will restore HP in full upon taking thee killing blow. Each time this effect is triggered, advances \"Instant of Indulgence's\" action.",
             "damage_type": "",
             "sp_hit_base": "",
             "extra": {}
@@ -411,6 +734,17 @@
         "monster_template_id": 5035011,
         "world_level": 6,
         "display_item_list": []
+      }
+    ],
+    "max_monster_phase": 2,
+    "phase_list": [
+      {
+        "phase_num": 1,
+        "phase_max_hp_ratio": 1
+      },
+      {
+        "phase_num": 2,
+        "phase_max_hp_ratio": 1
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "id": "3003051",
   "type": "monster",
-  "version": "4.6.54",
+  "version": "4.7.53",
   "name": {
     "zh": "「醉于盛会的此刻」",
     "en": "\"Present Inebriated in Revelry\""
@@ -419,7 +419,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 120,
+        "stance_modify_value": 240,
         "stance_weak_list": [
           "Physical",
           "Fire",
@@ -1095,7 +1095,7 @@
         "speed_modify_ratio": 1,
         "speed_modify_value": null,
         "stance_modify_ratio": 1,
-        "stance_modify_value": 120,
+        "stance_modify_value": 240,
         "stance_weak_list": [
           "Physical",
           "Fire",

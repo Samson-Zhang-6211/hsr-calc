@@ -832,8 +832,8 @@ describe('全真模拟交互控制器', () => {
       if (step.type === 'decision') {
         expect(step.status.sp).toBeGreaterThanOrEqual(0);
         expect(step.status.sp).toBeLessThanOrEqual(5);
-        // energy 为全 CharId 键（含 aha 恒 0：啊哈用愿力开大；火花开战键=80；langzun 恒 0=隐藏分另存；shuisha/zhenzhu/tibao 正常能量；trailblazerMem/Mem2 记忆开拓者双 id；tails 藿藿；xiedie/fengjin/changyeyue/xilian 记忆四人；cerdra/robin/ruanmei/trailblazerShaman/trailblazerShaman2 同谐四人；asta/bronya/tingyun/yukong/hanya 同谐收尾五人；luocha/lingsha/natasha/lynx/bailu/gallagher 丰饶六人；hysilens 海瑟音；welt/pela/sampo 虚无三人；yinlang/jiaoqiu/huangquan/qianye 虚无批四人；luka/guinaifen/saifeir 虚无收尾三人；dahlia/fugue 收官二人；himeko/rappa 智识接入二人；sanyueqi/gepard/aventurine 存护批并行接入；saber/gilgamesh/misha 毁灭三人）
-        expect(Object.keys(step.status.energy).length).toBe(99);
+        // energy 为全 CharId 键（含 aha 恒 0：啊哈用愿力开大；火花开战键=80；langzun 恒 0=隐藏分另存；shuisha/zhenzhu/tibao 正常能量；trailblazerMem/Mem2 记忆开拓者双 id；tails 藿藿；xiedie/fengjin/changyeyue/xilian 记忆四人；cerdra/robin/ruanmei/trailblazerShaman/trailblazerShaman2 同谐四人；asta/bronya/tingyun/yukong/hanya 同谐收尾五人；luocha/lingsha/natasha/lynx/bailu/gallagher 丰饶六人；hysilens 海瑟音；welt/pela/sampo 虚无三人；yinlang/jiaoqiu/huangquan/qianye 虚无批四人；luka/guinaifen/saifeir 虚无收尾三人；dahlia/fugue 收官二人；himeko/rappa 智识接入二人；sanyueqi/gepard/aventurine 存护批并行接入；saber/gilgamesh/misha 毁灭三人；ellen/yaojiayin 4.7.51 新增二人）
+        expect(Object.keys(step.status.energy).length).toBe(101);
         break;
       }
       step = ctl.advance();
